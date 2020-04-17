@@ -1,0 +1,31 @@
+{
+  "name": "eddiebot",
+  "version": "1.0.0",
+  "description": "Discord bot for Eddie Jaoude's Discord server",
+  "main": "index.js",
+  "scripts": {
+    "lint": "tslint --project .",
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eddiejaoude/EddieBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eddiejaoude/EddieBot/issues"
+  },
+  "homepage": "https://github.com/eddiejaoude/EddieBot#readme",
+  "dependencies": {
+    "discord.js": "^12.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^13.11.1",
+    "@types/ws": "^7.2.4",
+    "ts-lint": "4.5.1",
+    "typescript": "3.5.3"
+  }
+}
