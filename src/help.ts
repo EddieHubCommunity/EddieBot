@@ -9,17 +9,17 @@ export const commands = (message: Message) => {
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift()!.toLowerCase();
 
-const embed = new MessageEmbed()
-	.setColor('#0099ff')
-	.setTimestamp()
-	.setFooter('Our bot is Open Source, you can find it here https://github.com/eddiejaoude/EddieBot');
+	const embed = new MessageEmbed()
+		.setColor('#0099ff')
+		.setTimestamp()
+		.setFooter('Our bot is Open Source, you can find it here https://github.com/eddiejaoude/EddieBot');
 
 	switch (command) {
 		case 'help':
             		embed
-				.setTitle('Help commands')
-				.setDescription('Lists the command available')
-				.addField('!help', 'Lists available commands', true)
+			.setTitle('Help commands')
+			.setDescription('Lists the command available')
+			.addField('!help', 'Lists available commands', true)
 				.addField('!coc', 'Code of Conduct', true)
 			break;
 			
