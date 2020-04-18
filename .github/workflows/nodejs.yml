@@ -24,7 +24,7 @@ jobs:
         npm ci
         npm run build --if-present
     - name: Setup private secrets
-      run: sed -i 's|{{ DISCORD_TOKEN }}|'"${{ secrets.DISCORD_TOKEN }}"'|g' app.yaml
+      run: sed -i 's|{{ DISCORD_TOKEN }}|'"${{ secrets.DISCORD_TOKEN }}"'|g' ../app.yaml
     - name: Deploy to gcloud
       run: |
         echo ${{ secrets.DEPLOY_KEY_FILE }} > /tmp/deploy_key_file.json
