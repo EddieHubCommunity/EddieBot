@@ -27,8 +27,4 @@ jobs:
       run: sed -i 's|{{ DISCORD_TOKEN }}|'"${{ secrets.DISCORD_TOKEN }}"'|g' app.yml
     - name: Deploy to gcloud
       run: |
-        echo ${{ secrets.DEPLOY_KEY_FILE }} > /tmp/deploy_key_file.json
-        gcloud auth activate-service-account --key-file /tmp/deploy_key_file.json
-        gcloud config set project $GCLOUD_PROJECT
         gcloud info
-        gcloud --quiet app deploy app.yml
