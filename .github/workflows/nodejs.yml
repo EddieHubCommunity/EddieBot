@@ -15,18 +15,21 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
       with:
         node-version: '10.x'
-    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
     - name: Install deps and build project
       run: |
         npm ci
         npm run build --if-present
+
     - name: Setup private secrets
       run: sed -i 's|{{ DISCORD_TOKEN }}|'"${{ secrets.DISCORD_TOKEN }}"'|g' app.yml
-    - uses: actions/setup-node@v1
+
+    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
       with:
         project_id: ${{ secrets.GCLOUD_PROJECT }}
         service_account_key: ${{ secrets.DEPLOY_KEY_FILE }}
+        service_account_email: ${{ secrets.SA_EMAIL }}
     - name: Deploy to gcloud
       run: gcloud app deploy
