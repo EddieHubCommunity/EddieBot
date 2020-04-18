@@ -31,5 +31,6 @@ jobs:
         project_id: ${{ secrets.GCLOUD_PROJECT }}
         service_account_key: ${{ secrets.DEPLOY_KEY_FILE }}
         service_account_email: ${{ secrets.SA_EMAIL }}
+        export_default_credentials: true
     - name: Deploy to gcloud
       run: gcloud app deploy
