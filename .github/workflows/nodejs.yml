@@ -29,7 +29,7 @@ jobs:
     - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
     - name: Deploy to gcloud
       run: |
-        echo $DEPLOY_KEY_FILE > /tmp/deploy_key_file.json
+        echo ${{ secrets.DEPLOY_KEY_FILE }} > /tmp/deploy_key_file.json
         gcloud auth activate-service-account --key-file /tmp/deploy_key_file.json
         gcloud config set project $GCLOUD_PROJECT
         gcloud info
