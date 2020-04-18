@@ -26,7 +26,9 @@ jobs:
       run: sed -i 's|{{ DISCORD_TOKEN }}|'"${{ secrets.DISCORD_TOKEN }}"'|g' app.yml
     - uses: actions/setup-node@v1
       with:
+        project_id: ${{ secrets.GCLOUD_PROJECT }}
         service_account_key: ${{ secrets.DEPLOY_KEY_FILE }}
     - name: Deploy to gcloud
       run: |
         gcloud info
+        gcloud app deploy
