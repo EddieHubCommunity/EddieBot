@@ -15,7 +15,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
       with:
         node-version: '10.x'
     - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
@@ -25,7 +24,9 @@ jobs:
         npm run build --if-present
     - name: Setup private secrets
       run: sed -i 's|{{ DISCORD_TOKEN }}|'"${{ secrets.DISCORD_TOKEN }}"'|g' app.yml
+    - uses: actions/setup-node@v1
+      with:
+        service_account_key: ${{ secrets.DEPLOY_KEY_FILE }}
     - name: Deploy to gcloud
       run: |
-        echo ${{ secrets.DEPLOY_KEY_FILE }} > /tmp/deploy_key_file.json
         gcloud info
