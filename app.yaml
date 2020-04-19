@@ -1,0 +1,4 @@
+runtime: nodejs10
+
+env_variables:
+  DISCORD_TOKEN: "{{ DISCORD_TOKEN }}"
