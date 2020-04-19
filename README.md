@@ -6,6 +6,7 @@ Discord bot for Eddie Jaoude's Discord server
 
 - node v10+ installed
 - discord token
+- [optional] GCP account to deploy to (using GitHub Actions)
 
 ## Quickstart
 
