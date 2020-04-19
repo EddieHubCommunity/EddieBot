@@ -10,7 +10,7 @@ export const messageReactionAdd = async (reaction: MessageReaction) => {
 		}
 	}
 
-    // if message owner get 5+ reactios add "high value" role
+    // if message owner gets 5+ reactions add "high value" role
     if (reaction.count! >= 5) {
         const role = reaction.message.guild!.roles.cache.find(role => role.name === 'high value');
         const member = reaction.message.member;
