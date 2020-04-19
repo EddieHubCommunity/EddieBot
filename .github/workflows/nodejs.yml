@@ -33,4 +33,3 @@ jobs:
     - name: Deploy to gcloud
       run: |
         gcloud info
-        gcloud app deploy
