@@ -22,7 +22,7 @@ export const commands = (message: Message) => {
 			.addField('!help', 'Lists available commands', true)
 				.addField('!coc', 'Code of Conduct', true)
 			break;
-			
+
 		case 'codeofconduct':
 		case 'coc':
 			embed
@@ -39,13 +39,13 @@ export const commands = (message: Message) => {
 				.addField('TLDR', 'Be nice :)', true)
 				.addField('Full details availabe on GitHub repo', 'https://github.com/eddiejaoude/EddieBot/blob/master/CODE_OF_CONDUCT.md', true)
 			break;
-			
+
 		default:
 			embed
 				.setTitle('ERROR: ooops...command not found')
 				.setDescription('Try using the !help command.')
         		break;
     }
-
+console.log('HELP');
     message.channel.send(embed);
 };
