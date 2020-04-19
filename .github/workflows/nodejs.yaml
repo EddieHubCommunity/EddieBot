@@ -24,7 +24,7 @@ jobs:
         npm run build --if-present
 
     - name: Setup private secrets
-      run: sed -i 's|{{ DISCORD_TOKEN }}|'"${{ secrets.DISCORD_TOKEN }}"'|g' app.yml
+      run: sed -i 's|{{ DISCORD_TOKEN }}|'"${{ secrets.DISCORD_TOKEN }}"'|g' app.yaml
 
     - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
       with:
