@@ -28,7 +28,7 @@ jobs:
 
     - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
       with:
-        project_id: ${{ secrets.GCLOUD_PROJECT }}
+        project_id: ${{ secrets.GCP_PROJECT_ID }}
         service_account_key: ${{ secrets.DEPLOY_KEY_FILE }}
         service_account_email: ${{ secrets.SA_EMAIL }}
         export_default_credentials: true
