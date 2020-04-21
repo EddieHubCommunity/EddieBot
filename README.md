@@ -5,7 +5,7 @@ Discord bot for Eddie Jaoude's Discord server
 ## Required
 
 - node v10+ installed
-- discord token
+- discord token. To get one follow [these instructions](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)
 - [optional] GCP account to deploy to (using GitHub Actions)
 
 ## Quickstart
