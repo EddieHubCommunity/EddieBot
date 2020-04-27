@@ -17,5 +17,5 @@ Discord bot for Eddie Jaoude's Discord server
 1. `DISCORD_TOKEN=<GET YOUR DISCORD TOKEN> npm run start:local`
 
 ## Run on Windows using below commands
-1. set `DISCORD_TOKEN=<GET YOUR DISCORD TOKEN>`
-2. npm run start:local
+1. `set DISCORD_TOKEN=<GET YOUR DISCORD TOKEN>`
+2. `npm run start:local`
