@@ -6,6 +6,9 @@ Discord bot for Eddie Jaoude's Discord server
 
 - node v10+ installed
 - discord token. To get one follow [these instructions](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)
+- general channel ID of your discord server, read the instructions on one of these links to get yours:
+   - [Get the channel ID of the Discord text channel](https://github.com/Chikachi/DiscordIntegration/wiki/How-to-get-a-token-and-channel-ID-for-Discord#get-the-channel-id-of-the-discord-text-channel)
+   - [Where can I find my User/Server/Message ID?](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
 - [optional] GCP account to deploy to (using GitHub Actions)
 
 ## Quickstart
