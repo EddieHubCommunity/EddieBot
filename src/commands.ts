@@ -1,4 +1,4 @@
-import { Message, MessageEmbed } from "discord.js";
+import { Message, MessageEmbed, Client } from "discord.js";
 
 export const commands = (message: Message) => {
 	const prefix = '!';
@@ -40,6 +40,13 @@ export const commands = (message: Message) => {
 				.addField('Full details availabe on GitHub repo', 'https://github.com/eddiejaoude/EddieBot/blob/master/CODE_OF_CONDUCT.md', true)
 			break;
 
+		case 'stats':
+			const memberCount = getServerMemberCount(message.client);
+			embed
+				.setTitle('Server stats')
+				.addField('total users', memberCount)
+			break;
+	
 		default:
 			embed
 				.setTitle('ERROR: ooops...command not found')
@@ -49,3 +56,22 @@ export const commands = (message: Message) => {
 console.log('HELP');
     message.channel.send(embed);
 };
+
+/**
+ * @returns the number of members in the server configured by the environment variables or null if there was an error
+ */
+export function getServerMemberCount(client: Client) {
+    const guildKey = process.env.DISCORD_SERVER_ID
+    if (!guildKey) {
+        console.error(`ERROR: Couldn't get member count! Missing env. variable DISCORD_SERVER_ID. Please configure that value.`)
+        return 0
+    }
+
+    const guild = client.guilds.cache.get(guildKey)
+    if (!guild) {
+        console.error(`ERROR: Couldn't get member count! The guild with the configured DISCORD_SERVER_ID env. variable doesn't exist`)
+        return 0
+    }
+
+    return guild.memberCount
+}
