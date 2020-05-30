@@ -1,6 +1,7 @@
-import { Message, MessageEmbed, Client } from "discord.js";
+import { Message, MessageEmbed } from "discord.js";
+import { StatsService } from "./stats/statsService";
 
-export const commands = (message: Message) => {
+export const commands = async (message: Message, statsService: StatsService) => {
 	const prefix = '!';
 	if (!message.content.startsWith(prefix) || message.author.bot) {
 		return;
@@ -41,10 +42,12 @@ export const commands = (message: Message) => {
 			break;
 
 		case 'stats':
-			const memberCount = getServerMemberCount(message.client);
+			const memberCount = await statsService.getServerMemberCount();
+			const totalMessages = await statsService.getServerTotalMessages();
 			embed
 				.setTitle('Server stats')
 				.addField('total users', memberCount)
+				.addField('total messages', totalMessages)
 			break;
 	
 		default:
@@ -56,22 +59,3 @@ export const commands = (message: Message) => {
 console.log('HELP');
     message.channel.send(embed);
 };
-
-/**
- * @returns the number of members in the server configured by the environment variables or null if there was an error
- */
-export function getServerMemberCount(client: Client) {
-    const guildKey = process.env.DISCORD_SERVER_ID
-    if (!guildKey) {
-        console.error(`ERROR: Couldn't get member count! Missing env. variable DISCORD_SERVER_ID. Please configure that value.`)
-        return 0
-    }
-
-    const guild = client.guilds.cache.get(guildKey)
-    if (!guild) {
-        console.error(`ERROR: Couldn't get member count! The guild with the configured DISCORD_SERVER_ID env. variable doesn't exist`)
-        return 0
-    }
-
-    return guild.memberCount
-}
