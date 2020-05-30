@@ -12,7 +12,7 @@ export class DiscordStatsService implements StatsService {
     }
 
     /**
-     * @returns the number of members in the server configured by the environment variables or null if there was an error
+     * @returns the number of members in the server configured by the environment variables or 0 if there was an error
      */
     async getServerMemberCount(): Promise<number> {
         const guildKey = process.env.DISCORD_SERVER_ID;
