@@ -8,6 +8,9 @@ on:
     branches:
       - issue-14
 
+env:
+  APP_NAME: EddieBot
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,7 +32,7 @@ jobs:
         creds: '${{ secrets.AZURE_CREDENTIALS }}'
     - uses: azure/appservice-settings@v1
       with:
-        app-name: EddieBot
+        app-name: ${{ env.APP_NAME }}
         general-settings-json: '{"DISCORD_TOKEN": "${{ secrets.DISCORD_TOKEN }}"}' #'General configuration settings as Key Value pairs'
       id: settings
     - run: az logout
@@ -37,5 +40,5 @@ jobs:
     - name: 'Run Azure webapp deploy action using publish profile credentials'
       uses: azure/webapps-deploy@v2
       with:
-        app-name: EddieBot
+        app-name: ${{ env.APP_NAME }}
         publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
