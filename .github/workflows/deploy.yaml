@@ -1,0 +1,42 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Deploy to production
+
+on:
+  push:
+    branches:
+      - issue-14
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+
+    - name: Install deps and build project
+      run: |
+        npm install
+        npm run build
+
+    - uses: azure/login@v1
+      with:
+        creds: '${{ secrets.AZURE_CREDENTIALS }}'
+    - uses: azure/appservice-settings@v1
+      with:
+        app-name: EddieBot
+        general-settings-json: '{"DISCORD_TOKEN": "${{ secrets.DISCORD_TOKEN }}"}' #'General configuration settings as Key Value pairs'
+      id: settings
+    - run: az logout
+
+    - name: 'Run Azure webapp deploy action using publish profile credentials'
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: EddieBot
+        publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
