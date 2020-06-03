@@ -5,7 +5,9 @@ export default {
   INTRO_CHANNEL: 'introductions',
   GENERAL_CHANNEL: 'general',
   REACTIONS_COUNT: 5,
-  REACTIONS_ROLE: 'high value',
+  ROLE: {
+    HIGH_VALUE: 'high value'
+  },
   defaultEmbed: () => {
     return new MessageEmbed()
       .setColor('#0099ff')
