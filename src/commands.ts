@@ -16,8 +16,8 @@ export const commands = (message: Message) => {
   const embed = defaultEmbed();
 
   const matching = commandList
-                    .find(({ triggers }) => triggers
-                                              .find((trigger) => trigger === command)) || { command: fallback };
+    .find(({ triggers }) => triggers
+      .find((trigger) => trigger === command)) || { command: fallback };
 
   message.channel.send(matching.command(embed));
 };
