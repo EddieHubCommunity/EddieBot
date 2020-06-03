@@ -25,6 +25,7 @@ jobs:
     - name: Install deps and build project
       run: |
         npm install
+        npm run lint
         npm run build
 
     - uses: azure/login@v1
