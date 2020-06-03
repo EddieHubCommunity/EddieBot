@@ -17,13 +17,13 @@ export class DiscordStatsService implements StatsService {
     async getServerMemberCount(): Promise<number> {
         const guildKey = process.env.DISCORD_SERVER_ID;
         if (!guildKey) {
-            console.error(`ERROR: Couldn't get member count! Missing env. variable DISCORD_SERVER_ID. Please configure that value.`);
+            console.error("ERROR: Couldn't get member count! Missing env. variable DISCORD_SERVER_ID. Please configure that value.");
             return 0;
         }
     
         const guild = this.client.guilds.cache.get(guildKey);
         if (!guild) {
-            console.error(`ERROR: Couldn't get member count! The guild with the configured DISCORD_SERVER_ID env. variable doesn't exist`);
+            console.error("ERROR: Couldn't get member count! The guild with the configured DISCORD_SERVER_ID env. variable doesn't exist");
             return 0;
         }
     
