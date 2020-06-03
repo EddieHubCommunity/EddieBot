@@ -19,4 +19,4 @@ export const guildMemberAdd = async (member: GuildMember | PartialGuildMember) =
 	}
 console.log(channel)
 	// channel.send(`Welcome to the server, ${member}`);
-  }
+}
