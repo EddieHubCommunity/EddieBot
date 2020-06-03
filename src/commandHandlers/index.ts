@@ -1,5 +1,6 @@
-import * as codeOfConduct from './codeOfConduct'
-import * as help from './help'
+import * as codeOfConduct from './codeOfConduct';
+import * as help from './help';
 
-export default [codeOfConduct, help]
-export { fallback } from './fallback'
+export default [codeOfConduct, help];
+
+export { fallback } from './fallback';

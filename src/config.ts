@@ -1,4 +1,4 @@
-import { MessageEmbed } from 'discord.js'
+import { MessageEmbed } from 'discord.js';
 
 export default {
   COMMAND_PREFIX: '!',
@@ -6,8 +6,6 @@ export default {
     return new MessageEmbed()
       .setColor('#0099ff')
       .setTimestamp()
-      .setFooter(
-        'Our bot is Open Source, you can find it here https://github.com/eddiejaoude/EddieBot'
-      )
-  }
-}
+      .setFooter('Our bot is Open Source, you can find it here https://github.com/eddiejaoude/EddieBot');
+  },
+};

@@ -1,20 +1,22 @@
-import { MessageEmbed } from 'discord.js'
-import commandList from './index'
-import config from '../config'
-const { COMMAND_PREFIX } = config
+import { MessageEmbed } from 'discord.js';
+
+import config from '../config';
+import commandList from './index';
+
+const { COMMAND_PREFIX } = config;
 
 export const command = (embed: MessageEmbed) => {
-  embed.setTitle('Help commands').setDescription('Lists the command available')
+  embed.setTitle('Help commands').setDescription('Lists the command available');
 
-  commandList.forEach(({ triggers, description }) => {
-    const mainTrigger = `${COMMAND_PREFIX}${triggers[0]}`
+  commandList.forEach((commandItem) => {
+    const mainTrigger = `${COMMAND_PREFIX}${commandItem.triggers[0]}`;
 
-    embed.addField(mainTrigger, description, true)
-  })
+    embed.addField(mainTrigger, commandItem.description, true);
+  });
 
-  return embed
-}
+  return embed;
+};
 
-export const description = 'Lists available commands'
+export const description = 'Lists available commands';
 
-export const triggers = ['help']
+export const triggers = ['help'];

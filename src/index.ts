@@ -9,7 +9,7 @@ import { notifyGeneralChannel } from './notifyGeneralChannel';
 const client: Client = new Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
 
 // client is ready
-client.once('ready', () => console.log('Ready LOCAL!'));
+client.once('ready', () => console.info('Ready LOCAL!'));
 
 // bot actions
 client.on('channelCreate', notifyGeneralChannel);
