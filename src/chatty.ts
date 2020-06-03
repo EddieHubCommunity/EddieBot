@@ -1,11 +1,11 @@
-import { Message } from "discord.js";
+import { Message } from 'discord.js';
 
-let stats: { [ key: string ]: { messageCount: number }} = {};
+const stats: { [key: string]: { messageCount: number } } = {};
 
 export const chatty = async (message: Message) => {
     const prefix = '!';
-	if (message.content.startsWith(prefix) || message.author.bot) {
-		return;
+    if (message.content.startsWith(prefix) || message.author.bot) {
+        return;
     }
 
     if (message.member!.partial) {
@@ -18,11 +18,11 @@ export const chatty = async (message: Message) => {
         stats[userId].messageCount++;
     } catch {
         stats[userId] = {
-            messageCount: 1
+            messageCount: 1,
         };
     }
 
-    console.log(stats);
+    // console.log(stats);
 
     // @TODO: save status in DB
-}
+};
