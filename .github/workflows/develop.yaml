@@ -22,8 +22,11 @@ jobs:
       with:
         node-version: '10.x'
 
-    - name: Install deps and build project
-      run: |
-        npm install
-        npm run lint
-        npm run build
+    - name: Install deps
+      run: npm install
+
+    - name: Lint project
+      run: npm run lint
+
+    - name: Build project
+      run: npm run build
