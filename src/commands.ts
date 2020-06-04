@@ -10,8 +10,8 @@ export const commands = async (client: Client, message: Message) => {
         return;
     }
 
-    const args = message.content.slice(COMMAND_PREFIX.length).split(/ +/);
-    const command = args.shift()!.toLowerCase();
+    const args = message.content.slice(COMMAND_PREFIX.length);
+    const command = args.split(/ +/).shift()!.toLowerCase();
 
     const embed = defaultEmbed();
 
@@ -19,5 +19,5 @@ export const commands = async (client: Client, message: Message) => {
         .find(({ triggers }) => triggers
             .find((trigger) => trigger === command)) || { command: fallback };
 
-    await message.channel.send(await matching.command(client, embed));
+    await message.channel.send(await matching.command(args.slice(command.length + 1), client, embed));
 };

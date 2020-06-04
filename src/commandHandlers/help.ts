@@ -5,16 +5,16 @@ import commandList from './index';
 
 const { COMMAND_PREFIX } = config;
 
-export const command = async (client: Client, embed: MessageEmbed) => {
-  embed.setTitle('Help commands').setDescription('Lists the command available');
+export const command = async (arg: string, client: Client, embed: MessageEmbed) => {
+    embed
+        .setTitle('Help commands')
+        .setDescription('Lists the command available');
 
-  commandList.forEach((commandItem) => {
-    const mainTrigger = `${COMMAND_PREFIX}${commandItem.triggers[0]}`;
+    commandList
+        .forEach((commandItem) => embed
+                                    .addField(`${COMMAND_PREFIX}${commandItem.triggers[0]}`, commandItem.description, true));
 
-    embed.addField(mainTrigger, commandItem.description, true);
-  });
-
-  return embed;
+    return embed;
 };
 
 export const description = 'Lists available commands';
