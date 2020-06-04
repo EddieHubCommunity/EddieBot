@@ -1,6 +1,7 @@
 import { Message, MessageEmbed } from "discord.js";
+import { StatsService } from "./stats/statsService";
 
-export const commands = (message: Message) => {
+export const commands = async (message: Message, statsService: StatsService) => {
 	const prefix = '!';
 	if (!message.content.startsWith(prefix) || message.author.bot) {
 		return;
@@ -40,6 +41,15 @@ export const commands = (message: Message) => {
 				.addField('Full details availabe on GitHub repo', 'https://github.com/eddiejaoude/EddieBot/blob/master/CODE_OF_CONDUCT.md', true)
 			break;
 
+		case 'stats':
+			const memberCount = await statsService.getServerMemberCount();
+			const totalMessages = await statsService.getServerTotalMessages();
+			embed
+				.setTitle('Server stats')
+				.addField('total users', memberCount)
+				.addField('total messages', totalMessages)
+			break;
+	
 		default:
 			embed
 				.setTitle('ERROR: ooops...command not found')
