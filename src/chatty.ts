@@ -1,10 +1,13 @@
 import { Message } from 'discord.js';
 
+import config from './config';
+
+const { COMMAND_PREFIX } = config;
+
 const stats: { [key: string]: { messageCount: number } } = {};
 
 export const chatty = async (message: Message) => {
-    const prefix = '!';
-    if (message.content.startsWith(prefix) || message.author.bot) {
+    if (message.content.startsWith(COMMAND_PREFIX) || message.author.bot) {
         return;
     }
 
