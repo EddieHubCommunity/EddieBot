@@ -22,7 +22,7 @@ Discord bot for Eddie Jaoude's Discord server
 1. Clone the project or your fork (if you plan to make changes use your fork)
 2. Install dependencies by running the command `npm install`
 
-## Run the project locally on Mac and Linux using below command 
+## Run the project locally on Mac and Linux using below command
 1. `DISCORD_TOKEN=<GET YOUR DISCORD TOKEN> GENERAL_CHANNEL_ID=<GET YOUR GENERAL CHANNEL ID> DISCORD_SERVER_ID=<YOUR SERVER_ID> npm run start:local`
 
 ## Run on Windows using below commands
@@ -30,3 +30,5 @@ Discord bot for Eddie Jaoude's Discord server
 2. `set GENERAL_CHANNEL_ID=<GET YOUR GENERAL CHANNEL ID>`
 2. `set DISCORD_SERVER_ID=<YOUR SERVER_ID>`
 3. `npm run start:local`
+
+Join our discord community [here](https://discord.gg/jZQs6Wu)
