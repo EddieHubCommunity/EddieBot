@@ -1,11 +1,11 @@
-import { Client, MessageEmbed } from 'discord.js';
+import { MessageEmbed } from 'discord.js';
 
 import config from '../config';
 import commandList from './index';
 
 const { COMMAND_PREFIX } = config;
 
-export const command = async (arg: string, client: Client, embed: MessageEmbed) => {
+export const command = async (arg: string, embed: MessageEmbed) => {
     embed
         .setTitle('Help commands')
         .setDescription('Lists the command available');

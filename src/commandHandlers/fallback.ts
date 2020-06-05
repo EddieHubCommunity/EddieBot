@@ -1,10 +1,10 @@
-import { Client, MessageEmbed } from 'discord.js';
+import { MessageEmbed } from 'discord.js';
 
 import config from '../config';
 
 const { COMMAND_PREFIX } = config;
 
-export const fallback = async (arg: string, client: Client, embed: MessageEmbed) => {
+export const fallback = async (arg: string, embed: MessageEmbed) => {
   return embed
     .setTitle('ERROR: ooops...command not found')
     .setDescription(`Try using the ${COMMAND_PREFIX}help command.`);

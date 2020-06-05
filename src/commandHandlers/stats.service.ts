@@ -1,14 +1,19 @@
 import { Client, TextChannel, Channel } from 'discord.js';
 
+import { client } from '../client';
+
+export interface StatsServiceInterface {
+    getServerMemberCount(): Promise<number>;
+    getServerTotalMessages(): Promise<number>;
+    getServerTotalReactions(): Promise<number>;
+}
+
 /**
  * Uses the Discord API to implement the StatsService interface.
  */
-export class StatsService {
-    private client: Client;
+class StatsService implements StatsServiceInterface {
 
-    constructor(client: Client) {
-        this.client = client;
-    }
+    constructor(private discordClient: Client) {}
 
     /**
      * @returns the number of members in the server configured by the environment variables or 0 if there was an error
@@ -20,7 +25,7 @@ export class StatsService {
             return 0;
         }
 
-        const guild = this.client.guilds.cache.get(guildKey);
+        const guild = this.discordClient.guilds.cache.get(guildKey);
         if (!guild) {
             console.error('ERROR: Couldn\'t get member count! The guild with the configured DISCORD_SERVER_ID env. variable doesn\'t exist');
             return 0;
@@ -37,7 +42,7 @@ export class StatsService {
     async getServerTotalMessages(): Promise<number> {
         try {
             // Fetch in parallel the messages from all text channels
-            const messagePromises = this.client.channels.cache
+            const messagePromises = this.discordClient.channels.cache
                 .filter((ch: Channel) => ch instanceof TextChannel)
                 .map((channel: TextChannel) => channel.messages.fetch());
 
@@ -54,3 +59,5 @@ export class StatsService {
         return 0;
     }
 }
+
+export const statsService = new StatsService(client);

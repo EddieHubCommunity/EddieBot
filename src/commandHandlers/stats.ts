@@ -1,9 +1,8 @@
-import { Client, MessageEmbed } from 'discord.js';
+import { MessageEmbed } from 'discord.js';
 
-import { StatsService } from './stats.service';
+import { statsService } from './stats.service';
 
-export const command = async (arg: string, client: Client, embed: MessageEmbed) => {
-    const statsService = new StatsService(client)
+export const command = async (arg: string, embed: MessageEmbed) => {
 
     const memberCount = await statsService.getServerMemberCount();
     const totalMessages = await statsService.getServerTotalMessages();

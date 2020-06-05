@@ -1,11 +1,11 @@
-import { Client, Message } from 'discord.js';
+import { Message } from 'discord.js';
 
 import commandList, { fallback } from './commandHandlers';
 import config from './config';
 
 const { COMMAND_PREFIX, defaultEmbed } = config;
 
-export const commands = async (client: Client, message: Message) => {
+export const commands = async (message: Message) => {
     if (!message.content.startsWith(COMMAND_PREFIX) || message.author.bot) {
         return;
     }
@@ -19,5 +19,5 @@ export const commands = async (client: Client, message: Message) => {
         .find(({ triggers }) => triggers
             .find((trigger) => trigger === command)) || { command: fallback };
 
-    await message.channel.send(await matching.command(args.slice(command.length + 1), client, embed));
+    message.channel.send(await matching.command(args.slice(command.length + 1), embed));
 };
