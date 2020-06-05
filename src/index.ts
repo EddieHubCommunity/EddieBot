@@ -1,11 +1,24 @@
 import { client } from './client';
+import config from './config';
 import { commands } from './commands';
 import { chatty } from './chatty';
 import { guildMemberAdd } from './guildMemberAdd';
 import { messageReactionAdd } from './messageReactionAdd';
 import { notifyGeneralChannel } from './notifyGeneralChannel';
 
-client.once('ready', () => console.info('Ready LOCAL!'));
+client.once('ready', () => {
+    console.info('Ready LOCAL!');
+
+    if (client.user) {
+        client.user.setPresence({
+            activity: {
+                name: `${config.COMMAND_PREFIX}help for help`,
+                type: 'WATCHING',
+            },
+            status: 'online'
+        });
+    }
+});
 
 // bot actions
 client.on('channelCreate', notifyGeneralChannel);
