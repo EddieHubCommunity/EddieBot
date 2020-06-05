@@ -1,4 +1,5 @@
 import { client } from './client';
+import config from './config';
 import { commands } from './commands';
 import { chatty } from './chatty';
 import { guildMemberAdd } from './guildMemberAdd';
