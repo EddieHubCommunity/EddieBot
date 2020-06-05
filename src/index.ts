@@ -1,15 +1,10 @@
-import { Client } from 'discord.js';
+import { client } from './client';
 import { commands } from './commands';
-import config from './config';
+import { chatty } from './chatty';
 import { guildMemberAdd } from './guildMemberAdd';
 import { messageReactionAdd } from './messageReactionAdd';
-import { chatty } from './chatty';
 import { notifyGeneralChannel } from './notifyGeneralChannel';
 
-// initial client with params
-const client: Client = new Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
-
-// client is ready
 client.once('ready', () => {
     console.info('Ready LOCAL!');
 

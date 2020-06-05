@@ -5,19 +5,19 @@ import config from './config';
 
 const { COMMAND_PREFIX, defaultEmbed } = config;
 
-export const commands = (message: Message) => {
-  if (!message.content.startsWith(COMMAND_PREFIX) || message.author.bot) {
-    return;
-  }
+export const commands = async (message: Message) => {
+    if (!message.content.startsWith(COMMAND_PREFIX) || message.author.bot) {
+        return;
+    }
 
-  const args = message.content.slice(COMMAND_PREFIX.length).split(/ +/);
-  const command = args.shift()!.toLowerCase();
+    const args = message.content.slice(COMMAND_PREFIX.length).split(/ +/);
+    const command = args.shift()!.toLowerCase();
 
-  const embed = defaultEmbed();
+    const embed = defaultEmbed();
 
-  const matching = commandList
-    .find(({ triggers }) => triggers
-      .find((trigger) => trigger === command)) || { command: fallback };
+    const matching = commandList
+        .find(({ triggers }) => triggers
+            .find((trigger) => trigger === command)) || { command: fallback };
 
-  message.channel.send(matching.command(embed));
+    message.channel.send(await matching.command(embed));
 };

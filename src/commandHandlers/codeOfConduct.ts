@@ -1,6 +1,6 @@
 import { MessageEmbed } from 'discord.js';
 
-export const command = (embed: MessageEmbed) => {
+export const command = async (embed: MessageEmbed) => {
   return embed
     .setTitle('Code of Conduct (CoC) - Contributor Covenant Code of Conduct')
     .setDescription(`We as members, contributors, and leaders pledge to make participation in our
