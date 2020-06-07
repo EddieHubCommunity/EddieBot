@@ -18,4 +18,4 @@ export const description = 'Server status';
 
 export const triggers = ['stats'];
 
-export const usage = triggers[0]
+export const usage = triggers[0];

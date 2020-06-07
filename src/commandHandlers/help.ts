@@ -21,4 +21,4 @@ export const description = 'Lists available commands';
 
 export const triggers = ['help'];
 
-export const usage = triggers[0]
+export const usage = triggers[0];
