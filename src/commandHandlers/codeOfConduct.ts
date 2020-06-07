@@ -23,3 +23,5 @@ export const command = async (arg: string, embed: MessageEmbed) => {
 export const description = 'Code Of Conduct';
 
 export const triggers = ['coc', 'codeofconduct'];
+
+export const usage = triggers[0]

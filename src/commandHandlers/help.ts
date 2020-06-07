@@ -12,7 +12,7 @@ export const command = async (arg: string, embed: MessageEmbed) => {
 
     commandList
         .forEach((commandItem) => embed
-                                    .addField(`${COMMAND_PREFIX}${commandItem.triggers[0]}`, commandItem.description, true));
+            .addField(`${COMMAND_PREFIX}${commandItem.triggers[0]}`, `${commandItem.description}\nUsage: ${COMMAND_PREFIX}${commandItem.usage}`, false));
 
     return embed;
 };
@@ -20,3 +20,5 @@ export const command = async (arg: string, embed: MessageEmbed) => {
 export const description = 'Lists available commands';
 
 export const triggers = ['help'];
+
+export const usage = triggers[0]
