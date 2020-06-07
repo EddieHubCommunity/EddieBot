@@ -11,6 +11,7 @@ Discord bot for Eddie Jaoude's Discord server
    - [Where can I find my User/Server/Message ID?](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
 - ID of your discord server, to get your server ID follow these steps:
    - First make sure you have **Developer Mode** enabled on your Discord by visiting your Discord settings and going to Appearance
+   
    ![user settings button](https://user-images.githubusercontent.com/18630253/83634306-3458c180-a59a-11ea-8a96-15e9751b9d08.png)
    ![developer mode toggle button](https://user-images.githubusercontent.com/18630253/83634441-7a158a00-a59a-11ea-919c-2d7384d724f7.png)
 
