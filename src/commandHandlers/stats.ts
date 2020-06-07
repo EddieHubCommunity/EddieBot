@@ -17,3 +17,5 @@ export const command = async (arg: string, embed: MessageEmbed) => {
 export const description = 'Server status';
 
 export const triggers = ['stats'];
+
+export const usage = triggers[0]

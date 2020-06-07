@@ -20,3 +20,5 @@ export const command = async (arg: string, embed: MessageEmbed) => {
 export const description = 'Share your standup notes with the community. What you did yesterday and what you plan to do today, any blockers?';
 
 export const triggers = ['standup'];
+
+export const usage = `${triggers[0]} <notes from yesterday> || <notes for today>`
