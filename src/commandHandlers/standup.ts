@@ -8,6 +8,17 @@ import { MessageEmbed } from 'discord.js';
  */
 export const command = async (arg: string, embed: MessageEmbed) => {
     const args = arg.split('||');
+
+    if (!args[0] || !args[1]) {
+        embed
+        .setTitle('Standup (error)')
+        .setDescription('What I did yesterday and what I will do today')
+        .addField('ERROR', 'Missing arguments')
+        .addField('User', usage)
+
+        return embed;
+    }
+
     embed
         .setTitle('Standup')
         .setDescription('What I did yesterday and what I will do today')
