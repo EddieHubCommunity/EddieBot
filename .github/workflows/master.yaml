@@ -34,7 +34,7 @@ jobs:
     - uses: azure/appservice-settings@v1
       with:
         app-name: ${{ env.APP_NAME }}
-        app-settings-json: '[{ "name": "DISCORD_TOKEN", "value": "${{ secrets.DISCORD_TOKEN }}"}]'
+        app-settings-json: '[{ "name": "DISCORD_TOKEN", "value": "${{ secrets.DISCORD_TOKEN }}"},{ "name": "DISCORD_SERVER_ID", "value": "${{ secrets.DISCORD_SERVER_ID }}"}]'
       id: settings
     - run: az logout
 
