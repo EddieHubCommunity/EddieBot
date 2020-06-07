@@ -14,7 +14,7 @@ export const command = async (arg: string, embed: MessageEmbed) => {
         .setTitle('Standup (error)')
         .setDescription('What I did yesterday and what I will do today')
         .addField('ERROR', 'Missing arguments')
-        .addField('User', usage)
+        .addField('Usage', usage)
 
         return embed;
     }
