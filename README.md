@@ -33,3 +33,40 @@ Discord bot for Eddie Jaoude's Discord server
 3. `npm run start:local`
 
 Join our discord community [here](https://discord.gg/jZQs6Wu)
+
+---
+
+## How to add a new command to the bot
+All the commands are located in the folder `src/commandHandlers` so that each command has its own file. They are then executed in `src/commands.ts` when a user types a command with the configured command prefix in [config.ts](https://github.com/EddieJaoudeCommunity/EddieBot/blob/develop/src/config.ts#L4). To **create a new command**, follow these steps:
+1. **Create a new file** on the `/commandHandlers` folder with the name of the new command.
+ _Note: If you need to, use **camel case** for the file name, like_ `codeOfConduct.ts`
+2. On this file you must **export a function** and **three variables**:
+  - `command` - the function that executes the command. The **signature** of this function is the following:
+  ```ts
+   (arg: string, embed: MessageEmbed, message: Message): Promise<MessageEmbed>
+  ```
+
+   The **arg** parameter contains the arguments given to the command in a string.
+   The **embed** parameter is a [MessageEmbed](https://discord.js.org/#/docs/main/stable/class/MessageEmbed) instance, and it represents the message that is returned by the bot, in response to the user. **The command should return this parameter or a new instance** with an appropriate message to the user.
+   The **message** parameter is a [Message](https://discord.js.org/#/docs/main/stable/class/Message) instance that represents the message inputted  by the user to execute a given command.
+
+  - `description` - a string with a more detailed description of the command. Used for example by the [help command](https://github.com/EddieJaoudeCommunity/EddieBot/blob/develop/src/commandHandlers/help.ts)
+  - `triggers` - a string array with the values that trigger this command. If the user types the configured command prefix followed by one of these values, the command **should be executed**
+  - `usage` - a string explaining how the command is used (e.g. specifying the number of arguments and their separator)
+3. After creating that file, you have to import it and add it to the exported list of commands on the [index.ts](https://github.com/EddieJaoudeCommunity/EddieBot/blob/develop/src/commandHandlers/index.ts) file located in this folder. Here is an example of adding the `standup` command:
+```diff
+import * as codeOfConduct from './codeOfConduct';
+import * as help from './help';
++ import * as standup from './standup';
+import * as stats from './stats';
+
+- export default [codeOfConduct, help, stats];
++ export default [codeOfConduct, help, standup, stats];
+
+export { fallback } from './fallback';
+```
+
+<br>
+
+If you are having trouble creating a new command, here is an [example](https://github.com/EddieJaoudeCommunity/EddieBot/blob/develop/src/commandHandlers/standup.ts).
+Feel free to [create an issue](https://github.com/EddieJaoudeCommunity/EddieBot/issues) or make a PR with a new command 😃. Please see our [Contributing](./.github/CONTRIBUTING.md) file first, before making new commits or opening a PR. We appreciate it ❤️!
