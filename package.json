@@ -21,10 +21,13 @@
   },
   "homepage": "https://github.com/eddiejaoude/EddieBot#readme",
   "dependencies": {
-    "discord.js": "^12.1.1"
+    "discord.js": "^12.1.1",
+    "pino": "^6.3.2",
+    "pino-pretty": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^13.11.1",
+    "@types/pino": "^6.0.1",
     "@types/ws": "^7.2.4",
     "tslint": "^6.1.2",
     "typescript": "3.5.3"

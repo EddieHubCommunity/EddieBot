@@ -4,6 +4,7 @@ export default {
   COMMAND_PREFIX: '$',
   INTRO_CHANNEL: 'introductions',
   GENERAL_CHANNEL: 'general',
+  BOT_CHANNEL: '700340820162641962',
   REACTIONS_COUNT: 5,
   ROLE: {
     HIGH_VALUE: 'high value'
