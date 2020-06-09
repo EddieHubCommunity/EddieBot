@@ -4,7 +4,7 @@ export default {
   COMMAND_PREFIX: '$',
   INTRO_CHANNEL: 'introductions',
   GENERAL_CHANNEL: 'general',
-  BOT_CHANNEL: '700340820162641962',
+  BOT_CHANNEL_ID: process.env.DISCORD_BOT_CHANNEL_ID,
   REACTIONS_COUNT: 5,
   ROLE: {
     HIGH_VALUE: 'high value'

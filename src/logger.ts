@@ -9,15 +9,17 @@ const logger = pino({
 });
 
 const discordLog = async (type: string, message: string, details?: string) => {
-    const channel = <TextChannel> client.channels.cache.get(config.BOT_CHANNEL);
-
-    if (!channel) {
-        return logger.error('Channel not found');
-    };
-
     logger[type](message, details);
 
-    await channel.send(`${type.toUpperCase()}: ${message} - ${details}`);
+    if (config.BOT_CHANNEL_ID) {
+        const channel = <TextChannel> client.channels.cache.get(config.BOT_CHANNEL_ID);
+
+        if (!channel) {
+            return logger.error('Channel not found');
+        };
+
+        await channel.send(`${type.toUpperCase()}: ${message} - ${details}`);
+    }
 }
 
 export const log = {
