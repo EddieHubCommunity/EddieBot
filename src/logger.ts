@@ -5,7 +5,8 @@ import { client } from './client';
 import config from './config';
 
 const logger = pino({
-    prettyPrint: { colorize: true }
+    prettyPrint: { colorize: true },
+    level: process.env.LOG_LEVEL || 'info'
 });
 
 const discordLog = async (type: string, message: string, details?: string) => {
