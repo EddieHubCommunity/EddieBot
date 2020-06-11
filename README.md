@@ -11,7 +11,7 @@ Discord bot for Eddie Jaoude's Discord server
    - [Where can I find my User/Server/Message ID?](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
 - ID of your discord server, to get your server ID follow these steps:
    - First make sure you have **Developer Mode** enabled on your Discord by visiting your Discord settings and going to Appearance
-   
+
    ![user settings button](https://user-images.githubusercontent.com/18630253/83634306-3458c180-a59a-11ea-8a96-15e9751b9d08.png)
    ![developer mode toggle button](https://user-images.githubusercontent.com/18630253/83634441-7a158a00-a59a-11ea-919c-2d7384d724f7.png)
 
@@ -23,14 +23,45 @@ Discord bot for Eddie Jaoude's Discord server
 1. Clone the project or your fork (if you plan to make changes use your fork)
 2. Install dependencies by running the command `npm install`
 
-## Run the project locally on Mac and Linux using below command
-1. `DISCORD_TOKEN=<GET YOUR DISCORD TOKEN> GENERAL_CHANNEL_ID=<GET YOUR GENERAL CHANNEL ID> DISCORD_SERVER_ID=<YOUR SERVER_ID> npm run start:local`
+### Run the project locally on Mac and Linux using below command
+1. `DISCORD_TOKEN=<GET YOUR DISCORD TOKEN> GENERAL_CHANNEL_ID=<GET YOUR GENERAL CHANNEL ID> DISCORD_SERVER_ID=<YOUR SERVER_ID> DISCORD_BOT_CHANNEL_ID=<ID> npm run start:local`
 
-## Run on Windows using below commands
+### Run on Windows using below commands
 1. `set DISCORD_TOKEN=<GET YOUR DISCORD TOKEN>`
 2. `set GENERAL_CHANNEL_ID=<GET YOUR GENERAL CHANNEL ID>`
 2. `set DISCORD_SERVER_ID=<YOUR SERVER_ID>`
+2. `set DISCORD_BOT_CHANNEL_ID=<ID>`
 3. `npm run start:local`
+
+### Logging
+
+Logging will happen to the console as well as to the Discord `bot` channel.
+
+1. Include the logger object...
+
+```typescript
+import { log } from './logger';
+```
+
+2. Usage
+
+```typescript
+log.info('Message', 'Details');
+```
+or
+```typescript
+log.warn('Message', 'Details');
+```
+or
+```typescript
+log.error('Message', 'Details');
+```
+or
+```typescript
+log.fatal('Message', 'Details');
+```
+
+## Socials
 
 Join our discord community [here](https://discord.gg/jZQs6Wu)
 

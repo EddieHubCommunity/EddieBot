@@ -3,11 +3,12 @@ import config from './config';
 import { commands } from './commands';
 import { chatty } from './chatty';
 import { guildMemberAdd } from './guildMemberAdd';
+import { log } from './logger';
 import { messageReactionAdd } from './messageReactionAdd';
 import { notifyGeneralChannel } from './notifyGeneralChannel';
 
 client.once('ready', () => {
-    console.info('Ready LOCAL!');
+    log.info('Online!', 'Lets get started...');
 
     if (client.user) {
         client.user.setPresence({
