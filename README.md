@@ -61,6 +61,26 @@ or
 log.fatal('Message', 'Details');
 ```
 
+### [Discord Gateway Intents](https://discordjs.guide/popular-topics/intents.html)
+If you want the bot to receive a **new type of event**, you might need to add the required intent in `client.ts` to receive that event. Have a look at [discord.js docs](https://discord.js.org/#/docs/main/stable/class/Intents?scrollTo=s-FLAGS) for the list of intents.
+
+#### Example adding ban capabilities to moderators:
+1. Add the `GUILD_BANS` intent in `client.ts`:
+```ts
+export const client = new Client({
+    partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
+    ws: { intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS', 'GUILD_BANS', PrivilegedIntents.GUILD_MEMBERS] }
+});
+```
+
+2. Add an event handler function for the events you want in `index.ts`:
+```ts
+client.on('guildBanAdd', guild => guildBanAdd(guild));
+```
+
+_Note: We are using the `GUILD_MEMBERS` **privileged intent** to receive the `guildMemberAdd` event. To know more about Privileged Intents check the [official docs](https://discord.com/developers/docs/topics/gateway#privileged-intents)_.
+
+
 ## Socials
 
 Join our discord community [here](https://discord.gg/jZQs6Wu)
