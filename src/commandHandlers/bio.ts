@@ -27,13 +27,12 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
             .collection('users')
             .doc(mention ? mention!.id : message.author.id)
             .get();
+        const data = doc.data();
 
-        if (!doc.data()) {
+        if (data) {
+            Object.entries((data).bio).forEach(([key, value]) => embed.addField(key.toUpperCase(), value));
+        } else {
             embed.addField('Description', 'No bio details found');
-        }
-
-        if (doc.data()) {
-            Object.entries((doc.data()!).bio).forEach(([key, value]) => embed.addField(key.toUpperCase(), value));
         }
     }
 
