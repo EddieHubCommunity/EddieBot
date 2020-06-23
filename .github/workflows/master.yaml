@@ -1,6 +1,3 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
 name: Deploy to production
 
 on:
@@ -34,7 +31,7 @@ jobs:
     - uses: azure/appservice-settings@v1
       with:
         app-name: ${{ env.APP_NAME }}
-        app-settings-json: '[{ "name": "DISCORD_TOKEN", "value": "${{ secrets.DISCORD_TOKEN }}"},{ "name": "DISCORD_SERVER_ID", "value": "${{ secrets.DISCORD_SERVER_ID }}"},{ "name": "DISCORD_BOT_CHANNEL_ID", "value": "${{ secrets.DISCORD_BOT_CHANNEL_ID }}"}]'
+        app-settings-json: '[{ "name": "DISCORD_TOKEN", "value": "${{ secrets.DISCORD_TOKEN }}"},{ "name": "DISCORD_SERVER_ID", "value": "${{ secrets.DISCORD_SERVER_ID }}"},{ "name": "DISCORD_BOT_CHANNEL_ID", "value": "${{ secrets.DISCORD_BOT_CHANNEL_ID }}"},{ "name": "FIREBASE_KEY", "value": "${{ secrets.FIREBASE_KEY }}"}]'
       id: settings
     - run: az logout
 
