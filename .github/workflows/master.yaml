@@ -25,7 +25,13 @@ jobs:
         npm run lint
         npm run build
 
-    - uses: azure/login@v1
+    - name: Deploy firebase DB rules and indexes
+      run: |
+        npm install -g firebase-tools
+        firebase deploy --only firestore --token ${{ secrets.FIREBASE_TOKEN }}
+
+    - name: Set Azure envars
+      uses: azure/login@v1
       with:
         creds: '${{ secrets.AZURE_CREDENTIALS }}'
     - uses: azure/appservice-settings@v1
@@ -35,7 +41,7 @@ jobs:
       id: settings
     - run: az logout
 
-    - name: 'Run Azure webapp deploy action using publish profile credentials'
+    - name: Run Azure webapp deploy action using publish profile credentials
       uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ env.APP_NAME }}
