@@ -1,4 +1,5 @@
 import { MessageEmbed, Message } from 'discord.js';
+import * as firebase from 'firebase-admin';
 
 import config from '../config';
 import { db } from '../firebase';
@@ -38,16 +39,22 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
 
     // set information
     if (args[1]) {
+        const field = args[0].toLowerCase();
         const data = args[1].toLowerCase();
+
         embed.setDescription('Updating your bio')
             .addField(args[0], data);
         await db
             .collection('users')
             .doc(message.author.id)
             .set({
+                avatar: message.author.avatarURL(),
+                username: message.author.username,
+                joinedAt: firebase.firestore.Timestamp.fromDate(message.author.createdAt),
                 bio: {
-                    [data]: args[1]
-                }
+                    [field]: args[1]
+                },
+                updateAt: firebase.firestore.FieldValue.serverTimestamp()
             }, { merge: true });
     }
 
