@@ -93,11 +93,6 @@ client.on('guildBanAdd', guild => guildBanAdd(guild));
 
 _Note: We are using the `GUILD_MEMBERS` **privileged intent** to receive the `guildMemberAdd` event. To know more about Privileged Intents check the [official docs](https://discord.com/developers/docs/topics/gateway#privileged-intents)_.
 
-
-## Socials
-
-Join our discord community [here](https://discord.gg/jZQs6Wu)
-
 ---
 
 ## How to add a new command to the bot
@@ -135,7 +130,34 @@ import * as stats from './stats';
 export { fallback } from './fallback';
 ```
 
+## Database
+
+Using Firestore from Firebase.
+
+[![](https://mermaid.ink/img/eyJjb2RlIjoiY2xhc3NEaWFncmFtXG5cdFVzZXIgLS0gQmlvIDogTmVzdGVkXG5cblx0VXNlcjogYmlvXG5cblx0QmlvOiBkZXNjcmlwdGlvblxuXHRCaW86IHR3aXR0ZXJcblx0QmlvOiBnaXRodWJcblx0QmlvOiB5b3V0dWJlXG5cdEJpbzogbGlua2VkaW5cblxuXHRcdFx0XHRcdCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiY2xhc3NEaWFncmFtXG5cdFVzZXIgLS0gQmlvIDogTmVzdGVkXG5cblx0VXNlcjogYmlvXG5cblx0QmlvOiBkZXNjcmlwdGlvblxuXHRCaW86IHR3aXR0ZXJcblx0QmlvOiBnaXRodWJcblx0QmlvOiB5b3V0dWJlXG5cdEJpbzogbGlua2VkaW5cblxuXHRcdFx0XHRcdCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9)
+
+Source
+
+```
+classDiagram
+	User -- Bio : Nested
+
+	User: bio
+
+	Bio: description
+	Bio: twitter
+	Bio: github
+	Bio: youtube
+	Bio: linkedin
+```
+
 ---
 
 If you are having trouble creating a new command, here is an [example](https://github.com/EddieJaoudeCommunity/EddieBot/blob/develop/src/commandHandlers/standup.ts).
 Feel free to [create an issue](https://github.com/EddieJaoudeCommunity/EddieBot/issues) or make a PR with a new command 😃. Please see our [Contributing](./.github/CONTRIBUTING.md) file first, before making new commits or opening a PR. We appreciate it ❤️!
+
+---
+
+## Socials
+
+Join our discord community [here](https://discord.gg/jZQs6Wu)
