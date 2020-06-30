@@ -3,8 +3,8 @@ import * as codeOfConduct from './codeOfConduct';
 import * as help from './help';
 import * as standup from './standup';
 import * as stats from './stats';
-import * as opensource from './opensource';
+import * as tips from './tips/tips';
 
-export default [bio, codeOfConduct, help, opensource, standup, stats];
+export default [bio, codeOfConduct, help, standup, stats, tips];
 
 export { fallback } from './fallback';
