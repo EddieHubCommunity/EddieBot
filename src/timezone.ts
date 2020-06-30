@@ -13,11 +13,7 @@ export const timezone = async (message: Message) => {
     const match = message.content.match(/([\d]{1,2})([:\d]{3})?[\s]?(pm|am|AM|PM)?\b[\s]([a-zA-Z]{3})?\b/);
 
     if (match) {
-        const mentioned = match[0];
-        const hour = match[1];
-        const minutes = match[2];
-        const dayNight = match[3];
-        const zone = match[4];
+        const [mentioned, hour, minutes, dayNight, zone] = match;
 
         const proposedZone = TIMEZONES.find((item) => item.abbr === zone);
 
