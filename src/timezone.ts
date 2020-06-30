@@ -5,6 +5,13 @@ import config from './config';
 
 const { defaultEmbed, TIMEZONES } = config;
 
+/**
+ * Runs for every message
+ * and checks for time and zone "1pm UTC" or "1:30pm UTC"
+ * and replies with other options from the config
+ *
+ * @param message
+ */
 export const timezone = async (message: Message) => {
     if (message.author.bot) {
         return;
@@ -19,7 +26,6 @@ export const timezone = async (message: Message) => {
 
         if (proposedZone) {
             const initial = minutes ? moment.tz(`${hour}${minutes} ${dayNight}`, 'h:mm A', proposedZone.zone) : moment.tz(`${hour}${minutes} ${dayNight}`, 'h A', proposedZone.zone);
-
             const embed = defaultEmbed().setTitle('Popular timezones');
             const availableZones = TIMEZONES.filter((item) => item.abbr !== zone);
 
