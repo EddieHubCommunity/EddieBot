@@ -3,10 +3,10 @@ import { MessageEmbed } from 'discord.js';
 import { getOpenSourceResources, getOpenSourceTips } from './opensource.service';
 
 /**
- * This command shows a curated list of tips and resources that help members of the community to contribute to
- * open-source software (OSS).
+ * Set the given embed message with a curated list of tips and resources that help members of the community to
+ * contribute to open-source software (OSS).
  */
-export const command = async (arg: string, embed: MessageEmbed) => {
+export const createTip = async (embed: MessageEmbed) => {
     const tips = await getOpenSourceTips();
     const resources = await getOpenSourceResources();
     embed
@@ -17,9 +17,3 @@ export const command = async (arg: string, embed: MessageEmbed) => {
 
     return embed;
 };
-
-export const description = 'Open source tips and resources to help you contribute to OSS.';
-
-export const triggers = ['oss', 'opensource', 'openSource'];
-
-export const usage = triggers[0];
