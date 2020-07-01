@@ -49,6 +49,10 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
                     [data]: args[1]
                 }
             }, { merge: true });
+
+        const role = message.guild!.roles.cache.find((r) => r.name === config.ROLE.BIO);
+        const member = message.member;
+        await member!.roles.add(role!);
     }
 
     embed
