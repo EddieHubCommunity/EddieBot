@@ -23,6 +23,7 @@
   "dependencies": {
     "discord.js": "^12.1.1",
     "firebase-admin": "^8.12.1",
+    "moment-timezone": "^0.5.31",
     "pino": "^6.3.2",
     "pino-pretty": "^4.0.0"
   },
