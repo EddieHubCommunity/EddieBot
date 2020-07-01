@@ -8,7 +8,8 @@ export default {
   BOT_CHANNEL_ID: process.env.DISCORD_BOT_CHANNEL_ID,
   REACTIONS_COUNT: 5,
   ROLE: {
-    HIGH_VALUE: 'high value'
+    HIGH_VALUE: 'high value',
+    BIO: 'bio',
   },
   defaultEmbed: () => {
     return new MessageEmbed()
