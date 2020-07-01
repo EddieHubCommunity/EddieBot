@@ -16,4 +16,10 @@ export default {
       .setTimestamp()
       .setFooter('Our bot is Open Source, you can find it here https://github.com/eddiejaoude/EddieBot');
   },
+  TIMEZONES: [
+    { abbr: 'PDT', zone: 'America/Los_Angeles' },
+    { abbr: 'AEST', zone: 'Australia/Brisbane' },
+    { abbr: 'EEST', zone: 'Asia/Beirut' },
+    { abbr: 'UTC', zone: 'Europe/London' },
+  ]
 };
