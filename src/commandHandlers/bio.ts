@@ -56,6 +56,10 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
                 },
                 updateAt: firebase.firestore.FieldValue.serverTimestamp()
             }, { merge: true });
+
+        const role = message.guild!.roles.cache.find((r) => r.name === config.ROLE.BIO);
+        const member = message.member;
+        await member!.roles.add(role!);
     }
 
     embed

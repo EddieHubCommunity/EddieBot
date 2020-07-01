@@ -6,6 +6,7 @@ import { guildMemberAdd } from './guildMemberAdd';
 import { log } from './logger';
 import { messageReactionAdd } from './messageReactionAdd';
 import { notifyGeneralChannel } from './notifyGeneralChannel';
+import { timezone } from './timezone';
 
 client.once('ready', () => {
     log.info('Online!', 'Lets get started...');
@@ -26,6 +27,7 @@ client.on('channelCreate', notifyGeneralChannel);
 client.on('guildMemberAdd', (member) => guildMemberAdd(member));
 client.on('message', message => commands(message));
 client.on('message', message => chatty(message));
+client.on('message', message => timezone(message));
 client.on('messageReactionAdd', async (reaction) => messageReactionAdd(reaction))
 
 // bot authenticates with discord
