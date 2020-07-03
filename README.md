@@ -93,11 +93,6 @@ client.on('guildBanAdd', guild => guildBanAdd(guild));
 
 _Note: We are using the `GUILD_MEMBERS` **privileged intent** to receive the `guildMemberAdd` event. To know more about Privileged Intents check the [official docs](https://discord.com/developers/docs/topics/gateway#privileged-intents)_.
 
-
-## Socials
-
-Join our discord community [here](https://discord.gg/jZQs6Wu)
-
 ---
 
 ## How to add a new command to the bot
@@ -135,7 +130,38 @@ import * as stats from './stats';
 export { fallback } from './fallback';
 ```
 
+## Database
+
+Using Firestore from Firebase.
+
+[![](https://mermaid.ink/img/eyJjb2RlIjoiY2xhc3NEaWFncmFtXG5cdFVzZXIgLS0gQmlvIDogTmVzdGVkXG5cblx0VXNlcjogYmlvIChvYmplY3QpXG5cdFVzZXI6IGF2YXRhciAoc3RyaW5nKVxuXHRVc2VyOiBqb2luZWRBdCAoZGF0ZSlcblx0VXNlcjogdXBkYXRlZEF0IChkYXRlKVxuXHRVc2VyOiB1c2VybmFtZSAoc3RyaW5nKVxuXG5cdEJpbzogZGVzY3JpcHRpb25cblx0QmlvOiB0d2l0dGVyXG5cdEJpbzogZ2l0aHViXG5cdEJpbzogeW91dHViZVxuXHRCaW86IGxpbmtlZGluXG5cblx0XHRcdFx0XHQiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiY2xhc3NEaWFncmFtXG5cdFVzZXIgLS0gQmlvIDogTmVzdGVkXG5cblx0VXNlcjogYmlvIChvYmplY3QpXG5cdFVzZXI6IGF2YXRhciAoc3RyaW5nKVxuXHRVc2VyOiBqb2luZWRBdCAoZGF0ZSlcblx0VXNlcjogdXBkYXRlZEF0IChkYXRlKVxuXHRVc2VyOiB1c2VybmFtZSAoc3RyaW5nKVxuXG5cdEJpbzogZGVzY3JpcHRpb25cblx0QmlvOiB0d2l0dGVyXG5cdEJpbzogZ2l0aHViXG5cdEJpbzogeW91dHViZVxuXHRCaW86IGxpbmtlZGluXG5cblx0XHRcdFx0XHQiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)
+
+Source
+
+```
+classDiagram
+	User -- Bio : Nested
+
+	User: bio (object)
+	User: avatar (string)
+	User: joinedAt (date)
+	User: updatedAt (date)
+	User: username (string)
+
+	Bio: description
+	Bio: twitter
+	Bio: github
+	Bio: youtube
+	Bio: linkedin
+```
+
 ---
 
 If you are having trouble creating a new command, here is an [example](https://github.com/EddieJaoudeCommunity/EddieBot/blob/develop/src/commandHandlers/standup.ts).
 Feel free to [create an issue](https://github.com/EddieJaoudeCommunity/EddieBot/issues) or make a PR with a new command 😃. Please see our [Contributing](./.github/CONTRIBUTING.md) file first, before making new commits or opening a PR. We appreciate it ❤️!
+
+---
+
+## Socials
+
+Join our discord community [here](https://discord.gg/jZQs6Wu)
