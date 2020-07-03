@@ -1,7 +1,7 @@
 import { MessageEmbed } from 'discord.js';
 
 export default {
-  BIO: [ 'description', 'github', 'twitter', 'youtube', 'instagram', 'linkedin' ],
+  BIO: ['description', 'github', 'twitter', 'youtube', 'instagram', 'linkedin'],
   COMMAND_PREFIX: process.env.COMMAND_PREFIX || '$',
   INTRO_CHANNEL: 'introductions',
   GENERAL_CHANNEL: 'general',
@@ -22,5 +22,6 @@ export default {
     { abbr: 'AEST', zone: 'Australia/Brisbane' },
     { abbr: 'EEST', zone: 'Asia/Beirut' },
     { abbr: 'UTC', zone: 'Europe/London' },
+    { abbr: 'IST', zone: 'Asia/India' },
   ]
 };
