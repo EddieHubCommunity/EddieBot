@@ -22,6 +22,6 @@ export default {
     { abbr: 'AEST', zone: 'Australia/Brisbane' },
     { abbr: 'EEST', zone: 'Asia/Beirut' },
     { abbr: 'UTC', zone: 'Europe/London' },
-    { abbr: 'IST', zone: 'Asia/India' },
+    { abbr: 'IST', zone: 'Asia/Kolkata' },
   ]
 };
