@@ -25,3 +25,5 @@ export default {
     { abbr: 'IST', zone: 'Asia/Kolkata' },
   ]
 };
+
+export const selfAssignableRoles = []
