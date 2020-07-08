@@ -11,7 +11,7 @@ export const command = async (arg: string, embed: MessageEmbed) => {
     const rolesList = roles
         .filter(r => !r.name.includes('everyone')) // Filter the default role everyone has access to
         .map(discordRole =>  {
-            const role = Object.values(config.ROLE).find(role => role.name === discordRole.name);
+            const role = Object.values(config.ROLE).find(r => r.name === discordRole.name);
             const roleDescription = role ? `- ${role.description}` : '';
 
             return `\n• ${discordRole.toString()} ${roleDescription}`;
