@@ -1,6 +1,7 @@
 import { MessageEmbed } from 'discord.js';
 
 import { getRoles } from './guild.service';
+import config from '../config';
 
 /**
  * This command lists the available roles on the discord server
@@ -9,7 +10,12 @@ export const command = async (arg: string, embed: MessageEmbed) => {
     const roles = await getRoles();
     const rolesList = roles
         .filter(r => !r.name.includes('everyone')) // Filter the default role everyone has access to
-        .map(role => `\n• ${role.toString()}`);
+        .map(discordRole =>  {
+            const role = Object.values(config.ROLE).find(role => role.name === discordRole.name);
+            const roleDescription = role ? `- ${role.description}` : '';
+
+            return `\n• ${discordRole.toString()} ${roleDescription}`;
+        });
 
     embed
         .setTitle('Available Roles')

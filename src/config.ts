@@ -8,8 +8,14 @@ export default {
   BOT_CHANNEL_ID: process.env.DISCORD_BOT_CHANNEL_ID,
   REACTIONS_COUNT: 5,
   ROLE: {
-    HIGH_VALUE: 'high value',
-    BIO: 'bio',
+    HIGH_VALUE:  {
+      name: 'high value',
+      description: 'Members with this role have access to more commands to moderate the server (e.g. ban). You get assigned this role if you have a message with +5 reactions'
+    },
+    BIO:{
+      name: 'bio',
+      description: 'You get assigned this role once you set a biography with the "bio" command'
+    }
   },
   defaultEmbed: () => {
     return new MessageEmbed()
