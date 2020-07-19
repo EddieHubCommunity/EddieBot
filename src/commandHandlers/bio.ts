@@ -1,6 +1,7 @@
 import { MessageEmbed, Message } from 'discord.js';
 import * as firebase from 'firebase-admin';
 
+import { getUserRoles } from './guild.service';
 import config from '../config';
 import { db } from '../firebase';
 
@@ -23,6 +24,8 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
 
     // get information
     if (!args[0].length || (!args[1] && mention)) {
+        const roles = await getUserRoles(message.member!);
+
         embed.setDescription('Reading bio');
         const doc = await db
             .collection('users')
@@ -35,6 +38,8 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
         } else {
             embed.addField('Description', 'No bio details found');
         }
+
+        embed.addField(`Roles (${roles.length})`, roles.join(', ').toUpperCase());
     }
 
     // set information
