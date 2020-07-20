@@ -27,7 +27,7 @@ export default {
     { abbr: 'PDT', zone: 'America/Los_Angeles' },
     { abbr: 'AEST', zone: 'Australia/Brisbane' },
     { abbr: 'EEST', zone: 'Asia/Beirut' },
-    { abbr: 'UTC', zone: 'Europe/London' },
+    { abbr: 'UTC', zone: 'Europe/London' }, { abbr: 'UK', zone: 'Europe/London' },
     { abbr: 'IST', zone: 'Asia/Kolkata' },
   ]
 };
