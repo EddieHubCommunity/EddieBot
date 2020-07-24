@@ -5,7 +5,7 @@ import { log } from './logger';
 
 const { REACTIONS_COUNT, ROLE } = config;
 
-const getTotalReactionCount = async (reaction: MessageReaction) => {
+const getTotalReactionCount = async (reaction: MessageReaction, user: User | PartialUser) => {
     // Map through each reaction emoji and return the count
     const getReactionCounts = reaction.message.reactions.cache.map(async (value) => {
         if (value.partial) {
@@ -14,6 +14,12 @@ const getTotalReactionCount = async (reaction: MessageReaction) => {
             } catch (error) {
                 return Promise.resolve(0);
             }
+        }
+
+        // ignore reactions from the message author
+        if (user.id === reaction.message.author.id) {
+            log.info('User can not get credit for reacting to their own message: ', reaction.message.member!.displayName);
+            return Promise.resolve(0);
         }
 
         return Promise.resolve(value.count!);
@@ -62,14 +68,8 @@ export const messageReactionAdd = async (reaction: MessageReaction, user: User |
         }
     }
 
-    // ignore reactions from the message author
-    if (user.id === reaction.message.author.id) {
-        log.info('User can not get credit for reacting to their own message: ', reaction.message.member!.displayName);
-        return;
-    }
-
     try {
-        const reactionsCount = await getTotalReactionCount(reaction)
+        const reactionsCount = await getTotalReactionCount(reaction, user)
 
         // if message owner gets 5+ reactions add "high value" role
         if (reactionsCount >= REACTIONS_COUNT) {
