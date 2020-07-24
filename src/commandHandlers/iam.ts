@@ -18,7 +18,7 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
     }
 
     // Check if the provided role is self-assignable
-    if (selfAssignableRoles.find((role) => role === roleToAssign)) {
+    if (selfAssignableRoles.find((role) => role === roleToAssign.toLowerCase())) {
         const role = message.guild!.roles.cache.find((r) => r.name === roleToAssign);
         if (!role) {
             log.error(`ERROR: Couldn't get the role: ${roleToAssign}`);
