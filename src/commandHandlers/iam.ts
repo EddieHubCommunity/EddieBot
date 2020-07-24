@@ -34,7 +34,7 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
             .collection('users')
             .doc(message.author.id)
             .set({
-                roles: getUserRoles(message.member!),
+                roles: await getUserRoles(message.member!),
                 updateAt: firebase.firestore.FieldValue.serverTimestamp()
             }, { merge: true });
 
