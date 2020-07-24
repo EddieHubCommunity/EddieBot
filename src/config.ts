@@ -32,4 +32,12 @@ export default {
   ]
 };
 
-export const selfAssignableRoles = []
+export const selfAssignableRoles = [
+  'php', 'laravel',
+  'javascript', 'angular', 'react', 'vue',
+  'java',
+  'ruby',
+  'python',
+  'ops',
+  'fullstack',
+];
