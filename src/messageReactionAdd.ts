@@ -1,29 +1,25 @@
-import { MessageReaction, User, PartialUser } from 'discord.js';
+import { MessageReaction } from 'discord.js';
 
 import config from './config';
 import { log } from './logger';
 
 const { REACTIONS_COUNT, ROLE } = config;
 
-const getTotalReactionCount = async (reaction: MessageReaction, user: User | PartialUser) => {
+const getTotalReactionCount = async (reaction: MessageReaction) => {
     // Map through each reaction emoji and return the count
-    const getReactionCounts = reaction.message.reactions.cache.map(async (value) => {
-        if (value.partial) {
-            try {
-                await value.fetch();
-            } catch (error) {
-                return Promise.resolve(0);
+    const getReactionCounts = reaction.message.reactions.cache
+        .filter((r) => !r.users.cache.has(reaction.message.author.id)) // remove the message author's reactions
+        .map(async (r) => {
+            if (r.partial) {
+                try {
+                    await r.fetch();
+                } catch (error) {
+                    return Promise.resolve(0);
+                }
             }
-        }
 
-        // ignore reactions from the message author
-        if (user.id === reaction.message.author.id) {
-            log.info('User can not get credit for reacting to their own message: ', reaction.message.member!.displayName);
-            return Promise.resolve(0);
-        }
-
-        return Promise.resolve(value.count!);
-    });
+            return Promise.resolve(r.count!);
+        });
 
     const results = await Promise.all(getReactionCounts);
 
@@ -31,16 +27,7 @@ const getTotalReactionCount = async (reaction: MessageReaction, user: User | Par
     return results.reduce((acc, current) => acc + current, 0);
 }
 
-export const messageReactionAdd = async (reaction: MessageReaction, user: User | PartialUser) => {
-    if (user.partial) {
-        try {
-            await user.fetch();
-        } catch (error) {
-            log.error('Something went wrong when fetching the user: ', error);
-            return;
-        }
-    }
-
+export const messageReactionAdd = async (reaction: MessageReaction) => {
     if (reaction.partial) {
         try {
             await reaction.fetch();
@@ -69,7 +56,7 @@ export const messageReactionAdd = async (reaction: MessageReaction, user: User |
     }
 
     try {
-        const reactionsCount = await getTotalReactionCount(reaction, user)
+        const reactionsCount = await getTotalReactionCount(reaction)
 
         // if message owner gets 5+ reactions add "high value" role
         if (reactionsCount >= REACTIONS_COUNT) {
