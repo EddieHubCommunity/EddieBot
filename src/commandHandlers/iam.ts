@@ -11,15 +11,15 @@ import { log } from '../logger';
  * self-assigned.
  */
 export const command = async (arg: string, embed: MessageEmbed, message: Message) => {
-    const roleToAssign = arg;
+    const roleToAssign = arg.toLowerCase();
     // Check if the user provided the role argument
     if (!roleToAssign) {
         return buildErrorEmbed('Missing arguments');
     }
 
     // Check if the provided role is self-assignable
-    if (selfAssignableRoles.find((role) => role === roleToAssign.toLowerCase())) {
-        const role = message.guild!.roles.cache.find((r) => r.name === roleToAssign.toLowerCase());
+    if (selfAssignableRoles.find((role) => role === roleToAssign)) {
+        const role = message.guild!.roles.cache.find((r) => r.name === roleToAssign);
         if (!role) {
             log.error(`ERROR: Couldn't get the role: ${roleToAssign}`);
             return buildErrorEmbed();
