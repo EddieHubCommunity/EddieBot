@@ -28,7 +28,7 @@ client.on('guildMemberAdd', (member) => guildMemberAdd(member));
 client.on('message', message => commands(message));
 client.on('message', message => chatty(message));
 client.on('message', message => timezone(message));
-client.on('messageReactionAdd', async (reaction) => messageReactionAdd(reaction))
+client.on('messageReactionAdd', async (reaction, user) => messageReactionAdd(reaction, user))
 
 // bot authenticates with discord
 client.login(process.env.DISCORD_TOKEN);
