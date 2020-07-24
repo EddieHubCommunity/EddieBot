@@ -11,7 +11,7 @@ import { log } from '../logger';
  * self-assigned.
  */
 export const command = async (arg: string, embed: MessageEmbed, message: Message) => {
-    const roleToAssign = arg;
+    const roleToAssign = arg.toLowerCase();
     // Check if the user provided the role argument
     if (!roleToAssign) {
         return buildErrorEmbed('Missing arguments');
@@ -34,7 +34,7 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
             .collection('users')
             .doc(message.author.id)
             .set({
-                roles: getUserRoles(message.member!),
+                roles: await getUserRoles(message.member!),
                 updateAt: firebase.firestore.FieldValue.serverTimestamp()
             }, { merge: true });
 
