@@ -1,6 +1,9 @@
 import { MessageEmbed, Message } from 'discord.js';
+import * as firebase from 'firebase-admin';
 
 import { selfAssignableRoles } from '../config';
+import { db } from '../firebase';
+import { getUserRoles } from './guild.service';
 import { log } from '../logger';
 
 /**
@@ -25,6 +28,15 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
         // Assign the role to the user of the message
         const member = message.member;
         await member!.roles.add(role);
+
+        // Save the user's role to the DB
+        await db
+            .collection('users')
+            .doc(message.author.id)
+            .set({
+                roles: getUserRoles(message.member!),
+                updateAt: firebase.firestore.FieldValue.serverTimestamp()
+            }, { merge: true });
 
         const userName = message.member!.displayName || ''
         return embed.setDescription(`**${userName}** You now have the **${role.name}** role`);
