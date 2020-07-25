@@ -1,4 +1,7 @@
 # EddieBot
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Discord bot for Eddie Jaoude's Discord server
 
@@ -165,3 +168,22 @@ Feel free to [create an issue](https://github.com/EddieJaoudeCommunity/EddieBot/
 ## Socials
 
 Join our discord community [here](https://discord.gg/jZQs6Wu)
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/alrifay"><img src="https://avatars1.githubusercontent.com/u/19517534?v=4" width="100px;" alt=""/><br /><sub><b>Mohamed Al-Rifay</b></sub></a><br /><a href="https://github.com/EddieJaoudeCommunity/EddieBot/commits?author=alrifay" title="Tests">⚠️</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
