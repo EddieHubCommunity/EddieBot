@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "alrifay",
+      "name": "Mohamed Al-Rifay",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/19517534?v=4",
+      "profile": "https://github.com/alrifay",
+      "contributions": [
+        "test"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "EddieBot",
+  "projectOwner": "EddieJaoudeCommunity",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
