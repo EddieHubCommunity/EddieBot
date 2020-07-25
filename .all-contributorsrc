@@ -13,6 +13,15 @@
       "contributions": [
         "test"
       ]
+    },
+    {
+      "login": "BOLT04",
+      "name": "David",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/18630253?v=4",
+      "profile": "https://bolt04.github.io/react-ultimate-resume/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
