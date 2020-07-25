@@ -1,6 +1,6 @@
 # EddieBot
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Discord bot for Eddie Jaoude's Discord server
@@ -181,6 +181,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/alrifay"><img src="https://avatars1.githubusercontent.com/u/19517534?v=4" width="100px;" alt=""/><br /><sub><b>Mohamed Al-Rifay</b></sub></a><br /><a href="https://github.com/EddieJaoudeCommunity/EddieBot/commits?author=alrifay" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://bolt04.github.io/react-ultimate-resume/"><img src="https://avatars2.githubusercontent.com/u/18630253?v=4" width="100px;" alt=""/><br /><sub><b>David</b></sub></a><br /><a href="https://github.com/EddieJaoudeCommunity/EddieBot/commits?author=BOLT04" title="Code">💻</a></td>
     <td align="center"><a href="https://ste.london"><img src="https://avatars0.githubusercontent.com/u/150512?v=4" width="100px;" alt=""/><br /><sub><b>Stephen Mount</b></sub></a><br /><a href="https://github.com/EddieJaoudeCommunity/EddieBot/commits?author=stemount" title="Tests">⚠️</a> <a href="#ideas-stemount" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/mikeysan"><img src="https://avatars1.githubusercontent.com/u/13338176?v=4" width="100px;" alt=""/><br /><sub><b>Michael Mba</b></sub></a><br /><a href="https://github.com/EddieJaoudeCommunity/EddieBot/commits?author=mikeysan" title="Code">💻</a></td>
   </tr>
 </table>
 
