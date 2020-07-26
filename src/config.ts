@@ -40,4 +40,6 @@ export const selfAssignableRoles = [
   'python',
   'ops',
   'fullstack',
+  'flutter',
+  'typescript',
 ];
