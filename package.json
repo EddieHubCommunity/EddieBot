@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/eddiejaoude/EddieBot#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "discord.js": "^12.1.1",
     "firebase-admin": "^8.12.1",
     "moment-timezone": "^0.5.31",
