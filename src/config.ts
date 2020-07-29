@@ -21,7 +21,7 @@ export default {
     return new MessageEmbed()
       .setColor('#0099ff')
       .setTimestamp()
-      .setFooter('Our bot is Open Source, you can find it here https://github.com/eddiejaoude/EddieBot');
+      .setFooter('Our bot is Open Source, you can find it here https://github.com/EddieJaoudeCommunity/EddieBot');
   },
   TIMEZONES: [
     { abbr: 'PDT', zone: 'America/Los_Angeles' },
