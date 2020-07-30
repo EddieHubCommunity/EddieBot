@@ -39,6 +39,7 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
             Object.entries((data).bio).forEach(([key, value]) => embed.addField(key.toUpperCase(), value));
         } else {
             embed.addField('Description', 'No bio details found');
+            embed.addField('Example', '^bio description || I am a ... /n ^bio location || London, UK');
         }
 
         embed.addField(`Roles (${roles.length})`, roles.join(', ').toUpperCase());
