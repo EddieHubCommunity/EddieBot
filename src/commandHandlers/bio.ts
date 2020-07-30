@@ -1,9 +1,11 @@
 import { MessageEmbed, Message } from 'discord.js';
 import * as firebase from 'firebase-admin';
+import * as axios from 'axios';
 
 import { getUserRoles } from './guild.service';
 import config from '../config';
 import { db } from '../firebase';
+import { log } from '../logger';
 
 /**
  * This command lets the user set their personal data if others want to follow them on other social platforms
@@ -44,11 +46,21 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
 
     // set information
     if (args[1]) {
-        const field = args[0].toLowerCase();
-        const data = args[1].toLowerCase();
+        const field = args[0].toLowerCase().trim();
+        let data = args[1].trim();
 
-        embed.setDescription('Updating your bio')
-            .addField(args[0], data);
+        if (field === 'location') {
+            try {
+                const url = `https://nominatim.openstreetmap.org/?addressdetails=1&q=${encodeURIComponent(data)}&format=json&limit=1`;
+                const response = await axios.default.get(url);
+
+                data = response.data ? response.data[0] : {};
+            } catch (e) {
+                log.error(`ERROR: Couldn't get location ${data}`);
+            }
+        }
+
+        embed.setDescription(`Updating your bio with ${field}`);
         await db
             .collection('users')
             .doc(message.author.id)
@@ -57,9 +69,9 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
                 username: message.author.username,
                 joinedAt: firebase.firestore.Timestamp.fromDate(message.author.createdAt),
                 bio: {
-                    [field]: args[1]
+                    [field]: data
                 },
-                updateAt: firebase.firestore.FieldValue.serverTimestamp()
+                updatedAt: firebase.firestore.FieldValue.serverTimestamp()
             }, { merge: true });
 
         const role = message.guild!.roles.cache.find((r) => r.name === config.ROLE.BIO.name);
