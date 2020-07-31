@@ -29,8 +29,14 @@ export default {
     { abbr: 'EEST', zone: 'Asia/Beirut' },
     { abbr: 'UTC', zone: 'Europe/London' }, { abbr: 'UK', zone: 'Europe/London' },
     { abbr: 'IST', zone: 'Asia/Kolkata' },
-  ]
+  ],
+  OPENSOURCE_JOB_CRON_TIME: process.env.OPENSOURCE_JOB_CRON_TIME || '0 14 * * *' // Default time is everyday at 2pm
 };
+
+// Possible values for user subscriptions
+export enum UserSubscriptions {
+  OPEN_SOURCE = 'OPENSOURCE'
+}
 
 export const selfAssignableRoles = [
   'php', 'laravel',
