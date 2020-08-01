@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eddiejaoude/EddieBot.git"
+    "url": "git+https://github.com/EddieJaoudeCommunity/EddieBot.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/eddiejaoude/EddieBot/issues"
+    "url": "https://github.com/EddieJaoudeCommunity/EddieBot/issues"
   },
-  "homepage": "https://github.com/eddiejaoude/EddieBot#readme",
+  "homepage": "https://github.com/EddieJaoudeCommunity/EddieBot#readme",
   "dependencies": {
     "axios": "^0.19.2",
     "discord.js": "^12.1.1",
