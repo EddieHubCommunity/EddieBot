@@ -43,7 +43,10 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
             embed.addField('Example', `${config.COMMAND_PREFIX}bio location || London, UK`);
         }
 
-        embed.addField(`Roles (${roles.length})`, roles.join(', ').toUpperCase());
+        const numberOfRoles = roles.length;
+        if(roles && numberOfRoles > 0){
+            embed.addField(`Roles (${numberOfRoles})`, roles.join(', ').toUpperCase());
+        }
     }
 
     // set information
