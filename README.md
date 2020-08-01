@@ -26,28 +26,10 @@ Discord bot for Eddie Jaoude's Discord server
 1. Clone the project or your fork (if you plan to make changes use your fork)
 2. Install dependencies by running the command `npm install`
 
-### Run the project locally on Mac and Linux using below command
-1. `DISCORD_TOKEN=<GET YOUR DISCORD TOKEN> GENERAL_CHANNEL_ID=<GET YOUR GENERAL CHANNEL ID> DISCORD_SERVER_ID=<YOUR SERVER_ID> DISCORD_BOT_CHANNEL_ID=<ID> COMMAND_PREFIX=<PREFIX> FIREBASE_KEY=<FIREBASE_KEY> npm run start:local`
-
-or you can the envars in a file `envars.tmp.sh` and run the command `source envars.tmp.sh && npm run start:local`
-
-Example `envars.tmp.sh` file
-
-```bash
-export DISCORD_TOKEN=<DISCORD_TOKEN>
-export COMMAND_PREFIX='^'
-export DISCORD_SERVER_ID=<DISCORD_SERVER_ID>
-export DISCORD_BOT_CHANNEL_ID=<DISCORD_BOT_CHANNEL_ID>
-export FIREBASE_KEY=<FIREBASE_KEY>
-```
-
-### Run on Windows using below commands
-1. `set DISCORD_TOKEN=<GET YOUR DISCORD TOKEN>`
-2. `set GENERAL_CHANNEL_ID=<GET YOUR GENERAL CHANNEL ID>`
-3. `set DISCORD_SERVER_ID=<YOUR SERVER_ID>`
-4. `set DISCORD_BOT_CHANNEL_ID=<ID>`
-5. `set COMMAND_PREFIX=<PREFIX>`
-6. `npm run start:local`
+### Run the project locally on Mac/Linux *may have support for win32.
+- Use the `.env.example` by copying it to `.env` and modifying the values.
+- You should generate the "Service Account" from Firebase Settings > Cloud Messaging.
+- run `npm run start:local` to start the bot.
 
 ### Logging
 
