@@ -18,12 +18,12 @@ export const timezone = async (message: Message) => {
     }
 
     const match = message.content.match(/([\d]{1,2})([:\d]{3})?[\s]?(pm|am|AM|PM)?\b[\s]([a-zA-Z]{2,3})?\b/);
-    
+
     if (match) {
         const [mentioned, hour, minutes, dayNight, zone] = match;
 
         const proposedZone = TIMEZONES.find((item) => item.abbr === zone.toUpperCase());
-        
+
         if (proposedZone) {
             const initial = minutes ? moment.tz(`${hour}${minutes} ${dayNight}`, 'h:mm A', proposedZone.zone) : moment.tz(`${hour}${minutes} ${dayNight}`, 'h A', proposedZone.zone);
             const embed = defaultEmbed().setTitle('Popular timezones');
