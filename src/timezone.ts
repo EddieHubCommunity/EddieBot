@@ -22,7 +22,7 @@ export const timezone = async (message: Message) => {
     if (match) {
         const [mentioned, hour, minutes, dayNight, zone] = match;
 
-        const proposedZone = TIMEZONES.find((item) => item.abbr === zone);
+        const proposedZone = TIMEZONES.find((item) => item.abbr === zone.toUpperCase());
 
         if (proposedZone) {
             const initial = minutes ? moment.tz(`${hour}${minutes} ${dayNight}`, 'h:mm A', proposedZone.zone) : moment.tz(`${hour}${minutes} ${dayNight}`, 'h A', proposedZone.zone);
