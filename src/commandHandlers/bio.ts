@@ -63,6 +63,8 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
             } catch (e) {
                 log.error(`ERROR: Couldn't get location ${data}`);
             }
+        } else if (field === 'twitter') {
+            data = `https://twitter.com/${data}`
         }
 
         embed.setDescription(`Updating your bio with ${field}`);
