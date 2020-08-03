@@ -12,8 +12,9 @@ import { log } from '../logger';
  */
 export const command = async (arg: string, embed: MessageEmbed, message: Message) => {
     const args = arg.split('||');
-    const mention = message.mentions.users.first();
-
+    const mention = message.mentions.users.first()
+    
+    
     args[0] = args[0].toLowerCase();
     if (args[0].length && !mention && !config.BIO.includes(args[0].trim())) {
         embed
