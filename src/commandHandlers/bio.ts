@@ -13,8 +13,8 @@ import { log } from '../logger';
 export const command = async (arg: string, embed: MessageEmbed, message: Message) => {
     const args = arg.split('||');
     const mention = message.mentions.users.first();
-    const args[0] = args[0].toLowerCase();
-    if (args[0].length && !mention && !config.BIO.includes(args[0].trim())) {
+    const field = args[0].toLowerCase().trim();
+    if (field.length && !mention && !config.BIO.includes(field.trim())) {
         embed
         .setTitle('Edit Bio (error)')
         .setDescription(`Bio option not valid, please use one of the following: ${config.BIO.join(', ')}`)
@@ -25,7 +25,7 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
     }
 
     // get information
-    if (!args[0].length || (!args[1] && mention)) {
+    if (field.length || (!args[1] && mention)) {
         const roles = await getUserRoles(message.member!);
 
         embed.setDescription('Reading bio');
