@@ -51,7 +51,6 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
 
     // set information
     if (args[1]) {
-       
         let data = args[1].trim();
 
         switch(field) {
