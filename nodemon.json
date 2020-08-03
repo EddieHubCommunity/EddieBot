@@ -3,4 +3,4 @@
     "ext": "ts",
     "ignore": [],
     "exec": "npm run start:local"
-  }
+}
