@@ -1,7 +1,7 @@
 import { MessageEmbed } from 'discord.js';
 
 export default {
-  BIO: [ 'description', 'github', 'twitter', 'youtube', 'instagram', 'linkedin', 'location' ],
+  BIO: [ 'description', 'github', 'twitter', 'youtube', 'instagram', 'linkedin', 'location', 'timezone'],
   COMMAND_PREFIX: process.env.COMMAND_PREFIX || '$',
   INTRO_CHANNEL: 'introductions',
   GENERAL_CHANNEL: 'general',
