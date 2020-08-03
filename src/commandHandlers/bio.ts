@@ -54,16 +54,21 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
         const field = args[0].toLowerCase().trim();
         let data = args[1].trim();
 
-        if (field === 'location') {
-            try {
-                const url = `https://nominatim.openstreetmap.org/?addressdetails=1&q=${encodeURIComponent(data)}&format=json&limit=1`;
-                const response = await axios.default.get(url);
-
-                data = response.data ? response.data[0] : {};
-            } catch (e) {
-                log.error(`ERROR: Couldn't get location ${data}`);
-            }
+        switch(field) {
+            case 'location':
+                try {
+                    const url = `https://nominatim.openstreetmap.org/?addressdetails=1&q=${encodeURIComponent(data)}&format=json&limit=1`;
+                    const response = await axios.default.get(url);
+                    data = response.data ? response.data[0] : {};
+                } catch (e) {
+                    log.error(`ERROR: Couldn't get location ${data}`);
+                }
+                break;
+            case 'twitter':
+                data = `https://twitter.com/${data}`
+                break;
         }
+
 
         embed.setDescription(`Updating your bio with ${field}`);
         await db
