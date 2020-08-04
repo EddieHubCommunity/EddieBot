@@ -13,8 +13,8 @@ import { log } from '../logger';
 export const command = async (arg: string, embed: MessageEmbed, message: Message) => {
     const args = arg.split('||');
     const mention = message.mentions.users.first();
-
-    if (args[0].length && !mention && !config.BIO.includes(args[0].trim())) {
+    const field = args[0].toLowerCase().trim();
+    if (field.length && !mention && !config.BIO.includes(field.trim())) {
         embed
         .setTitle('Edit Bio (error)')
         .setDescription(`Bio option not valid, please use one of the following: ${config.BIO.join(', ')}`)
@@ -25,7 +25,7 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
     }
 
     // get information
-    if (!args[0].length || (!args[1] && mention)) {
+    if (field.length || (!args[1] && mention)) {
         const roles = await getUserRoles(message.member!);
 
         embed.setDescription('Reading bio');
@@ -51,19 +51,23 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
 
     // set information
     if (args[1]) {
-        const field = args[0].toLowerCase().trim();
         let data = args[1].trim();
 
-        if (field === 'location') {
-            try {
-                const url = `https://nominatim.openstreetmap.org/?addressdetails=1&q=${encodeURIComponent(data)}&format=json&limit=1`;
-                const response = await axios.default.get(url);
-
-                data = response.data ? response.data[0] : {};
-            } catch (e) {
-                log.error(`ERROR: Couldn't get location ${data}`);
-            }
+        switch(field) {
+            case 'location':
+                try {
+                    const url = `https://nominatim.openstreetmap.org/?addressdetails=1&q=${encodeURIComponent(data)}&format=json&limit=1`;
+                    const response = await axios.default.get(url);
+                    data = response.data ? response.data[0] : {};
+                } catch (e) {
+                    log.error(`ERROR: Couldn't get location ${data}`);
+                }
+                break;
+            case 'twitter':
+                data = `https://twitter.com/${data}`
+                break;
         }
+
 
         embed.setDescription(`Updating your bio with ${field}`);
         await db
