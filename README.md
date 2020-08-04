@@ -5,6 +5,28 @@
 
 Discord bot for Eddie Jaoude's Discord server
 
+## Features of EddieBot
+
+- Set/Get user bio with description and social links
+
+- Timezone, listens for messages that contain 1:30pm UTC and replies with common timezones translation
+
+- Code of Conduct
+
+- Daily standup message consistently formatted
+
+- Help showing a list of available commands
+
+- Members role rewards
+
+- Gets tips of resources on a given subject
+
+- Server status
+
+- Firebase (Firestore) integration, allowing people to easily add commands and persist data
+
+- GitHub Actions deploys mainline branch to Azure
+
 ## Required
 
 - node v10+ installed
