@@ -25,7 +25,7 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
     }
 
     // get information
-    if (field.length || (!args[1] && mention)) {
+    if (!field.length || (!args[1] && mention)) {
         const roles = await getUserRoles(message.member!);
 
         embed.setDescription('Reading bio');
