@@ -71,6 +71,12 @@ export FIREBASE_KEY=<FIREBASE_KEY>
 5. `set COMMAND_PREFIX=<PREFIX>`
 6. `npm run start:local`
 
+**Note**
+
+firebase_key is the firebase service key and expected key structure is json string that needs to be valid json with single quotes around the whole string and the field names/values need double quotes. An example below: 
+
+export FIREBASE_KEY='{"type": "service_account","project_id": ... }'
+
 ### Logging
 
 Logging will happen to the console as well as to the Discord `bot` channel.
