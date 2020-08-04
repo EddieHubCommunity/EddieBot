@@ -73,9 +73,9 @@ export FIREBASE_KEY=<FIREBASE_KEY>
 
 **Note**
 
-firebase_key is the firebase service key and expected key structure is json string that needs to be valid json with single quotes around the whole string and the field names/values need double quotes. An example below: 
+`FIREBASE_KEY` is the firebase service key and expected key structure is json string that needs to be valid json with single quotes around the whole string and the field names/values need double quotes. An example below: 
 
-export FIREBASE_KEY='{"type": "service_account","project_id": ... }'
+`export FIREBASE_KEY='{"type": "service_account","project_id": ... }'`
 
 ### Logging
 
