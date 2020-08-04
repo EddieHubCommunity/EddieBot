@@ -5,6 +5,28 @@
 
 Discord bot for Eddie Jaoude's Discord server
 
+## Features of EddieBot
+
+- Set/Get user bio with description and social links
+
+- Timezone, listens for messages that contain 1:30pm UTC and replies with common timezones translation
+
+- Code of Conduct
+
+- Daily standup message consistently formatted
+
+- Help showing a list of available commands
+
+- Members role rewards
+
+- Gets tips of resources on a given subject
+
+- Server status
+
+- Firebase (Firestore) integration, allowing people to easily add commands and persist data
+
+- GitHub Actions deploys mainline branch to Azure
+
 ## Required
 
 - node v10+ installed
@@ -48,6 +70,12 @@ export FIREBASE_KEY=<FIREBASE_KEY>
 4. `set DISCORD_BOT_CHANNEL_ID=<ID>`
 5. `set COMMAND_PREFIX=<PREFIX>`
 6. `npm run start:local`
+
+**Note**
+
+`FIREBASE_KEY` is the firebase service key and expected key structure is json string that needs to be valid json with single quotes around the whole string and the field names/values need double quotes. An example below: 
+
+`export FIREBASE_KEY='{"type": "service_account","project_id": ... }'`
 
 ### Logging
 
