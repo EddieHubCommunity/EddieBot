@@ -50,6 +50,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "AllanRegush",
+      "name": "Allan Regush",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/17693494?v=4",
+      "profile": "https://github.com/AllanRegush",
+      "contributions": [
+        "code",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
