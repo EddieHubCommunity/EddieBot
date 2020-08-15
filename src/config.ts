@@ -15,6 +15,10 @@ export default {
     BIO:{
       name: 'bio',
       description: 'You get assigned this role once you set a biography with the "bio" command'
+    },
+    OPEN_SOURCE:{
+      name: 'opensource',
+      description: 'You can assign this role to yourself to subscribe to get open-source reminders and if you like contributing to open-source software'
     }
   },
   defaultEmbed: () => {
@@ -48,4 +52,5 @@ export const selfAssignableRoles = [
   'fullstack',
   'flutter',
   'typescript',
+  'opensource'
 ];
