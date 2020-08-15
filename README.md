@@ -1,9 +1,34 @@
 # EddieBot
+
+![Production workflow](https://github.com/EddieJaoudeCommunity/EddieBot/workflows/production/badge.svg)
+![Develop workflow](https://github.com/EddieJaoudeCommunity/EddieBot/workflows/develop/badge.svg)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Discord bot for Eddie Jaoude's Discord server
+
+## Features of EddieBot
+
+- Set/Get user bio with description and social links
+
+- Timezone, listens for messages that contain 1:30pm UTC and replies with common timezones translation
+
+- Code of Conduct
+
+- Daily standup message consistently formatted
+
+- Help showing a list of available commands
+
+- Members role rewards
+
+- Gets tips of resources on a given subject
+
+- Server status
+
+- Firebase (Firestore) integration, allowing people to easily add commands and persist data
+
+- GitHub Actions deploys mainline branch to Azure
 
 ## Required
 
@@ -49,6 +74,12 @@ export FIREBASE_KEY=<FIREBASE_KEY>
 4. `set DISCORD_BOT_CHANNEL_ID=<ID>`
 5. `set COMMAND_PREFIX=<PREFIX>`
 6. `npm run start:local`
+
+**Note**
+
+`FIREBASE_KEY` is the firebase service key and expected key structure is json string that needs to be valid json with single quotes around the whole string and the field names/values need double quotes. An example below: 
+
+`export FIREBASE_KEY='{"type": "service_account","project_id": ... }'`
 
 ### Logging
 
@@ -184,6 +215,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://ste.london"><img src="https://avatars0.githubusercontent.com/u/150512?v=4" width="100px;" alt=""/><br /><sub><b>Stephen Mount</b></sub></a><br /><a href="https://github.com/EddieJaoudeCommunity/EddieBot/commits?author=stemount" title="Tests">⚠️</a> <a href="#ideas-stemount" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/mikeysan"><img src="https://avatars1.githubusercontent.com/u/13338176?v=4" width="100px;" alt=""/><br /><sub><b>Michael Mba</b></sub></a><br /><a href="https://github.com/EddieJaoudeCommunity/EddieBot/commits?author=mikeysan" title="Code">💻</a></td>
     <td align="center"><a href="http://youtube.com/eddiejaoude?sub_confirmation=1"><img src="https://avatars3.githubusercontent.com/u/624760?v=4" width="100px;" alt=""/><br /><sub><b>Eddie Jaoude</b></sub></a><br /><a href="https://github.com/EddieJaoudeCommunity/EddieBot/commits?author=eddiejaoude" title="Code">💻</a></td>
+    <td align="center"><a href="https://ruthie.hashnode.dev/"><img src="https://avatars1.githubusercontent.com/u/62059002?v=4" width="100px;" alt=""/><br /><sub><b>Ruth Ikegah</b></sub></a><br /><a href="https://github.com/EddieJaoudeCommunity/EddieBot/commits?author=Ruth-ikegah" title="Code">💻</a> <a href="https://github.com/EddieJaoudeCommunity/EddieBot/commits?author=Ruth-ikegah" title="Documentation">📖</a></td>
   </tr>
 </table>
 
