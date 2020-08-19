@@ -3,7 +3,9 @@
 ![Production workflow](https://github.com/EddieJaoudeCommunity/EddieBot/workflows/production/badge.svg)
 ![Develop workflow](https://github.com/EddieJaoudeCommunity/EddieBot/workflows/develop/badge.svg)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Discord bot for Eddie Jaoude's Discord server
@@ -215,6 +217,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/mikeysan"><img src="https://avatars1.githubusercontent.com/u/13338176?v=4" width="100px;" alt=""/><br /><sub><b>Michael Mba</b></sub></a><br /><a href="https://github.com/EddieJaoudeCommunity/EddieBot/commits?author=mikeysan" title="Code">💻</a></td>
     <td align="center"><a href="http://youtube.com/eddiejaoude?sub_confirmation=1"><img src="https://avatars3.githubusercontent.com/u/624760?v=4" width="100px;" alt=""/><br /><sub><b>Eddie Jaoude</b></sub></a><br /><a href="https://github.com/EddieJaoudeCommunity/EddieBot/commits?author=eddiejaoude" title="Code">💻</a></td>
     <td align="center"><a href="http://www.garretcharp.com"><img src="https://avatars2.githubusercontent.com/u/32212214?v=4" width="100px;" alt=""/><br /><sub><b>Garret Harp</b></sub></a><br /><a href="https://github.com/EddieJaoudeCommunity/EddieBot/commits?author=garretcharp" title="Code">💻</a> <a href="#maintenance-garretcharp" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://github.com/AllanRegush"><img src="https://avatars0.githubusercontent.com/u/17693494?v=4" width="100px;" alt=""/><br /><sub><b>Allan Regush</b></sub></a><br /><a href="https://github.com/EddieJaoudeCommunity/EddieBot/commits?author=AllanRegush" title="Code">💻</a> <a href="#maintenance-AllanRegush" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://ruthie.hashnode.dev/"><img src="https://avatars1.githubusercontent.com/u/62059002?v=4" width="100px;" alt=""/><br /><sub><b>Ruth Ikegah</b></sub></a><br /><a href="https://github.com/EddieJaoudeCommunity/EddieBot/commits?author=Ruth-ikegah" title="Code">💻</a> <a href="https://github.com/EddieJaoudeCommunity/EddieBot/commits?author=Ruth-ikegah" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/morrme"><img src="https://avatars2.githubusercontent.com/u/26514778?v=4" width="100px;" alt=""/><br /><sub><b>morrme</b></sub></a><br /><a href="#maintenance-morrme" title="Maintenance">🚧</a></td>
   </tr>
 </table>
 

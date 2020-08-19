@@ -60,6 +60,35 @@
         "code",
         "maintenance"
       ]
+    },
+    {
+      "login": "AllanRegush",
+      "name": "Allan Regush",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/17693494?v=4",
+      "profile": "https://github.com/AllanRegush",
+      "contributions": [
+        "code",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Ruth-ikegah",
+      "name": "Ruth Ikegah",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/62059002?v=4",
+      "profile": "https://ruthie.hashnode.dev/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "morrme",
+      "name": "morrme",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/26514778?v=4",
+      "profile": "https://github.com/morrme",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
