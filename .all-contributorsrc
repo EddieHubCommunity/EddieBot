@@ -11,7 +11,8 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/19517534?v=4",
       "profile": "https://github.com/alrifay",
       "contributions": [
-        "test"
+        "test",
+        "review"
       ]
     },
     {
@@ -52,6 +53,35 @@
       ]
     },
     {
+      "login": "garretcharp",
+      "name": "Garret Harp",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/32212214?v=4",
+      "profile": "http://www.garretcharp.com",
+      "contributions": [
+        "code",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "webkhushboo",
+      "name": "Khushboo Agrawal",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/10898595?v=4",
+      "profile": "https://github.com/webkhushboo",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "AllanRegush",
+      "name": "Allan Regush",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/17693494?v=4",
+      "profile": "https://github.com/AllanRegush",
+      "contributions": [
+        "code",
+        "maintenance"
+      ]
+    },
+    {
       "login": "Ruth-ikegah",
       "name": "Ruth Ikegah",
       "avatar_url": "https://avatars1.githubusercontent.com/u/62059002?v=4",
@@ -59,6 +89,24 @@
       "contributions": [
         "code",
         "doc"
+      ]
+    },
+    {
+      "login": "morrme",
+      "name": "morrme",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/26514778?v=4",
+      "profile": "https://github.com/morrme",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "HarshKapadia2",
+      "name": "Harsh Kapadia",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/50140864?v=4",
+      "profile": "http://linkedin.com/in/harshgkapadia",
+      "contributions": [
+        "maintenance"
       ]
     }
   ],
