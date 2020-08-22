@@ -55,9 +55,7 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
     if (args[1]) {
         let data = args[1].trim();
 
-        const isValidTwitterUsername = (username: string): boolean | null => {
-            return username.match(/^@?(\w){1,15}$/i) ? true : false;
-        }
+        const isValidTwitterUsername = (username: string): boolean => /^@?(\w){1,15}$/i.test(username);
 
         const updateBio = async () => {
             embed.setDescription(`Updating your bio with ${field}`);
