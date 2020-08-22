@@ -13,8 +13,8 @@ import { log } from '../logger';
 export const command = async (arg: string, embed: MessageEmbed, message: Message) => {
     const args = arg.split('||');
     const mention = message.mentions.users.first();
-
-    if (args[0].length && !mention && !config.BIO.includes(args[0].trim())) {
+    const field = args[0].toLowerCase().trim();
+    if (field.length && !mention && !config.BIO.includes(field.trim())) {
         embed
         .setTitle('Edit Bio (error)')
         .setDescription(`Bio option not valid, please use one of the following: ${config.BIO.join(', ')}`)
@@ -25,7 +25,7 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
     }
 
     // get information
-    if (!args[0].length || (!args[1] && mention)) {
+    if (!field.length || (!args[1] && mention)) {
         const roles = await getUserRoles(message.member!);
 
         embed.setDescription('Reading bio');
@@ -43,42 +43,65 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
             embed.addField('Example', `${config.COMMAND_PREFIX}bio location || London, UK`);
         }
 
-        embed.addField(`Roles (${roles.length})`, roles.join(', ').toUpperCase());
+        const numberOfRoles = roles.length;
+        if(roles && numberOfRoles > 0){
+            embed.addField(`Roles (${numberOfRoles})`, roles.join(', ').toUpperCase());
+        }
     }
+
+
 
     // set information
     if (args[1]) {
-        const field = args[0].toLowerCase().trim();
         let data = args[1].trim();
 
-        if (field === 'location') {
-            try {
-                const url = `https://nominatim.openstreetmap.org/?addressdetails=1&q=${encodeURIComponent(data)}&format=json&limit=1`;
-                const response = await axios.default.get(url);
+        const isValidTwitterUsername = (username: string): boolean => /^@?(\w){1,15}$/i.test(username);
 
-                data = response.data ? response.data[0] : {};
-            } catch (e) {
-                log.error(`ERROR: Couldn't get location ${data}`);
-            }
+        const updateBio = async () => {
+            embed.setDescription(`Updating your bio with ${field}`);
+            await db
+                .collection('users')
+                .doc(message.author.id)
+                .set({
+                    avatar: message.author.avatarURL(),
+                    username: message.author.username,
+                    joinedAt: firebase.firestore.Timestamp.fromDate(message.author.createdAt),
+                    bio: {
+                        [field]: data
+                    },
+                    updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+                    }, { merge: true });
+
+            const role = message.guild!.roles.cache.find((r) => r.name === config.ROLE.BIO.name);
+            const member = message.member;
+            await member!.roles.add(role!);
         }
 
-        embed.setDescription(`Updating your bio with ${field}`);
-        await db
-            .collection('users')
-            .doc(message.author.id)
-            .set({
-                avatar: message.author.avatarURL(),
-                username: message.author.username,
-                joinedAt: firebase.firestore.Timestamp.fromDate(message.author.createdAt),
-                bio: {
-                    [field]: data
-                },
-                updatedAt: firebase.firestore.FieldValue.serverTimestamp()
-            }, { merge: true });
-
-        const role = message.guild!.roles.cache.find((r) => r.name === config.ROLE.BIO.name);
-        const member = message.member;
-        await member!.roles.add(role!);
+        switch(field) {
+            case 'location':
+                try {
+                    const url = `https://nominatim.openstreetmap.org/?addressdetails=1&q=${encodeURIComponent(data)}&format=json&limit=1`;
+                    const response = await axios.default.get(url);
+                    data = response.data ? response.data[0] : {};
+                    updateBio();
+                } catch (e) {
+                    log.error(`ERROR: Couldn't get location ${data}`);
+                }
+                break;
+            case 'twitter':
+                if(isValidTwitterUsername(data)) {
+                    data = `https://twitter.com/${data}`;
+                    updateBio();
+                } else {
+                    embed.addField('Description', 'Twitter Handle - Unexpected format');
+                    embed.addField('Example', `${config.COMMAND_PREFIX}bio twitter || @example`);
+                    embed.addField('Example', `${config.COMMAND_PREFIX}bio twitter || example`);
+                }
+                break;
+            default:
+                updateBio();
+                break;
+        }
     }
 
     embed
