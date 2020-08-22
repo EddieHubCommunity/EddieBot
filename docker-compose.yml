@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  eddiebot-nodejs:
+    build:
+      context: ./docker
+    command: ["npm", "run", "dev"]
+    volumes:
+      - ./:/opt/EddieBot/
+    environment:
+      - NODE_ENV=development
+volumes:
+  eddiebot-nodejs:
+    driver: ${VOLUMES_DRIVER}
