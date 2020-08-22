@@ -49,9 +49,33 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
         }
     }
 
+
+
     // set information
     if (args[1]) {
         let data = args[1].trim();
+
+        const isValidTwitterUsername = (username: string): boolean => /^@?(\w){1,15}$/i.test(username);
+
+        const updateBio = async () => {
+            embed.setDescription(`Updating your bio with ${field}`);
+            await db
+                .collection('users')
+                .doc(message.author.id)
+                .set({
+                    avatar: message.author.avatarURL(),
+                    username: message.author.username,
+                    joinedAt: firebase.firestore.Timestamp.fromDate(message.author.createdAt),
+                    bio: {
+                        [field]: data
+                    },
+                    updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+                    }, { merge: true });
+
+            const role = message.guild!.roles.cache.find((r) => r.name === config.ROLE.BIO.name);
+            const member = message.member;
+            await member!.roles.add(role!);
+        }
 
         switch(field) {
             case 'location':
@@ -59,33 +83,25 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
                     const url = `https://nominatim.openstreetmap.org/?addressdetails=1&q=${encodeURIComponent(data)}&format=json&limit=1`;
                     const response = await axios.default.get(url);
                     data = response.data ? response.data[0] : {};
+                    updateBio();
                 } catch (e) {
                     log.error(`ERROR: Couldn't get location ${data}`);
                 }
                 break;
             case 'twitter':
-                data = `https://twitter.com/${data}`
+                if(isValidTwitterUsername(data)) {
+                    data = `https://twitter.com/${data}`;
+                    updateBio();
+                } else {
+                    embed.addField('Description', 'Twitter Handle - Unexpected format');
+                    embed.addField('Example', `${config.COMMAND_PREFIX}bio twitter || @example`);
+                    embed.addField('Example', `${config.COMMAND_PREFIX}bio twitter || example`);
+                }
+                break;
+            default:
+                updateBio();
                 break;
         }
-
-
-        embed.setDescription(`Updating your bio with ${field}`);
-        await db
-            .collection('users')
-            .doc(message.author.id)
-            .set({
-                avatar: message.author.avatarURL(),
-                username: message.author.username,
-                joinedAt: firebase.firestore.Timestamp.fromDate(message.author.createdAt),
-                bio: {
-                    [field]: data
-                },
-                updatedAt: firebase.firestore.FieldValue.serverTimestamp()
-            }, { merge: true });
-
-        const role = message.guild!.roles.cache.find((r) => r.name === config.ROLE.BIO.name);
-        const member = message.member;
-        await member!.roles.add(role!);
     }
 
     embed
