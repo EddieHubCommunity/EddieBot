@@ -63,7 +63,9 @@ export const messageReactionAdd = async (reaction: MessageReaction) => {
         if (reactionsCount >= REACTIONS_COUNT) {
             const isAssignedRole = (await getUserRoles(reaction.message.member!)).includes(ROLE.HIGH_VALUE.name);
 
-            if(isAssignedRole) return;
+            if (isAssignedRole) {
+              return;
+            }
 
             const role = reaction.message.guild!.roles.cache.find((r) => r.name === ROLE.HIGH_VALUE.name);
 
