@@ -4,7 +4,6 @@ import config from './config';
 import { log } from './logger';
 import { getUserRoles } from './commandHandlers/guild.service';
 
-
 const { REACTIONS_COUNT, ROLE } = config;
 
 const getTotalReactionCount = async (reaction: MessageReaction) => {
