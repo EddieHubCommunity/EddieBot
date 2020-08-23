@@ -11,14 +11,14 @@ export function scheduleOpenSourceReminder() {
 
 /**
  * Send a DM to users that are subscribed to this reminder with a message.
- * The user's subscriptions are kept on the "users_subscriptions" DB collection.
+ * The user's subscriptions are kept on the "usersSubscriptions" DB collection.
  */
 async function reminderCallback() {
     // TODO: use the GitHub API to check if the user has already contributed on this day.
     // TODO: if he has, then send a rewarding positive message instead of a reminder.
 
     // Get the list of users that are subscribed to the open source subscription
-    const querySnapshot = await db.collection('users_subscriptions').get();
+    const querySnapshot = await db.collection('usersSubscriptions').get();
     const userNamesToSendMessage = querySnapshot
         .docs
         .filter(doc => {
@@ -51,7 +51,7 @@ async function reminderCallback() {
     log.info('Succesfully sent open source reminder messages');
 }
 
-// This type represents the model/schema of a document in the "users_subscriptions" collection
+// This type represents the model/schema of a document in the "usersSubscriptions" collection
 interface UserSubscriptionDb {
     subscriptions: string[]
     username: string

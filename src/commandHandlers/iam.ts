@@ -74,7 +74,7 @@ async function tryAddOpenSourceUserSubscription(roleToAssign: string, message: M
     if (roleToAssign === config.ROLE.OPEN_SOURCE.name) {
         // Get the subscriptions of the user that sent the given message
         const doc = await db
-            .collection('users_subscriptions')
+            .collection('usersSubscriptions')
             .doc(message.author.id)
             .get();
         const data = doc.data();
@@ -82,7 +82,7 @@ async function tryAddOpenSourceUserSubscription(roleToAssign: string, message: M
 
         // Add the open source subscription to the list of existing subscriptions
         await db
-            .collection('users_subscriptions') // TODO: create a constant variable with all these collection names (e.g. exported in firebase.ts)
+            .collection('usersSubscriptions') // TODO: create a constant variable with all these collection names (e.g. exported in firebase.ts)
             .doc(message.author.id)
             .set({
                 subscriptions: [...subscriptions, UserSubscriptions.OPEN_SOURCE],
