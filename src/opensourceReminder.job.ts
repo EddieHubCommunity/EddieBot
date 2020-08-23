@@ -32,11 +32,11 @@ async function reminderCallback() {
 
     // Send the messages in parallel to subscribed users
     log.info(`Starting to send open source reminder messages to ${subscribedUsers.size} subscribed users`);
-    const promises = subscribedUsers.map(member => {
+    const promises = subscribedUsers.map(async member => {
         const userId = member.user.id;
         try {
             log.info(`Sending a open source reminder message to user ${userId}`, userId);
-            member.user.send('Hey :wave:, this is a friendly reminder for you to contribute to open source today. Let\'s get those green squares together :smiley:!');
+            await member.user.send('Hey :wave:, this is a friendly reminder for you to contribute to open source today. Let\'s get those green squares together :smiley:!');
             return;
         } catch (e) {
             log.error(`ERROR: Sending the open source reminder message to the user with id: ${userId}`, e.message);
