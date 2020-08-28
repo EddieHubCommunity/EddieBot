@@ -19,7 +19,11 @@ const discordLog = async (type: string, message: string, details?: string) => {
             return logger.error('Channel not found');
         };
 
-        await channel.send(`${type.toUpperCase()}: ${message} - ${details}`);
+        if (details) {
+            await channel.send(`${type.toUpperCase()}: ${message} - ${details}`);
+        } else {
+            await channel.send(`${type.toUpperCase()}: ${message}`);
+        }
     }
 }
 
