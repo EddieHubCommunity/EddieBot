@@ -36,7 +36,13 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
         const data = doc.data();
 
         if (data) {
-            Object.entries((data).bio).forEach(([key, value]) => embed.addField(key.toUpperCase(), value));
+            Object.entries((data).bio).forEach(([key]) => {
+                let value = data.bio[key];
+                if(key === 'location') {
+                    value = value.display_name;
+                }
+                return embed.addField(key.toUpperCase(), value);
+            });
         } else {
             embed.addField('Description', 'No bio details found');
             embed.addField('Example', `${config.COMMAND_PREFIX}bio description || I am a ...`);
