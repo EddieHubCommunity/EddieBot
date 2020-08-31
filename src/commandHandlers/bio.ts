@@ -26,7 +26,17 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
 
     // get information
     if (!field.length || (!args[1] && mention)) {
-        const roles = await getUserRoles(message.member!);
+        let roles;
+        if (mention) {
+            const mentionMember = message.guild ? message.guild.member(mention) : null;
+            if (mentionMember) {
+                roles = await getUserRoles(mentionMember);
+            } else {
+                log.error('Could not get member: ', mention.id);
+            }
+        } else {
+            roles = await getUserRoles(message.member!);
+        }
 
         embed.setDescription('Reading bio');
         const doc = await db
@@ -49,8 +59,8 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
             embed.addField('Example', `${config.COMMAND_PREFIX}bio location || London, UK`);
         }
 
-        const numberOfRoles = roles.length;
-        if(roles && numberOfRoles > 0){
+        if (roles) {
+            const numberOfRoles = roles.length;
             embed.addField(`Roles (${numberOfRoles})`, roles.join(', ').toUpperCase());
         }
     }
