@@ -11,9 +11,10 @@ import { log } from '../logger';
  * This command lets the user set their personal data if others want to follow them on other social platforms
  */
 export const command = async (arg: string, embed: MessageEmbed, message: Message) => {
-    const args = arg.split('||');
+    const [first, ...rest] = arg.split('||');
+    const content = rest.join('||');
     const mention = message.mentions.users.first();
-    const field = args[0].toLowerCase().trim();
+    const field = first.toLowerCase().trim();
     if (field.length && !mention && !config.BIO.includes(field.trim())) {
         embed
         .setTitle('Edit Bio (error)')
@@ -25,7 +26,7 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
     }
 
     // get information
-    if (!field.length || (!args[1] && mention)) {
+    if (!field.length || (!content && mention)) {
         let roles;
         if (mention) {
             const mentionMember = message.guild ? message.guild.member(mention) : null;
@@ -68,8 +69,8 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
 
 
     // set information
-    if (args[1]) {
-        let data = args[1].trim();
+    if (content) {
+        let data = content.trim();
 
         const isValidTwitterUsername = (username: string): boolean => /^@?(\w){1,15}$/i.test(username);
 
