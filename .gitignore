@@ -4,3 +4,5 @@ dist/
 *.key
 # Ignore .env from being accidentally committed.
 .env
+# Remove firestore debug log.
+firestore-debug.log

@@ -7,6 +7,7 @@ firebase.initializeApp({
         "projectId": process.env.FIREBASE_PROJECT_ID,
         "clientEmail": process.env.FIREBASE_CLIENT_EMAIL,
     }),
+
     "databaseURL": process.env.FIREBASE_DATABASE_URL,
 });
 
