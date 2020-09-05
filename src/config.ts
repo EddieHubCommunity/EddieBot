@@ -1,7 +1,8 @@
 import { MessageEmbed } from 'discord.js';
+import dotenv from 'dotenv';
 
 // Use dotenv to find system variables or a .env file.
-require('dotenv').config();
+dotenv.config();
 
 export default {
   BIO: [ 'description', 'github', 'twitter', 'youtube', 'instagram', 'linkedin', 'location', 'timezone'],
