@@ -44,6 +44,7 @@ Discord bot for Eddie Jaoude's Discord server
    ![developer mode toggle button](https://user-images.githubusercontent.com/18630253/83634441-7a158a00-a59a-11ea-919c-2d7384d724f7.png)
 
    - Right click on the server icon on the left hand sidebar then click on "Copy ID"
+- firebase key for the project, check [these docs](https://firebase.google.com/docs/admin/setup) to get your key
 - [optional] GCP account to deploy to (using GitHub Actions)
 
 ## Quickstart

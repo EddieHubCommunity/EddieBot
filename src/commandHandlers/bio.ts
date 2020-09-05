@@ -11,9 +11,10 @@ import { log } from '../logger';
  * This command lets the user set their personal data if others want to follow them on other social platforms
  */
 export const command = async (arg: string, embed: MessageEmbed, message: Message) => {
-    const args = arg.split('||');
+    const [first, ...rest] = arg.split('||');
+    const content = rest.join('||');
     const mention = message.mentions.users.first();
-    const field = args[0].toLowerCase().trim();
+    const field = first.toLowerCase().trim();
     if (field.length && !mention && !config.BIO.includes(field.trim())) {
         embed
         .setTitle('Edit Bio (error)')
@@ -25,8 +26,18 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
     }
 
     // get information
-    if (!field.length || (!args[1] && mention)) {
-        const roles = await getUserRoles(message.member!);
+    if (!field.length || (!content && mention)) {
+        let roles;
+        if (mention) {
+            const mentionMember = message.guild ? message.guild.member(mention) : null;
+            if (mentionMember) {
+                roles = await getUserRoles(mentionMember);
+            } else {
+                log.error('Could not get member: ', mention.id);
+            }
+        } else {
+            roles = await getUserRoles(message.member!);
+        }
 
         embed.setDescription('Reading bio');
         const doc = await db
@@ -36,15 +47,21 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
         const data = doc.data();
 
         if (data) {
-            Object.entries((data).bio).forEach(([key, value]) => embed.addField(key.toUpperCase(), value));
+            Object.entries((data).bio).forEach(([key]) => {
+                let value = data.bio[key];
+                if(key === 'location') {
+                    value = value.display_name;
+                }
+                return embed.addField(key.toUpperCase(), value);
+            });
         } else {
             embed.addField('Description', 'No bio details found');
             embed.addField('Example', `${config.COMMAND_PREFIX}bio description || I am a ...`);
             embed.addField('Example', `${config.COMMAND_PREFIX}bio location || London, UK`);
         }
 
-        const numberOfRoles = roles.length;
-        if(roles && numberOfRoles > 0){
+        if (roles) {
+            const numberOfRoles = roles.length;
             embed.addField(`Roles (${numberOfRoles})`, roles.join(', ').toUpperCase());
         }
     }
@@ -52,8 +69,8 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
 
 
     // set information
-    if (args[1]) {
-        let data = args[1].trim();
+    if (content) {
+        let data = content.trim();
 
         const isValidTwitterUsername = (username: string): boolean => /^@?(\w){1,15}$/i.test(username);
 

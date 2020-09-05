@@ -18,6 +18,10 @@ export default {
     BIO:{
       name: 'bio',
       description: 'You get assigned this role once you set a biography with the "bio" command'
+    },
+    OPEN_SOURCE:{
+      name: 'opensource',
+      description: 'You can assign this role to yourself to subscribe to get open-source reminders and if you like contributing to open-source software'
     }
   },
   defaultEmbed: () => {
@@ -32,8 +36,14 @@ export default {
     { abbr: 'EEST', zone: 'Asia/Beirut' },
     { abbr: 'UTC', zone: 'Europe/London' }, { abbr: 'UK', zone: 'Europe/London' },
     { abbr: 'IST', zone: 'Asia/Kolkata' },
-  ]
+  ],
+  OPENSOURCE_JOB_CRON_TIME: process.env.OPENSOURCE_JOB_CRON_TIME || '0 14 * * *' // Default time is everyday at 2pm
 };
+
+// Possible values for user subscriptions
+export enum UserSubscriptions {
+  OPEN_SOURCE = 'OPENSOURCE'
+}
 
 export const selfAssignableRoles = [
   'php', 'laravel',
@@ -45,4 +55,5 @@ export const selfAssignableRoles = [
   'fullstack',
   'flutter',
   'typescript',
+  'opensource'
 ];
