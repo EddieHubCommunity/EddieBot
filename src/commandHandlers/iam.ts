@@ -11,42 +11,46 @@ import { log } from '../logger';
  * self-assigned.
  */
 export const command = async (arg: string, embed: MessageEmbed, message: Message) => {
-    const roleToAssign = arg.toLowerCase();
+    const rolesToAssign = arg.toLowerCase().split(',');
     // Check if the user provided the role argument
-    if (!roleToAssign) {
+    if (!rolesToAssign) {
         return buildErrorEmbed('Missing arguments');
     }
 
-    // Check if the provided role is self-assignable
-    if (selfAssignableRoles.find((role) => role === roleToAssign)) {
-        const role = message.guild!.roles.cache.find((r) => r.name === roleToAssign);
-        if (!role) {
-            log.error(`ERROR: Couldn't get the role: ${roleToAssign}`);
-            return buildErrorEmbed();
+    for(const roleToAssign of rolesToAssign) {
+        // Check if the provided role is self-assignable
+        if (selfAssignableRoles.find((role) => role === roleToAssign)) {
+            const role = message.guild!.roles.cache.find((r) => r.name === roleToAssign);
+            if (!role) {
+                log.error(`ERROR: Couldn't get the role: ${roleToAssign}`);
+                return buildErrorEmbed();
+            }
+            // Assign the role to the user of the message
+            const member = message.member;
+            await member!.roles.add(role);
+            await tryAddOpenSourceUserSubscription(roleToAssign, message);
+        } else {
+            return buildErrorEmbed(`The role you specified is not self-assignable, try one of these roles:
+            ${selfAssignableRoles.join(', ')}
+            `);
         }
-
-        // Assign the role to the user of the message
-        const member = message.member;
-        await member!.roles.add(role);
-
-        // Save the user's role to the DB
-        await db
-            .collection('users')
-            .doc(message.author.id)
-            .set({
-                roles: await getUserRoles(message.member!),
-                updateAt: firebase.firestore.FieldValue.serverTimestamp()
-            }, { merge: true });
-
-        await tryAddOpenSourceUserSubscription(roleToAssign, message);
-
-        const userName = message.member!.displayName || ''
-        return embed.setDescription(`**${userName}** You now have the **${role.name}** role`);
     }
 
-    return buildErrorEmbed(`The role you specified is not self-assignable, try one of these roles:
-    ${selfAssignableRoles.join(', ')}
-    `);
+    // Save the user's role to the DB
+    await db
+        .collection('users')
+        .doc(message.author.id)
+        .set({
+            roles: await getUserRoles(message.member!),
+            updateAt: firebase.firestore.FieldValue.serverTimestamp()
+        }, { merge: true });
+
+    const userName = message.member!.displayName || ''
+    if (rolesToAssign.length > 1) {
+        return embed.setDescription(`**${userName}** You now have the roles **${rolesToAssign.join(', ')}**`);
+    } else {
+        return embed.setDescription(`**${userName}** You now have the **${rolesToAssign[0]}** role`);
+    }
 
     // Auxiliar function
     function buildErrorEmbed(errorMsg = 'An error has occurred') {
@@ -62,7 +66,7 @@ export const description = 'Assign yourself a server role';
 
 export const triggers = ['iam'];
 
-export const usage = `${triggers[0]} <role name>`;
+export const usage = `${triggers[0]} <role name> || ${triggers[0]} <role name>, <role name>, ...`;
 
 /**
  * Check if the role to assign is the open source role. If so, then add the open source subscription for the user to
