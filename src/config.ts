@@ -34,7 +34,8 @@ export default {
     { abbr: 'UTC', zone: 'Europe/London' }, { abbr: 'UK', zone: 'Europe/London' },
     { abbr: 'IST', zone: 'Asia/Kolkata' },
   ],
-  OPENSOURCE_JOB_CRON_TIME: process.env.OPENSOURCE_JOB_CRON_TIME || '0 14 * * *' // Default time is everyday at 2pm
+  OPENSOURCE_JOB_CRON_TIME: process.env.OPENSOURCE_JOB_CRON_TIME || '0 14 * * *', // Default time is everyday at 2pm
+  TIPS_DIRECTORY: './tips'
 };
 
 // Possible values for user subscriptions
