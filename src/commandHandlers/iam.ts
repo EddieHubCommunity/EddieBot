@@ -11,12 +11,11 @@ import { log } from '../logger';
  * self-assigned.
  */
 export const command = async (arg: string, embed: MessageEmbed, message: Message) => {
-    const args = arg.toLowerCase().split(',');
+    const rolesToAssign = arg.toLowerCase().split(',');
     // Check if the user provided the role argument
-    if (!args) {
+    if (!rolesToAssign) {
         return buildErrorEmbed('Missing arguments');
     }
-    const rolesToAssign = args.map(x => x.trim());
 
     for(const roleToAssign of rolesToAssign) {
         // Check if the provided role is self-assignable
