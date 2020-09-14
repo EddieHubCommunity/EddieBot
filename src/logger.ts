@@ -32,4 +32,5 @@ export const log = {
     warn: (message: string, details?: string) => discordLog('warn', message, details),
     error: (message: string, details?: string) => discordLog('error', message, details),
     fatal: (message: string, details?: string) => discordLog('fatal', message, details),
+    trace: (message: string, details?: string) => discordLog('trace', message, details),
 }
