@@ -62,8 +62,9 @@ export const messageReactionAdd = async (reaction: MessageReaction) => {
         // if message owner gets 5+ reactions add "high value" role
         if (reactionsCount >= REACTIONS_COUNT) {
             const isAssignedRole = (await getUserRoles(reaction.message.member!)).includes(ROLE.HIGH_VALUE.name);
+            const isModerator = reaction.message.member!.hasPermission('KICK_MEMBERS');
 
-            if (isAssignedRole) {
+            if (isAssignedRole || isModerator) {
               return;
             }
 

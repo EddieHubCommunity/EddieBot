@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export default {
-  BIO: [ 'description', 'github', 'twitter', 'youtube', 'instagram', 'linkedin', 'location', 'timezone'],
+  BIO: [ 'description', 'github', 'twitter', 'youtube', 'instagram', 'linkedin', 'location', 'timezone', 'delete'],
   COMMAND_PREFIX: process.env.COMMAND_PREFIX || '$',
   INTRO_CHANNEL: 'introductions',
   GENERAL_CHANNEL: 'general',

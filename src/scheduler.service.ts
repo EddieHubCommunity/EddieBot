@@ -19,6 +19,7 @@ export function scheduleJob(timeRule: string | number | Date, job: () => Promise
       log.info(`Finished the job${jobName}`);
     } catch(e) {
       log.error('An error occurred:', e.message);
+      log.trace(e.stack);
       throw e;
     }
   });
