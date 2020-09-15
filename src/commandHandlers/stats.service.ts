@@ -1,6 +1,7 @@
 import { Client, TextChannel, Channel } from 'discord.js';
 
 import { client } from '../client';
+import { log } from '../logger';
 
 export interface StatsServiceInterface {
     getServerMemberCount(): Promise<number>;
@@ -21,13 +22,13 @@ class StatsService implements StatsServiceInterface {
     async getServerMemberCount(): Promise<number> {
         const guildKey = process.env.DISCORD_SERVER_ID;
         if (!guildKey) {
-            console.error('ERROR: Couldn\'t get member count! Missing env. variable DISCORD_SERVER_ID. Please configure that value.');
+            log.error('ERROR: Couldn\'t get member count! Missing env. variable DISCORD_SERVER_ID. Please configure that value.');
             return 0;
         }
 
         const guild = this.discordClient.guilds.cache.get(guildKey);
         if (!guild) {
-            console.error('ERROR: Couldn\'t get member count! The guild with the configured DISCORD_SERVER_ID env. variable doesn\'t exist');
+            log.error('ERROR: Couldn\'t get member count! The guild with the configured DISCORD_SERVER_ID env. variable doesn\'t exist');
             return 0;
         }
 
@@ -49,13 +50,14 @@ class StatsService implements StatsServiceInterface {
             const messageResponses = await Promise.all(messagePromises);
             return messageResponses.reduce((total, msgRsp) => total + msgRsp.size, 0);
         } catch (error) {
-            console.error(`An error occurred while fetching messages`, error);
+            log.error(`An error occurred while fetching messages`, error);
             return 0;
         }
     }
 
     async getServerTotalReactions(): Promise<number> {
         // TODO: implement this
+        log.info('Get server total reactions not implemented yet');
         return 0;
     }
 }

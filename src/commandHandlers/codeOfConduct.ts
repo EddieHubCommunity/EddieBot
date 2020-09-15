@@ -15,7 +15,7 @@ export const command = async (arg: string, embed: MessageEmbed) => {
     .addField('TLDR', 'Be nice :)', true)
     .addField(
       'Full details available on GitHub repo',
-      'https://github.com/eddiejaoude/EddieBot/blob/master/CODE_OF_CONDUCT.md',
+      'https://github.com/EddieJaoudeCommunity/EddieBot/blob/master/CODE_OF_CONDUCT.md',
       true,
     );
 };
@@ -23,3 +23,5 @@ export const command = async (arg: string, embed: MessageEmbed) => {
 export const description = 'Code Of Conduct';
 
 export const triggers = ['coc', 'codeofconduct'];
+
+export const usage = triggers[0]
