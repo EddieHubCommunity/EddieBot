@@ -25,6 +25,15 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
         return embed;
     }
 
+    // Delete bio
+    if(field === 'delete' && !content && !mention) {
+        await db
+        .collection('users')
+        .doc(message.author.id)
+        .delete();
+        embed.setDescription('Deleted your bio');
+    }
+
     // get information
     if (!field.length || (!content && mention)) {
         let roles;
