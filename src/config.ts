@@ -1,5 +1,5 @@
 import { MessageEmbed } from 'discord.js';
-import dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
 
 // Use dotenv to find system variables or a .env file.
 dotenv.config();
