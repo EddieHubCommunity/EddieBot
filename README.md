@@ -55,7 +55,7 @@ Discord bot for Eddie Jaoude's Discord server
 ### Run the project locally on Mac and Linux using below command
 1. `DISCORD_TOKEN=<GET YOUR DISCORD TOKEN> GENERAL_CHANNEL_ID=<GET YOUR GENERAL CHANNEL ID> DISCORD_SERVER_ID=<YOUR SERVER_ID> DISCORD_BOT_CHANNEL_ID=<ID> COMMAND_PREFIX=<PREFIX> FIREBASE_KEY=<FIREBASE_KEY> npm run start:local`
 
-or you can the envars in a file `envars.tmp.sh` and run the command `source envars.tmp.sh && npm run start:local`
+1b. OR you can add the envars (Environment Variables) in a file `envars.tmp.sh` and run the command `source envars.tmp.sh && npm run start:local`
 
 Example `envars.tmp.sh` file
 
