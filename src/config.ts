@@ -37,7 +37,7 @@ export default {
   OPENSOURCE_JOB_CRON_TIME: process.env.OPENSOURCE_JOB_CRON_TIME || '0 14 * * *', // Default time is everyday at 2pm
   TIPS_DIRECTORY: './tips',
   WORDS: {
-    prepend: [ 'hello', 'hey', 'hi', 'yo' ],
+    prepend: [ 'hello', 'hey', 'hi', 'yo', 'hiya', 'whatsup' ],
     checks: [
         {
           check: 'guys',
