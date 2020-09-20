@@ -55,7 +55,7 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
             .get();
         const data = doc.data();
 
-        if (data) {
+        if (data && data.bio) {
             Object.entries((data).bio).forEach(([key]) => {
                 let value = data.bio[key];
                 if(key === 'location') {
@@ -69,9 +69,8 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
             embed.addField('Example', `${config.COMMAND_PREFIX}bio location || London, UK`);
         }
 
-        if (roles) {
-            const numberOfRoles = roles.length;
-            embed.addField(`Roles (${numberOfRoles})`, roles.join(', ').toUpperCase());
+        if (roles && !!roles.length) {
+            embed.addField(`Roles (${roles.length})`, roles.join(', ').toUpperCase());
         }
     }
 
