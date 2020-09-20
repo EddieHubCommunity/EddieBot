@@ -35,7 +35,25 @@ export default {
     { abbr: 'IST', zone: 'Asia/Kolkata' },
   ],
   OPENSOURCE_JOB_CRON_TIME: process.env.OPENSOURCE_JOB_CRON_TIME || '0 14 * * *', // Default time is everyday at 2pm
-  TIPS_DIRECTORY: './tips'
+  TIPS_DIRECTORY: './tips',
+  WORDS: [
+    {
+      check: 'guys',
+      suggestions: [ 'folks', 'people', 'everyone']
+    },
+    {
+      check: 'bros',
+      suggestions: [ 'folks', 'people', 'everyone']
+    },
+    {
+      check: 'bro',
+      suggestions: [ 'folks', 'people', 'everyone']
+    },
+    {
+      check: 'man',
+      suggestions: [ 'folks', 'people', 'everyone']
+    }
+  ]
 };
 
 // Possible values for user subscriptions

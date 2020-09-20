@@ -7,6 +7,7 @@ import { log } from './logger';
 import { messageReactionAdd } from './messageReactionAdd';
 import { notifyGeneralChannel } from './notifyGeneralChannel';
 import { timezone } from './timezone';
+import { words } from './words';
 import { eventStream } from './eventStream';
 import { scheduleOpenSourceReminder } from './opensourceReminder.job';
 
@@ -30,6 +31,7 @@ client.on('guildMemberAdd', (member) => guildMemberAdd(member));
 client.on('message', (message) => commands(message));
 client.on('message', (message) => chatty(message));
 client.on('message', (message) => timezone(message));
+client.on('message', (message) => words(message));
 client.on('messageReactionAdd', async (reaction) => messageReactionAdd(reaction));
 
 // all events
