@@ -193,7 +193,7 @@ classDiagram
 ---
 
 If you are having trouble creating a new command, here is an [example](https://github.com/EddieJaoudeCommunity/EddieBot/blob/develop/src/commandHandlers/standup.ts).
-Feel free to [create an issue](https://github.com/EddieJaoudeCommunity/EddieBot/issues) or make a PR with a new command 😃. Please see our [Contributing](./.github/CONTRIBUTING.md) file first, before making new commits or opening a PR. We appreciate it ❤️!
+Feel free to [create an issue](https://github.com/EddieJaoudeCommunity/EddieBot/issues) or make a PR with a new command 😃. Please see our [Contributing](CONTRIBUTING.md) file first, before making new commits or opening a PR. We appreciate it ❤️!
 
 ---
 
