@@ -16,7 +16,9 @@ export const words = async (message: Message) => {
         return;
     }
 
-    const match = WORDS.find((word) => message.content.toLowerCase().includes(word.check));
+    const match = WORDS.checks
+        .find((word) => WORDS.prepend
+            .find((prepend) => message.content.toLowerCase().includes(`${prepend} ${word.check}`)));
 
     if (match) {
         const embed = defaultEmbed()
