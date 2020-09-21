@@ -38,7 +38,7 @@ export default {
   TIPS_DIRECTORY: './tips',
   WORDS: {
     prepend: [
-      'hello', 'hey', 'hi', 'yo', 'hiya', 'whatsup',
+      'hello', 'hey', 'hi', 'yo', 'hiya', 'whatsup', 'greetings',
       'bye', 'seeya', 'goodbye', 'good bye', 'thanks', 'whatsup',
     ],
     checks: [
