@@ -1,6 +1,6 @@
-### GitHub Tips
+## GitHub Tips
 
-** Procedural steps to make contributions **
+### Procedural steps to make contributions
 - fork project (done via website)
 - clone your fork (to your system)
     - run: ``` git status ```
@@ -12,10 +12,10 @@
 - push your changes: ``` git push ```
 - Request a PR on github (website).
 
-** Learning more **
+### Learning more
 - Use GitHub's learning tool https://lab.github.com
 - Short helpful reads https://guides.github.com
 - Thanks to the opensourceTips page, we discovered this https://learngitbranching.js.org 
 
-** Extra ** 
+### Extra
 - Use ssh where possible https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
