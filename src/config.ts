@@ -35,7 +35,11 @@ export default {
     { abbr: 'IST', zone: 'Asia/Kolkata' },
   ],
   OPENSOURCE_JOB_CRON_TIME: process.env.OPENSOURCE_JOB_CRON_TIME || '0 14 * * *', // Default time is everyday at 2pm
-  TIPS_DIRECTORY: './tips',
+  TIPS: {
+    directory: './tips',
+    tips: [ 'openSourceTips.md', 'githubTips.md' ],
+    resources: [ 'openSourceResources.md' ],
+  },
   WORDS: {
     prepend: [
       'hello', 'hey', 'hi', 'yo', 'hiya', 'whatsup', 'greetings',
