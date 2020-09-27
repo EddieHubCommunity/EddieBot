@@ -1,4 +1,4 @@
-- Read projects contribution guidelines (usually on the CONTRIBUTING.md file at the root or inside the folder \`.github\`).
+- Read projects' contribution guidelines (usually on the CONTRIBUTING.md file at the root or inside the folder \`.github\`).
 - Contribute small and often.
 - Fixing typos and adding documentation is valuable! Don't feel the need to make a PR with just code 🙂.
 - Sharing your experience with the project, is as much a contribution as a code contribution! For example, write a blog post about how you use a certain library and what problem it solves for you.

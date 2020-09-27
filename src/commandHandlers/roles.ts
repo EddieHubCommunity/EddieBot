@@ -19,8 +19,10 @@ export const command = async (arg: string, embed: MessageEmbed) => {
 
     embed
         .setTitle('Available Roles')
-        .setDescription(`Here is the list of roles on this server. You can assign any role to yourself, except the ones for admins or given to you via a condition!
-        ${rolesList}`);
+        .setDescription(`Here is the list of roles on this server. You can assign almost any role to yourself. Some of the roles are admin only or given to you via a condition!
+        ${rolesList}
+        Example of usage:
+        ^iam javascript`);
 
     return embed;
 };

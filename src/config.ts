@@ -39,7 +39,52 @@ export default {
     { abbr: 'IST', zone: 'Asia/Kolkata' },
   ],
   OPENSOURCE_JOB_CRON_TIME: process.env.OPENSOURCE_JOB_CRON_TIME || '0 14 * * *', // Default time is everyday at 2pm
-  TIPS_DIRECTORY: './tips'
+  TIPS: {
+    directory: './tips',
+    tips: [ 'openSourceTips.md', 'githubTips.md' ],
+    resources: [ 'openSourceResources.md' ],
+  },
+  WORDS: {
+    prepend: [
+      'hello', 'hey', 'hi', 'yo', 'hiya', 'whatsup', 'greetings',
+      'bye', 'seeya', 'goodbye', 'good bye', 'thanks', 'whatsup',
+      'look', 'you',
+    ],
+    checks: [
+        {
+          check: 'guys',
+          suggestions: [ 'folks', 'people', 'everyone']
+        },
+        {
+          check: 'bros',
+          suggestions: [ 'folks', 'people', 'everyone']
+        },
+        {
+          check: 'bro',
+          suggestions: [ 'folks', 'people', 'everyone']
+        },
+        {
+          check: 'man',
+          suggestions: [ 'folks', 'people', 'everyone']
+        },
+        {
+          check: 'dude',
+          suggestions: [ 'folks', 'people', 'everyone']
+        },
+        {
+          check: 'dudes',
+          suggestions: [ 'folks', 'people', 'everyone']
+        },
+        {
+          check: 'gentlemen',
+          suggestions: [ 'folks', 'people', 'everyone']
+        },
+        {
+          check: 'boys',
+          suggestions: [ 'folks', 'people', 'everyone']
+        },
+      ]
+    }
 };
 
 // Possible values for user subscriptions

@@ -21,6 +21,7 @@ export const command = async (arg: string, embed: MessageEmbed) => {
 
     switch (subject) {
         case 'opensource':
+        case 'github':
             return createTip(embed);
         default:
             return embed
