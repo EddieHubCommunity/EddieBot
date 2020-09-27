@@ -8,7 +8,7 @@
 
 Discord bot for Eddie Jaoude's Discord server
 
-## Features of EddieBot
+## → Features of EddieBot
 
 - Set/Get user bio with description and social links
 
@@ -30,58 +30,42 @@ Discord bot for Eddie Jaoude's Discord server
 
 - GitHub Actions deploys mainline branch to Azure
 
-## Required
+## → Requirements
 
-- node v10+ installed
+- Docker and Docker-Compose
 - discord token. To get one follow [these instructions](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)
 - general channel ID of your discord server, read the instructions on one of these links to get yours:
    - [Get the channel ID of the Discord text channel](https://github.com/Chikachi/DiscordIntegration/wiki/How-to-get-a-token-and-channel-ID-for-Discord#get-the-channel-id-of-the-discord-text-channel)
    - [Where can I find my User/Server/Message ID?](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
 - ID of your discord server, to get your server ID follow these steps:
    - First make sure you have **Developer Mode** enabled on your Discord by visiting your Discord settings and going to Appearance
-
-   ![user settings button](https://user-images.githubusercontent.com/18630253/83634306-3458c180-a59a-11ea-8a96-15e9751b9d08.png)
-   ![developer mode toggle button](https://user-images.githubusercontent.com/18630253/83634441-7a158a00-a59a-11ea-919c-2d7384d724f7.png)
-
    - Right click on the server icon on the left hand sidebar then click on "Copy ID"
 - firebase key for the project, check [these docs](https://firebase.google.com/docs/admin/setup) to get your key
 - [optional] GCP account to deploy to (using GitHub Actions)
 
-## Quickstart
+## → How to run EddieBot locally:
 
-1. Clone the project or your fork (if you plan to make changes use your fork)
-2. Install dependencies by running the command `npm install`
+#### 1. Set Environment Variables
+1. Copy `.env.example` to `.env`.
+1. Generate the "Service Account" from Firebase Settings > Cloud Messaging.
+    1. Download Service Account JSON file from this same screen.
+1. Open `.env` and fill empty strings with matching credentials from the JSON file.
 
-### Run the project locally on Mac and Linux using below command
-1. `DISCORD_TOKEN=<GET YOUR DISCORD TOKEN> GENERAL_CHANNEL_ID=<GET YOUR GENERAL CHANNEL ID> DISCORD_SERVER_ID=<YOUR SERVER_ID> DISCORD_BOT_CHANNEL_ID=<ID> COMMAND_PREFIX=<PREFIX> FIREBASE_KEY=<FIREBASE_KEY> npm run start:local`
+#### 2. Ensure you have the latest Docker and Docker Compose installed and run
+- `docker-compose up`
 
-1b. OR you can add the envars (Environment Variables) in a file `envars.tmp.sh` and run the command `source envars.tmp.sh && npm run start:local`
+---
 
-Example `envars.tmp.sh` file
+### → Useful Commands
+- **View Logs**
 
-```bash
-export DISCORD_TOKEN=<DISCORD_TOKEN>
-export COMMAND_PREFIX='^'
-export DISCORD_SERVER_ID=<DISCORD_SERVER_ID>
-export DISCORD_BOT_CHANNEL_ID=<DISCORD_BOT_CHANNEL_ID>
-export FIREBASE_KEY=<FIREBASE_KEY>
-```
+  `docker-compose logs --tail=all -f eddiebot-nodejs`
 
-### Run on Windows using below commands
-1. `set DISCORD_TOKEN=<GET YOUR DISCORD TOKEN>`
-2. `set GENERAL_CHANNEL_ID=<GET YOUR GENERAL CHANNEL ID>`
-3. `set DISCORD_SERVER_ID=<YOUR SERVER_ID>`
-4. `set DISCORD_BOT_CHANNEL_ID=<ID>`
-5. `set COMMAND_PREFIX=<PREFIX>`
-6. `npm run start:local`
+- **Use NodeJS instance CLI**
 
-**Note**
+  `docker-compose exec eddiebot-nodejs /bin/bash`
 
-`FIREBASE_KEY` is the firebase service key and expected key structure is json string that needs to be valid json with single quotes around the whole string and the field names/values need double quotes. An example below:
-
-`export FIREBASE_KEY='{"type": "service_account","project_id": ... }'`
-
-### Logging
+### → Logging
 
 Logging will happen to the console as well as to the Discord `bot` channel.
 
