@@ -1,5 +1,5 @@
-import { scheduleJob as schedule } from 'node-schedule';
-import { log } from './logger';
+import { scheduleJob as schedule } from "node-schedule";
+import { log } from "./logger";
 
 /**
  * Schedule the given job function to run in the periodicity specified with cronTime
@@ -8,8 +8,12 @@ import { log } from './logger';
  * @param job callback function
  * @param jobName (optional) name for the job
  */
-export function scheduleJob(timeRule: string | number | Date, job: () => Promise<void>, jobName?: string) {
-  jobName = jobName ? ` ${jobName}` : '';
+export function scheduleJob(
+  timeRule: string | number | Date,
+  job: () => Promise<void>,
+  jobName?: string
+) {
+  jobName = jobName ? ` ${jobName}` : "";
   log.info(`Scheduling the job${jobName}`);
 
   schedule(timeRule, async () => {
@@ -17,8 +21,8 @@ export function scheduleJob(timeRule: string | number | Date, job: () => Promise
       log.info(`Running the job${jobName}`);
       await job();
       log.info(`Finished the job${jobName}`);
-    } catch(e) {
-      log.error('An error occurred:', e.message);
+    } catch (e) {
+      log.error("An error occurred:", e.message);
       log.trace(e.stack);
       throw e;
     }
