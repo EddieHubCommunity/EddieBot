@@ -18,9 +18,9 @@ export const words = async (message: Message) => {
 
     const match = WORDS.checks
         .find((word) => WORDS.prepend
-            .find((prepend) => {
-                const msg = message.content.toLowerCase();
-                return msg.includes(`${prepend} ${word.check} `) || msg.includes(`${word.check}.`)}));
+            .find((prepend) => message.content.toLowerCase().includes(`${prepend} ${word.check}`) ||
+                WORDS.punctuation
+                    .find(punctuation => message.content.toLowerCase().includes(`${word.check}${punctuation}`))));
     if (match) {
         const embed = defaultEmbed()
             .setTitle(`You used the word "${match.check.toUpperCase()}"`)

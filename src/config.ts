@@ -50,6 +50,9 @@ export default {
       'bye', 'seeya', 'goodbye', 'good bye', 'thanks', 'whatsup',
       'look', 'you',
     ],
+    punctuation: [
+      '.', '?', '!', ';', ':',
+    ],
     checks: [
         {
           check: 'guys',
