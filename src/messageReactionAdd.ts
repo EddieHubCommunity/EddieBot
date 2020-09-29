@@ -1,8 +1,8 @@
-import { MessageReaction } from "discord.js";
+import { MessageReaction } from 'discord.js';
 
-import config from "./config";
-import { log } from "./logger";
-import { getUserRoles } from "./commandHandlers/guild.service";
+import config from './config';
+import { log } from './logger';
+import { getUserRoles } from './commandHandlers/guild.service';
 
 const { REACTIONS_COUNT, ROLE } = config;
 
@@ -33,7 +33,7 @@ export const messageReactionAdd = async (reaction: MessageReaction) => {
     try {
       await reaction.fetch();
     } catch (error) {
-      log.error("Something went wrong when fetching the reaction: ", error);
+      log.error('Something went wrong when fetching the reaction: ', error);
       return;
     }
   }
@@ -42,7 +42,7 @@ export const messageReactionAdd = async (reaction: MessageReaction) => {
     try {
       await reaction.message.member!.fetch();
     } catch (error) {
-      log.error("Something went wrong when fetching the message: ", error);
+      log.error('Something went wrong when fetching the message: ', error);
       return;
     }
   }
@@ -51,7 +51,7 @@ export const messageReactionAdd = async (reaction: MessageReaction) => {
     try {
       await reaction.message.member!.fetch();
     } catch (error) {
-      log.error("Something went wrong when fetching the member: ", error);
+      log.error('Something went wrong when fetching the member: ', error);
       return;
     }
   }
@@ -65,7 +65,7 @@ export const messageReactionAdd = async (reaction: MessageReaction) => {
         await getUserRoles(reaction.message.member!)
       ).includes(ROLE.HIGH_VALUE.name);
       const isModerator = reaction.message.member!.hasPermission(
-        "KICK_MEMBERS"
+        'KICK_MEMBERS'
       );
 
       if (isAssignedRole || isModerator) {
@@ -83,6 +83,6 @@ export const messageReactionAdd = async (reaction: MessageReaction) => {
       );
     }
   } catch (error) {
-    log.error("Something went wrong when counting the reactions: ", error);
+    log.error('Something went wrong when counting the reactions: ', error);
   }
 };

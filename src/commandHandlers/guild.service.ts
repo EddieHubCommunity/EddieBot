@@ -1,7 +1,7 @@
-import { Role, Collection, GuildMember, Guild } from "discord.js";
+import { Role, Collection, GuildMember, Guild } from 'discord.js';
 
-import { client as discordClient } from "../client";
-import { log } from "../logger";
+import { client as discordClient } from '../client';
+import { log } from '../logger';
 
 export async function getRoles(): Promise<Collection<string, Role>> {
   const guild = getConfiguredGuild();
@@ -19,7 +19,7 @@ export async function getUserRoles(member: GuildMember): Promise<string[]> {
   const allRoles = await getRoles();
 
   return allRoles
-    .filter((role) => !role.name.includes("everyone"))
+    .filter((role) => !role.name.includes('everyone'))
     .filter((role) => member.roles.cache.has(role.id))
     .map((role) => role.name);
 }

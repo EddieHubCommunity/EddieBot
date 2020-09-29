@@ -1,8 +1,8 @@
-import { MessageEmbed } from "discord.js";
+import { MessageEmbed } from 'discord.js';
 
 export const command = async (arg: string, embed: MessageEmbed) => {
   return embed
-    .setTitle("Code of Conduct (CoC) - Contributor Covenant Code of Conduct")
+    .setTitle('Code of Conduct (CoC) - Contributor Covenant Code of Conduct')
     .setDescription(
       `We as members, contributors, and leaders pledge to make participation in our
   community a harassment-free experience for everyone, regardless of age, body
@@ -14,16 +14,16 @@ export const command = async (arg: string, embed: MessageEmbed) => {
   diverse, inclusive, and healthy community.
   Our Standards`
     )
-    .addField("TLDR", "Be nice :)", true)
+    .addField('TLDR', 'Be nice :)', true)
     .addField(
-      "Full details available on GitHub repo",
-      "https://github.com/EddieJaoudeCommunity/EddieBot/blob/master/CODE_OF_CONDUCT.md",
+      'Full details available on GitHub repo',
+      'https://github.com/EddieJaoudeCommunity/EddieBot/blob/master/CODE_OF_CONDUCT.md',
       true
     );
 };
 
-export const description = "Code Of Conduct";
+export const description = 'Code Of Conduct';
 
-export const triggers = ["coc", "codeofconduct"];
+export const triggers = ['coc', 'codeofconduct'];
 
 export const usage = triggers[0];

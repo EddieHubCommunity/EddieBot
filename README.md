@@ -78,31 +78,31 @@ Logging will happen to the console as well as to the Discord `bot` channel.
 1. Include the logger object...
 
 ```typescript
-import { log } from "./logger";
+import { log } from './logger';
 ```
 
 2. Usage
 
 ```typescript
-log.info("Message", "Details");
+log.info('Message', 'Details');
 ```
 
 or
 
 ```typescript
-log.warn("Message", "Details");
+log.warn('Message', 'Details');
 ```
 
 or
 
 ```typescript
-log.error("Message", "Details");
+log.error('Message', 'Details');
 ```
 
 or
 
 ```typescript
-log.fatal("Message", "Details");
+log.fatal('Message', 'Details');
 ```
 
 ### [Discord Gateway Intents](https://discordjs.guide/popular-topics/intents.html)
@@ -115,13 +115,13 @@ If you want the bot to receive a **new type of event**, you might need to add th
 
 ```ts
 export const client = new Client({
-  partials: ["MESSAGE", "CHANNEL", "REACTION"],
+  partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
   ws: {
     intents: [
-      "GUILDS",
-      "GUILD_MESSAGES",
-      "GUILD_MESSAGE_REACTIONS",
-      "GUILD_BANS",
+      'GUILDS',
+      'GUILD_MESSAGES',
+      'GUILD_MESSAGE_REACTIONS',
+      'GUILD_BANS',
       PrivilegedIntents.GUILD_MEMBERS,
     ],
   },
@@ -131,7 +131,7 @@ export const client = new Client({
 2. Add an event handler function for the events you want in `index.ts`:
 
 ```ts
-client.on("guildBanAdd", (guild) => guildBanAdd(guild));
+client.on('guildBanAdd', (guild) => guildBanAdd(guild));
 ```
 
 _Note: We are using the `GUILD_MEMBERS` **privileged intent** to receive the `guildMemberAdd` event. To know more about Privileged Intents check the [official docs](https://discord.com/developers/docs/topics/gateway#privileged-intents)_.

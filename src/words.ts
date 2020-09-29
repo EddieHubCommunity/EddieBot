@@ -1,6 +1,6 @@
-import { Message } from "discord.js";
+import { Message } from 'discord.js';
 
-import config from "./config";
+import config from './config';
 
 const { defaultEmbed, WORDS } = config;
 
@@ -26,11 +26,11 @@ export const words = async (message: Message) => {
     const embed = defaultEmbed()
       .setTitle(`You used the word "${match.check.toUpperCase()}"`)
       .setDescription(
-        "In future, please use one of the following suggestions instead..."
+        'In future, please use one of the following suggestions instead...'
       );
 
     match.suggestions.forEach((suggestion) =>
-      embed.addField(suggestion, "Is another alternative")
+      embed.addField(suggestion, 'Is another alternative')
     );
 
     return message.channel.send(embed);

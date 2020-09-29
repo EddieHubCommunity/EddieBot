@@ -1,6 +1,6 @@
-import { Message } from "discord.js";
+import { Message } from 'discord.js';
 
-import config from "./config";
+import config from './config';
 
 const { COMMAND_PREFIX } = config;
 

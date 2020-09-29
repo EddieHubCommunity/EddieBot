@@ -1,31 +1,31 @@
-import { MessageEmbed } from "discord.js";
+import { MessageEmbed } from 'discord.js';
 
-import { createTip } from "./opensource";
+import { createTip } from './opensource';
 
-const AVAILABLE_SUBJECTS = ["opensource"];
+const AVAILABLE_SUBJECTS = ['opensource'];
 
 /**
  * This command receives an argument that specifies the subject the user wants advice on, and then returns an embed
  * message with the tips and resources on that subject.
  */
 export const command = async (arg: string, embed: MessageEmbed) => {
-  const [subject] = arg.split("||");
+  const [subject] = arg.split('||');
 
   if (!subject) {
     return embed
-      .setTitle("Tips (error)")
+      .setTitle('Tips (error)')
       .setDescription(description)
-      .addField("ERROR", "Missing arguments")
-      .addField("Usage", usage);
+      .addField('ERROR', 'Missing arguments')
+      .addField('Usage', usage);
   }
 
   switch (subject) {
-    case "opensource":
-    case "github":
+    case 'opensource':
+    case 'github':
       return createTip(embed);
     default:
       return embed
-        .setTitle("Tips")
+        .setTitle('Tips')
         .setDescription(
           "Sorry :frowning:, we don't have tips on that subject. Feel free to [open an issue](https://github.com/EddieJaoudeCommunity/EddieBot/issues) to add tips on that subject."
         );
@@ -33,10 +33,10 @@ export const command = async (arg: string, embed: MessageEmbed) => {
 };
 
 export const description =
-  "Get a list of tips and resources to help you on a given subject (e.g. open source)";
+  'Get a list of tips and resources to help you on a given subject (e.g. open source)';
 
-export const triggers = ["tips"];
+export const triggers = ['tips'];
 
 export const usage = `${
   triggers[0]
-} <subject>. Available subjects: ${AVAILABLE_SUBJECTS.join(";")}`;
+} <subject>. Available subjects: ${AVAILABLE_SUBJECTS.join(';')}`;

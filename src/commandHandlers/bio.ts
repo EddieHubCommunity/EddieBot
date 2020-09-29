@@ -1,11 +1,11 @@
-import { MessageEmbed, Message } from "discord.js";
-import * as firebase from "firebase-admin";
-import * as axios from "axios";
+import { MessageEmbed, Message } from 'discord.js';
+import * as firebase from 'firebase-admin';
+import * as axios from 'axios';
 
-import { getUserRoles } from "./guild.service";
-import config from "../config";
-import { db } from "../firebase";
-import { log } from "../logger";
+import { getUserRoles } from './guild.service';
+import config from '../config';
+import { db } from '../firebase';
+import { log } from '../logger';
 
 /**
  * This command lets the user set their personal data if others want to follow them on other social platforms
@@ -15,28 +15,28 @@ export const command = async (
   embed: MessageEmbed,
   message: Message
 ) => {
-  const [first, ...rest] = arg.split("||");
-  const content = rest.join("||");
+  const [first, ...rest] = arg.split('||');
+  const content = rest.join('||');
   const mention = message.mentions.users.first();
   const field = first.toLowerCase().trim();
   if (field.length && !mention && !config.BIO.includes(field.trim())) {
     embed
-      .setTitle("Edit Bio (error)")
+      .setTitle('Edit Bio (error)')
       .setDescription(
         `Bio option not valid, please use one of the following: ${config.BIO.join(
-          ", "
+          ', '
         )}`
       )
-      .addField("ERROR", "Invalid argument")
-      .addField("Usage", usage);
+      .addField('ERROR', 'Invalid argument')
+      .addField('Usage', usage);
 
     return embed;
   }
 
   // Delete bio
-  if (field === "delete" && !content && !mention) {
-    await db.collection("users").doc(message.author.id).delete();
-    embed.setDescription("Deleted your bio");
+  if (field === 'delete' && !content && !mention) {
+    await db.collection('users').doc(message.author.id).delete();
+    embed.setDescription('Deleted your bio');
   }
 
   // get information
@@ -49,15 +49,15 @@ export const command = async (
       if (mentionMember) {
         roles = await getUserRoles(mentionMember);
       } else {
-        log.error("Could not get member: ", mention.id);
+        log.error('Could not get member: ', mention.id);
       }
     } else {
       roles = await getUserRoles(message.member!);
     }
 
-    embed.setDescription("Reading bio");
+    embed.setDescription('Reading bio');
     const doc = await db
-      .collection("users")
+      .collection('users')
       .doc(mention ? mention!.id : message.author.id)
       .get();
     const data = doc.data();
@@ -65,25 +65,25 @@ export const command = async (
     if (data && data.bio) {
       Object.entries(data.bio).forEach(([key]) => {
         let value = data.bio[key];
-        if (key === "location") {
+        if (key === 'location') {
           value = value.display_name;
         }
         return embed.addField(key.toUpperCase(), value);
       });
     } else {
-      embed.addField("Description", "No bio details found");
+      embed.addField('Description', 'No bio details found');
       embed.addField(
-        "Example",
+        'Example',
         `${config.COMMAND_PREFIX}bio description || I am a ...`
       );
       embed.addField(
-        "Example",
+        'Example',
         `${config.COMMAND_PREFIX}bio location || London, UK`
       );
     }
 
     if (roles && !!roles.length) {
-      embed.addField(`Roles (${roles.length})`, roles.join(", ").toUpperCase());
+      embed.addField(`Roles (${roles.length})`, roles.join(', ').toUpperCase());
     }
   }
 
@@ -97,7 +97,7 @@ export const command = async (
     const updateBio = async () => {
       embed.setDescription(`Updating your bio with ${field}`);
       await db
-        .collection("users")
+        .collection('users')
         .doc(message.author.id)
         .set(
           {
@@ -122,7 +122,7 @@ export const command = async (
     };
 
     switch (field) {
-      case "location":
+      case 'location':
         try {
           const url = `https://nominatim.openstreetmap.org/?addressdetails=1&q=${encodeURIComponent(
             data
@@ -134,18 +134,18 @@ export const command = async (
           log.error(`ERROR: Couldn't get location ${data}`);
         }
         break;
-      case "twitter":
+      case 'twitter':
         if (isValidTwitterUsername(data)) {
           data = `https://twitter.com/${data}`;
           updateBio();
         } else {
-          embed.addField("Description", "Twitter Handle - Unexpected format");
+          embed.addField('Description', 'Twitter Handle - Unexpected format');
           embed.addField(
-            "Example",
+            'Example',
             `${config.COMMAND_PREFIX}bio twitter || @example`
           );
           embed.addField(
-            "Example",
+            'Example',
             `${config.COMMAND_PREFIX}bio twitter || example`
           );
         }
@@ -157,18 +157,18 @@ export const command = async (
   }
 
   embed
-    .setTitle("Bio")
+    .setTitle('Bio')
     .setFooter(
       mention ? mention!.username : message.author.username,
-      (mention ? mention!.avatarURL() : message.author.avatarURL()) || ""
+      (mention ? mention!.avatarURL() : message.author.avatarURL()) || ''
     );
 
   return embed;
 };
 
 export const description =
-  "Get & Set your bio information for others to find you social platforms";
+  'Get & Set your bio information for others to find you social platforms';
 
-export const triggers = ["bio"];
+export const triggers = ['bio'];
 
 export const usage = `${triggers[0]} <key> || <value> or ${triggers[0]} or ${triggers[0]} <@user>`;

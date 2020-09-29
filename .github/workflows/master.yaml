@@ -17,7 +17,7 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: "10.x"
+          node-version: '10.x'
 
       - name: Install deps and build project
         run: |
@@ -33,7 +33,7 @@ jobs:
       - name: Set Azure envars
         uses: azure/login@v1
         with:
-          creds: "${{ secrets.AZURE_CREDENTIALS }}"
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: azure/appservice-settings@v1
         with:
           app-name: ${{ env.APP_NAME }}

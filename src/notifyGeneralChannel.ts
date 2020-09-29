@@ -1,7 +1,7 @@
-import { DMChannel, GuildChannel, TextChannel } from "discord.js";
+import { DMChannel, GuildChannel, TextChannel } from 'discord.js';
 
-import config from "./config";
-import { log } from "./logger";
+import config from './config';
+import { log } from './logger';
 
 const { GENERAL_CHANNEL } = config;
 

@@ -1,7 +1,7 @@
-import { Message } from "discord.js";
+import { Message } from 'discord.js';
 
-import commandList, { fallback } from "./commandHandlers";
-import config from "./config";
+import commandList, { fallback } from './commandHandlers';
+import config from './config';
 
 const { COMMAND_PREFIX, defaultEmbed } = config;
 

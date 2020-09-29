@@ -1,7 +1,7 @@
-import { User, PartialUser } from "discord.js";
-import * as firebase from "firebase-admin";
+import { User, PartialUser } from 'discord.js';
+import * as firebase from 'firebase-admin';
 
-import { db } from "./firebase";
+import { db } from './firebase';
 
 interface Event {
   type: string;
@@ -13,7 +13,7 @@ export const eventStream = async (event: Event) => {
     return;
   }
 
-  await db.collection("eventStream").doc().create({
+  await db.collection('eventStream').doc().create({
     avatar: event.author.avatarURL(),
     username: event.author.username,
     type: event.type,

@@ -1,7 +1,7 @@
-import { Client, TextChannel, Channel } from "discord.js";
+import { Client, TextChannel, Channel } from 'discord.js';
 
-import { client } from "../client";
-import { log } from "../logger";
+import { client } from '../client';
+import { log } from '../logger';
 
 export interface StatsServiceInterface {
   getServerMemberCount(): Promise<number>;
@@ -60,7 +60,7 @@ class StatsService implements StatsServiceInterface {
 
   async getServerTotalReactions(): Promise<number> {
     // TODO: implement this
-    log.info("Get server total reactions not implemented yet");
+    log.info('Get server total reactions not implemented yet');
     return 0;
   }
 }

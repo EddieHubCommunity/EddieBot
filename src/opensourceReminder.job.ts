@@ -1,16 +1,16 @@
-import config from "./config";
-import { scheduleJob } from "./scheduler.service";
-import { getConfiguredGuild } from "./commandHandlers/guild.service";
-import { db } from "./firebase";
-import { UserSubscriptions } from "./config";
-import { log } from "./logger";
-import { Collection, GuildMember } from "discord.js";
+import config from './config';
+import { scheduleJob } from './scheduler.service';
+import { getConfiguredGuild } from './commandHandlers/guild.service';
+import { db } from './firebase';
+import { UserSubscriptions } from './config';
+import { log } from './logger';
+import { Collection, GuildMember } from 'discord.js';
 
 export function scheduleOpenSourceReminder() {
   scheduleJob(
     config.OPENSOURCE_JOB_CRON_TIME,
     reminderCallback,
-    "opensource-reminder"
+    'opensource-reminder'
   );
 }
 
@@ -52,7 +52,7 @@ async function reminderCallback() {
     }
   });
   await Promise.all(promises);
-  log.info("Succesfully sent open source reminder messages");
+  log.info('Succesfully sent open source reminder messages');
 }
 
 async function getOpenSourceSubscribedUsers(): Promise<
@@ -61,7 +61,7 @@ async function getOpenSourceSubscribedUsers(): Promise<
   log.info(`Getting open source subscribed users`);
 
   log.trace(`Getting querySnapshot`);
-  const querySnapshot = await db.collection("usersSubscriptions").get();
+  const querySnapshot = await db.collection('usersSubscriptions').get();
   log.trace(`Got querySnapshot`);
 
   const userNamesToSendMessage = querySnapshot.docs

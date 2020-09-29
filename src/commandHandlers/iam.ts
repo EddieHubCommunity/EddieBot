@@ -1,10 +1,10 @@
-import { MessageEmbed, Message } from "discord.js";
-import * as firebase from "firebase-admin";
+import { MessageEmbed, Message } from 'discord.js';
+import * as firebase from 'firebase-admin';
 
-import config, { selfAssignableRoles, UserSubscriptions } from "../config";
-import { db } from "../firebase";
-import { getUserRoles } from "./guild.service";
-import { log } from "../logger";
+import config, { selfAssignableRoles, UserSubscriptions } from '../config';
+import { db } from '../firebase';
+import { getUserRoles } from './guild.service';
+import { log } from '../logger';
 
 /**
  * This command assigns the role given in the argument to the user that executed the command, if that role can be
@@ -15,10 +15,10 @@ export const command = async (
   embed: MessageEmbed,
   message: Message
 ) => {
-  const args = arg.toLowerCase().split(",");
+  const args = arg.toLowerCase().split(',');
   // Check if the user provided the role argument
   if (!args) {
-    return buildErrorEmbed("Missing arguments");
+    return buildErrorEmbed('Missing arguments');
   }
 
   const rolesToAssign = args.map((x) => x.trim());
@@ -39,14 +39,14 @@ export const command = async (
       await tryAddOpenSourceUserSubscription(roleToAssign, message);
     } else {
       return buildErrorEmbed(`The role you specified is not self-assignable, try one of these roles:
-            ${selfAssignableRoles.join(", ")}
+            ${selfAssignableRoles.join(', ')}
             `);
     }
   }
 
   // Save the user's role to the DB
   await db
-    .collection("users")
+    .collection('users')
     .doc(message.author.id)
     .set(
       {
@@ -56,10 +56,10 @@ export const command = async (
       { merge: true }
     );
 
-  const userName = message.member!.displayName || "";
+  const userName = message.member!.displayName || '';
   if (rolesToAssign.length > 1) {
     return embed.setDescription(
-      `**${userName}** You now have the roles **${rolesToAssign.join(", ")}**`
+      `**${userName}** You now have the roles **${rolesToAssign.join(', ')}**`
     );
   } else {
     return embed.setDescription(
@@ -68,17 +68,17 @@ export const command = async (
   }
 
   // Auxiliar function
-  function buildErrorEmbed(errorMsg = "An error has occurred") {
+  function buildErrorEmbed(errorMsg = 'An error has occurred') {
     return embed
-      .setTitle("Role Assignment (error)")
+      .setTitle('Role Assignment (error)')
       .setDescription(errorMsg)
-      .addField("Usage", usage);
+      .addField('Usage', usage);
   }
 };
 
-export const description = "Assign yourself a server role";
+export const description = 'Assign yourself a server role';
 
-export const triggers = ["iam"];
+export const triggers = ['iam'];
 
 export const usage = `${triggers[0]} <role name> || ${triggers[0]} <role name>, <role name>, ...`;
 
@@ -95,7 +95,7 @@ async function tryAddOpenSourceUserSubscription(
   if (roleToAssign === config.ROLE.OPEN_SOURCE.name) {
     // Get the subscriptions of the user that sent the given message
     const doc = await db
-      .collection("usersSubscriptions")
+      .collection('usersSubscriptions')
       .doc(message.author.id)
       .get();
     const data = doc.data();
@@ -103,7 +103,7 @@ async function tryAddOpenSourceUserSubscription(
 
     // Add the open source subscription to the list of existing subscriptions
     await db
-      .collection("usersSubscriptions") // TODO: create a constant variable with all these collection names (e.g. exported in firebase.ts)
+      .collection('usersSubscriptions') // TODO: create a constant variable with all these collection names (e.g. exported in firebase.ts)
       .doc(message.author.id)
       .set(
         {

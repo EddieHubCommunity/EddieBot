@@ -1,4 +1,4 @@
-import * as firebase from "firebase-admin";
+import * as firebase from 'firebase-admin';
 
 // Providing a path to a service account key JSON file
 firebase.initializeApp({

@@ -1,7 +1,7 @@
-import { promises as fs } from "fs";
-import * as path from "path";
-import config from "../../config";
-import { log } from "../../logger";
+import { promises as fs } from 'fs';
+import * as path from 'path';
+import config from '../../config';
+import { log } from '../../logger';
 
 export async function readMarkdown(fileName: string) {
   try {
@@ -9,6 +9,6 @@ export async function readMarkdown(fileName: string) {
     return (await fs.readFile(filePath)).toString();
   } catch (e) {
     log.error(`ERROR: Could not read file: ${fileName} - ${e.message}`);
-    return "";
+    return '';
   }
 }
