@@ -18,8 +18,9 @@ export const words = async (message: Message) => {
 
     const match = WORDS.checks
         .find((word) => WORDS.prepend
-            .find((prepend) => message.content.toLowerCase().includes(`${prepend} ${word.check}`)));
-
+            .find((prepend) => message.content.toLowerCase().includes(`${prepend} ${word.check}`) ||
+                WORDS.append
+                    .find(append => message.content.toLowerCase().includes(`${word.check}${append}`))));
     if (match) {
         const embed = defaultEmbed()
             .setTitle(`You used the word "${match.check.toUpperCase()}"`)
