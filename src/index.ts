@@ -13,7 +13,7 @@ import { scheduleOpenSourceReminder } from './opensourceReminder.job';
 
 client.once('ready', () => {
     log.info('Online!', 'Lets get started...');
-
+    scheduleOpenSourceReminder();
     if (client.user) {
         client.user.setPresence({
             activity: {
@@ -37,8 +37,6 @@ client.on('messageReactionAdd', async (reaction) => messageReactionAdd(reaction)
 // all events
 client.on('message', (message) => eventStream({ type: 'message', author: message.author }));
 client.on('messageReactionAdd', (reaction, user) => eventStream({ type: 'reaction', author: user }));
-
-scheduleOpenSourceReminder();
 
 // bot authenticates with discord
 client.login(process.env.DISCORD_TOKEN);
