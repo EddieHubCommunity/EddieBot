@@ -32,7 +32,7 @@ Discord bot for Eddie Jaoude's Discord server
 
 ## → Requirements
 
-- Docker and Docker-Compose
+- [optional] Docker and Docker-Compose
 - discord token. To get one follow [these instructions](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)
 - general channel ID of your discord server, read the instructions on one of these links to get yours:
    - [Get the channel ID of the Discord text channel](https://github.com/Chikachi/DiscordIntegration/wiki/How-to-get-a-token-and-channel-ID-for-Discord#get-the-channel-id-of-the-discord-text-channel)
@@ -51,8 +51,12 @@ Discord bot for Eddie Jaoude's Discord server
     1. Download Service Account JSON file from this same screen.
 1. Open `.env` and fill empty strings with matching credentials from the JSON file.
 
-#### 2. Ensure you have the latest Docker and Docker Compose installed and run
-- `docker-compose up`
+#### 2. To start the application
+- [optional] To run with Docker ensure you have the latest version and Docker Compose installed and run
+	- `docker-compose up`
+
+- To run locally
+	- `npm run start:local`
 
 ---
 
