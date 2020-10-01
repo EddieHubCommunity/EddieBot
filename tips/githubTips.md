@@ -1,16 +1,16 @@
 **GitHub Tips**
 
 **Procedural steps to make contributions**
-- fork project (done via website)
-- clone your fork (to your system)
-- run: ``` git status ```
-- create a branch to work from: ``` git checkout -b <branch-name> ```
+- Fork project (done via website)
+- Clone your fork (to your system)
+- Run: ``` git status ```
+- Create a branch to work from: ``` git checkout -b <branch-name> ```
 - Check status ``` git status ```
-- make your code/changes/etc
-- run: ``` git add <file-name> <file-name> ```
-- commit your changes: ``` git commit -m "appropriate note" ```
-- push your changes: ``` git push ```
-- Request a PR on github (website).
+- Make your code/changes/etc
+- Run: ``` git add <file-name> <file-name> ```
+- Commit your changes: ``` git commit -m "appropriate note" ```
+- Push your changes: ``` git push ```
+- Request a PR on github (website), after you have done changes.
 
 **Learning more**
 - Use GitHub's learning tool https://lab.github.com
