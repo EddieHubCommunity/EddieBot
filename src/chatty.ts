@@ -1,31 +1,31 @@
-import { Message } from 'discord.js';
+import { Message } from "discord.js";
 
-import config from './config';
+import config from "./config";
 
 const { COMMAND_PREFIX } = config;
 
 const stats: { [key: string]: { messageCount: number } } = {};
 
 export const chatty = async (message: Message) => {
-    if (message.content.startsWith(COMMAND_PREFIX) || message.author.bot) {
-        return;
-    }
+  if (message.content.startsWith(COMMAND_PREFIX) || message.author.bot) {
+    return;
+  }
 
-    if (message.member!.partial) {
-        await message.member!.fetch;
-    }
+  if (message.member!.partial) {
+    await message.member!.fetch;
+  }
 
-    const userId: string = message.member!.id;
+  const userId: string = message.member!.id;
 
-    try {
-        stats[userId].messageCount++;
-    } catch {
-        stats[userId] = {
-            messageCount: 1,
-        };
-    }
+  try {
+    stats[userId].messageCount++;
+  } catch {
+    stats[userId] = {
+      messageCount: 1,
+    };
+  }
 
-    // console.log(stats);
+  // console.log(stats);
 
-    // @TODO: save status in DB
+  // @TODO: save status in DB
 };
