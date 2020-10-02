@@ -79,6 +79,9 @@ export default {
       'look',
       'you',
     ],
+    append: [
+      '.', '?', '!', ';', ':',
+    ],
     checks: [
       {
         check: 'guys',
