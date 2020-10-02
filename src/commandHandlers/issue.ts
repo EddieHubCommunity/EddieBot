@@ -1,4 +1,4 @@
-import { get as axiosGet } from 'axios';
+import axios from 'axios';
 import { load as cheerioLoad } from 'cheerio';
 import { Message, MessageEmbed } from 'discord.js';
 
@@ -16,7 +16,7 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
         }).catch(() => { throw new Error('You took too long to reply (`10 seconds`). Try again.') });
 
         let url = 'https://github.com';
-        const { data } = await axiosGet(`https://github.com/search?q=${encodeURI(repository)}`);
+        const { data } = await axios.get(`https://github.com/search?q=${encodeURI(repository)}`);
         const $ = cheerioLoad(data);
         const element = $('a.v-align-middle').first();
         const attr = element.attr();
