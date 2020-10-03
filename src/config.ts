@@ -83,6 +83,14 @@ export default {
           suggestions: [ 'folks', 'people', 'everyone']
         },
         {
+          check: 'fella',
+          suggestions: [ 'folks', 'people', 'everyone']
+        },
+        {
+          check: 'fellas',
+          suggestions: [ 'folks', 'people', 'everyone']
+        },
+        {
           check: 'boys',
           suggestions: [ 'folks', 'people', 'everyone']
         },
