@@ -12,7 +12,7 @@ export const commands = async (message: Message) => {
     }
 
     const embed = defaultEmbed();
-    
+
     // handle cooldown
     const nextCommand = cooldownCollection.get(message.author.id);
     if(nextCommand && nextCommand > Date.now()) {
