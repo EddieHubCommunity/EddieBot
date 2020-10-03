@@ -7,6 +7,7 @@ dotenv.config();
 export default {
   BIO: [ 'description', 'github', 'twitter', 'youtube', 'instagram', 'linkedin', 'location', 'timezone', 'delete'],
   COMMAND_PREFIX: process.env.COMMAND_PREFIX || '$',
+  COOLDOWN_SECONDS: 2,
   INTRO_CHANNEL: 'introductions',
   GENERAL_CHANNEL: 'general',
   BOT_CHANNEL_ID: process.env.DISCORD_BOT_CHANNEL_ID,
