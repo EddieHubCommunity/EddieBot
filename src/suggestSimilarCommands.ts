@@ -2,19 +2,28 @@ import commandList from './commandHandlers';
 
 // @ts-ignore
 import * as soundex from 'soundex-code';
+/**
+ * function soundex(value: string, maxLength?: number): string
+ * returns a hash string of maxLength size
+ * of the string value passed to it, s.t.
+ * similar values result in equal hashes
+ */
 
-const maxLength = 2;
-const map = new Map();
+// this map contains the soundex value for each command
+const commandToSoundexMap = new Map();
+const maxLength = 2; // stores the length of hashes
 commandList
-  .forEach((commandItem) => map.set(commandItem, soundex(commandItem.triggers[0], maxLength)));
+  .forEach((commandItem) => commandToSoundexMap.set(commandItem, soundex(commandItem.triggers[0], maxLength)));
 
-const reverseMap = new Map();
-for (const [key, value] of map.entries()) {
-  const previous = reverseMap.get(value) || [];
-  previous.push(key);
-  reverseMap.set(value, previous);
+// this map contains the list of commands for a given soundex key
+const soundexToSimilarCommandsListMap = new Map();
+for (const [key, value] of commandToSoundexMap.entries()) {
+  const previousSimilarCommandsList = soundexToSimilarCommandsListMap.get(value) || [];
+  previousSimilarCommandsList.push(key);
+  soundexToSimilarCommandsListMap.set(value, previousSimilarCommandsList);
 }
 
+// returns a list of similar commands
 export const suggestSimilarCommands = (command: string) => {
-  return reverseMap.get(soundex(command, maxLength));
+  return soundexToSimilarCommandsListMap.get(soundex(command, maxLength));
 };
