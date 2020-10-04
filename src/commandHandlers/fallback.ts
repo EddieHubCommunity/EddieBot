@@ -3,6 +3,8 @@ import { MessageEmbed } from 'discord.js';
 import config from '../config';
 import { suggestSimilarCommands } from '../suggestSimilarCommands';
 
+import { CommandHandler } from './index';
+
 const { COMMAND_PREFIX } = config;
 
 export const fallback = async (arg: string, embed: MessageEmbed) => {
@@ -17,7 +19,7 @@ export const fallback = async (arg: string, embed: MessageEmbed) => {
           .setDescription('Here is a list of similar commands');
 
       similarCommands
-          .forEach((commandItem: {command: (arg: string, embed: MessageEmbed) => Promise<MessageEmbed>, description: string, triggers: string[], usage: string}) => embed
+          .forEach((commandItem: CommandHandler) => embed
               .addField(`${COMMAND_PREFIX}${commandItem.triggers[0]}`, `${commandItem.description}\nUsage: ${COMMAND_PREFIX}${commandItem.usage}`, false));
   } else {
       embed
