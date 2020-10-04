@@ -121,6 +121,6 @@ export const issueRequestConfig: AxiosRequestConfig = {
   url: `https://api.github.com/search/repositories`
 };
 
-if(process.env.GITHUB_TOKEN) {
-  issueRequestConfig.headers = { 'Authorization': `token ${process.env.GITHUB_TOKEN}` }
+if (process.env.GITHUB_TOKEN) {
+  issueRequestConfig.headers = { 'Authorization': `token ${process.env.GITHUB_TOKEN}` };
 }
