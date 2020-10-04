@@ -1,5 +1,5 @@
 import { MessageEmbed } from 'discord.js';
-//@ts-ignore
+// @ts-ignore
 import * as soundex from 'soundex-code';
 
 import config from '../config';
@@ -32,7 +32,7 @@ export const fallback = async (arg: string, embed: MessageEmbed) => {
           .setDescription('Here is a list of similar commands');
 
       similarCommands
-          //@ts-ignore
+          // @ts-ignore
           .forEach((commandItem) => embed
               .addField(`${COMMAND_PREFIX}${commandItem.triggers[0]}`, `${commandItem.description}\nUsage: ${COMMAND_PREFIX}${commandItem.usage}`, false));
   } else {
