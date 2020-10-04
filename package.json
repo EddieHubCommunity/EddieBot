@@ -30,7 +30,8 @@
     "moment-timezone": "^0.5.31",
     "node-schedule": "^1.3.2",
     "pino": "^6.3.2",
-    "pino-pretty": "^4.0.0"
+    "pino-pretty": "^4.0.0",
+    "soundex-code": "^1.0.5"
   },
   "devDependencies": {
     "@types/node": "^13.11.1",
