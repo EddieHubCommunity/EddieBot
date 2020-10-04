@@ -47,7 +47,7 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
         }
         let url = `${item.html_url}/issues/new`;
 
-        if(arg) {
+        if (arg) {
             url += `?title=${encodeURI(arg)}`;
         }
         return embed
