@@ -17,7 +17,7 @@ export const fallback = async (arg: string, embed: MessageEmbed) => {
           .setDescription('Here is a list of similar commands');
 
       similarCommands
-          .forEach((commandItem: {command: (arg: string, embed: MessageEmbed) => Promise<MessageEmbed>, description: string, triggers: Array<string>, usage: string}) => embed
+          .forEach((commandItem: {command: (arg: string, embed: MessageEmbed) => Promise<MessageEmbed>, description: string, triggers: string[], usage: string}) => embed
               .addField(`${COMMAND_PREFIX}${commandItem.triggers[0]}`, `${commandItem.description}\nUsage: ${COMMAND_PREFIX}${commandItem.usage}`, false));
   } else {
       embed
