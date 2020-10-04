@@ -35,7 +35,12 @@ export default {
     { abbr: 'PDT', zone: 'America/Los_Angeles' },
     { abbr: 'AEST', zone: 'Australia/Brisbane' },
     { abbr: 'EEST', zone: 'Asia/Beirut' },
-    { abbr: 'UTC', zone: 'Europe/London' }, { abbr: 'UK', zone: 'Europe/London' },
+    { abbr: 'UTC', zone: 'Europe/London' }, { abbr: 'UK', zone: 'Europe/London' }, 
+    { abbr: 'CEST', zone: 'Europe/Stockholm' },
+    //winter timezone of Finland +1h 
+    { abbr: 'EET', zone: 'Europe/Finland' },
+    //summer timezone of Finland -1h 
+    { abbr: 'EEST', zone: 'Europe/Finland' },
     { abbr: 'IST', zone: 'Asia/Kolkata' },
   ],
   OPENSOURCE_JOB_CRON_TIME: process.env.OPENSOURCE_JOB_CRON_TIME || '0 14 * * *', // Default time is everyday at 2pm
