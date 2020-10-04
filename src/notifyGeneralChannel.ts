@@ -8,7 +8,7 @@ const { GENERAL_CHANNEL } = config;
 export const notifyGeneralChannel = async (channel: DMChannel | GuildChannel) => {
     // Note: When the bot sends DMS to members, this is triggered. So we ignore the notification
     if (channel instanceof DMChannel) {
-       return;
+        return;
     }
 
     const generalChannel = channel.client.channels.cache.find(currentChannel =>
@@ -16,10 +16,11 @@ export const notifyGeneralChannel = async (channel: DMChannel | GuildChannel) =>
         (currentChannel instanceof TextChannel && currentChannel.name === GENERAL_CHANNEL)
     );
     if (!generalChannel)
-        return log.error(`${GENERAL_CHANNEL} channel not found. Make sure to setup GENERAL_CHANNEL_ID env variable.`);
+    {return log.error(`${GENERAL_CHANNEL} channel not found. Make sure to setup GENERAL_CHANNEL_ID env variable.`);}
 
     if (generalChannel instanceof TextChannel) {
+        // eslint-disable-next-line
         const message = `\:tada: A new channel was created! Check out the channel ${channel.toString()}`;
         return await generalChannel.send(message);
     }
-}
+};

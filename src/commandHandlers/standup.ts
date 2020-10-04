@@ -17,10 +17,10 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
 
     if (!args[0] || !args[1]) {
         embed
-        .setTitle('Standup (error)')
-        .setDescription('What I did yesterday and what I will do today')
-        .addField('ERROR', 'Missing arguments')
-        .addField('Usage', usage)
+            .setTitle('Standup (error)')
+            .setDescription('What I did yesterday and what I will do today')
+            .addField('ERROR', 'Missing arguments')
+            .addField('Usage', usage);
 
         return embed;
     }
@@ -30,7 +30,7 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
         .setDescription('What I did yesterday and what I will do today')
         .addField('Yesterday', args[0])
         .addField('Today', args[1])
-        .setFooter(message.author.username, message.author.avatarURL() || undefined)
+        .setFooter(message.author.username, message.author.avatarURL() || undefined);
 
     return embed;
 };
@@ -39,4 +39,4 @@ export const description = 'Share your standup notes with the community. What yo
 
 export const triggers = ['standup'];
 
-export const usage = `${triggers[0]} <notes from yesterday> || <notes for today>`
+export const usage = `${triggers[0]} <notes from yesterday> || <notes for today>`;

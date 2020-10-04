@@ -16,17 +16,17 @@ export const command = async (arg: string, embed: MessageEmbed) => {
             .setTitle('Tips (error)')
             .setDescription(description)
             .addField('ERROR', 'Missing arguments')
-            .addField('Usage', usage)
+            .addField('Usage', usage);
     }
 
     switch (subject) {
-        case 'opensource':
-        case 'github':
-            return createTip(embed);
-        default:
-            return embed
-                .setTitle('Tips')
-                .setDescription('Sorry :frowning:, we don\'t have tips on that subject. Feel free to [open an issue](https://github.com/EddieJaoudeCommunity/EddieBot/issues) to add tips on that subject.')
+    case 'opensource':
+    case 'github':
+        return createTip(embed);
+    default:
+        return embed
+            .setTitle('Tips')
+            .setDescription('Sorry :frowning:, we don\'t have tips on that subject. Feel free to [open an issue](https://github.com/EddieJaoudeCommunity/EddieBot/issues) to add tips on that subject.');
     }
 };
 

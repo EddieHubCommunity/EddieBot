@@ -50,7 +50,7 @@ class StatsService implements StatsServiceInterface {
             const messageResponses = await Promise.all(messagePromises);
             return messageResponses.reduce((total, msgRsp) => total + msgRsp.size, 0);
         } catch (error) {
-            log.error(`An error occurred while fetching messages`, error);
+            log.error('An error occurred while fetching messages', error);
             return 0;
         }
     }

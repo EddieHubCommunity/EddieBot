@@ -4,7 +4,7 @@ import { client as discordClient } from '../client';
 import { log } from '../logger';
 
 export async function getRoles(): Promise<Collection<string, Role>> {
-    const guild = getConfiguredGuild()
+    const guild = getConfiguredGuild();
     if (!guild) {
         log.error('ERROR: Couldn\'t get roles list! The guild with the configured DISCORD_SERVER_ID env. variable doesn\'t exist');
         return new Collection();

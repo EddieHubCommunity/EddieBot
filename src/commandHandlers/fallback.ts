@@ -5,7 +5,7 @@ import config from '../config';
 const { COMMAND_PREFIX } = config;
 
 export const fallback = async (arg: string, embed: MessageEmbed) => {
-  return embed
-    .setTitle('ERROR: ooops...command not found')
-    .setDescription(`Try using the ${COMMAND_PREFIX}help command.`);
+    return embed
+        .setTitle('ERROR: ooops...command not found')
+        .setDescription(`Try using the ${COMMAND_PREFIX}help command.`);
 };

@@ -9,7 +9,7 @@ export const command = async (arg: string, embed: MessageEmbed) => {
     embed
         .setTitle('Server stats')
         .addField('total users', memberCount)
-        .addField('total messages', totalMessages)
+        .addField('total messages', totalMessages);
 
     return embed;
 };

@@ -9,18 +9,18 @@ import { log } from './logger';
  * @param jobName (optional) name for the job
  */
 export function scheduleJob(timeRule: string | number | Date, job: () => Promise<void>, jobName?: string) {
-  jobName = jobName ? ` ${jobName}` : '';
-  log.info(`Scheduling the job${jobName}`);
+    jobName = jobName ? ` ${jobName}` : '';
+    log.info(`Scheduling the job${jobName}`);
 
-  schedule(timeRule, async () => {
-    try {
-      log.info(`Running the job${jobName}`);
-      await job();
-      log.info(`Finished the job${jobName}`);
-    } catch(e) {
-      log.error('An error occurred:', e.message);
-      log.trace(e.stack);
-      throw e;
-    }
-  });
+    schedule(timeRule, async () => {
+        try {
+            log.info(`Running the job${jobName}`);
+            await job();
+            log.info(`Finished the job${jobName}`);
+        } catch(e) {
+            log.error('An error occurred:', e.message);
+            log.trace(e.stack);
+            throw e;
+        }
+    });
 }

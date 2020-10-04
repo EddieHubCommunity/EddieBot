@@ -26,7 +26,7 @@ const getTotalReactionCount = async (reaction: MessageReaction) => {
 
     // reduce down the array of numbers to the count of reactions
     return results.reduce((acc, current) => acc + current, 0);
-}
+};
 
 export const messageReactionAdd = async (reaction: MessageReaction) => {
     if (reaction.partial) {
@@ -57,7 +57,7 @@ export const messageReactionAdd = async (reaction: MessageReaction) => {
     }
 
     try {
-        const reactionsCount = await getTotalReactionCount(reaction)
+        const reactionsCount = await getTotalReactionCount(reaction);
 
         // if message owner gets 5+ reactions add "high value" role
         if (reactionsCount >= REACTIONS_COUNT) {
@@ -65,7 +65,7 @@ export const messageReactionAdd = async (reaction: MessageReaction) => {
             const isModerator = reaction.message.member!.hasPermission('KICK_MEMBERS');
 
             if (isAssignedRole || isModerator) {
-              return;
+                return;
             }
 
             const role = reaction.message.guild!.roles.cache.find((r) => r.name === ROLE.HIGH_VALUE.name);

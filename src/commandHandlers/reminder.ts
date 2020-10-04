@@ -27,7 +27,7 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
         const jobName = `reminder-${message.author.id}`;
         scheduleJob(dateTimestamp, reminderCallback, jobName);
 
-        return embed.setTitle(`${CLOCK_EMOJI} Reminder set successfully`)
+        return embed.setTitle(`${CLOCK_EMOJI} Reminder set successfully`);
     } catch (e) {
         const errorMsg = 'An error occurred while setting a reminder';
         log.error(errorMsg, e);
@@ -53,7 +53,7 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
             .addField('ERROR', errorMsg)
             .addField('Usage', usage);
     }
-}
+};
 
 export const description = 'Set reminders for yourself.';
 

@@ -17,7 +17,7 @@ const discordLog = async (type: string, message: string, details?: string) => {
 
         if (!channel) {
             return logger.error('Channel not found');
-        };
+        }
 
         if (details) {
             await channel.send(`${type.toUpperCase()}: ${message} - ${details}`);
@@ -25,7 +25,7 @@ const discordLog = async (type: string, message: string, details?: string) => {
             await channel.send(`${type.toUpperCase()}: ${message}`);
         }
     }
-}
+};
 
 export const log = {
     info: (message: string, details?: string) => discordLog('info', message, details),
@@ -33,4 +33,4 @@ export const log = {
     error: (message: string, details?: string) => discordLog('error', message, details),
     fatal: (message: string, details?: string) => discordLog('fatal', message, details),
     trace: (message: string, details?: string) => discordLog('trace', message, details),
-}
+};

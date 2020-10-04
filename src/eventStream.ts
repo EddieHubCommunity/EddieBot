@@ -15,12 +15,12 @@ export const eventStream = async (event: Event) => {
     }
 
     await db
-            .collection('eventStream')
-            .doc()
-            .create({
-                avatar: event.author.avatarURL(),
-                username: event.author.username,
-                type: event.type,
-                createdAt: firebase.firestore.FieldValue.serverTimestamp()
-            });
-}
+        .collection('eventStream')
+        .doc()
+        .create({
+            avatar: event.author.avatarURL(),
+            username: event.author.username,
+            type: event.type,
+            createdAt: firebase.firestore.FieldValue.serverTimestamp()
+        });
+};

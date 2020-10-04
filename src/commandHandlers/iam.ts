@@ -47,7 +47,7 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
             updatedAt: firebase.firestore.FieldValue.serverTimestamp()
         }, { merge: true });
 
-    const userName = message.member!.displayName || ''
+    const userName = message.member!.displayName || '';
     if (rolesToAssign.length > 1) {
         return embed.setDescription(`**${userName}** You now have the roles **${rolesToAssign.join(', ')}**`);
     } else {
@@ -59,7 +59,7 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
         return embed
             .setTitle('Role Assignment (error)')
             .setDescription(errorMsg)
-            .addField('Usage', usage)
+            .addField('Usage', usage);
     }
 };
 

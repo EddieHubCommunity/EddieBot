@@ -36,17 +36,17 @@ async function reminderCallback() {
             // so that Promise.all doesn't get rejected.
             return;
         }
-    })
+    });
     await Promise.all(promises);
     log.info('Succesfully sent open source reminder messages');
 }
 
 async function getOpenSourceSubscribedUsers(): Promise<Collection<string, GuildMember>> {
-    log.info(`Getting open source subscribed users`);
+    log.info('Getting open source subscribed users');
 
-    log.trace(`Getting querySnapshot`);
+    log.trace('Getting querySnapshot');
     const querySnapshot = await db.collection('usersSubscriptions').get();
-    log.trace(`Got querySnapshot`);
+    log.trace('Got querySnapshot');
 
     const userNamesToSendMessage = querySnapshot
         .docs
@@ -58,12 +58,12 @@ async function getOpenSourceSubscribedUsers(): Promise<Collection<string, GuildM
     log.trace(`Got userNamesToSendMessage: ${userNamesToSendMessage}`);
 
     const guild = getConfiguredGuild();
-    log.trace(`Getting all members from guild`);
+    log.trace('Getting all members from guild');
     const allMembers = await guild!.members.fetch();
-    log.trace(`Got all members from guild`);
+    log.trace('Got all members from guild');
     const subscribedUsers = allMembers.filter(member => userNamesToSendMessage.includes(member.user.username));
 
-    log.info(`Got open source subscribed users`);
+    log.info('Got open source subscribed users');
     return subscribedUsers;
 }
 

@@ -17,10 +17,10 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
     const field = first.toLowerCase().trim();
     if (field.length && !mention && !config.BIO.includes(field.trim())) {
         embed
-        .setTitle('Edit Bio (error)')
-        .setDescription(`Bio option not valid, please use one of the following: ${config.BIO.join(', ')}`)
-        .addField('ERROR', 'Invalid argument')
-        .addField('Usage', usage)
+            .setTitle('Edit Bio (error)')
+            .setDescription(`Bio option not valid, please use one of the following: ${config.BIO.join(', ')}`)
+            .addField('ERROR', 'Invalid argument')
+            .addField('Usage', usage);
 
         return embed;
     }
@@ -28,9 +28,9 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
     // Delete bio
     if(field === 'delete' && !content && !mention) {
         await db
-        .collection('users')
-        .doc(message.author.id)
-        .delete();
+            .collection('users')
+            .doc(message.author.id)
+            .delete();
         embed.setDescription('Deleted your bio');
     }
 
@@ -95,43 +95,43 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
                         [field]: data
                     },
                     updatedAt: firebase.firestore.FieldValue.serverTimestamp()
-                    }, { merge: true });
+                }, { merge: true });
 
             const role = message.guild!.roles.cache.find((r) => r.name === config.ROLE.BIO.name);
             const member = message.member;
             await member!.roles.add(role!);
-        }
+        };
 
         switch(field) {
-            case 'location':
-                try {
-                    const url = `https://nominatim.openstreetmap.org/?addressdetails=1&q=${encodeURIComponent(data)}&format=json&limit=1`;
-                    const response = await axios.default.get(url);
-                    data = response.data ? response.data[0] : {};
-                    updateBio();
-                } catch (e) {
-                    log.error(`ERROR: Couldn't get location ${data}`);
-                }
-                break;
-            case 'twitter':
-                if(isValidTwitterUsername(data)) {
-                    data = `https://twitter.com/${data}`;
-                    updateBio();
-                } else {
-                    embed.addField('Description', 'Twitter Handle - Unexpected format');
-                    embed.addField('Example', `${config.COMMAND_PREFIX}bio twitter || @example`);
-                    embed.addField('Example', `${config.COMMAND_PREFIX}bio twitter || example`);
-                }
-                break;
-            default:
+        case 'location':
+            try {
+                const url = `https://nominatim.openstreetmap.org/?addressdetails=1&q=${encodeURIComponent(data)}&format=json&limit=1`;
+                const response = await axios.default.get(url);
+                data = response.data ? response.data[0] : {};
                 updateBio();
-                break;
+            } catch (e) {
+                log.error(`ERROR: Couldn't get location ${data}`);
+            }
+            break;
+        case 'twitter':
+            if(isValidTwitterUsername(data)) {
+                data = `https://twitter.com/${data}`;
+                updateBio();
+            } else {
+                embed.addField('Description', 'Twitter Handle - Unexpected format');
+                embed.addField('Example', `${config.COMMAND_PREFIX}bio twitter || @example`);
+                embed.addField('Example', `${config.COMMAND_PREFIX}bio twitter || example`);
+            }
+            break;
+        default:
+            updateBio();
+            break;
         }
     }
 
     embed
         .setTitle('Bio')
-        .setFooter(mention ? mention!.username : message.author.username, (mention ? mention!.avatarURL() : message.author.avatarURL()) || '')
+        .setFooter(mention ? mention!.username : message.author.username, (mention ? mention!.avatarURL() : message.author.avatarURL()) || '');
 
     return embed;
 };
