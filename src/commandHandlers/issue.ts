@@ -42,7 +42,7 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
 
         const [ item ] = await req(repository);
 
-        if(!item) {
+        if (!item) {
             return buildErrorMessage(`Could not find repository with name \`${repository}\`.`);
         }
         let url = `${item.html_url}/issues/new`;
