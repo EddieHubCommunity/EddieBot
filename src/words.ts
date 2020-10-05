@@ -12,9 +12,9 @@ const { defaultEmbed, WORDS } = config;
  * @param message
  */
 export const words = async (message: Message) => {
-    if (message.author.bot) {
-        return;
-    }
+  if (message.author.bot) {
+    return;
+  }
 
     const match = WORDS.checks
         .find((word) => WORDS.prepend
@@ -26,10 +26,12 @@ export const words = async (message: Message) => {
             .setTitle(`You used the word "${match.check.toUpperCase()}"`)
             .setDescription('In future, please use one of the following suggestions instead...');
 
-        match.suggestions.forEach((suggestion) => embed.addField(suggestion, 'Is another alternative'));
+    match.suggestions.forEach((suggestion) =>
+      embed.addField(suggestion, 'Is another alternative')
+    );
 
-        return message.channel.send(embed);
-    }
+    return message.channel.send(embed);
+  }
 
-    return;
+  return;
 };

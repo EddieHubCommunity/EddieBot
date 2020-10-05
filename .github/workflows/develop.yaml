@@ -16,17 +16,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
 
-    - name: Install deps
-      run: npm install
+      - name: Install deps
+        run: npm install
 
-    - name: Lint project
-      run: npm run lint
+      - name: Lint project
+        run: npm run lint
 
-    - name: Build project
-      run: npm run build
+      - name: Build project
+        run: npm run build

@@ -6,14 +6,14 @@ import config from './config';
 const { COMMAND_PREFIX, defaultEmbed } = config;
 
 export const commands = async (message: Message) => {
-    if (!message.content.startsWith(COMMAND_PREFIX) || message.author.bot) {
-        return;
-    }
+  if (!message.content.startsWith(COMMAND_PREFIX) || message.author.bot) {
+    return;
+  }
 
-    const args = message.content.slice(COMMAND_PREFIX.length);
-    const command = args.split(/ +/).shift()!.toLowerCase();
+  const args = message.content.slice(COMMAND_PREFIX.length);
+  const command = args.split(/ +/).shift()!.toLowerCase();
 
-    const embed = defaultEmbed();
+  const embed = defaultEmbed();
 
     const matching = commandList
         .find(({ triggers }) => triggers
