@@ -13,9 +13,11 @@
 - Request a PR on github (website), after you have done changes.
 
 **Learning more**
+
 - Use GitHub's learning tool https://lab.github.com
 - Short helpful reads https://guides.github.com
-- Thanks to the opensourceTips page, we discovered this https://learngitbranching.js.org 
+- Thanks to the opensourceTips page, we discovered this https://learngitbranching.js.org
 
 **Extra**
+
 - Use ssh where possible https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
