@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/EddieJaoudeCommunity/EddieBot#readme",
   "dependencies": {
+    "@types/soundex-code": "^1.0.0",
     "axios": "^0.19.2",
     "discord.js": "^12.1.1",
     "dotenv": "^8.2.0",

@@ -1,4 +1,4 @@
-import * as pino from 'pino';
+import pino from 'pino';
 import { TextChannel } from 'discord.js';
 
 import { client } from './client';
