@@ -1,9 +1,9 @@
-version: "3.8"
+version: '3.8'
 
 services:
   eddiebot-nodejs:
     build:
       context: ./docker
-    command: ["npm", "run", "dev"]
+    command: ['npm', 'run', 'dev']
     volumes:
       - ./:/opt/EddieBot/
