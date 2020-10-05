@@ -2,6 +2,7 @@ import axios from 'axios';
 import { Message, MessageEmbed } from 'discord.js';
 import { issueRequestConfig } from '../config';
 
+const MAX_QUERY_LENGTH = 256;
 const req = async(q: string): Promise<any[]> => {
     try {
         issueRequestConfig.params = { q };
@@ -28,16 +29,12 @@ export const command = async (arg: string, embed: MessageEmbed, message: Message
         // await repository name
         let repository = await message.channel.awaitMessages((m: Message) => m.author.id === message.author.id, { max: 1, time: 10000, errors: ['time'] }).then(collected => {
             const res = collected.first();
-            if(res) {
-                return res.content;
-            }
-            return 'EddieBot';
+            return res ? res.content : 'EddieBot';
         }).catch(() => { throw new Error('You took too long to reply (`10 seconds`). Try again.') });
 
-        // query max length is 256 chars
         repository = encodeURI(repository);
-        if(repository.length > 256) {
-            repository.substr(0, 256);
+        if (repository.length > MAX_QUERY_LENGTH) {
+            repository.substr(0, MAX_QUERY_LENGTH);
         }
 
         const [ item ] = await req(repository);
