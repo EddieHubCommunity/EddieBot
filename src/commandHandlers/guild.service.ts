@@ -28,7 +28,7 @@ export function getConfiguredGuild(): Guild | undefined {
   const guildKey = process.env.DISCORD_SERVER_ID;
   if (!guildKey) {
     log.error(
-      "ERROR: Couldn't get roles list! Missing env. variable DISCORD_SERVER_ID. Please configure that value."
+      'ERROR: Couldn\'t get roles list! Missing env. variable DISCORD_SERVER_ID. Please configure that value.'
     );
     return;
   }
