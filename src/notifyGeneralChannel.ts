@@ -19,12 +19,14 @@ export const notifyGeneralChannel = async (
       (currentChannel instanceof TextChannel &&
         currentChannel.name === GENERAL_CHANNEL)
   );
-  if (!generalChannel)
+  if (!generalChannel) {
     return log.error(
       `${GENERAL_CHANNEL} channel not found. Make sure to setup GENERAL_CHANNEL_ID env variable.`
     );
+  }
 
   if (generalChannel instanceof TextChannel) {
+    // eslint-disable-next-line
     const message = `\:tada: A new channel was created! Check out the channel ${channel.toString()}`;
     return await generalChannel.send(message);
   }

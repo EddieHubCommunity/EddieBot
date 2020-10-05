@@ -44,15 +44,17 @@ export const command = async (
     }
   }
 
-
-    // Save the user's role to the DB
-    await db
-        .collection('users')
-        .doc(message.author.id)
-        .set({
-            roles: await getUserRoles(message.member!),
-            updatedAt: firebase.firestore.FieldValue.serverTimestamp()
-        }, { merge: true });
+  // Save the user's role to the DB
+  await db
+    .collection('users')
+    .doc(message.author.id)
+    .set(
+      {
+        roles: await getUserRoles(message.member!),
+        updatedAt: firebase.firestore.FieldValue.serverTimestamp(),
+      },
+      { merge: true }
+    );
 
   const userName = message.member!.displayName || '';
   if (rolesToAssign.length > 1) {

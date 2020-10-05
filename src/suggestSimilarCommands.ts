@@ -1,5 +1,6 @@
 import commandList, { CommandHandler } from './commandHandlers';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import * as soundex from 'soundex-code';
 /**
@@ -12,13 +13,18 @@ import * as soundex from 'soundex-code';
 // this map contains the soundex value for each command
 const commandToSoundexMap = new Map<CommandHandler, string>();
 const maxLength = 2; // stores the length of hashes
-commandList
-  .forEach((commandItem) => commandToSoundexMap.set(commandItem, soundex(commandItem.triggers[0], maxLength)));
+commandList.forEach((commandItem) =>
+  commandToSoundexMap.set(
+    commandItem,
+    soundex(commandItem.triggers[0], maxLength)
+  )
+);
 
 // this map contains the list of commands for a given soundex key
 const soundexToSimilarCommandsListMap = new Map<string, CommandHandler[]>();
 for (const [key, value] of commandToSoundexMap.entries()) {
-  const previousSimilarCommandsList = soundexToSimilarCommandsListMap.get(value) || [];
+  const previousSimilarCommandsList =
+    soundexToSimilarCommandsListMap.get(value) || [];
   previousSimilarCommandsList.push(key);
   soundexToSimilarCommandsListMap.set(value, previousSimilarCommandsList);
 }
