@@ -32,11 +32,17 @@ client.on('message', (message) => commands(message));
 client.on('message', (message) => chatty(message));
 client.on('message', (message) => timezone(message));
 client.on('message', (message) => words(message));
-client.on('messageReactionAdd', async (reaction) => messageReactionAdd(reaction));
+client.on('messageReactionAdd', async (reaction) =>
+  messageReactionAdd(reaction)
+);
 
 // all events
-client.on('message', (message) => eventStream({ type: 'message', author: message.author }));
-client.on('messageReactionAdd', (reaction, user) => eventStream({ type: 'reaction', author: user }));
+client.on('message', (message) =>
+  eventStream({ type: 'message', author: message.author })
+);
+client.on('messageReactionAdd', (reaction, user) =>
+  eventStream({ type: 'reaction', author: user })
+);
 
 // bot authenticates with discord
 client.login(process.env.DISCORD_TOKEN);
