@@ -61,7 +61,7 @@ Discord bot for Eddie Jaoude's Discord server
 
 - To run locally
   1. To setup: `npm run setup`
-	2. To start: `npm run start:local`
+  2. To start: `npm run start:local`
 
 ---
 
