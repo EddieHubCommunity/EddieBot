@@ -1,7 +1,6 @@
 import commandList, { CommandHandler } from './commandHandlers';
 
-// @ts-ignore
-import * as soundex from 'soundex-code';
+import soundex from 'soundex-code';
 /**
  * function soundex(value: string, maxLength?: number): string
  * returns a hash string of maxLength size
