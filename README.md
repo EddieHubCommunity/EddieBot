@@ -44,6 +44,7 @@ Discord bot for Eddie Jaoude's Discord server
   - First make sure you have **Developer Mode** enabled on your Discord by visiting your Discord settings and going to Appearance
   - Right click on the server icon on the left hand sidebar then click on "Copy ID"
 - firebase key for the project, check [these docs](https://firebase.google.com/docs/admin/setup) to get your key
+- [optional] Github token that you can get from [here](https://github.com/settings/tokens)
 - [optional] GCP account to deploy to (using GitHub Actions)
 
 ## → How to run EddieBot locally:

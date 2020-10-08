@@ -1,3 +1,4 @@
+import { AxiosRequestConfig } from 'axios';
 import { MessageEmbed } from 'discord.js';
 import * as dotenv from 'dotenv';
 
@@ -153,3 +154,11 @@ export const selfAssignableRoles = [
   'typescript',
   'opensource',
 ];
+
+export const issueRequestConfig: AxiosRequestConfig = {
+  url: `https://api.github.com/search/repositories`
+};
+
+if (process.env.GITHUB_TOKEN) {
+  issueRequestConfig.headers = { 'Authorization': `token ${process.env.GITHUB_TOKEN}` };
+}
