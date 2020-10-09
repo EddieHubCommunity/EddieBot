@@ -11,7 +11,7 @@ export const commands = async (message: Message) => {
     return;
   }
 
-  if(cooldown.isCooled(message.author.id)) {
+  if (cooldown.isCooled(message.author.id)) {
     message.channel.send(`:clock1: Too fast! Only **1** command each **${config.COOLDOWN_SECONDS}** seconds.`);
     return;
   }
