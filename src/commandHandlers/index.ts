@@ -12,7 +12,19 @@ import * as support from './support';
 
 import { MessageEmbed, Message } from 'discord.js';
 
-export default [bio, codeOfConduct, help, iam, issue, reminder, roles, standup, stats, tips, support];
+export default [
+  bio,
+  codeOfConduct,
+  help,
+  iam,
+  issue,
+  reminder,
+  roles,
+  standup,
+  stats,
+  tips,
+  support,
+];
 
 export { fallback } from './fallback';
 
