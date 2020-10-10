@@ -27,7 +27,7 @@ Discord bot for Eddie Jaoude's Discord server
 
 - Gets tips of resources on a given subject
 
-- Server status
+- Server status, to display some statistics of the server (e.g total number of users and messages)
 
 - Firebase (Firestore) integration, allowing people to easily add commands and persist data
 
