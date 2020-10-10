@@ -12,17 +12,17 @@ import { eventStream } from './eventStream';
 import { scheduleOpenSourceReminder } from './opensourceReminder.job';
 
 client.once('ready', () => {
-    log.info('Online!', 'Lets get started...');
-    scheduleOpenSourceReminder();
-    if (client.user) {
-        client.user.setPresence({
-            activity: {
-                name: `${config.COMMAND_PREFIX}help for help`,
-                type: 'WATCHING',
-            },
-            status: 'online'
-        });
-    }
+  log.info('Online!', 'Lets get started...');
+  scheduleOpenSourceReminder();
+  if (client.user) {
+    client.user.setPresence({
+      activity: {
+        name: `${config.COMMAND_PREFIX}help for help`,
+        type: 'WATCHING',
+      },
+      status: 'online',
+    });
+  }
 });
 
 // bot actions

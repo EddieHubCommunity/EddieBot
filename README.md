@@ -52,16 +52,17 @@ Discord bot for Eddie Jaoude's Discord server
 #### 1. Set Environment Variables
 
 1. Copy `.env.example` to `.env`.
-1. Generate the "Service Account" from Firebase Settings > Cloud Messaging.
+2. Generate the "Service Account" from Firebase Settings > Cloud Messaging.
    1. Download Service Account JSON file from this same screen.
-1. Open `.env` and fill empty strings with matching credentials from the JSON file.
+3. Open `.env` and fill empty strings with matching credentials from the JSON file.
 
 #### 2. To start the application
 - [optional] To run with Docker ensure you have the latest version and Docker Compose installed and run
 	- `docker-compose up`
 
 - To run locally
-	- `npm run start:local`
+  1. To setup: `npm run setup`
+  2. To start: `npm run start:local`
 
 ---
 
@@ -74,6 +75,12 @@ Discord bot for Eddie Jaoude's Discord server
 - **Use NodeJS instance CLI**
 
   `docker-compose exec eddiebot-nodejs /bin/bash`
+
+### Standardized Code Formating
+
+- **Before Commit**
+  1. lint for errors: `npm run lint`
+  2. fix any errors: `npm run lint:fix`
 
 ### → Logging
 

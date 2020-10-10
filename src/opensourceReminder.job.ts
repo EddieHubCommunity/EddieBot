@@ -36,7 +36,7 @@ async function reminderCallback() {
         userId
       );
       await member.user.send(
-        'Hey :wave:, this is a friendly reminder for you to contribute to open source today. Let\'s get those green squares together :smiley:!'
+        "Hey :wave:, this is a friendly reminder for you to contribute to open source today. Let's get those green squares together :smiley:!"
       );
       return;
     } catch (e) {

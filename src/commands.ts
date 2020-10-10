@@ -21,14 +21,16 @@ export const commands = async (message: Message) => {
 
   const embed = defaultEmbed();
 
-  const matching = commandList
-      .find(({ triggers }) => triggers
-          .find((trigger) => trigger === command)) || { command: fallback };
+  const matching = commandList.find(({ triggers }) =>
+    triggers.find((trigger) => trigger === command)
+  ) || { command: fallback };
 
   if (matching.command === fallback) {
-      message.channel.send(await matching.command(command, embed, message));
+    message.channel.send(await matching.command(command, embed, message));
   } else {
-      message.channel.send(await matching.command(args.slice(command.length + 1), embed, message));
-      cooldown.setCool(message.author.id);
+    message.channel.send(
+      await matching.command(args.slice(command.length + 1), embed, message)
+    );
+    cooldown.setCool(message.author.id);
   }
 };
