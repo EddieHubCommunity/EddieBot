@@ -22,7 +22,7 @@ class StatsService implements StatsServiceInterface {
     const guildKey = process.env.DISCORD_SERVER_ID;
     if (!guildKey) {
       log.error(
-        'ERROR: Couldn\'t get member count! Missing env. variable DISCORD_SERVER_ID. Please configure that value.'
+        "ERROR: Couldn't get member count! Missing env. variable DISCORD_SERVER_ID. Please configure that value."
       );
       return 0;
     }
@@ -30,7 +30,7 @@ class StatsService implements StatsServiceInterface {
     const guild = this.discordClient.guilds.cache.get(guildKey);
     if (!guild) {
       log.error(
-        'ERROR: Couldn\'t get member count! The guild with the configured DISCORD_SERVER_ID env. variable doesn\'t exist'
+        "ERROR: Couldn't get member count! The guild with the configured DISCORD_SERVER_ID env. variable doesn't exist"
       );
       return 0;
     }

@@ -4,8 +4,10 @@
   "description": "Discord bot for Eddie Jaoude's Discord server",
   "main": "index.js",
   "scripts": {
-    "lint": "tslint --project .",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
     "build": "tsc",
+    "setup": "npm install && npm run lint && npm run build",
     "dev": "npm install && ts-node-dev --watch --respawn --transpile-only ./src/index.ts",
     "start": "node dist/index.js",
     "start:local": "npm run build && node dist/index.js",
@@ -39,9 +41,14 @@
     "@types/pino": "^6.0.1",
     "@types/soundex-code": "^1.0.0",
     "@types/ws": "^7.2.4",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "nodemon": "^2.0.4",
+    "prettier": "^2.1.2",
     "ts-node-dev": "^1.0.0-pre.62",
-    "tslint": "^6.1.2",
     "typescript": "3.5.3"
   }
 }

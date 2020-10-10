@@ -27,7 +27,7 @@ export const command = async (arg: string, embed: MessageEmbed) => {
       return embed
         .setTitle('Tips')
         .setDescription(
-          'Sorry :frowning:, we don\'t have tips on that subject. Feel free to [open an issue](https://github.com/EddieJaoudeCommunity/EddieBot/issues) to add tips on that subject.'
+          "Sorry :frowning:, we don't have tips on that subject. Feel free to [open an issue](https://github.com/EddieJaoudeCommunity/EddieBot/issues) to add tips on that subject."
         );
   }
 };

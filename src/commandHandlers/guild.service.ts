@@ -7,7 +7,7 @@ export async function getRoles(): Promise<Collection<string, Role>> {
   const guild = getConfiguredGuild();
   if (!guild) {
     log.error(
-      'ERROR: Couldn\'t get roles list! The guild with the configured DISCORD_SERVER_ID env. variable doesn\'t exist'
+      "ERROR: Couldn't get roles list! The guild with the configured DISCORD_SERVER_ID env. variable doesn't exist"
     );
     return new Collection();
   }
@@ -28,7 +28,7 @@ export function getConfiguredGuild(): Guild | undefined {
   const guildKey = process.env.DISCORD_SERVER_ID;
   if (!guildKey) {
     log.error(
-      'ERROR: Couldn\'t get roles list! Missing env. variable DISCORD_SERVER_ID. Please configure that value.'
+      "ERROR: Couldn't get roles list! Missing env. variable DISCORD_SERVER_ID. Please configure that value."
     );
     return;
   }
