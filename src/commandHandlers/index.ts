@@ -30,7 +30,7 @@ export { fallback } from './fallback';
 
 export interface CommandHandler {
   command: (
-    arg: string,
+    arg: [string, string],
     embed: MessageEmbed,
     message: Message
   ) => Promise<MessageEmbed>;

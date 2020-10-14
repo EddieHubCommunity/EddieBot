@@ -8,8 +8,8 @@ const AVAILABLE_SUBJECTS = ['opensource'];
  * This command receives an argument that specifies the subject the user wants advice on, and then returns an embed
  * message with the tips and resources on that subject.
  */
-export const command = async (arg: string, embed: MessageEmbed) => {
-  const [subject] = arg.split('||');
+export const command = async (arg: [string, string], embed: MessageEmbed) => {
+  const [subject] = arg[1].split('||');
 
   if (!subject) {
     return embed

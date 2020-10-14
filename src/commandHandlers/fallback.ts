@@ -7,8 +7,8 @@ import { CommandHandler } from './index';
 
 const { COMMAND_PREFIX } = config;
 
-export const fallback = async (arg: string, embed: MessageEmbed) => {
-  const command = arg;
+export const fallback = async (arg: [string, string], embed: MessageEmbed) => {
+  const command = arg[0];
   const similarCommands = suggestSimilarCommands(command);
 
   embed.setTitle('ERROR: ooops...command not found');

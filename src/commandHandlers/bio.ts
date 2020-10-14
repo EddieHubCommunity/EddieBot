@@ -11,11 +11,11 @@ import { log } from '../logger';
  * This command lets the user set their personal data if others want to follow them on other social platforms
  */
 export const command = async (
-  arg: string,
+  arg: [string, string],
   embed: MessageEmbed,
   message: Message
 ) => {
-  const [first, ...rest] = arg.split('||');
+  const [first, ...rest] = arg[1].split('||');
   const content = rest.join('||');
   const mention = message.mentions.users.first();
   const field = first.toLowerCase().trim();

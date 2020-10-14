@@ -6,7 +6,7 @@ import config from '../config';
 /**
  * This command lists the available roles on the discord server
  */
-export const command = async (arg: string, embed: MessageEmbed) => {
+export const command = async (arg: [string, string], embed: MessageEmbed) => {
   const roles = await getRoles();
   const rolesList = roles
     .filter((r) => !r.name.includes('everyone')) // Filter the default role everyone has access to
