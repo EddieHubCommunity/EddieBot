@@ -28,7 +28,11 @@ export const commands = async (message: Message) => {
   ) || { command: fallback };
 
   message.channel.send(
-    await matching.command([command, args.slice(command.length + 1)], embed, message)
+    await matching.command(
+      [command, args.slice(command.length + 1)],
+      embed,
+      message
+    )
   );
   cooldown.setCool(message.author.id);
 };
