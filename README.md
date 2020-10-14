@@ -162,10 +162,11 @@ To **create a new command**, follow these steps:
    - `command` - the function that executes the command. The **signature** of this function is the following:
 
    ```ts
-   (arg: string, embed: MessageEmbed, message: Message): Promise<MessageEmbed>
+   (arg: [string, string], embed: MessageEmbed, message: Message): Promise<MessageEmbed>
    ```
 
    The **arg** parameter contains the arguments given to the command in a string.
+   The **arg** parameter is a tuple of two `string`s where, `arg[0]` is the command name and `arg[1]` is the string of command arguments.
    The **embed** parameter is a [MessageEmbed](https://discord.js.org/#/docs/main/stable/class/MessageEmbed) instance, and it represents the message that is returned by the bot, in response to the user. **The command should return this parameter or a new instance** with an appropriate message to the user.
    The **message** parameter is a [Message](https://discord.js.org/#/docs/main/stable/class/Message) instance that represents the message inputted by the user to execute a given command.
 
