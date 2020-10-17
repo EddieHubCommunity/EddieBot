@@ -82,6 +82,10 @@ Discord bot for Eddie Jaoude's Discord server
   1. lint for errors: `npm run lint`
   2. fix any errors: `npm run lint:fix`
 
+### Using Commitizen for commits
+1. `git add <your files>`
+2. `npm run commit`
+
 ### → Logging
 
 Logging will happen to the console as well as to the Discord `bot` channel.
