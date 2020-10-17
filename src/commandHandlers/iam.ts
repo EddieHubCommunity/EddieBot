@@ -11,11 +11,11 @@ import { log } from '../logger';
  * self-assigned.
  */
 export const command = async (
-  arg: string,
+  arg: [string, string],
   embed: MessageEmbed,
   message: Message
 ) => {
-  const args = arg.toLowerCase().split(',');
+  const args = arg[1].toLowerCase().split(',');
   // Check if the user provided the role argument
   if (!args) {
     return buildErrorEmbed('Missing arguments');

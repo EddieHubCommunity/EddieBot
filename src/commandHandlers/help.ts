@@ -5,7 +5,7 @@ import commandList from './index';
 
 const { COMMAND_PREFIX } = config;
 
-export const command = async (arg: string, embed: MessageEmbed) => {
+export const command = async (arg: [string, string], embed: MessageEmbed) => {
   embed.setTitle('Help commands').setDescription('Lists the command available');
 
   commandList.forEach((commandItem) =>
