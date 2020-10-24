@@ -1,7 +1,7 @@
 import { MessageEmbed, Message } from 'discord.js';
 
 export const command = async (
-  arg: string,
+  arg: [string, string],
   embed: MessageEmbed,
   message: Message
 ) => {

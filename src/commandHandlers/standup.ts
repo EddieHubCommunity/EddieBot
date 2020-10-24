@@ -7,7 +7,7 @@ import { MessageEmbed, Message } from 'discord.js';
  * {link https://www.atlassian.com/agile/scrum/standups}
  */
 export const command = async (
-  arg: string,
+  arg: [string, string],
   embed: MessageEmbed,
   message: Message
 ) => {
@@ -17,7 +17,7 @@ export const command = async (
     message.delete();
   }
 
-  const args = arg.split('||');
+  const args = arg[1].split('||');
 
   if (!args[0] || !args[1]) {
     embed
