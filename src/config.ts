@@ -49,9 +49,36 @@ export default {
       );
   },
   TIMEZONES: [
+    //AMERICA
+    
+    { abbr: 'SST', zone: 'Pacific/midway'},
+    // UTC-11(samoa standard time) -- If conflicts, use America/Pago_pago
+    { abbr: 'HST', zone: 'Pacific/Honolulu'},
+    // UTC - 10(Hawaii–Aleutian Standad Time Zone)
+    { abbr: 'HDT', zone: 'America/Adak'},
+    // UTC - 9(Hawaii–Aleutian Daylight Saving Time)
+    { abbr: 'AKDT', zone: 'America/Anchorage'},
+    // UTC - 8(Alaska Daylight Time)
     { abbr: 'PDT', zone: 'America/Los_Angeles' },
+    // UTC - 7(Pacific Daylight Time))
+
+
+    // AUSTRALIA
+    
     { abbr: 'AEST', zone: 'Australia/Brisbane' },
-    { abbr: 'EEST', zone: 'Asia/Beirut' },
+    // AEST- UTC + 10 (Australian Eastern Standard Time)
+    { abbr: 'AEDT', zone: 'Australia/Melbourne' },
+    // AEDT- UTC + 11 (Australian Eastern Daylight Time)
+    { abbr: 'ACDT', zone: 'Australia/Adelaide'},
+    // ACDT- UTC + 10:30 (Australian Central Daylight Time)
+    { abbr: 'AWST', zone: 'Australia/Perth'},
+    // AWST- UTC + 8 (Australian Western Standard Time)
+    { abbr: 'ACST', zone: 'Australia/Darwin'}
+    // ACST- UTC + 9:30 (Australian Central Standard Time)
+
+
+    // Europe
+    
     { abbr: 'UTC', zone: 'Europe/London' },
     { abbr: 'UK', zone: 'Europe/London' },
     { abbr: 'CEST', zone: 'Europe/Stockholm' },
@@ -59,8 +86,14 @@ export default {
     { abbr: 'EET', zone: 'Europe/Finland' },
     // summer timezone of Finland -1h
     { abbr: 'EEST', zone: 'Europe/Finland' },
+
+
+    // Asia
+    
     { abbr: 'IST', zone: 'Asia/Kolkata' },
+    { abbr: 'EEST', zone: 'Asia/Beirut' },
   ],
+
   OPENSOURCE_JOB_CRON_TIME:
     process.env.OPENSOURCE_JOB_CRON_TIME || '0 14 * * *', // Default time is everyday at 2pm
   TIPS: {
