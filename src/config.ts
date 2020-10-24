@@ -63,21 +63,20 @@ export default {
     // UTC - 7(Pacific Daylight Time)
     { abbr: 'MST', zone: 'America/Creston' },
     // UTC - 7(Mountain Standard Time)
-    { abbr: 'MDT', zone: 'America/Denver'},
+    { abbr: 'MDT', zone: 'America/Denver' },
     // UTC - 6(Mountain Daylight Time)
-    { abbr: 'CST', zone: 'America/Regina'},
+    { abbr: 'CST', zone: 'America/Regina' },
     // UTC - 6(Central Standard Time)
-    { abbr: 'CDT', zone: 'America/Denver'},
+    { abbr: 'CDT', zone: 'America/Denver' },
     // UTC - 5(Central Daylight Time)
-    { abbr: 'EST', zone: 'America/Panama'},
+    { abbr: 'EST', zone: 'America/Panama' },
     // UTC - 5(Eastern Standard TIme)
-    { abbr: 'EDT', zone: 'America/Detroit'},
+    { abbr: 'EDT', zone: 'America/Detroit' },
     // UTC - 4(Eastern Daylight Time)
-    { abbr: 'AST', zone: 'America/Curacao'},
+    { abbr: 'AST', zone: 'America/Curacao' },
     // UTC - 4(Atlantic Standard Time)
-    { abbr: 'ADT', zone: 'America/Halifax'},
+    { abbr: 'ADT', zone: 'America/Halifax' },
     // UTC - 3(Atlantic Daylight Time)
-
 
     // Europe
 
@@ -88,8 +87,7 @@ export default {
     { abbr: 'EET', zone: 'Europe/Finland' },
     // summer timezone of Finland -1h
     { abbr: 'EEST', zone: 'Europe/Finland' },
- 
-  
+
     // AUSTRALIA
 
     { abbr: 'AEST', zone: 'Australia/Brisbane' },
@@ -102,7 +100,6 @@ export default {
     // ACST- UTC + 9:30 (Australian Central Standard Time)
     { abbr: 'AWST', zone: 'Australia/Perth' },
     // AWST- UTC + 8 (Australian Western Standard Time)
-
 
     // Asia
 
