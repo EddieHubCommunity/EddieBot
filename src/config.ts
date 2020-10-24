@@ -62,7 +62,7 @@ export default {
     { abbr: 'EDT', zone: 'America/Detroit' },
     { abbr: 'AST', zone: 'America/Curacao' },
     { abbr: 'ADT', zone: 'America/Halifax' },
-    
+
     { abbr: 'UTC', zone: 'Europe/London' },
     { abbr: 'UK', zone: 'Europe/London' },
     { abbr: 'CEST', zone: 'Europe/Stockholm' },
@@ -74,7 +74,7 @@ export default {
     { abbr: 'ACDT', zone: 'Australia/Adelaide' },
     { abbr: 'ACST', zone: 'Australia/Darwin' },
     { abbr: 'AWST', zone: 'Australia/Perth' },
-    
+
     { abbr: 'IST', zone: 'Asia/Kolkata' },
     { abbr: 'EEST', zone: 'Asia/Beirut' },
   ],
