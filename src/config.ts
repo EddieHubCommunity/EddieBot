@@ -49,60 +49,32 @@ export default {
       );
   },
   TIMEZONES: [
-    //AMERICA
-
     { abbr: 'SST', zone: 'Pacific/midway' },
-    // UTC-11(samoa standard time) -- If conflicts, use America/Pago_pago
     { abbr: 'HST', zone: 'Pacific/Honolulu' },
-    // UTC - 10(Hawaii–Aleutian Standad Time Zone)
     { abbr: 'HDT', zone: 'America/Adak' },
-    // UTC - 9(Hawaii–Aleutian Daylight Saving Time)
     { abbr: 'AKDT', zone: 'America/Anchorage' },
-    // UTC - 8(Alaska Daylight Time)
     { abbr: 'PDT', zone: 'America/Los_Angeles' },
-    // UTC - 7(Pacific Daylight Time)
     { abbr: 'MST', zone: 'America/Creston' },
-    // UTC - 7(Mountain Standard Time)
     { abbr: 'MDT', zone: 'America/Denver' },
-    // UTC - 6(Mountain Daylight Time)
     { abbr: 'CST', zone: 'America/Regina' },
-    // UTC - 6(Central Standard Time)
     { abbr: 'CDT', zone: 'America/Denver' },
-    // UTC - 5(Central Daylight Time)
     { abbr: 'EST', zone: 'America/Panama' },
-    // UTC - 5(Eastern Standard TIme)
     { abbr: 'EDT', zone: 'America/Detroit' },
-    // UTC - 4(Eastern Daylight Time)
     { abbr: 'AST', zone: 'America/Curacao' },
-    // UTC - 4(Atlantic Standard Time)
     { abbr: 'ADT', zone: 'America/Halifax' },
-    // UTC - 3(Atlantic Daylight Time)
-
-    // Europe
-
+    
     { abbr: 'UTC', zone: 'Europe/London' },
     { abbr: 'UK', zone: 'Europe/London' },
     { abbr: 'CEST', zone: 'Europe/Stockholm' },
-    // winter timezone of Finland +1h
     { abbr: 'EET', zone: 'Europe/Finland' },
-    // summer timezone of Finland -1h
     { abbr: 'EEST', zone: 'Europe/Finland' },
 
-    // AUSTRALIA
-
     { abbr: 'AEST', zone: 'Australia/Brisbane' },
-    // AEST- UTC + 10 (Australian Eastern Standard Time)
     { abbr: 'AEDT', zone: 'Australia/Melbourne' },
-    // AEDT- UTC + 11 (Australian Eastern Daylight Time)
     { abbr: 'ACDT', zone: 'Australia/Adelaide' },
-    // ACDT- UTC + 10:30 (Australian Central Daylight Time)
     { abbr: 'ACST', zone: 'Australia/Darwin' },
-    // ACST- UTC + 9:30 (Australian Central Standard Time)
     { abbr: 'AWST', zone: 'Australia/Perth' },
-    // AWST- UTC + 8 (Australian Western Standard Time)
-
-    // Asia
-
+    
     { abbr: 'IST', zone: 'Asia/Kolkata' },
     { abbr: 'EEST', zone: 'Asia/Beirut' },
   ],
