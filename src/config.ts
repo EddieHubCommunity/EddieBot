@@ -51,6 +51,7 @@ export default {
   TIMEZONES: [
     { abbr: 'PDT', zone: 'America/Los_Angeles' },
     { abbr: 'AEST', zone: 'Australia/Brisbane' },
+    { abbr: 'KST', zone: 'Asia/Seoul' },
     { abbr: 'EEST', zone: 'Asia/Beirut' },
     { abbr: 'UTC', zone: 'Europe/London' },
     { abbr: 'UK', zone: 'Europe/London' },
