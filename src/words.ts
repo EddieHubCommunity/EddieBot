@@ -26,9 +26,10 @@ export const words = async (message: Message) => {
         'In future, please use one of the following suggestions instead...'
       );
 
-    match.forEach((suggestion) =>
-      embed.addField(suggestion.reason, suggestion.note ? suggestion.note : '')
-    );
+    match.forEach((suggestion) => {
+      const field = suggestion.note ? suggestion.note : 'See above ^^';
+      return embed.addField(suggestion.reason, field);
+    });
 
     return message.channel.send(embed);
   }
