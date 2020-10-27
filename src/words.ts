@@ -25,9 +25,9 @@ export const words = async (message: Message) => {
       .setDescription(
         'In future, please use one of the following suggestions instead...'
       );
-    console.log(match);
+
     match.forEach((suggestion) =>
-      embed.addField(suggestion.reason, suggestion.note)
+      embed.addField(suggestion.reason, suggestion.note ? suggestion.note : '')
     );
 
     return message.channel.send(embed);
