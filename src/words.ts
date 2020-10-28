@@ -17,7 +17,8 @@ export const words = async (message: Message) => {
     return;
   }
 
-  const match = alex.markdown(message.content).messages;
+  const config: alex.Config = { profanitySureness: 2 };
+  const match = alex.markdown(message.content, config).messages;
 
   if (match.length) {
     const embed = defaultEmbed()
