@@ -3,7 +3,7 @@ import alex from 'alex';
 
 import config from './config';
 
-const { defaultEmbed } = config;
+const { defaultEmbed, ALEX } = config;
 
 /**
  * Runs for every message
@@ -17,8 +17,7 @@ export const words = async (message: Message) => {
     return;
   }
 
-  const config: alex.Config = { profanitySureness: 2 };
-  const match = alex.markdown(message.content, config).messages;
+  const match = alex.markdown(message.content, ALEX as alex.Config).messages;
 
   if (match.length) {
     const embed = defaultEmbed()

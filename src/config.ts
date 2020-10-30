@@ -69,6 +69,10 @@ export default {
     tips: ['openSourceTips.md', 'githubTips.md'],
     resources: ['openSourceResources.md'],
   },
+  ALEX: {
+    profanitySureness: 2,
+    allow: ['just'],
+  },
 };
 
 // Possible values for user subscriptions
