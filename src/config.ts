@@ -66,14 +66,14 @@ export default {
     { abbr: 'UTC', zone: 'Europe/London' },
     { abbr: 'CEST', zone: 'Europe/Stockholm' },
     { abbr: 'EET', zone: 'Europe/Finland' },
-    
+
     { abbr: 'AEST', zone: 'Australia/Brisbane' },
     { abbr: 'AEDT', zone: 'Australia/Melbourne' },
     { abbr: 'ACDT', zone: 'Australia/Adelaide' },
     { abbr: 'ACST', zone: 'Australia/Darwin' },
     { abbr: 'AWST', zone: 'Australia/Perth' },
     { abbr: 'AEST', zone: 'Australia/Brisbane' },
-    
+
     { abbr: 'KST', zone: 'Asia/Seoul' },
     { abbr: 'IST', zone: 'Asia/Kolkata' },
     { abbr: 'EEST', zone: 'Asia/Beirut' },
