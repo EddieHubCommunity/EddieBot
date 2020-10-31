@@ -153,6 +153,9 @@ export const selfAssignableRoles = [
   'flutter',
   'typescript',
   'opensource',
+  'node',
+  'kotlin',
+  'svelte',
 ];
 
 export const issueRequestConfig: AxiosRequestConfig = {
