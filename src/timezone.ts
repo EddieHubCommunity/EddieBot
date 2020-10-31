@@ -44,7 +44,8 @@ export const timezone = async (message: Message) => {
       availableZones.forEach((item) =>
         embed.addField(
           `${item.zone} (${item.abbr})`,
-          initial.tz(item.zone).format('h:mma z')
+          initial.tz(item.zone).format('h:mma z'),
+          inline: true
         )
       );
 
