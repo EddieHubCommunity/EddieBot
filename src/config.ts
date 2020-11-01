@@ -95,6 +95,8 @@ export const selfAssignableRoles = [
   'flutter',
   'typescript',
   'opensource',
+  'node',
+  'kotlin',
   'svelte',
 ];
 
