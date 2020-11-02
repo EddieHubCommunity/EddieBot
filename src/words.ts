@@ -23,7 +23,7 @@ export const words = async (message: Message) => {
     const embed = defaultEmbed()
       .setTitle(`You used the word "${match[0].actual}"`)
       .setDescription(
-        'In future, please use one of the following suggestions instead...'
+        'This might not be inclusive or welcoming language. Please consider the following suggestions instead:'
       );
 
     match.forEach((suggestion) => {
