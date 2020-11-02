@@ -71,7 +71,7 @@ export default {
   },
   ALEX: {
     profanitySureness: 2,
-    allow: ['just'],
+    allow: ['just', 'brother', 'sister', 'daft'],
   },
 };
 
