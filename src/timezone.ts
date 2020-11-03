@@ -55,4 +55,3 @@ export const timezone = async (message: Message) => {
 
   return;
 };
-
