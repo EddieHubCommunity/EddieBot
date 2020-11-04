@@ -1,6 +1,6 @@
 import { MessageEmbed } from 'discord.js';
 
-export const command = async (arg: string, embed: MessageEmbed) => {
+export const command = async (arg: [string, string], embed: MessageEmbed) => {
   return embed
     .setTitle('Code of Conduct (CoC) - Contributor Covenant Code of Conduct')
     .setDescription(
@@ -17,7 +17,7 @@ export const command = async (arg: string, embed: MessageEmbed) => {
     .addField('TLDR', 'Be nice :)', true)
     .addField(
       'Full details available on GitHub repo',
-      'https://github.com/EddieJaoudeCommunity/EddieBot/blob/master/CODE_OF_CONDUCT.md',
+      'https://github.com/EddieJaoudeCommunity/support/blob/main/CODE_OF_CONDUCT.md',
       true
     );
 };

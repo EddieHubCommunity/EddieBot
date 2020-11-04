@@ -25,7 +25,7 @@ const req = async (q: string): Promise<any[]> => {
  * This command returns a URL for the user to create an issue in the specified github repository
  */
 export const command = async (
-  arg: string,
+  arg: [string, string],
   embed: MessageEmbed,
   message: Message
 ) => {
@@ -64,8 +64,8 @@ export const command = async (
     }
     let url = `${item.html_url}/issues/new`;
 
-    if (arg) {
-      url += `?title=${encodeURI(arg)}`;
+    if (arg[1]) {
+      url += `?title=${encodeURI(arg[1])}`;
     }
     return embed
       .setAuthor(item.owner.login, item.owner.avatar_url, item.owner.html_url)

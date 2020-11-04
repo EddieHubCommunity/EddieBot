@@ -10,11 +10,11 @@ const CLOCK_EMOJI = ':alarm_clock:';
  * and time they want to receive it.
  */
 export const command = async (
-  arg: string,
+  arg: [string, string],
   embed: MessageEmbed,
   message: Message
 ) => {
-  const [dateString, reminderMessage] = arg.split(ARG_SEPARATOR);
+  const [dateString, reminderMessage] = arg[1].split(ARG_SEPARATOR);
 
   if (!reminderMessage || !dateString) {
     return buildErrorMessage('Missing arguments');
