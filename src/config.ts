@@ -49,19 +49,35 @@ export default {
       );
   },
   TIMEZONES: [
+    //AMERICA
+
+    { abbr: 'HST', zone: 'Pacific/Honolulu' },
+    { abbr: 'AKDT', zone: 'America/Anchorage' },
     { abbr: 'PDT', zone: 'America/Los_Angeles' },
-    { abbr: 'AEST', zone: 'Australia/Brisbane' },
-    { abbr: 'KST', zone: 'Asia/Seoul' },
-    { abbr: 'EEST', zone: 'Asia/Beirut' },
+    { abbr: 'MST', zone: 'America/Creston' },
+    { abbr: 'MDT', zone: 'America/Denver' },
+    { abbr: 'CST', zone: 'America/Regina' },
+    { abbr: 'EST', zone: 'America/Panama' },
+    { abbr: 'EDT', zone: 'America/Detroit' },
+    { abbr: 'AST', zone: 'America/Curacao' },
+    { abbr: 'ADT', zone: 'America/Halifax' },
+
     { abbr: 'UTC', zone: 'Europe/London' },
     { abbr: 'UK', zone: 'Europe/London' },
     { abbr: 'CEST', zone: 'Europe/Stockholm' },
-    // winter timezone of Finland +1h
     { abbr: 'EET', zone: 'Europe/Finland' },
-    // summer timezone of Finland -1h
     { abbr: 'EEST', zone: 'Europe/Finland' },
+
+    { abbr: 'AEST', zone: 'Australia/Brisbane' },
+    { abbr: 'AEDT', zone: 'Australia/Melbourne' },
+    { abbr: 'ACDT', zone: 'Australia/Adelaide' },
+    { abbr: 'ACST', zone: 'Australia/Darwin' },
+    { abbr: 'AWST', zone: 'Australia/Perth' },
+
+    { abbr: 'KST', zone: 'Asia/Seoul' },
     { abbr: 'IST', zone: 'Asia/Kolkata' },
   ],
+
   OPENSOURCE_JOB_CRON_TIME:
     process.env.OPENSOURCE_JOB_CRON_TIME || '0 14 * * *', // Default time is everyday at 2pm
   TIPS: {

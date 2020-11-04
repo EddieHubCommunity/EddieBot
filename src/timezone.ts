@@ -18,7 +18,7 @@ export const timezone = async (message: Message) => {
   }
 
   const match = message.content.match(
-    /([\d]{1,2})([:\d]{3})?[\s]?(pm|am|AM|PM)?\b[\s]([a-zA-Z]{2,3})?\b/
+    /([\d]{1,2})([:\d]{3})?[\s]?(pm|am|AM|PM)?\b[\s]([a-zA-Z]{2,4})?\b/
   );
 
   if (match) {
@@ -44,7 +44,8 @@ export const timezone = async (message: Message) => {
       availableZones.forEach((item) =>
         embed.addField(
           `${item.zone} (${item.abbr})`,
-          initial.tz(item.zone).format('h:mma z')
+          initial.tz(item.zone).format('h:mma z'),
+          true
         )
       );
 
