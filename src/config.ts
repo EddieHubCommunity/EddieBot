@@ -94,6 +94,7 @@ export default {
       'daft',
       'master',
       'clearly',
+      'moaning',
     ],
   },
 };
