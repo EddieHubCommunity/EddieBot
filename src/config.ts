@@ -95,6 +95,7 @@ export default {
       'master',
       'clearly',
       'moaning',
+      'host',
     ],
   },
 };
