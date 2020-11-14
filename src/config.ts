@@ -96,6 +96,8 @@ export default {
       'clearly',
       'moaning',
       'host',
+      'wife',
+      'husband',
     ],
   },
 };
