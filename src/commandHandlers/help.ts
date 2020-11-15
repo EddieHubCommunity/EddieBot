@@ -19,8 +19,9 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
       false
     );
   } else {
-    const format = commandItem => '`' + `${COMMAND_PREFIX}${commandItem.triggers[0]}` + '`';
-    const text = commandList.map(format).join(" | ");
+    const format = (commandItem) =>
+      '`' + `${COMMAND_PREFIX}${commandItem.triggers[0]}` + '`';
+    const text = commandList.map(format).join(' | ');
     embed.addField('\u200b', text);
   }
 
