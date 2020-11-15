@@ -98,6 +98,8 @@ export default {
       'host',
       'wife',
       'husband',
+      'obviously',
+      'simple',
     ],
   },
 };
