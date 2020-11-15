@@ -40,15 +40,17 @@ export const timezone = async (message: Message) => {
       const availableZones = TIMEZONES.filter((item) => item.abbr !== zone);
 
       embed.addField(mentioned, proposedZone!.zone);
-
-      availableZones.forEach((item) =>
-        embed.addField(
-          `${item.zone} (${item.abbr})`,
-          initial.tz(item.zone).format('h:mma z'),
-          true
-        )
-      );
-
+      
+      let zones = ''; 
+      availableZones.forEach((item) => {
+        zones = zones.concat(`**${item.zone} (${item.abbr})**: `)
+                     .concat(`${initial.tz(item.zone).format('h:mma z')}`)
+                     .concat('\n');
+      });
+      embed.addField(
+          '\u200b',
+          zones
+        );
       return message.channel.send(embed);
     }
   }
