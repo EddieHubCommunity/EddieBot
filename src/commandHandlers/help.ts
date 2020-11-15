@@ -21,12 +21,7 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
   } else {
     let text = '';
     commandList.forEach((commandItem) => {
-      text = text
-        .concat(`**${COMMAND_PREFIX}${commandItem.triggers[0]}**  `)
-        .concat(`${commandItem.description}\n`)
-        .concat(
-          'Usage:' + '`' + `${COMMAND_PREFIX}${commandItem.usage}\n` + '`'
-        );
+      text = text.concat('`'+`${COMMAND_PREFIX}${commandItem.triggers[0]}` +'` | ');
     });
     embed.addField('\u200b', text);
   }
