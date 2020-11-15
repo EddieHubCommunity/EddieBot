@@ -54,7 +54,6 @@ export default {
     { abbr: 'PDT', zone: 'America/Los_Angeles' },
     { abbr: 'MST', zone: 'America/Creston' },
     { abbr: 'EST', zone: 'America/Panama' },
-    { abbr: 'EDT', zone: 'America/Detroit' },
     { abbr: 'ADT', zone: 'America/Halifax' },
 
     { abbr: 'UTC', zone: 'Europe/London' },
