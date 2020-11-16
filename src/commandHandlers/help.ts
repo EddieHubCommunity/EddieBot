@@ -10,15 +10,12 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
     triggers.find((trigger) => trigger === arg[1])
   );
 
-  embed.setTitle('Help commands').setDescription('Lists the command available');
 
   if (matching) {
-    embed.addField(
-      `${COMMAND_PREFIX}${matching.triggers[0]}`,
-      `${matching.description}\nUsage: ${COMMAND_PREFIX}${matching.usage}`,
-      false
-    );
+    embed.setTitle(`${COMMAND_PREFIX}${matching.triggers[0]}`)
+         .setDescription(`${matching.description}\nUsage: ${COMMAND_PREFIX}${matching.usage}`);
   } else {
+    embed.setTitle('Help commands').setDescription("These are the available commands. For more information on a specific command, use `^help <commandName>`");
     const format = (commandItem: CommandHandler) =>
       '`' + `${COMMAND_PREFIX}${commandItem.triggers[0]}` + '`';
     const text = commandList.map(format).join(' | ');
