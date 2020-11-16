@@ -1,7 +1,7 @@
 import { MessageEmbed } from 'discord.js';
 
 import config from '../config';
-import commandList from './index';
+import commandList, { CommandHandler } from './index';
 
 const { COMMAND_PREFIX } = config;
 
