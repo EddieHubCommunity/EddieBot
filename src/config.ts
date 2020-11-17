@@ -100,7 +100,7 @@ export default {
       'husband',
       'obviously',
       'simple',
-      'of course'
+      'of course',
     ],
   },
 };
