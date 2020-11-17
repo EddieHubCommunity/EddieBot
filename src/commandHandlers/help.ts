@@ -14,7 +14,7 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
     embed
       .setTitle(`${COMMAND_PREFIX}${matching.triggers[0]}`)
       .setDescription(
-        `${matching.description}\nUsage: ${COMMAND_PREFIX}${matching.usage}`
+        `${matching.description}`+ '\nUsage:`' + `${COMMAND_PREFIX}${matching.usage}` + '`'
       );
   } else {
     embed
