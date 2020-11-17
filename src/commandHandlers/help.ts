@@ -25,9 +25,8 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
       .setDescription(
         'These are the available commands. For more information on a specific command, use `^help <commandName>`'
       );
-    const format = (commandItem: CommandHandler) =>
-      '`' + `${COMMAND_PREFIX}${commandItem.triggers[0]}` + '`';
-    const text = commandList.map(format).join(' | ');
+    const formatWithCodeBlocks = (commandItem: CommandHandler) => mapToCodeBlock(commandItem.triggers[0]);
+    const text = commandList.map(formatWithCodeBlocks).join(' | ');
     embed.addField('\u200b', text);
   }
 
