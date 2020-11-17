@@ -12,9 +12,9 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
 
   if (matching) {
     const blocky = (arg) => '`' + `${COMMAND_PREFIX}` + `${arg}`.trim() + '`';
-    let text = `${matching.usage}`;
-    text = text.split('or');
+    const text = `${matching.usage}`.split('or');
     const formatted = text.map(blocky).join(' or ');
+
     embed
       .setTitle(`${COMMAND_PREFIX}${matching.triggers[0]}`)
       .setDescription(
