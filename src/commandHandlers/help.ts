@@ -11,10 +11,15 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
   );
 
   if (matching) {
+    const blocky = (arg: string) =>
+      '`' + `${COMMAND_PREFIX}` + `${arg}`.trim() + '`';
+    let text = `${matching.usage}`;
+    text = text.split('or');
+    const formatted = text.map(blocky).join(' or ');
     embed
       .setTitle(`${COMMAND_PREFIX}${matching.triggers[0]}`)
       .setDescription(
-        `${matching.description}`+ '\nUsage:`' + `${COMMAND_PREFIX}${matching.usage}` + '`'
+        `${matching.description}` + '\nUsage:\t' + `${formatted}`
       );
   } else {
     embed
