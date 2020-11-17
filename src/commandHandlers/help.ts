@@ -33,6 +33,8 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
 
   return embed;
 };
+const mapToCodeBlock = (arg: string) =>
+  '`' + `${COMMAND_PREFIX}` + `${arg}`.trim() + '`';
 
 export const description = 'Lists available commands';
 
