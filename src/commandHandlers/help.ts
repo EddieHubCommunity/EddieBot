@@ -21,13 +21,14 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
   } else {
     let text = '';
     commandList.forEach((commandItem) => {
-      text = text.concat(`**${COMMAND_PREFIX}${commandItem.triggers[0]}**  `);
-      text = text.concat(`${commandItem.description}\n`);
-      text = text.concat(
-        'Usage:' + '`' + `${COMMAND_PREFIX}${commandItem.usage}\n` + '`'
-      );
+      text = text
+        .concat(`**${COMMAND_PREFIX}${commandItem.triggers[0]}**  `)
+        .concat(`${commandItem.description}\n`)
+        .concat(
+          'Usage:' + '`' + `${COMMAND_PREFIX}${commandItem.usage}\n` + '`'
+        );
     });
-    embed.addField(`\u200b`, `${text}`);
+    embed.addField('\u200b', text);4
   }
 
   return embed;
