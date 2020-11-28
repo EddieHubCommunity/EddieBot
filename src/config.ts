@@ -51,27 +51,18 @@ export default {
   TIMEZONES: [
     //AMERICA
 
-    { abbr: 'HST', zone: 'Pacific/Honolulu' },
-    { abbr: 'AKDT', zone: 'America/Anchorage' },
     { abbr: 'PDT', zone: 'America/Los_Angeles' },
     { abbr: 'MST', zone: 'America/Creston' },
-    { abbr: 'MDT', zone: 'America/Denver' },
-    { abbr: 'CST', zone: 'America/Regina' },
     { abbr: 'EST', zone: 'America/Panama' },
-    { abbr: 'EDT', zone: 'America/Detroit' },
-    { abbr: 'AST', zone: 'America/Curacao' },
     { abbr: 'ADT', zone: 'America/Halifax' },
 
     { abbr: 'UTC', zone: 'Europe/London' },
     { abbr: 'UK', zone: 'Europe/London' },
     { abbr: 'CEST', zone: 'Europe/Stockholm' },
     { abbr: 'EET', zone: 'Europe/Finland' },
-    { abbr: 'EEST', zone: 'Europe/Finland' },
 
     { abbr: 'AEST', zone: 'Australia/Brisbane' },
-    { abbr: 'AEDT', zone: 'Australia/Melbourne' },
     { abbr: 'ACDT', zone: 'Australia/Adelaide' },
-    { abbr: 'ACST', zone: 'Australia/Darwin' },
     { abbr: 'AWST', zone: 'Australia/Perth' },
 
     { abbr: 'KST', zone: 'Asia/Seoul' },
@@ -85,66 +76,22 @@ export default {
     tips: ['openSourceTips.md', 'githubTips.md'],
     resources: ['openSourceResources.md'],
   },
-  WORDS: {
-    prepend: [
-      'hello',
-      'hey',
-      'hi',
-      'yo',
-      'hiya',
-      'whatsup',
-      'greetings',
-      'bye',
-      'seeya',
-      'goodbye',
-      'good bye',
-      'thanks',
-      'whatsup',
-      'look',
-      'you',
-    ],
-    append: ['.', '?', '!', ';', ':'],
-    checks: [
-      {
-        check: 'guys',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
-      {
-        check: 'bros',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
-      {
-        check: 'bro',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
-      {
-        check: 'man',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
-      {
-        check: 'dude',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
-      {
-        check: 'dudes',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
-      {
-        check: 'gentlemen',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
-      {
-        check: 'fella',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
-      {
-        check: 'fellas',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
-      {
-        check: 'boys',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
+  ALEX: {
+    profanitySureness: 2,
+    allow: [
+      'just',
+      'brother-sister',
+      'brothers-sisters',
+      'daft',
+      'master',
+      'clearly',
+      'moaning',
+      'host',
+      'wife',
+      'husband',
+      'obviously',
+      'simple',
+      'of course',
     ],
   },
 };
