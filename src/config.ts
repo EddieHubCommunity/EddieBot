@@ -51,27 +51,18 @@ export default {
   TIMEZONES: [
     //AMERICA
 
-    { abbr: 'HST', zone: 'Pacific/Honolulu' },
-    { abbr: 'AKDT', zone: 'America/Anchorage' },
     { abbr: 'PDT', zone: 'America/Los_Angeles' },
     { abbr: 'MST', zone: 'America/Creston' },
-    { abbr: 'MDT', zone: 'America/Denver' },
-    { abbr: 'CST', zone: 'America/Regina' },
     { abbr: 'EST', zone: 'America/Panama' },
-    { abbr: 'EDT', zone: 'America/Detroit' },
-    { abbr: 'AST', zone: 'America/Curacao' },
     { abbr: 'ADT', zone: 'America/Halifax' },
 
     { abbr: 'UTC', zone: 'Europe/London' },
     { abbr: 'UK', zone: 'Europe/London' },
     { abbr: 'CEST', zone: 'Europe/Stockholm' },
     { abbr: 'EET', zone: 'Europe/Finland' },
-    { abbr: 'EEST', zone: 'Europe/Finland' },
 
     { abbr: 'AEST', zone: 'Australia/Brisbane' },
-    { abbr: 'AEDT', zone: 'Australia/Melbourne' },
     { abbr: 'ACDT', zone: 'Australia/Adelaide' },
-    { abbr: 'ACST', zone: 'Australia/Darwin' },
     { abbr: 'AWST', zone: 'Australia/Perth' },
 
     { abbr: 'KST', zone: 'Asia/Seoul' },
