@@ -28,7 +28,8 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
           'Usage:' + '`' + `${COMMAND_PREFIX}${commandItem.usage}\n` + '`'
         );
     });
-    embed.addField('\u200b', text);4
+    embed.addField('\u200b', text);
+    4;
   }
 
   return embed;
