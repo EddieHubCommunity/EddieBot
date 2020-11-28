@@ -76,66 +76,22 @@ export default {
     tips: ['openSourceTips.md', 'githubTips.md'],
     resources: ['openSourceResources.md'],
   },
-  WORDS: {
-    prepend: [
-      'hello',
-      'hey',
-      'hi',
-      'yo',
-      'hiya',
-      'whatsup',
-      'greetings',
-      'bye',
-      'seeya',
-      'goodbye',
-      'good bye',
-      'thanks',
-      'whatsup',
-      'look',
-      'you',
-    ],
-    append: ['.', '?', '!', ';', ':'],
-    checks: [
-      {
-        check: 'guys',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
-      {
-        check: 'bros',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
-      {
-        check: 'bro',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
-      {
-        check: 'man',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
-      {
-        check: 'dude',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
-      {
-        check: 'dudes',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
-      {
-        check: 'gentlemen',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
-      {
-        check: 'fella',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
-      {
-        check: 'fellas',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
-      {
-        check: 'boys',
-        suggestions: ['folks', 'people', 'everyone'],
-      },
+  ALEX: {
+    profanitySureness: 2,
+    allow: [
+      'just',
+      'brother-sister',
+      'brothers-sisters',
+      'daft',
+      'master',
+      'clearly',
+      'moaning',
+      'host',
+      'wife',
+      'husband',
+      'obviously',
+      'simple',
+      'of course',
     ],
   },
 };
