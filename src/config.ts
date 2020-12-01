@@ -94,7 +94,6 @@ export default {
       'of course',
       'fellow',
       'fellowship',
-      
     ],
   },
 };
