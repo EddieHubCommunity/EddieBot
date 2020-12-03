@@ -15,28 +15,50 @@ export const command = async (
   embed: MessageEmbed,
   message: Message
 ) => {
-  const args = arg[1].toLowerCase().split(',');
+  const argCheck = arg[1].toLowerCase().split(' ');
+  let toAdd;
+  if (argCheck[0] === 'add') {
+    toAdd = true;
+  } else if (argCheck[0] === 'remove') {
+    toAdd = false;
+  } else {
+    return buildErrorEmbed('Missing arguments');
+  }
+  // const toAdd = argCheck[0] === 'add' ? true : false;
+  argCheck.shift();
+
+  const args = argCheck.join(' ').split(',');
+
   // Check if the user provided the role argument
   if (!args) {
     return buildErrorEmbed('Missing arguments');
   }
 
-  const rolesToAssign = args.map((x) => x.trim());
+  const rolesToModify = args.map((x) => x.trim());
 
-  for (const roleToAssign of rolesToAssign) {
+  for (const roleToModify of rolesToModify) {
     // Check if the provided role is self-assignable
-    if (selfAssignableRoles.find((role) => role === roleToAssign)) {
+    if (selfAssignableRoles.find((role) => role === roleToModify)) {
       const role = message.guild!.roles.cache.find(
-        (r) => r.name === roleToAssign
+        (r) => r.name === roleToModify
       );
       if (!role) {
-        log.error(`ERROR: Couldn't get the role: ${roleToAssign}`);
+        log.error(`ERROR: Couldn't get the role: ${roleToModify}`);
         return buildErrorEmbed();
       }
       // Assign the role to the user of the message
       const member = message.member;
-      await member!.roles.add(role);
-      await tryAddOpenSourceUserSubscription(roleToAssign, message);
+      if (toAdd) {
+        await member!.roles.add(role);
+      } else {
+        if (member!.roles.cache.find((r) => r.name === roleToModify)) {
+          await member!.roles.remove(role);
+        } else {
+          log.error(`ERROR: You do not have the role: ${roleToModify}`);
+          return buildErrorEmbed();
+        }
+      }
+      await tryAddOpenSourceUserSubscription(roleToModify, toAdd, message);
     } else {
       return buildErrorEmbed(`The role you specified is not self-assignable, try one of these roles:
             ${selfAssignableRoles.join(', ')}
@@ -57,14 +79,28 @@ export const command = async (
     );
 
   const userName = message.member!.displayName || '';
-  if (rolesToAssign.length > 1) {
-    return embed.setDescription(
-      `**${userName}** You now have the roles **${rolesToAssign.join(', ')}**`
-    );
+  if (rolesToModify.length > 1) {
+    if (toAdd) {
+      return embed.setDescription(
+        `**${userName}** You now have the roles **${rolesToModify.join(', ')}**`
+      );
+    } else {
+      return embed.setDescription(
+        `**${userName}** You now don't have the roles **${rolesToModify.join(
+          ', '
+        )}**`
+      );
+    }
   } else {
-    return embed.setDescription(
-      `**${userName}** You now have the **${rolesToAssign[0]}** role`
-    );
+    if (toAdd) {
+      return embed.setDescription(
+        `**${userName}** You now have the **${rolesToModify[0]}** role`
+      );
+    } else {
+      return embed.setDescription(
+        `**${userName}** You now don't have **${rolesToModify[0]}** the role`
+      );
+    }
   }
 
   // Auxiliar function
@@ -83,16 +119,18 @@ export const triggers = ['iam'];
 export const usage = `${triggers[0]} <role name> || ${triggers[0]} <role name>, <role name>, ...`;
 
 /**
- * Check if the role to assign is the open source role. If so, then add the open source subscription for the user to
+ * Check if the role to assign or remove  is the open source role. If so, then add or remove the open source subscription for the user to
  * receive recurrent messages to remind them to contribute to open source. If not then do nothing.
  * @param roleToAssign
+ * @param toAdd
  * @param message
  */
 async function tryAddOpenSourceUserSubscription(
-  roleToAssign: string,
+  roleToModify: string,
+  toAdd: boolean,
   message: Message
 ) {
-  if (roleToAssign === config.ROLE.OPEN_SOURCE.name) {
+  if (roleToModify === config.ROLE.OPEN_SOURCE.name) {
     // Get the subscriptions of the user that sent the given message
     const doc = await db
       .collection('usersSubscriptions')
@@ -102,15 +140,19 @@ async function tryAddOpenSourceUserSubscription(
     const subscriptions: string[] = data != null ? data.subscriptions : [];
 
     // Add the open source subscription to the list of existing subscriptions
-    await db
-      .collection('usersSubscriptions') // TODO: create a constant variable with all these collection names (e.g. exported in firebase.ts)
-      .doc(message.author.id)
-      .set(
-        {
-          subscriptions: [...subscriptions, UserSubscriptions.OPEN_SOURCE],
-          username: message.author.username,
-        },
-        { merge: true }
-      );
+    if (toAdd) {
+      await db
+        .collection('usersSubscriptions') // TODO: create a constant variable with all these collection names (e.g. exported in firebase.ts)
+        .doc(message.author.id)
+        .set(
+          {
+            subscriptions: [...subscriptions, UserSubscriptions.OPEN_SOURCE],
+            username: message.author.username,
+          },
+          { merge: true }
+        );
+    } else {
+      await db.collection('userSubscription').doc(message.author.id).delete();
+    }
   }
 }
