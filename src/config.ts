@@ -93,6 +93,9 @@ export default {
       'simple',
       'of course',
       'special',
+      'fellow',
+      'fellowship',
+
     ],
   },
 };
