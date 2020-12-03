@@ -11,7 +11,7 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
   );
 
   if (matching) {
-    const usageTextOptions = matching.usage.split('or');
+    const usageTextOptions = matching.usage.split(' or ');
     const formatted = usageTextOptions.map(mapToCodeBlock).join(' or ');
 
     embed
