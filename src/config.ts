@@ -92,6 +92,7 @@ export default {
       'obviously',
       'simple',
       'of course',
+      'pop',
       'fellow',
       'fellowship',
     ],
