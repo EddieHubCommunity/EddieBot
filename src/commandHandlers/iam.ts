@@ -7,16 +7,18 @@ import { getUserRoles } from './guild.service';
 import { log } from '../logger';
 
 /**
- * This command assigns the role given in the argument to the user that executed the command, if that role can be
- * self-assigned.
+ * This command assigns or removes  the role given in the argument to the user that executed the command,
+ * if that role can be self-assigned.
  */
 export const command = async (
   arg: [string, string],
   embed: MessageEmbed,
   message: Message
 ) => {
+  // Check for add or remove keywords
   const argCheck = arg[1].toLowerCase().split(' ');
   let toAdd;
+
   if (argCheck[0] === 'add') {
     toAdd = true;
   } else if (argCheck[0] === 'remove') {
@@ -24,9 +26,9 @@ export const command = async (
   } else {
     return buildErrorEmbed('Missing arguments');
   }
-  // const toAdd = argCheck[0] === 'add' ? true : false;
-  argCheck.shift();
 
+  // get list of roles to modify
+  argCheck.shift();
   const args = argCheck.join(' ').split(',');
 
   // Check if the user provided the role argument
@@ -46,14 +48,23 @@ export const command = async (
         log.error(`ERROR: Couldn't get the role: ${roleToModify}`);
         return buildErrorEmbed();
       }
-      // Assign the role to the user of the message
+
       const member = message.member;
       if (toAdd) {
-        await member!.roles.add(role);
+        if (member!.roles.cache.find((r) => r.name === roleToModify)) {
+          // Checks if the user already has the role
+          log.error(`ERROR: You already have the ${roleToModify} role`);
+          return buildErrorEmbed();
+        } else {
+          // Adds role to author of the message
+          await member!.roles.add(role);
+        }
       } else {
+        // Unasign role from author of the message
         if (member!.roles.cache.find((r) => r.name === roleToModify)) {
           await member!.roles.remove(role);
         } else {
+          // Checks if the user doesnot have the role
           log.error(`ERROR: You do not have the role: ${roleToModify}`);
           return buildErrorEmbed();
         }
@@ -112,11 +123,12 @@ export const command = async (
   }
 };
 
-export const description = 'Assign yourself a server role';
+export const description =
+  'Assign yourself a server role or unassign your server role';
 
 export const triggers = ['iam'];
 
-export const usage = `${triggers[0]} <role name> || ${triggers[0]} <role name>, <role name>, ...`;
+export const usage = `${triggers[0]} <add/remove> <role name> or ${triggers[0]} <add/remove> <role name>, <role name>, ...`;
 
 /**
  * Check if the role to assign or remove  is the open source role. If so, then add or remove the open source subscription for the user to
