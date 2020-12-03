@@ -4,7 +4,6 @@ import * as help from './help';
 import * as roles from './roles';
 import * as reminder from './reminder';
 import * as iam from './iam';
-import * as iamnot from './iamnot';
 import * as issue from './issue';
 import * as standup from './standup';
 import * as stats from './stats';
@@ -18,7 +17,6 @@ export default [
   codeOfConduct,
   help,
   iam,
-  iamnot,
   issue,
   reminder,
   roles,
