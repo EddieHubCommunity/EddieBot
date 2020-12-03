@@ -53,8 +53,7 @@ export const command = async (
       if (toAdd) {
         if (member!.roles.cache.find((r) => r.name === roleToModify)) {
           // Checks if the user already has the role
-          log.error(`ERROR: You already have the ${roleToModify} role`);
-          return buildErrorEmbed();
+          return buildErrorEmbed(`You already have the ${roleToModify} role`);
         } else {
           // Adds role to author of the message
           await member!.roles.add(role);
@@ -65,8 +64,7 @@ export const command = async (
           await member!.roles.remove(role);
         } else {
           // Checks if the user doesnot have the role
-          log.error(`ERROR: You do not have the role: ${roleToModify}`);
-          return buildErrorEmbed();
+          return buildErrorEmbed(`You do not have the role: ${roleToModify}`);
         }
       }
       await tryAddOpenSourceUserSubscription(roleToModify, toAdd, message);
