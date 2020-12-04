@@ -93,9 +93,9 @@ export default {
       'simple',
       'of course',
       'special',
+      'pop',
       'fellow',
       'fellowship',
-
     ],
   },
 };
