@@ -97,10 +97,7 @@ export default {
       'fellow',
       'fellowship',
       'basically',
-      'he',
-      'she',
-      'him',
-      'her',
+      'exactly',
     ],
   },
 };
