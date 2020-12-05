@@ -96,6 +96,12 @@ export default {
       'pop',
       'fellow',
       'fellowship',
+      'exactly',
+      'basically',
+      'he',
+      'she',
+      'him',
+      'her'
     ],
   },
 };
