@@ -27,7 +27,7 @@ export default {
     HIGH_VALUE: {
       name: 'high value',
       description:
-        'Members with this role have access to more commands to moderate the server (e.g. ban). You get assigned this role if you have a message with +5 reactions',
+        'You get assigned the High Value role if you have a message with +5 reactions',
     },
     BIO: {
       name: 'bio',
