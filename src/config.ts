@@ -97,7 +97,7 @@ export default {
       'fellow',
       'fellowship',
       'basically',
-      'long time no see',
+      'long-time-no-see',
     ],
   },
 };
