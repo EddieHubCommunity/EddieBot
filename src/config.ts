@@ -100,7 +100,7 @@ export default {
       'he',
       'she',
       'him',
-      'her'
+      'her',
     ],
   },
 };
