@@ -51,19 +51,19 @@ export const command = async (
 
       const member = message.member;
       if (toAdd) {
+        // Checks if the user already has the role
         if (member!.roles.cache.find((r) => r.name === roleToModify)) {
-          // Checks if the user already has the role
           return buildErrorEmbed(`You already have the ${roleToModify} role`);
         } else {
           // Adds role to author of the message
           await member!.roles.add(role);
         }
       } else {
-        // Unasign role from author of the message
+        // Unassign role from author of the message
         if (member!.roles.cache.find((r) => r.name === roleToModify)) {
           await member!.roles.remove(role);
         } else {
-          // Checks if the user doesnot have the role
+          // Checks if the user does not have the role
           return buildErrorEmbed(`You do not have the role: ${roleToModify}`);
         }
       }
@@ -107,7 +107,7 @@ export const command = async (
       );
     } else {
       return embed.setDescription(
-        `**${userName}** You now don't have **${rolesToModify[0]}** the role`
+        `**${userName}** You now don't have the **${rolesToModify[0]}** role`
       );
     }
   }
