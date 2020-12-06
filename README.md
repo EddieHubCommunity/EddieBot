@@ -192,6 +192,40 @@ import * as stats from './stats';
 export { fallback } from './fallback';
 ```
 
+## How to add allowed word
+
+All the allowed words are located in an array in ` src/config.ts ` inside the object ` ALEX ` as shown below. 
+
+```ts
+ALEX: {
+    profanitySureness: 2,
+    noBinary: true,
+    allow: [
+      'just',
+      'brother-sister',
+      'brothers-sisters',
+      'daft',
+      'master',
+      'clearly',
+      'moaning',
+      'host-hostess',
+      'husband-wife',
+      'obvious',
+      'simple',
+      'of-course',
+      'special',
+      'dad-mom',
+      'fellowship',
+      'basically',
+      'long-time-no-see',
+    ],
+  },
+
+```
+
+In order to add a new allowed word you have to do it inside of single quotes (` '' `) and for phrases (multiple words togheter) you should put a hiphon (` - `).
+
+
 ## Database
 
 Using Firestore from Firebase.
