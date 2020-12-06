@@ -96,6 +96,8 @@ export default {
       'pop',
       'fellow',
       'fellowship',
+      'basically',
+      'long-time-no-see',
     ],
   },
 };
