@@ -78,6 +78,7 @@ export default {
   },
   ALEX: {
     profanitySureness: 2,
+    noBinary: true,
     allow: [
       'just',
       'brother-sister',
