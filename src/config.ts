@@ -94,6 +94,8 @@ export default {
       'special',
       'dad-mom',
       'fellowship',
+      'basically',
+      'long-time-no-see',
     ],
   },
 };
