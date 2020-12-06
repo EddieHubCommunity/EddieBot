@@ -29,7 +29,6 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
       mapToCodeBlock(commandItem.triggers[0]);
     const text = commandList.map(formatWithCodeBlocks).join(' | ');
     embed.addField('\u200b', text);
-    4;
   }
 
   return embed;
