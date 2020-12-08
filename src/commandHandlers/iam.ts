@@ -7,8 +7,9 @@ import { getUserRoles } from './guild.service';
 import { log } from '../logger';
 
 /**
- * This command assigns or removes  the role given in the argument to the user that executed the command,
- * if that role can be self-assigned.
+ * This command assigns or removes the role given in the argumens
+ * to the user that executed the command,
+ * if that role is self-assignable
  */
 export const command = async (
   arg: [string, string],
@@ -57,21 +58,32 @@ export const command = async (
         } else {
           // Adds role to author of the message
           await member!.roles.add(role);
+          await addOpenSourceUserSubscription(roleToModify, message);
         }
       } else {
         // Unassign role from author of the message
         if (member!.roles.cache.find((r) => r.name === roleToModify)) {
           await member!.roles.remove(role);
+          await removeOpenSourceUserSubscription(roleToModify, message);
         } else {
           // Checks if the user does not have the role
           return buildErrorEmbed(`You do not have the role: ${roleToModify}`);
         }
       }
-      await tryAddOpenSourceUserSubscription(roleToModify, toAdd, message);
     } else {
       return buildErrorEmbed(`The role you specified is not self-assignable, try one of these roles:
             ${selfAssignableRoles.join(', ')}
             `);
+    }
+
+    // Checks if role being assigned is Opensource role
+    if (roleToModify === config.ROLE.OPEN_SOURCE.name) {
+      // Check if subscription is to be added or removed and calls respective function
+      if (toAdd) {
+        await addOpenSourceUserSubscription(roleToModify, message);
+      } else {
+        await removeOpenSourceUserSubscription(roleToModify, message);
+      }
     }
   }
 
@@ -129,40 +141,49 @@ export const triggers = ['iam'];
 export const usage = `${triggers[0]} <add/remove> <role name> or ${triggers[0]} <add/remove> <role name>, <role name>, ...`;
 
 /**
- * Check if the role to assign or remove  is the open source role. If so, then add or remove the open source subscription for the user to
- * receive recurrent messages to remind them to contribute to open source. If not then do nothing.
+ * Adds the open source subscription for the user to
+ * receive recurrent messages to remind them to contribute to open source.
  * @param roleToAssign
- * @param toAdd
  * @param message
  */
-async function tryAddOpenSourceUserSubscription(
+async function addOpenSourceUserSubscription(
   roleToModify: string,
-  toAdd: boolean,
   message: Message
 ) {
-  if (roleToModify === config.ROLE.OPEN_SOURCE.name) {
-    // Get the subscriptions of the user that sent the given message
-    const doc = await db
-      .collection('usersSubscriptions')
-      .doc(message.author.id)
-      .get();
-    const data = doc.data();
-    const subscriptions: string[] = data != null ? data.subscriptions : [];
+  // Get the subscriptions of the user that sent the given message
+  const doc = await db
+    .collection('usersSubscriptions')
+    .doc(message.author.id)
+    .get();
+  const data = doc.data();
+  const subscriptions: string[] = data != null ? data.subscriptions : [];
 
-    // Add the open source subscription to the list of existing subscriptions
-    if (toAdd) {
-      await db
-        .collection('usersSubscriptions') // TODO: create a constant variable with all these collection names (e.g. exported in firebase.ts)
-        .doc(message.author.id)
-        .set(
-          {
-            subscriptions: [...subscriptions, UserSubscriptions.OPEN_SOURCE],
-            username: message.author.username,
-          },
-          { merge: true }
-        );
-    } else {
-      await db.collection('userSubscription').doc(message.author.id).delete();
-    }
-  }
+  // Add the open source subscription to the list of existing subscriptions
+  await db
+    .collection('usersSubscriptions') // TODO: create a constant variable with all these collection names (e.g. exported in firebase.ts)
+    .doc(message.author.id)
+    .set(
+      {
+        subscriptions: [...subscriptions, UserSubscriptions.OPEN_SOURCE],
+        username: message.author.username,
+      },
+      { merge: true }
+    );
+}
+
+/**
+ * Removes the open source subscription for the user to
+ * stop recieving recurrent messages to remind them to contribute to open source.
+ * @param roleToAssign
+ * @param message
+ *
+ ! NOTE- This function has to be modified, so that it 
+ ! only deletes the user's OpenSourceSubscription
+ */
+async function removeOpenSourceUserSubscription(
+  roleToModify: string,
+  message: Message
+) {
+  // Deletes the opensource subscription for the user
+  await db.collection('userSubscription').doc(message.author.id).delete(); // TODO: set this to only delete the opensource subscription, not the entire subscriptions field of the user
 }
