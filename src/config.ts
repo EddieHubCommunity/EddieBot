@@ -40,7 +40,7 @@ export default {
         'You can assign this role to yourself to subscribe to get open-source reminders and if you like contributing to open-source software',
     },
   },
-  defaultEmbed: (color : string = '#0099ff') => {
+  defaultEmbed: (color = '#0099ff') => {
     return new MessageEmbed()
       .setColor(color)
       .setTimestamp()
