@@ -58,13 +58,11 @@ export const command = async (
         } else {
           // Adds role to author of the message
           await member!.roles.add(role);
-          await addOpenSourceUserSubscription(roleToModify, message);
         }
       } else {
         // Unassign role from author of the message
         if (member!.roles.cache.find((r) => r.name === roleToModify)) {
           await member!.roles.remove(role);
-          await removeOpenSourceUserSubscription(roleToModify, message);
         } else {
           // Checks if the user does not have the role
           return buildErrorEmbed(`You do not have the role: ${roleToModify}`);
