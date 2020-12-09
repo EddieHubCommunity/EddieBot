@@ -27,7 +27,7 @@ export default {
     HIGH_VALUE: {
       name: 'high value',
       description:
-        'Members with this role have access to more commands to moderate the server (e.g. ban). You get assigned this role if you have a message with +5 reactions',
+        'You get assigned the High Value role if you have a message with +5 reactions',
     },
     BIO: {
       name: 'bio',
@@ -78,6 +78,7 @@ export default {
   },
   ALEX: {
     profanitySureness: 2,
+    noBinary: true,
     allow: [
       'just',
       'brother-sister',
@@ -86,12 +87,16 @@ export default {
       'master',
       'clearly',
       'moaning',
-      'host',
-      'wife',
-      'husband',
-      'obviously',
+      'host-hostess',
+      'husband-wife',
+      'obvious',
       'simple',
-      'of course',
+      'of-course',
+      'special',
+      'dad-mom',
+      'fellowship',
+      'basically',
+      'long-time-no-see',
     ],
   },
 };
