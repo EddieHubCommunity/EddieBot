@@ -40,9 +40,17 @@ export default {
         'You can assign this role to yourself to subscribe to get open-source reminders and if you like contributing to open-source software',
     },
   },
-  defaultEmbed: () => {
+  COLORS: {
+    message: '#0099ff',
+    alerts: '#e84118',
+    system: '#4cd137',
+    github: '#6f7c7d',
+    users: '#ffc200',
+    help: '#4b2c5e',
+  },
+  defaultEmbed: (color = '#0099ff') => {
     return new MessageEmbed()
-      .setColor('#0099ff')
+      .setColor(color)
       .setTimestamp()
       .setFooter(
         'Our bot is Open Source, you can find it here https://github.com/EddieJaoudeCommunity/EddieBot'
@@ -101,7 +109,7 @@ export default {
       'he',
       'she',
       'him',
-      'her'
+      'her',
     ],
   },
 };
