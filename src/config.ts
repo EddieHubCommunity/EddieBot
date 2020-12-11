@@ -40,9 +40,9 @@ export default {
         'You can assign this role to yourself to subscribe to get open-source reminders and if you like contributing to open-source software',
     },
   },
-  defaultEmbed: () => {
+  defaultEmbed: (color = '#0099ff') => {
     return new MessageEmbed()
-      .setColor('#0099ff')
+      .setColor(color)
       .setTimestamp()
       .setFooter(
         'Our bot is Open Source, you can find it here https://github.com/EddieJaoudeCommunity/EddieBot'
