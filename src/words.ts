@@ -18,7 +18,7 @@ export const words = async (message: Message) => {
   }
   // Regex to remove puntuation from text
   const textAfterRemovingPunctuation = message.content
-    .replace(/[.,/#!$%&*;:{}=\-_'"~()]/g, ' ')
+    .replace(/[.,/#!$%&*;:{}<>=\-_'"~()]/g, ' ')
     .replace(/\s{2,}/g, ' ');
   const match = alex.markdown(textAfterRemovingPunctuation, ALEX as alex.Config)
     .messages;
