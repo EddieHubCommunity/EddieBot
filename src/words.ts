@@ -16,8 +16,12 @@ export const words = async (message: Message) => {
   if (message.author.bot) {
     return;
   }
-
-  const match = alex.markdown(message.content, ALEX as alex.Config).messages;
+  // Regex to remove puntuation from text
+  const textAfterRemovingPunctuation = message.content
+    .replace(/[.,/#!$%&*;:{}=\-_'"~()]/g, ' ')
+    .replace(/\s{2,}/g, ' ');
+  const match = alex.markdown(textAfterRemovingPunctuation, ALEX as alex.Config)
+    .messages;
 
   if (match.length) {
     const embed = defaultEmbed()
