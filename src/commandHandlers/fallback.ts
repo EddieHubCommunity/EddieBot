@@ -11,7 +11,9 @@ export const fallback = async (arg: [string, string], embed: MessageEmbed) => {
   const command = arg[0];
   const similarCommands = suggestSimilarCommands(command);
 
-  embed.setTitle('ERROR: ooops...command not found');
+  embed
+    .setColor(config.COLORS.alerts)
+    .setTitle('ERROR: ooops...command not found');
 
   if (similarCommands && similarCommands.length) {
     embed.setDescription('Here is a list of similar commands');
