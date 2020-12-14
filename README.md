@@ -1,13 +1,6 @@
 # EddieBot
 
-![Production workflow](https://github.com/EddieJaoudeCommunity/EddieBot/workflows/production/badge.svg)
 ![Develop workflow](https://github.com/EddieJaoudeCommunity/EddieBot/workflows/develop/badge.svg)
-
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Discord bot for Eddie Jaoude's Discord server
 
@@ -160,9 +153,15 @@ _Note: We are using the `GUILD_MEMBERS` **privileged intent** to receive the `gu
 ---
 
 ## How to add a new command to the bot
-
-All the commands are located in the folder `src/commandHandlers` so that each command has its own file. They are then executed in `src/commands.ts` when a user types a command with the configured command prefix in [config.ts](https://github.com/EddieJaoudeCommunity/EddieBot/blob/develop/src/config.ts#L4).
-
+ If you are new to Discord bot development, here is a small introduction about the flow of something happening on the Discord server to the bot.
+ 
+ ### Introduction
+ When a message is sent by a user on the Discord server, the Discord app sends an event to the [Discord Gateway](https://discord.com/developers/docs/topics/gateway), which then sends that event to the clients that are connected to it with WebSockets, in our case [Discord.js](https://discord.js.org/#/).
+ The start of the program is at `src/index.ts`, and here we register an event handler (the function exported on `src/commands.ts`) for the `message` event here. The client library ([Discord.js](https://discord.js.org/#/)) will call that function when it receives the `message` event from the Discord Gateway, and this is where the commands exported in the [src/commandHandlers/index.ts](https://github.com/EddieJaoudeCommunity/EddieBot/blob/develop/src/commandHandlers/index.ts) are used and where there is logic to decide which one to call.
+ 
+ ### Steps to create a new command
+ All the commands are located in the folder `src/commandHandlers` so that each command has its own file. They are then executed in `src/commands.ts` when a user types a command with the configured command prefix in [config.ts](https://github.com/EddieJaoudeCommunity/EddieBot/blob/develop/src/config.ts#L4).
+ 
 To **create a new command**, follow these steps:
 
 1. **Create a new file** on the `/commandHandlers` folder with the name of the new command.
@@ -197,6 +196,28 @@ import * as stats from './stats';
 
 export { fallback } from './fallback';
 ```
+
+## How to add allowed word
+
+All the allowed words are located in an array in [src/config.ts](src/config.ts) inside the object ` ALEX ` as shown below. 
+
+```ts
+ALEX: {
+    profanitySureness: 2,
+    noBinary: true,
+    allow: [
+      'just',
+      'brother-sister',
+      'brothers-sisters',
+      'daft',
+      ...
+
+```
+In order to add a new allowed word you have to do it inside of single quotes (` '' `) and for phrases (multiple words togheter) you should put a hiphon (` - `).
+
+It must match **the following rules**: 
+- [Rules for profanities](https://github.com/retextjs/retext-profanities/blob/main/rules.md)
+- [Rules for equality](https://github.com/retextjs/retext-equality/blob/main/rules.md)
 
 ## Database
 
