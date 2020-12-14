@@ -171,4 +171,4 @@ export const description =
 
 export const triggers = ['bio'];
 
-export const usage = `${triggers[0]} <key> || <value> or ${triggers[0]} or ${triggers[0]} <@user>`;
+export const usage = "`" + `${triggers[0]} <key> || <value>` + "` or `" + `${triggers[0]}` + " `or` "+ `${triggers[0]} <@user>` + "`";
