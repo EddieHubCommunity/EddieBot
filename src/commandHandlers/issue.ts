@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { Message, MessageEmbed } from 'discord.js';
-import { issueRequestConfig } from '../config';
+import config, { issueRequestConfig } from '../config';
 
 const MAX_QUERY_LENGTH = 256;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -68,6 +68,7 @@ export const command = async (
       url += `?title=${encodeURI(arg[1])}`;
     }
     return embed
+      .setColor(config.COLORS.github)
       .setAuthor(item.owner.login, item.owner.avatar_url, item.owner.html_url)
       .setURL(item.html_url)
       .setDescription(
@@ -79,6 +80,7 @@ export const command = async (
 
   function buildErrorMessage(errorMsg: string) {
     return embed
+      .setColor(config.COLORS.alerts)
       .setTitle('Issue (error)')
       .setDescription(description)
       .addField('ERROR', errorMsg)

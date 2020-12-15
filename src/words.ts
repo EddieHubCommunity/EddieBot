@@ -17,10 +17,13 @@ export const words = async (message: Message) => {
     return;
   }
 
-  const match = alex.markdown(message.content, ALEX as alex.Config).messages;
-
+  // Regex to remove puntuation from text
+  const match = alex.markdown(
+    stripSpecialCharacters(message.content),
+    ALEX as alex.Config
+  ).messages;
   if (match.length) {
-    const embed = defaultEmbed()
+    const embed = defaultEmbed(config.COLORS.alerts)
       .setTitle(`You used the word "${match[0].actual}"`)
       .setDescription(
         'This might not be inclusive or welcoming language. Please consider the following suggestions instead:'
@@ -36,3 +39,11 @@ export const words = async (message: Message) => {
 
   return;
 };
+
+// Utility function for removing special characters
+function stripSpecialCharacters(str: string) {
+  // match special symbols and replace with ' '
+  str = str.replace(/[.,/#!$%&*;:{}=\-_'"~()]/g, ' ');
+  // match double whitespace with single space for cleaner string
+  return str.replace(/\s{2,}/g, ' ');
+}

@@ -21,6 +21,7 @@ export const command = async (
   const field = first.toLowerCase().trim();
   if (field.length && !mention && !config.BIO.includes(field.trim())) {
     embed
+      .setColor(config.COLORS.alerts)
       .setTitle('Edit Bio (error)')
       .setDescription(
         `Bio option not valid, please use one of the following: ${config.BIO.join(
@@ -157,6 +158,7 @@ export const command = async (
   }
 
   embed
+    .setColor(config.COLORS.users)
     .setTitle('Bio')
     .setFooter(
       mention ? mention!.username : message.author.username,

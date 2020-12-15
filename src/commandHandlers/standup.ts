@@ -1,4 +1,5 @@
 import { MessageEmbed, Message } from 'discord.js';
+import config from '../config';
 
 /**
  * This command lets the user create a message for the daily standup in the community. For more information on
@@ -21,6 +22,7 @@ export const command = async (
 
   if (!args[0] || !args[1]) {
     embed
+      .setColor(config.COLORS.alerts)
       .setTitle('Standup (error)')
       .setDescription('What I did yesterday and what I will do today')
       .addField('ERROR', 'Missing arguments')
@@ -30,6 +32,7 @@ export const command = async (
   }
 
   embed
+    .setColor(config.COLORS.users)
     .setTitle('Standup')
     .setDescription('What I did yesterday and what I will do today')
     .addField('Yesterday', args[0])
