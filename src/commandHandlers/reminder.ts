@@ -1,6 +1,7 @@
 import { MessageEmbed, Message } from 'discord.js';
 import { scheduleJob } from '../scheduler.service';
 import { log } from '../logger';
+import config from '../config';
 
 const ARG_SEPARATOR = '||';
 const CLOCK_EMOJI = ':alarm_clock:';
@@ -58,6 +59,7 @@ export const command = async (
 
   function buildErrorMessage(errorMsg: string) {
     return embed
+      .setColor(config.COLORS.alerts)
       .setTitle('Reminder (error)')
       .setDescription(description)
       .addField('ERROR', errorMsg)

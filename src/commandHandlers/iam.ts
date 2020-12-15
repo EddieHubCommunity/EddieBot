@@ -125,6 +125,7 @@ export const command = async (
   // Auxiliar function
   function buildErrorEmbed(errorMsg = 'An error has occurred') {
     return embed
+      .setColor(config.COLORS.alerts)
       .setTitle('Role Assignment (error)')
       .setDescription(errorMsg)
       .addField('Usage', usage);

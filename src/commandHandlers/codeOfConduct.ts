@@ -1,7 +1,9 @@
 import { MessageEmbed } from 'discord.js';
+import config from '../config';
 
 export const command = async (arg: [string, string], embed: MessageEmbed) => {
   return embed
+    .setColor(config.COLORS.help)
     .setTitle('Code of Conduct (CoC) - Contributor Covenant Code of Conduct')
     .setDescription(
       `We as members, contributors, and leaders pledge to make participation in our
