@@ -16,13 +16,12 @@ export const words = async (message: Message) => {
   if (message.author.bot) {
     return;
   }
-  // Regex to remove puntuation from text
-  const textAfterRemovingPunctuation = message.content
-    .replace(/[.,/#!$%&*;:{}<>=\-_'"~()]/g, ' ')
-    .replace(/\s{2,}/g, ' ');
-  const match = alex.markdown(textAfterRemovingPunctuation, ALEX as alex.Config)
-    .messages;
 
+  // Regex to remove puntuation from text
+  const match = alex.markdown(
+    stripSpecialCharacters(message.content),
+    ALEX as alex.Config
+  ).messages;
   if (match.length) {
     const embed = defaultEmbed()
       .setTitle(`You used the word "${match[0].actual}"`)
@@ -40,3 +39,10 @@ export const words = async (message: Message) => {
 
   return;
 };
+
+// Utility function for removing special characters
+function stripSpecialCharacters(str: string) {
+  // match characters . , and replace with ' '
+  // regex to replace special symbols with ' '
+  return str.replace(/[.,]/g, ' ').replace(/[.,/#!$%&*;:{}<>=\-_'"~()]/, ' ');
+}
