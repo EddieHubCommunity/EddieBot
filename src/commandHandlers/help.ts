@@ -15,6 +15,7 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
     const formatted = usageTextOptions.map(mapToCodeBlock).join(' or ');
 
     embed
+      .setColor(config.COLORS.help)
       .setTitle(`${COMMAND_PREFIX}${matching.triggers[0]}`)
       .setDescription(
         `${matching.description}` + '\nUsage:\t' + `${formatted}`
