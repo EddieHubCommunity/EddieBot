@@ -36,7 +36,9 @@ export const timezone = async (message: Message) => {
             proposedZone.zone
           )
         : moment.tz(`${hour}${minutes} ${dayNight}`, 'h A', proposedZone.zone);
-      const embed = defaultEmbed().setTitle('Popular timezones');
+      const embed = defaultEmbed(config.COLORS.system).setTitle(
+        'Popular timezones'
+      );
       const availableZones = TIMEZONES.filter((item) => item.abbr !== zone);
 
       embed.addField(mentioned, proposedZone!.zone);

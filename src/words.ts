@@ -23,7 +23,7 @@ export const words = async (message: Message) => {
     ALEX as alex.Config
   ).messages;
   if (match.length) {
-    const embed = defaultEmbed()
+    const embed = defaultEmbed(config.COLORS.alerts)
       .setTitle(`You used the word "${match[0].actual}"`)
       .setDescription(
         'This might not be inclusive or welcoming language. Please consider the following suggestions instead:'
