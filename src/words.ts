@@ -19,7 +19,7 @@ export const words = async (message: Message) => {
 
   // Modify text by removing redundancy and special characters
   const messageText = [
-    ...new Set(stripSpecialCharacters(message.content)),
+    ...new Set(stripSpecialCharacters(message.content).split(' ')),
   ].join(' ');
   const match = alex.markdown(messageText, ALEX as alex.Config).messages;
   if (match.length) {
@@ -45,5 +45,5 @@ function stripSpecialCharacters(str: string) {
   // match special symbols and replace with ' '
   str = str.replace(/[.,/#!$%&*;:{}=\-_'"~()]/g, ' ');
   // match double whitespace with single space for cleaner string
-  return str.replace(/\s{2,}/g, ' ').split(' ');
+  return str.replace(/\s{2,}/g, ' ');
 }
