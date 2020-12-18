@@ -17,11 +17,11 @@ export const words = async (message: Message) => {
     return;
   }
 
-  // Regex to remove puntuation from text
-  const match = alex.markdown(
-    stripSpecialCharacters(message.content),
-    ALEX as alex.Config
-  ).messages;
+  // Modify text by removing redundancy and special characters
+  const messageText = [
+    ...new Set(stripSpecialCharacters(message.content).split(' ')),
+  ].join(' ');
+  const match = alex.markdown(messageText, ALEX as alex.Config).messages;
   if (match.length) {
     const embed = defaultEmbed(config.COLORS.alerts)
       .setTitle(`You used the word "${match[0].actual}"`)
