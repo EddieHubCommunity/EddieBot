@@ -137,7 +137,12 @@ export const description =
 
 export const triggers = ['iam'];
 
-export const usage = `${triggers[0]} <add/remove> <role name> or ${triggers[0]} <add/remove> <role name>, <role name>, ...`;
+export const usage =
+  '`' +
+  `${triggers[0]} <add/remove> <role name>` +
+  '` or `' +
+  `${triggers[0]} <add/remove> <role name>, <role name>, ...` +
+  '`';
 
 /**
  * Adds the open source subscription for the user to
