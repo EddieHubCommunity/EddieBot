@@ -35,7 +35,10 @@
     "node-schedule": "^1.3.2",
     "pino": "^6.7.0",
     "pino-pretty": "^4.3.0",
-    "soundex-code": "^1.0.5"
+    "remark": "^13.0.0",
+    "soundex-code": "^1.0.5",
+    "stopword": "^1.0.6",
+    "strip-markdown": "^4.0.0"
   },
   "devDependencies": {
     "@types/alex": "^9.0.0",
@@ -43,6 +46,7 @@
     "@types/node-schedule": "^1.3.1",
     "@types/pino": "^6.3.3",
     "@types/soundex-code": "^1.0.0",
+    "@types/stopword": "^1.0.0",
     "@types/ws": "^7.2.9",
     "@typescript-eslint/eslint-plugin": "^4.6.1",
     "@typescript-eslint/parser": "^4.6.1",
