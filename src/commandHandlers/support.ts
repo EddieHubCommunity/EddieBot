@@ -54,10 +54,10 @@ const searchIssuesCommand = async (question: string, embed: MessageEmbed) => {
 
   issues.forEach((issue: Issue) => {
     const description = stripMarkdown(issue.body).trim().replace(/\n+/g, '\n');
-    const brefDescription = truncate(description);
+    const briefDescription = truncate(description);
     embed.addField(
       `${issue.title} #${issue.number}`,
-      `Author: [${issue.user.login}](${issue.user.html_url}) | Status: ${issue.state} | Comments: ${issue.comments}\n[${brefDescription}](${issue.html_url})`
+      `Author: [${issue.user.login}](${issue.user.html_url}) | Status: ${issue.state} | Comments: ${issue.comments}\n[${briefDescription}](${issue.html_url})`
     );
   });
 
