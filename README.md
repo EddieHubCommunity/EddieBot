@@ -4,7 +4,7 @@
 
 Discord bot for Eddie Jaoude's Discord server
 
----
+# Contributing
 
 Feel free to [create an issue](https://github.com/EddieJaoudeCommunity/EddieBot/issues) or make a Pull Request 😃. Please see our [Contributing](CONTRIBUTING.md) file first, before making new commits or opening a PR. We appreciate it ❤️!
 
