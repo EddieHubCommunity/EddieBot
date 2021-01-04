@@ -14,6 +14,7 @@ ALEX: {
       ...
     ]
 }
+```
 In order to add a new allowed word you have to do it inside of single quotes (` '' `) and for phrases (multiple words togheter) you should put a hiphon (` - `).
 
 It must match **the following rules**: 
