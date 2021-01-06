@@ -93,7 +93,6 @@ export default {
       'brothers-sisters',
       'daft',
       'easy',
-      'easily',
       'master',
       'clearly',
       'moaning',
