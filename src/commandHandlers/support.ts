@@ -63,7 +63,7 @@ const searchIssuesCommand = async (question: string, embed: MessageEmbed) => {
   return embed;
 };
 
-const fetchIssues = async (q: string) => {
+const fetchIssues = async (q: string): Promise<Issue[]> => {
   const request = {
     ...issueRequestConfig,
     url: '/issues',
