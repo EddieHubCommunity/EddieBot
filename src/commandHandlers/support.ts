@@ -1,7 +1,6 @@
 import { MessageEmbed, Message } from 'discord.js';
 import { removeStopwords } from 'stopword';
-import remark from 'remark';
-import strip from 'strip-markdown';
+import removeMd from 'remove-markdown';
 import axios from 'axios';
 import { log } from '../logger';
 import config, { issueRequestConfig } from '../config';
@@ -53,7 +52,7 @@ const searchIssuesCommand = async (question: string, embed: MessageEmbed) => {
   );
 
   issues.forEach((issue: Issue) => {
-    const description = stripMarkdown(issue.body).trim().replace(/\n+/g, '\n');
+    const description = removeMd(issue.body).trim().replace(/\n+/g, '\n');
     const briefDescription = truncate(description);
     embed.addField(
       `${issue.title} #${issue.number}`,
@@ -80,9 +79,6 @@ const fetchIssues = async (q: string) => {
     return [];
   }
 };
-
-const stripMarkdown = (text: string) =>
-  remark().use(strip).processSync(text).toString();
 
 const truncate = (text: string, limit = 100) =>
   text.length > limit ? `${text.slice(0, limit)}...` : text;
