@@ -45,6 +45,7 @@ Feel free to [create an issue](https://github.com/EddieJaoudeCommunity/EddieBot/
 - firebase key for the project, check [these docs](https://firebase.google.com/docs/admin/setup) to get your key
 - [optional] Github token that you can get from [here](https://github.com/settings/tokens)
 - [optional] GCP account to deploy to (using GitHub Actions)
+- Configured words show with alternative suggestions after the user sends a message using the [Alex project](https://github.com/get-alex/alex)
 
 ## → How to run EddieBot locally:
 
