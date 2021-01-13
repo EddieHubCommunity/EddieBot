@@ -133,6 +133,11 @@ export const selfAssignableRoles = [
   'node',
   'kotlin',
   'svelte',
+  'nim',
+  'go',
+  'java',
+  'c/++',
+  'c#',
 ];
 
 export const issueRequestConfig: AxiosRequestConfig = {
