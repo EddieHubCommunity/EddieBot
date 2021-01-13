@@ -75,6 +75,7 @@ export default {
 
     { abbr: 'KST', zone: 'Asia/Seoul' },
     { abbr: 'IST', zone: 'Asia/Kolkata' },
+    { abbr: 'AST', zone: 'Asia/Saudi-Arabia'},
   ],
 
   OPENSOURCE_JOB_CRON_TIME:
@@ -133,6 +134,11 @@ export const selfAssignableRoles = [
   'node',
   'kotlin',
   'svelte',
+  'nim',
+  'go',
+  'c/++',
+  'java',
+  'c#',
 ];
 
 export const issueRequestConfig: AxiosRequestConfig = {
