@@ -1,6 +1,6 @@
 ## How to add allowed word
 
-All the allowed words are located in an array in [src/config.ts](src/config.ts) inside the object ` ALEX ` as shown below. 
+All the allowed words are located in an array in [src/config.ts](../src/config.ts) inside the object ` ALEX ` as shown below. 
 
 ```ts
 ALEX: {

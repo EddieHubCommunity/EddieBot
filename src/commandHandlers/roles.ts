@@ -23,7 +23,7 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
     .setDescription(`Here is the list of roles on this server. You can assign almost any role to yourself. Some of the roles are admin only or given to you via a condition!
         ${rolesList}
         Example of usage:
-        ^iam javascript`);
+        ^iam add javascript`);
 
   return embed;
 };
