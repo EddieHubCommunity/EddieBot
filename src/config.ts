@@ -106,6 +106,9 @@ export default {
       'fellowship',
       'basically',
       'long-time-no-see',
+      'superman',
+      'superwoman',
+      'hero',
     ],
   },
 };
