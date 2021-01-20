@@ -12,30 +12,30 @@ Feel free to [create an issue](https://github.com/EddieJaoudeCommunity/EddieBot/
 
 ## → Features of EddieBot
 
-- Set/Get user bio with description and social links
+- Set/Get user bio with description and social links.
 
-- Timezone, listens for messages that contain 1:30pm UTC and replies with common timezones translation
+- Timezone, listens for messages that contain 1:30pm UTC and replies with common timezones translation.
 
-- Code of Conduct
+- Code of Conduct.
 
-- Daily standup message consistently formatted
+- Daily standup message consistently formatted.
 
-- Help showing a list of available commands
+- Help showing a list of available commands.
 
-- Members role rewards
+- Members role rewards.
 
-- Gets tips of resources on a given subject
+- Gets tips of resources on a given subject.
 
-- Server status, to display some statistics of the server (e.g total number of users and messages)
+- Server status, to display some statistics of the server (e.g total number of users and messages).
 
-- Firebase (Firestore) integration, allowing people to easily add commands and persist data
+- Firebase (Firestore) integration, allowing people to easily add commands and persist data.
 
-- GitHub Actions deploys mainline branch to Azure
+- GitHub Actions deploys mainline branch to Azure.
 
 ## → Requirements
 
-- [optional] Docker and Docker-Compose
-- discord token. To get one follow [these instructions](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)
+- [optional] Docker and Docker-Compose.
+- discord token. To get one follow [these instructions](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot).
 - general channel ID of your discord server, read the instructions on one of these links to get yours:
   - [Get the channel ID of the Discord text channel](https://github.com/Chikachi/DiscordIntegration/wiki/How-to-get-a-token-and-channel-ID-for-Discord#get-the-channel-id-of-the-discord-text-channel)
   - [Where can I find my User/Server/Message ID?](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
@@ -57,7 +57,7 @@ Feel free to [create an issue](https://github.com/EddieJaoudeCommunity/EddieBot/
 3. Open `.env` and fill empty strings with matching credentials from the JSON file.
 
 #### 2. To start the application
-- [optional] To run with Docker ensure you have the latest version and Docker Compose installed and run
+- [optional] To run with Docker ensure you have the latest version and Docker Compose installed and run:
 	- `docker-compose up`
 
 - To run locally
@@ -136,4 +136,4 @@ log.fatal('Message', 'Details');
 
 ## Socials
 
-Join our discord community [here](https://discord.gg/jZQs6Wu)
+Join our discord community click [here](https://discord.gg/jZQs6Wu)
