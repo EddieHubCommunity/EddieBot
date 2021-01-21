@@ -6,7 +6,7 @@ Discord bot for Eddie Jaoude's Discord server
 
 # Contributing
 
-Feel free to [create an issue](https://github.com/EddieJaoudeCommunity/EddieBot/issues) or make a Pull Request 😃. Please see our [Contributing](CONTRIBUTING.md) file first, before making new commits or opening a PR. We appreciate it ❤️!
+Feel free to [create an issue](https://github.com/EddieJaoudeCommunity/EddieBot/issues) or make a Pull Request 😃. Please see our [contributing](CONTRIBUTING.md) file first, before making new commits or opening a pull request. We appreciate it ❤️!
 
 ---
 
@@ -16,7 +16,7 @@ Feel free to [create an issue](https://github.com/EddieJaoudeCommunity/EddieBot/
 
 - Timezone, listens for messages that contain 1:30pm UTC and replies with common timezones translation
 
-- Code of Conduct
+- Code of Conduct(COC)
 
 - Daily standup message consistently formatted
 
@@ -34,17 +34,17 @@ Feel free to [create an issue](https://github.com/EddieJaoudeCommunity/EddieBot/
 
 ## → Requirements
 
-- [optional] Docker and Docker-Compose
-- discord token. To get one follow [these instructions](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)
-- general channel ID of your discord server, read the instructions on one of these links to get yours:
+- [Optional] Docker and Docker-Compose
+- Discord token. To get one follow [these instructions](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)
+- General channel ID of your discord server, read the instructions on one of these links to get yours:
   - [Get the channel ID of the Discord text channel](https://github.com/Chikachi/DiscordIntegration/wiki/How-to-get-a-token-and-channel-ID-for-Discord#get-the-channel-id-of-the-discord-text-channel)
   - [Where can I find my User/Server/Message ID?](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
 - ID of your discord server, to get your server ID follow these steps:
   - First make sure you have **Developer Mode** enabled on your Discord by visiting your Discord settings and going to Appearance
   - Right click on the server icon on the left hand sidebar then click on "Copy ID"
-- firebase key for the project, check [these docs](https://firebase.google.com/docs/admin/setup) to get your key
-- [optional] Github token that you can get from [here](https://github.com/settings/tokens)
-- [optional] GCP account to deploy to (using GitHub Actions)
+- Firebase key for the project, check [these docs](https://firebase.google.com/docs/admin/setup) to get your key
+- [Optional] Github token that you can get from [here](https://github.com/settings/tokens)
+- [Optional] GCP account to deploy to (using GitHub Actions)
 - Configured words show with alternative suggestions after the user sends a message using the [Alex project](https://github.com/get-alex/alex)
 
 ## → How to run EddieBot locally:
@@ -57,7 +57,7 @@ Feel free to [create an issue](https://github.com/EddieJaoudeCommunity/EddieBot/
 3. Open `.env` and fill empty strings with matching credentials from the JSON file.
 
 #### 2. To start the application
-- [optional] To run with Docker ensure you have the latest version and Docker Compose installed and run
+- [Optional] To run with docker ensure you have the latest version and docker compose installed and run
 	- `docker-compose up`
 
 - To run locally
@@ -88,7 +88,7 @@ Feel free to [create an issue](https://github.com/EddieJaoudeCommunity/EddieBot/
 
 ### → Logging
 
-Logging will happen to the console as well as to the Discord `bot` channel.
+Logging will happen to the console as well as to the discord `bot` channel.
 
 1. Include the logger object...
 
@@ -136,4 +136,4 @@ log.fatal('Message', 'Details');
 
 ## Socials
 
-Join our discord community [here](https://discord.gg/jZQs6Wu)
+Join our discord community by clicking [here](https://discord.gg/jZQs6Wu)
