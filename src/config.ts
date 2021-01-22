@@ -106,6 +106,7 @@ export default {
       'fellowship',
       'basically',
       'long-time-no-see',
+      'moan',
     ],
   },
 };
