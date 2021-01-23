@@ -107,6 +107,7 @@ export default {
       'basically',
       'long-time-no-see',
       'moan',
+      'latino',
     ],
   },
 };
