@@ -108,6 +108,7 @@ export default {
       'long-time-no-see',
       'moan',
       'latino',
+      'postman-postwoman',
     ],
   },
 };
