@@ -59,7 +59,7 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
     }
   } else {
     // Parse the Assignable-roles list and display assignable roles
-    const describedRoles = [];
+    const describedRoles: string[] = [];
     const rolesList = roles
       .filter((r) => !r.name.includes('everyone')) // remove the common everyone role
       .filter((r) => selfAssignableRoles.includes(r.name)) // Filter the assignable roles
