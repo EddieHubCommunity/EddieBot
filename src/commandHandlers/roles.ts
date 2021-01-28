@@ -9,7 +9,7 @@ import config, { selfAssignableRoles } from '../config';
 export const command = async (arg: [string, string], embed: MessageEmbed) => {
   const roles = await getRoles();
   const specificRole = arg[1];
-  const stack = [];
+  const describedRoles = [];
   if (specificRole) {
     if (arg[1] === '-a' || arg[1] === 'all') {
       const rolesList = roles
@@ -20,31 +20,68 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
           );
           const roleDescription = role ? `- ${role.description}` : '';
           if (roleDescription) {
-            stack.push(`\n${discordRole.toString()} ${roleDescription}`);
+            describedRoles.push(`
+            ${discordRole.toString()} ${roleDescription}`);
           } else {
             return ` ${discordRole.toString()}`;
           }
-        })
-        .filter((val) => val !== undefined);
-      console.log(stack);
-      console.log(rolesList);
+        }) // Filter the role names and generate list for roleDescriptions
+        .filter((val) => val !== undefined); // Removed undefined values from the list
       embed.setTitle('Available Roles')
         .setDescription(`Here is the list of all the roles on this server. You can assign almost any role to yourself. Some of the roles are admin only or given to you via a condition!\n
-        ${rolesList} \n${stack}\n
+        ${rolesList} \n${describedRoles}\n
         Example of usage:
         \`^iam add javascript\``);
       return embed;
     } else {
-      // Parse the roles list for the argument, and set up a try except,
-      // if anything errors out send an Error Embed
-      console.log('details about the role');
+      // Search the roles list for the argument, and
+      // if the role is not found, send an Error Embed
+      const role = arg[1];
+      const roleObject = roles.find((r) => r.name === role);
+      if (roleObject) {
+        const roleData = Object.values(config.ROLE).find(
+          (r) => r.name === role
+        );
+        const roleDescription = roleData ? `- ${roleData.description}` : '';
+        embed.setTitle(`${role} Role`)
+          .setDescription(`${roleObject} ${roleDescription}
+          \nAssigning this role to yourself:
+              \`^iam add ${role}\``);
+      } else {
+        embed
+          .setColor(config.COLORS.alerts)
+          .setTitle('Role Listing (error)')
+          .setDescription(`**${role}** \nThat role does not exist`)
+          .addField('Usage', usage);
+        console.log("ERROR- The queried role can't be found");
+      }
       return embed;
     }
   } else {
-    console.log('weeeee');
+    // Parse the Assignable-roles list and display assignable roles
+    const describedRoles = [];
+    const rolesList = roles
+      .filter((r) => !r.name.includes('everyone')) // remove the common everyone role
+      .filter((r) => selfAssignableRoles.includes(r.name)) // Filter the assignable roles
+      .map((discordRole) => {
+        const role = Object.values(config.ROLE).find(
+          (r) => r.name === discordRole.name
+        );
+        const roleDescription = role ? `- ${role.description}` : '';
+        if (roleDescription) {
+          describedRoles.push(`
+            ${discordRole.toString()} ${roleDescription}`);
+        } else {
+          return ` ${discordRole.toString()}`;
+        }
+      })
+      .filter((val) => val !== undefined);
+    embed.setTitle('Assignable Roles')
+      .setDescription(`Here is the list of all self-assignable roles on this server. You can assign the following roles to yourself:\n
+      ${rolesList} \n${describedRoles}\n
+      Assigning roles to yourself:
+      \`^iam add javascript\``);
     return embed;
-    // Parse the Assignable-roles list for the argument, and set up a try except,
-    // if anything errors out send an Error Embed
   }
 };
 
@@ -52,4 +89,4 @@ export const description = 'Server roles';
 
 export const triggers = ['roles'];
 
-export const usage = triggers[0];
+export const usage = triggers[0] + ' <argument>';
