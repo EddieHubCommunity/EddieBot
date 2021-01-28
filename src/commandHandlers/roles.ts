@@ -22,6 +22,7 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
           if (roleDescription) {
             describedRoles.push(`
             ${discordRole.toString()} ${roleDescription}`);
+            return undefined;
           } else {
             return ` ${discordRole.toString()}`;
           }
@@ -29,7 +30,7 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
         .filter((val) => val !== undefined); // Removed undefined values from the list
       embed.setTitle('Available Roles')
         .setDescription(`Here is the list of all the roles on this server. You can assign almost any role to yourself. Some of the roles are admin only or given to you via a condition!\n
-        ${rolesList} \n${describedRoles}\n
+        ${rolesList} \n${describedRoles.toString()}\n
         Example of usage:
         \`^iam add javascript\``);
       return embed;
@@ -78,7 +79,7 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
       .filter((val) => val !== undefined);
     embed.setTitle('Assignable Roles')
       .setDescription(`Here is the list of all self-assignable roles on this server. You can assign the following roles to yourself:\n
-      ${rolesList} \n${describedRoles}\n
+      ${rolesList} \n${describedRoles.toString()}\n
       Assigning roles to yourself:
       \`^iam add javascript\``);
     return embed;
