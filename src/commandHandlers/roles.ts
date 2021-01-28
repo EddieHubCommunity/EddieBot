@@ -9,6 +9,7 @@ import config, { selfAssignableRoles } from '../config';
 export const command = async (arg: [string, string], embed: MessageEmbed) => {
   const roles = await getRoles();
   const specificRole = arg[1];
+  const stack = [];
   if (specificRole) {
     if (arg[1] === '-a' || arg[1] === 'all') {
       const rolesList = roles
@@ -18,12 +19,18 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
             (r) => r.name === discordRole.name
           );
           const roleDescription = role ? `- ${role.description}` : '';
-
-          return `${discordRole.toString()} ${roleDescription}`;
-        });
+          if (roleDescription) {
+            stack.push(`\n${discordRole.toString()} ${roleDescription}`);
+          } else {
+            return ` ${discordRole.toString()}`;
+          }
+        })
+        .filter((val) => val !== undefined);
+      console.log(stack);
+      console.log(rolesList);
       embed.setTitle('Available Roles')
-        .setDescription(`Here is the list of all the roles on this server. You can assign almost any role to yourself. Some of the roles are admin only or given to you via a condition!
-        ${rolesList}
+        .setDescription(`Here is the list of all the roles on this server. You can assign almost any role to yourself. Some of the roles are admin only or given to you via a condition!\n
+        ${rolesList} \n${stack}\n
         Example of usage:
         \`^iam add javascript\``);
       return embed;
