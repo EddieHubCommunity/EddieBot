@@ -9,28 +9,29 @@ import config, { selfAssignableRoles } from '../config';
 export const command = async (arg: [string, string], embed: MessageEmbed) => {
   const roles = await getRoles();
   const specificRole = arg[1];
-  const describedRoles: string[] = [];
+
   if (specificRole) {
     if (arg[1] === '-a' || arg[1] === 'all') {
-      const rolesList = roles
-        .filter((r) => !r.name.includes('everyone')) // Filter the default role everyone has access to
-        .map((discordRole) => {
-          const role = Object.values(config.ROLE).find(
-            (r) => r.name === discordRole.name
-          );
-          const roleDescription = role ? `- ${role.description}` : '';
-          if (roleDescription) {
-            describedRoles.push(`
-            ${discordRole.toString()} ${roleDescription}`);
-            return undefined;
-          } else {
-            return ` ${discordRole.toString()}`;
-          }
-        }) // Filter the role names and generate list for roleDescriptions
-        .filter((val) => val !== undefined); // Removed undefined values from the list
+      const describedRoles: string[] = [];
+      const rolesList: string[] = [];
+      roles.forEach((role) => {
+        if (role.name.includes('everyone')) {
+          return;
+        }
+        const roleConfig = Object.values(config.ROLE).find(
+          (r) => r.name === role.name
+        );
+        if (roleConfig && roleConfig.description) {
+          describedRoles.push(`${role.toString()} - ${roleConfig.description}
+          `);
+        } else {
+          rolesList.push(` ${role.toString()}`);
+        }
+      });
       embed.setTitle('Available Roles')
         .setDescription(`Here is the list of all the roles on this server. You can assign almost any role to yourself. Some of the roles are admin only or given to you via a condition!\n
-        ${rolesList} \n${describedRoles.toString()}\n
+        ${rolesList.toString()}\n
+        ${describedRoles.toString()}
         Example of usage:
         \`^iam add javascript\``);
       return embed;
@@ -45,7 +46,7 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
         );
         const roleDescription = roleData ? `- ${roleData.description}` : '';
         embed.setTitle(`${role} Role`)
-          .setDescription(`${roleObject} ${roleDescription}
+          .setDescription(`\n${roleObject} ${roleDescription}
           \nAssigning this role to yourself:
               \`^iam add ${role}\``);
       } else {
@@ -61,25 +62,24 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
   } else {
     // Parse the Assignable-roles list and display assignable roles
     const describedRoles: string[] = [];
-    const rolesList = roles
-      .filter((r) => selfAssignableRoles.includes(r.name)) // Filter the assignable roles
-      .map((discordRole) => {
-        const role = Object.values(config.ROLE).find(
-          (r) => r.name === discordRole.name
-        );
-        const roleDescription = role ? `- ${role.description}` : '';
-        if (roleDescription) {
-          describedRoles.push(`
-            ${discordRole.toString()} ${roleDescription}`);
-          return undefined;
-        } else {
-          return ` ${discordRole.toString()}`;
-        }
-      })
-      .filter((val) => val !== undefined);
+    const rolesList: string[] = [];
+    roles.forEach((role) => {
+      if (!selfAssignableRoles.includes(role.name)) {
+        return;
+      }
+      const roleConfig = Object.values(config.ROLE).find(
+        (r) => r.name === role.name
+      );
+      if (roleConfig && roleConfig.description) {
+        describedRoles.push(`${role.toString()} - ${roleConfig.description}\n`);
+      } else {
+        rolesList.push(` ${role.toString()}`);
+      }
+    });
     embed.setTitle('Assignable Roles')
       .setDescription(`Here is the list of all self-assignable roles on this server. You can assign the following roles to yourself:\n
-      ${rolesList} \n${describedRoles.toString()}\n
+      ${rolesList}\n
+      ${describedRoles.toString()}
       Assigning roles to yourself:
       \`^iam add javascript\``);
     return embed;
