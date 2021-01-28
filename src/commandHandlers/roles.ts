@@ -9,7 +9,7 @@ import config, { selfAssignableRoles } from '../config';
 export const command = async (arg: [string, string], embed: MessageEmbed) => {
   const roles = await getRoles();
   const specificRole = arg[1];
-  const describedRoles = [];
+  const describedRoles: string[] = [];
   if (specificRole) {
     if (arg[1] === '-a' || arg[1] === 'all') {
       const rolesList = roles
@@ -72,6 +72,7 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
         if (roleDescription) {
           describedRoles.push(`
             ${discordRole.toString()} ${roleDescription}`);
+          return undefined;
         } else {
           return ` ${discordRole.toString()}`;
         }
