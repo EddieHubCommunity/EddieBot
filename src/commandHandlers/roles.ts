@@ -22,16 +22,17 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
           (r) => r.name === role.name
         );
         if (roleConfig && roleConfig.description) {
-          describedRoles.push(`${role.toString()} - ${roleConfig.description}
-          `);
+          describedRoles.push(
+            `\n${role.toString()} - ${roleConfig.description}`
+          );
         } else {
           rolesList.push(` ${role.toString()}`);
         }
       });
       embed.setTitle('Available Roles')
         .setDescription(`Here is the list of all the roles on this server. You can assign almost any role to yourself. Some of the roles are admin only or given to you via a condition!\n
-        ${rolesList.toString()}\n
-        ${describedRoles.toString()}
+        ${rolesList.toString()}
+        ${describedRoles.toString()}\n
         Example of usage:
         \`^iam add javascript\``);
       return embed;
