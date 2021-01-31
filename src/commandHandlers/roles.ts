@@ -12,11 +12,11 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
 
   if (specificRole) {
     if (arg[1] === '-a' || arg[1] === 'all') {
-      const roleInfo = getRoleLists(roles, (r) => r.name.includes('everyone'));
+      const [rolesList, describedRoles] = getRoleLists(roles, (r) => r.name.includes('everyone'));
       embed.setTitle('Available Roles')
         .setDescription(`Here is the list of all the roles on this server. You can assign almost any role to yourself. Some of the roles are admin only or given to you via a condition!\n
-        ${roleInfo[0].toString()}
-        ${roleInfo[1].toString()}\n
+        ${rolesList.toString()}
+        ${describedRoles.toString()}\n
         Assigning this role to yourself:
         \`^iam add javascript\``);
     } else {
