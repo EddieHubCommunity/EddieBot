@@ -24,20 +24,22 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
     } else {
       // Search the roles list for the argument, and
       // if the role is not found, send an Error Embed
-      const role = arg[1];
-      const roleInfo = getRoleLists(roles, (r) => !r.name.includes(role));
-      const roleText = [].concat(roleInfo[0], roleInfo[1]).toString();
-      if (roleText.length === 0) {
+      const [rolesList, describedRoles] = getRoleLists(
+        roles,
+        (r) => !r.name.includes(specificRole)
+      );
+      if (rolesList.length === 0 && describedRoles.length == 0) {
         embed
           .setColor(config.COLORS.alerts)
           .setTitle('Role Listing (error)')
-          .setDescription(`**${role}** \nThat role does not exist`)
+          .setDescription(`**${specificRole}** \nThat role does not exist`)
           .addField('Usage', usage);
         console.log("ERROR- The queried role can't be found");
       } else {
-        embed.setTitle(`${role} Role`).setDescription(`${roleText}
+        embed.setTitle(`${specificRole} Role`)
+          .setDescription(`${rolesList.concat(describedRoles).toString()}
           \nAssigning this role to yourself:
-              \`^iam add ${role}\``);
+          \`^iam add ${specificRole}\``);
       }
     }
   } else {
