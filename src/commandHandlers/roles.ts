@@ -1,4 +1,4 @@
-import { MessageEmbed } from 'discord.js';
+import { MessageEmbed, Role, Collection } from 'discord.js';
 
 import { getRoles } from './guild.service';
 import config, { selfAssignableRoles } from '../config';
@@ -12,7 +12,9 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
 
   if (specificRole) {
     if (arg[1] === '-a' || arg[1] === 'all') {
-      const [rolesList, describedRoles] = getRoleLists(roles, (r) => r.name.includes('everyone'));
+      const [rolesList, describedRoles] = getRoleLists(roles, (r) =>
+        r.name.includes('everyone')
+      );
       embed.setTitle('Available Roles')
         .setDescription(`Here is the list of all the roles on this server. You can assign almost any role to yourself. Some of the roles are admin only or given to you via a condition!\n
         ${rolesList.toString()}
