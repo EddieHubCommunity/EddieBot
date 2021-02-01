@@ -60,12 +60,12 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
 // Returns two lists, one with all the role names and the other with role names followed by their description.
 function getRoleLists(
   roles: Collection<string, Role>,
-  isValidRole: (role: Role) => boolean
+  notValid: (role: Role) => boolean
 ): [string[], string[]] {
   const describedRoles: string[] = [];
   const rolesList: string[] = [];
   roles.forEach((role) => {
-    if (isValidRole(role)) {
+    if (notValid(role)) {
       return;
     }
     const roleConfig = Object.values(config.ROLE).find(
