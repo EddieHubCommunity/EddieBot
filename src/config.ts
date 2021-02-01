@@ -39,6 +39,11 @@ export default {
       description:
         'You can assign this role to yourself to subscribe to get open-source reminders and if you like contributing to open-source software',
     },
+    COMMUNITY_CHAT: {
+      name: 'community chat',
+      description:
+        'You can assign this role to yourself to be pinged when we open a voice chat for an impromptu community session.',
+    },
   },
   COLORS: {
     message: '#0099ff',
@@ -122,6 +127,7 @@ export const selfAssignableRoles = [
   'angular',
   'c/++',
   'c#',
+  'community chat',
   'fullstack',
   'flutter',
   'go',
