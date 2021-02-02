@@ -39,6 +39,16 @@ export default {
       description:
         'You can assign this role to yourself to subscribe to get open-source reminders and if you like contributing to open-source software',
     },
+    COMMUNITY_CHAT: {
+      name: 'community chat',
+      description:
+        'You can assign this role to yourself to be pinged when we open a voice chat for an impromptu community session.',
+    },
+    AMONG_US: {
+      name: 'among us',
+      description:
+        'You can assign this role to yourself to be pinged when nhcarrigan (or another Admin) runs an Among Us session.',
+    },
   },
   COLORS: {
     message: '#0099ff',
@@ -119,9 +129,11 @@ export enum UserSubscriptions {
 }
 
 export const selfAssignableRoles = [
+  'among us',
   'angular',
   'c/++',
   'c#',
+  'community chat',
   'fullstack',
   'flutter',
   'go',
