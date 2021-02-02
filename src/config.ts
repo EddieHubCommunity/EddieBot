@@ -119,6 +119,7 @@ export default {
       'moan',
       'latino',
       'postman-postwoman',
+      'hostesses-hosts',
     ],
   },
 };
