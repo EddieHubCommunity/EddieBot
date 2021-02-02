@@ -11,7 +11,7 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
   const specificRole = arg[1];
 
   if (specificRole) {
-    if (arg[1] === '-a' || arg[1] === 'all') {
+    if (specificRole === '-a' || specificRole === 'all') {
       const [rolesList, describedRoles] = getRoleLists(roles, (r) =>
         r.name.includes('everyone')
       );
