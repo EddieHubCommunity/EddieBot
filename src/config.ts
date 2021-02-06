@@ -39,6 +39,16 @@ export default {
       description:
         'You can assign this role to yourself to subscribe to get open-source reminders and if you like contributing to open-source software',
     },
+    COMMUNITY_CHAT: {
+      name: 'community chat',
+      description:
+        'You can assign this role to yourself to be pinged when we open a voice chat for an impromptu community session.',
+    },
+    AMONG_US: {
+      name: 'among us',
+      description:
+        'You can assign this role to yourself to be pinged when nhcarrigan (or another Admin) runs an Among Us session.',
+    },
   },
   COLORS: {
     message: '#0099ff',
@@ -106,6 +116,10 @@ export default {
       'fellowship',
       'basically',
       'long-time-no-see',
+      'moan',
+      'latino',
+      'postman-postwoman',
+      'hostesses-hosts',
     ],
   },
 };
@@ -116,23 +130,29 @@ export enum UserSubscriptions {
 }
 
 export const selfAssignableRoles = [
-  'php',
-  'laravel',
-  'javascript',
+  'among us',
   'angular',
-  'react',
-  'vue',
-  'java',
-  'ruby',
-  'python',
-  'ops',
+  'c/++',
+  'c#',
+  'community chat',
   'fullstack',
   'flutter',
-  'typescript',
-  'opensource',
-  'node',
+  'go',
+  'java',
+  'javascript',
   'kotlin',
+  'laravel',
+  'nim',
+  'node',
+  'opensource',
+  'ops',
+  'php',
+  'python',
+  'react',
+  'ruby',
   'svelte',
+  'typescript',
+  'vue',
 ];
 
 export const issueRequestConfig: AxiosRequestConfig = {
