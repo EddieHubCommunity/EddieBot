@@ -156,7 +156,7 @@ export const selfAssignableRoles = [
 ];
 
 export const issueRequestConfig: AxiosRequestConfig = {
-  url: `https://api.github.com/search/repositories`,
+  baseURL: `https://api.github.com/search/`,
 };
 
 if (process.env.GITHUB_TOKEN) {
