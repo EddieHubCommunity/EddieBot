@@ -33,10 +33,10 @@ export const command = async (
 
 /**
  * The first part of the pattern `^search\s+` matches against any string that starts with the word `search`
- * followed by at least one space or more, the second part `([\s\S]+)$` captures everything (including new lines) 
+ * followed by at least one space or more, the second part `([\s\S]+)$` captures everything (including new lines)
  * after the space to the end of the string and the `i` flag make the pattern case-insensitive.
  *
- * `\s` matches any space character and `\S` matches any non-space character 
+ * `\s` matches any space character and `\S` matches any non-space character
  * so using them combined `[\s\S]` works like `.` with one difference that `.` can't match a newline but `[\s\S]` does.
  *
  * @param {string} text
