@@ -38,6 +38,10 @@ export const messageReactionAdd = async (reaction: MessageReaction) => {
     }
   }
 
+  if (reaction.message.author.bot) {
+    return;
+  }
+
   if (reaction.message.partial) {
     try {
       await reaction.message.member!.fetch();

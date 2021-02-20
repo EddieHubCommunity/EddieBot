@@ -49,6 +49,11 @@ export default {
       description:
         'You can assign this role to yourself to be pinged when nhcarrigan (or another Admin) runs an Among Us session.',
     },
+    BATTLESNAKE: {
+      name: 'battlesnake',
+      description:
+        "You can assign this role to yourself to be pinged when there are updates regarding community battlesnake games or Eddie' video for battlesnake",
+    },
   },
   COLORS: {
     message: '#0099ff',
@@ -148,6 +153,7 @@ export const selfAssignableRoles = [
   'ops',
   'php',
   'python',
+  'battlesnake',
   'react',
   'ruby',
   'svelte',
