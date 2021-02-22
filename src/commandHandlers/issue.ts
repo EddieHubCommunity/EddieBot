@@ -6,8 +6,12 @@ const MAX_QUERY_LENGTH = 256;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const req = async (q: string): Promise<any[]> => {
   try {
-    issueRequestConfig.params = { q };
-    return (await axios(issueRequestConfig)).data.items;
+    const request = {
+      ...issueRequestConfig,
+      url: '/repositories',
+      params: { q },
+    };
+    return (await axios(request)).data.items;
   } catch (err) {
     if (err.response.status === 403) {
       return new Promise((resolve) => {

@@ -43,7 +43,7 @@ export const words = async (message: Message) => {
 // Utility function for removing special characters
 function stripSpecialCharacters(str: string) {
   // match special symbols and replace with ' '
-  str = str.replace(/[.,/#!$%&*;:{}=\-_'"~()]/g, ' ');
+  str = str.replace(/[.,/#!$%?&*;:{}=\-_'"~()]/g, ' ');
   // match double whitespace with single space for cleaner string
   return str.replace(/\s{2,}/g, ' ');
 }
