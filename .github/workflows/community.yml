@@ -29,11 +29,4 @@ jobs:
       - uses: EddieHubCommunity/gh-action-community/src/statistics@main
         with:
           firebase-key: ${{ secrets.FIREBASE_KEY }}
-
-  statistics:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: EddieJaoudeCommunity/gh-action-community/src/statistics@main
-        with:
-          firebase-key: ${{ secrets.FIREBASE_KEY }}
+          
