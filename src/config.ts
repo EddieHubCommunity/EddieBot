@@ -100,7 +100,7 @@ export default {
     resources: ['openSourceResources.md'],
   },
   ALEX: {
-    profanitySureness: 2,
+    profanitySureness: 1,
     noBinary: true,
     allow: [
       'just',
