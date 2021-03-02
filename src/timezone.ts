@@ -24,6 +24,10 @@ export const timezone = async (message: Message) => {
   if (match) {
     const [mentioned, hour, minutes, dayNight, zone] = match;
 
+    if (!zone) {
+      return;
+    }
+
     const proposedZone = TIMEZONES.find(
       (item) => item.abbr === zone.toUpperCase()
     );
