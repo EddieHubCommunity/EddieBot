@@ -58,7 +58,7 @@ export default {
       name: 'mlh_guild',
       description:
         'You can assign this role to yourself if you are participating with our guild in an MLH LHD Share hackathon.',
-      },
+    },
   },
   COLORS: {
     message: '#0099ff',
