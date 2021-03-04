@@ -163,7 +163,7 @@ export const selfAssignableRoles = [
   'svelte',
   'typescript',
   'vue',
-  'mlh_guild'
+  'mlh_guild',
 ];
 
 export const issueRequestConfig: AxiosRequestConfig = {
