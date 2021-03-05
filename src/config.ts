@@ -123,6 +123,7 @@ export default {
       'of-course',
       'special',
       'dad-mom',
+      'fellow',
       'fellowship',
       'basically',
       'long-time-no-see',
