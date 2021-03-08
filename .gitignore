@@ -6,3 +6,5 @@ dist/
 .env
 # Remove firestore debug log.
 firestore-debug.log
+# Ignore IDEs (some)
+.idea/
