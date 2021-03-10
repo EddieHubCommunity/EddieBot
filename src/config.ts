@@ -130,7 +130,7 @@ export default {
       'latino',
       'postman-postwoman',
       'hostesses-hosts',
-      'GIMP',
+      'gimp',
     ],
   },
 };
