@@ -71,4 +71,7 @@ export const description = 'Set reminders for yourself.';
 
 export const triggers = ['reminder', 'rem'];
 
-export const usage = `${triggers[0]} <date and time> ${ARG_SEPARATOR} <reminder message>`;
+export const usage =
+  '`' +
+  `${triggers[0]} <date and time> ${ARG_SEPARATOR} <reminder message>` +
+  '`';

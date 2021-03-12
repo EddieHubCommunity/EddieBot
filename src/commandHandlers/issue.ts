@@ -96,4 +96,4 @@ export const description = 'Create a link for an issue on a github repository';
 
 export const triggers = ['issue'];
 
-export const usage = `${triggers[0]} [title]`;
+export const usage = '`' + `${triggers[0]} [title]` + '`';

@@ -37,6 +37,9 @@ export const description =
 
 export const triggers = ['tips'];
 
-export const usage = `${
-  triggers[0]
-} <subject>. Available subjects: ${AVAILABLE_SUBJECTS.join(';')}`;
+export const usage =
+  '`' +
+  `${triggers[0]} <subject>. Available subjects: ${AVAILABLE_SUBJECTS.join(
+    ';'
+  )}` +
+  '`';
