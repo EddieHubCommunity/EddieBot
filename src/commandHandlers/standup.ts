@@ -50,4 +50,5 @@ export const description =
 
 export const triggers = ['standup'];
 
-export const usage = `${triggers[0]} <notes from yesterday> || <notes for today>`;
+export const usage =
+  '`' + `${triggers[0]} <notes from yesterday> || <notes for today>` + '`';
