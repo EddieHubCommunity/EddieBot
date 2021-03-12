@@ -54,6 +54,11 @@ export default {
       description:
         "You can assign this role to yourself to be pinged when there are updates regarding community battlesnake games or Eddie' video for battlesnake",
     },
+    MLH_GUILD: {
+      name: 'mlh-guild',
+      description:
+        'You can assign this role to yourself if you are participating with our guild in a MLH LHD hackathon.',
+    },
   },
   COLORS: {
     message: '#0099ff',
@@ -100,7 +105,7 @@ export default {
     resources: ['openSourceResources.md'],
   },
   ALEX: {
-    profanitySureness: 2,
+    profanitySureness: 1,
     noBinary: true,
     allow: [
       'just',
@@ -159,6 +164,7 @@ export const selfAssignableRoles = [
   'svelte',
   'typescript',
   'vue',
+  'mlh-guild',
 ];
 
 export const issueRequestConfig: AxiosRequestConfig = {
