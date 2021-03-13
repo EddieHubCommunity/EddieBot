@@ -16,7 +16,7 @@ Feel free to [create an issue](https://github.com/EddieJaoudeCommunity/EddieBot/
 
 - Timezone, listens for messages that contain 1:30pm UTC and replies with common timezones translation
 
-- Code of Conduct
+- Code of Conduct (COC)
 
 - Daily standup message consistently formatted
 
@@ -35,11 +35,11 @@ Feel free to [create an issue](https://github.com/EddieJaoudeCommunity/EddieBot/
 ## → Requirements
 
 - [optional] Docker and Docker-Compose
-- discord token. To get one follow [these instructions](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)
-- general channel ID of your discord server, read the instructions on one of these links to get yours:
+- Discord token. To get one follow [these instructions](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)
+- general channel ID of your Discord server, read the instructions on one of these links to get yours:
   - [Get the channel ID of the Discord text channel](https://github.com/Chikachi/DiscordIntegration/wiki/How-to-get-a-token-and-channel-ID-for-Discord#get-the-channel-id-of-the-discord-text-channel)
   - [Where can I find my User/Server/Message ID?](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-)
-- ID of your discord server, to get your server ID follow these steps:
+- ID of your Discord server, to get your server ID follow these steps:
   - First make sure you have **Developer Mode** enabled on your Discord by visiting your Discord settings and going to Appearance
   - Right click on the server icon on the left hand sidebar then click on "Copy ID"
 - firebase key for the project, check [these docs](https://firebase.google.com/docs/admin/setup) to get your key
@@ -136,4 +136,4 @@ log.fatal('Message', 'Details');
 
 ## Socials
 
-Join our discord community [here](https://discord.gg/jZQs6Wu)
+Join our Discord community [here](https://discord.gg/jZQs6Wu)
