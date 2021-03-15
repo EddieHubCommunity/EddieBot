@@ -39,6 +39,26 @@ export default {
       description:
         'You can assign this role to yourself to subscribe to get open-source reminders and if you like contributing to open-source software',
     },
+    COMMUNITY_CHAT: {
+      name: 'community chat',
+      description:
+        'You can assign this role to yourself to be pinged when we open a voice chat for an impromptu community session.',
+    },
+    AMONG_US: {
+      name: 'among us',
+      description:
+        'You can assign this role to yourself to be pinged when nhcarrigan (or another Admin) runs an Among Us session.',
+    },
+    BATTLESNAKE: {
+      name: 'battlesnake',
+      description:
+        "You can assign this role to yourself to be pinged when there are updates regarding community battlesnake games or Eddie' video for battlesnake",
+    },
+    MLH_GUILD: {
+      name: 'mlh-guild',
+      description:
+        'You can assign this role to yourself if you are participating with our guild in a MLH LHD hackathon.',
+    },
   },
   COLORS: {
     message: '#0099ff',
@@ -85,7 +105,7 @@ export default {
     resources: ['openSourceResources.md'],
   },
   ALEX: {
-    profanitySureness: 2,
+    profanitySureness: 1,
     noBinary: true,
     allow: [
       'just',
@@ -108,42 +128,49 @@ export default {
       'long-time-no-see',
       'superman-superwoman',
       'hero-heroine',
+      'moan',
+      'latino',
+      'postman-postwoman',
+      'hostesses-hosts',
+      'gimp',
     ],
   },
 };
-
 // Possible values for user subscriptions
 export enum UserSubscriptions {
   OPEN_SOURCE = 'OPENSOURCE',
 }
 
 export const selfAssignableRoles = [
-  'php',
-  'laravel',
-  'javascript',
+  'among us',
   'angular',
-  'react',
-  'vue',
-  'java',
-  'ruby',
-  'python',
-  'ops',
-  'fullstack',
-  'flutter',
-  'typescript',
-  'opensource',
-  'node',
-  'kotlin',
-  'svelte',
-  'nim',
-  'go',
-  'java',
   'c/++',
   'c#',
+  'community chat',
+  'fullstack',
+  'flutter',
+  'go',
+  'java',
+  'javascript',
+  'kotlin',
+  'laravel',
+  'nim',
+  'node',
+  'opensource',
+  'ops',
+  'php',
+  'python',
+  'battlesnake',
+  'react',
+  'ruby',
+  'svelte',
+  'typescript',
+  'vue',
+  'mlh-guild',
 ];
 
 export const issueRequestConfig: AxiosRequestConfig = {
-  url: `https://api.github.com/search/repositories`,
+  baseURL: `https://api.github.com/search/`,
 };
 
 if (process.env.GITHUB_TOKEN) {
