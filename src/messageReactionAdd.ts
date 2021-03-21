@@ -38,6 +38,10 @@ export const messageReactionAdd = async (reaction: MessageReaction) => {
     }
   }
 
+  if (reaction.message.author.bot) {
+    return;
+  }
+
   if (reaction.message.partial) {
     try {
       await reaction.message.member!.fetch();
@@ -47,9 +51,9 @@ export const messageReactionAdd = async (reaction: MessageReaction) => {
     }
   }
 
-  if (reaction.message.member!.partial) {
+  if (reaction.message.member && reaction.message.member.partial) {
     try {
-      await reaction.message.member!.fetch();
+      await reaction.message.member.fetch();
     } catch (error) {
       log.error('Something went wrong when fetching the member: ', error);
       return;
