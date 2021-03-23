@@ -19,7 +19,7 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
         .setDescription(`Here is the list of all the roles on this server. You can assign almost any role to yourself. Some of the roles are admin only or given to you via a condition!\n
         ${rolesList.toString()}
         ${describedRoles.toString()}\n
-        Assigning this role to yourself:
+        Assigning a role to yourself:
         \`^iam add javascript\``);
     } else {
       // Search the roles list for the argument, and
@@ -36,10 +36,18 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
           .addField('Usage', usage);
         console.log("ERROR- The queried role can't be found");
       } else {
-        embed.setTitle(`${specificRole} Role`)
-          .setDescription(`${rolesList.concat(describedRoles).toString()}
+        // Check if the role is self Assignable
+        const isAssignable = selfAssignableRoles.includes(specificRole);
+        if (isAssignable) {
+          embed.setTitle(`${specificRole} Role`)
+            .setDescription(`${rolesList.concat(describedRoles).toString()}
           \nAssigning this role to yourself:
           \`^iam add ${specificRole}\``);
+        } else {
+          embed
+            .setTitle(`${specificRole} Role`)
+            .setDescription(rolesList.concat(describedRoles).toString());
+        }
       }
     }
   } else {
@@ -52,7 +60,7 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
       ${roleInfo[0].toString()}
       ${roleInfo[1].toString()}\n
       Assigning roles to yourself:
-      \`^iam add javascript\``);
+      \`^iam add javascript, go\``);
   }
   return embed;
 };
