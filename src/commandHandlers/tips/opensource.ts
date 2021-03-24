@@ -8,12 +8,10 @@ import { readMarkdown } from './opensource.service';
  * contribute to open-source software (OSS).
  */
 export const createTip = async (embed: MessageEmbed) => {
-  const tips = await Promise.all(
-    config.TIPS.tips.map((file) => readMarkdown(file))
-  );
-  const resources = await Promise.all(
-    config.TIPS.resources.map((file) => readMarkdown(file))
-  );
+ const { tips, resources } = await Promise.all([
+  config.TIPS.tips.map(readMarkdown),
+  config.TIPS.resources.map(readMarkdown)
+  ]);
 
   tips.forEach((tip) => embed.addField('Tips :bulb:', tip));
   resources.forEach((resource) =>
