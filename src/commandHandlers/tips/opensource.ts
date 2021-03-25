@@ -10,7 +10,7 @@ import { readMarkdown } from './opensource.service';
 export const createTip = async (embed: MessageEmbed) => {
   const { tips, resources } = await Promise.all([
     config.TIPS.tips.map(readMarkdown),
-    config.TIPS.resources.map(readMarkdown)
+    config.TIPS.resources.map(readMarkdown),
   ]);
 
   tips.forEach((tip) => embed.addField('Tips :bulb:', tip));
