@@ -1,9 +1,15 @@
-import { Message } from 'discord.js';
+import { Message, MessageEmbed } from 'discord.js';
 import alex from 'alex';
 
 import config from './config';
 
 const { defaultEmbed, ALEX } = config;
+
+export interface WordsArgs {
+  isBot: boolean;
+  content: string;
+  send(messageEmbed: MessageEmbed): Promise<Message>;
+}
 
 /**
  * Runs for every message
@@ -12,15 +18,16 @@ const { defaultEmbed, ALEX } = config;
  *
  * @param message
  */
-export const words = async (message: Message) => {
-  if (message.author.bot) {
+export const words = async (wordsArgs: WordsArgs) => {
+  if (wordsArgs.isBot) {
     return;
   }
 
   // Modify text by removing redundancy and special characters
   const messageText = [
-    ...new Set(stripSpecialCharacters(message.content).split(' ')),
+    ...new Set(stripSpecialCharacters(wordsArgs.content).split(' ')),
   ].join(' ');
+
   const match = alex.markdown(messageText, ALEX as alex.Config).messages;
   if (match.length) {
     const embed = defaultEmbed(config.COLORS.alerts)
@@ -28,13 +35,12 @@ export const words = async (message: Message) => {
       .setDescription(
         'This might not be inclusive or welcoming language. Please consider the following suggestions instead:'
       );
-
     match.forEach((suggestion) => {
       const field = suggestion.note ? suggestion.note : 'See above ^^';
       return embed.addField(suggestion.reason, field);
     });
 
-    return message.channel.send(embed);
+    return wordsArgs.send(embed);
   }
 
   return;

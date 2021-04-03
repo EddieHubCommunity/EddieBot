@@ -31,7 +31,13 @@ client.on('guildMemberAdd', (member) => guildMemberAdd(member));
 client.on('message', (message) => commands(message));
 client.on('message', (message) => chatty(message));
 client.on('message', (message) => timezone(message));
-client.on('message', (message) => words(message));
+client.on('message', (message) =>
+  words({
+    isBot: message.author.bot,
+    content: message.content,
+    send: message.channel.send,
+  })
+);
 client.on('messageReactionAdd', async (reaction) =>
   messageReactionAdd(reaction)
 );
