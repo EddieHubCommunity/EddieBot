@@ -17,12 +17,13 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: '10.x'
+          node-version: '12.x'
 
       - name: Install deps and build project
         run: |
           npm install
           npm run lint
+          npm run test
           npm run build
 
       - name: Deploy firebase DB rules and indexes
