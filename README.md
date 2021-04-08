@@ -16,7 +16,7 @@ Feel free to [create an issue](https://github.com/EddieJaoudeCommunity/EddieBot/
 
 - Timezone, listens for messages that contain 1:30pm UTC and replies with common timezones translation
 
-- Code of Conduct
+- Flags violations of the Code of Conduct.
 
 - Daily standup message consistently formatted
 
