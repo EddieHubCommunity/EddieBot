@@ -126,6 +126,8 @@ export default {
       'fellowship',
       'basically',
       'long-time-no-see',
+      'superman-superwoman',
+      'hero-heroine',
       'moan',
       'latino',
       'postman-postwoman',
@@ -134,7 +136,6 @@ export default {
     ],
   },
 };
-
 // Possible values for user subscriptions
 export enum UserSubscriptions {
   OPEN_SOURCE = 'OPENSOURCE',
