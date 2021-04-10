@@ -133,7 +133,7 @@ export default {
       'postman-postwoman',
       'hostesses-hosts',
       'gimp',
-      'tinker'
+      'tinker',
     ],
   },
 };
