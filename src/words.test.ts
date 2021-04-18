@@ -4,7 +4,7 @@ describe('words', () => {
   it('should not send a message if the author is a bot', async () => {
     const mockArgs = {
       isBot: true,
-      content: '',
+      content: 'this will trigger guys',
       send: jest.fn(),
     };
     await words(mockArgs);
