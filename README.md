@@ -1,5 +1,7 @@
 ## Description
 
+This project rebuilds the `Alex.js`-Feature from [Eddiebot](https://github.com/EddieHubCommunity/EddieBot) based on Nest.js
+
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 ## Installation
