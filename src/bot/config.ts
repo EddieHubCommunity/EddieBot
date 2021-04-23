@@ -34,7 +34,11 @@ export default {
   },
 
   defaultEmbed: (color = '#0099ff') => {
-    return new MessageEmbed().setColor(color);
+    return new MessageEmbed()
+      .setColor(color)
+      .setFooter(
+        'Our bot is Open Source, you can find it here https://github.com/EddieJaoudeCommunity/EddieBot',
+      );
   },
   colors: {
     message: '#0099ff',
