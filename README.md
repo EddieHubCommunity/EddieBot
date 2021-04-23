@@ -4,6 +4,13 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Env-File
+
+```
+DISCORD_TOKEN=
+PREFIX=
+```
+
 ## Installation
 
 ```bash
