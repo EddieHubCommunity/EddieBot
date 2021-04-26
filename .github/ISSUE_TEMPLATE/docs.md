@@ -19,4 +19,4 @@ assignees: ''
 
 <!-- Add any other context about the problem here. -->
 
-Join Eddie's discord community [here](https://discord.com/invite/jZQs6Wu)
+Join Eddie's discord community [here](http://discord.eddiehub.org)
