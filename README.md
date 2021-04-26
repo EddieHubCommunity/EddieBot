@@ -136,4 +136,4 @@ log.fatal('Message', 'Details');
 
 ## Socials
 
-Join our discord community [here](https://discord.gg/jZQs6Wu)
+Join our discord community [here](http://discord.eddiehub.org)
