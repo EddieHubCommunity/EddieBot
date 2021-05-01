@@ -24,7 +24,7 @@ export const command = async (arg: [string, string], embed: MessageEmbed) => {
     );
 };
 
-export const description = 'Code Of Conduct';
+export const description = 'Code of Conduct';
 
 export const triggers = ['coc', 'codeofconduct'];
 
