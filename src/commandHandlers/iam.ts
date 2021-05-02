@@ -43,7 +43,7 @@ export const command = async (
     // Check if the provided role is self-assignable
     if (selfAssignableRoles.find((role) => role === roleToModify)) {
       const role = message.guild!.roles.cache.find(
-        (r) => r.name === roleToModify
+        (role) => role.name === roleToModify
       );
       if (!role) {
         log.error(`ERROR: Couldn't get the role: ${roleToModify}`);
@@ -53,7 +53,7 @@ export const command = async (
       const member = message.member;
       if (toAdd) {
         // Checks if the user already has the role
-        if (member!.roles.cache.find((r) => r.name === roleToModify)) {
+        if (member!.roles.cache.find((role) => role.name === roleToModify)) {
           return buildErrorEmbed(`You already have the ${roleToModify} role`);
         } else {
           // Adds role to author of the message
@@ -61,7 +61,7 @@ export const command = async (
         }
       } else {
         // Unassign role from author of the message
-        if (member!.roles.cache.find((r) => r.name === roleToModify)) {
+        if (member!.roles.cache.find((role) => role.name === roleToModify)) {
           await member!.roles.remove(role);
         } else {
           // Checks if the user does not have the role
