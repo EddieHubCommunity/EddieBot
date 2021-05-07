@@ -1,6 +1,0 @@
-{
-  "watch": ["src"],
-  "ext": "ts",
-  "ignore": [],
-  "exec": "npm run start:local"
-}
