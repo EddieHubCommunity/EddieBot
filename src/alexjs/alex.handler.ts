@@ -4,12 +4,9 @@ import { Message } from 'discord.js';
 import { AlexService } from './alex.service';
 
 @Injectable()
-export class BotService {
+export class AlexHandler {
   constructor(private readonly alexService: AlexService) {}
-  @On({ event: 'ready' })
-  OnReady() {
-    console.log('ready');
-  }
+
   @On({ event: 'message' })
   onMessage(message: Message) {
     return this.alexService.checkAlex(message);

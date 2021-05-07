@@ -1,17 +1,19 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { AppController } from './app.controller';
+import { DiscordModule } from 'discord-nestjs';
+import { AlexService } from './alexjs/alex.service';
 import { AppService } from './app.service';
-import { BotModule } from './bot/bot.module';
+import { DiscordConfigService } from './environment/discord-config.service';
+import { AlexModule } from './alexjs/alexjs.module';
 
 @Module({
   imports: [
-    BotModule,
+    AlexModule,
+    DiscordModule.forRootAsync({ useClass: DiscordConfigService }),
     ConfigModule.forRoot({
       isGlobal: true,
     }),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, DiscordConfigService, AlexService],
 })
 export class AppModule {}

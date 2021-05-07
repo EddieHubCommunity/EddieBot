@@ -1,3 +1,4 @@
+import { ConfigModule } from '@nestjs/config';
 import { Test, TestingModule } from '@nestjs/testing';
 import { DiscordConfigService } from './discord-config.service';
 
@@ -6,6 +7,11 @@ describe('DiscordConfigService', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
+      imports: [
+        ConfigModule.forRoot({
+          isGlobal: true,
+        }),
+      ],
       providers: [DiscordConfigService],
     }).compile();
 
