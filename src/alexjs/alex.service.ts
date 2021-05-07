@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Message } from 'discord.js';
 import * as alex from 'alex';
-import config from './config';
+import config from '../config';
 
 const { defaultEmbed, alexWhitelist } = config;
 

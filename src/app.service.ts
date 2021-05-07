@@ -1,8 +1,10 @@
 import { Injectable } from '@nestjs/common';
+import { On } from 'discord-nestjs';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  @On({ event: 'ready' })
+  OnReady() {
+    console.log('Eddiebot started successfully');
   }
 }
