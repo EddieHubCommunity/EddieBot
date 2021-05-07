@@ -1,4 +1,3 @@
-
 name: Release
 on:
   push:
@@ -16,7 +15,7 @@ jobs:
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3
         with:
-          github-token: ${{ secrets.CHANGELOG_RELEASE }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           output-file: "false"
 
       - name: Create Release
