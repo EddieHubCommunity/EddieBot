@@ -1,4 +1,4 @@
-name: Import open source standard labels
+name: Label importer
 
 on:
   push:
