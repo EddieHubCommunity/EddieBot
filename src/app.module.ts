@@ -1,10 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { DiscordModule } from 'discord-nestjs';
-import { AlexService } from './alexjs/alex.service';
 import { AppService } from './app.service';
 import { DiscordConfigService } from './environment/discord-config.service';
-import { AlexModule } from './alexjs/alexjs.module';
+import { AlexModule } from './alexjs/alex.module';
 
 @Module({
   imports: [
@@ -14,6 +13,6 @@ import { AlexModule } from './alexjs/alexjs.module';
       isGlobal: true,
     }),
   ],
-  providers: [AppService, DiscordConfigService, AlexService],
+  providers: [AppService, DiscordConfigService],
 })
 export class AppModule {}
