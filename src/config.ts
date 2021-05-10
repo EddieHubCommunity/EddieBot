@@ -30,6 +30,7 @@ export default {
       'postman-postwoman',
       'hostesses-hosts',
       'gimp',
+      'add',
     ],
   },
 
