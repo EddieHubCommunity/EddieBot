@@ -38,7 +38,7 @@ export default {
     return new MessageEmbed()
       .setColor(color)
       .setFooter(
-        'Our bot is Open Source, you can find it here https://github.com/EddieJaoudeCommunity/EddieBot',
+        'Our bot is Open Source, you can find it here https://github.com/EddieHubCommunity/EddieBot',
       );
   },
   colors: {
