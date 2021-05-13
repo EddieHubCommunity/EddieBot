@@ -14,6 +14,8 @@ PREFIX=
 ## Installation
 
 ```bash
+$ git clone https://github.com/EddieHubCommunity/EddieBot.git
+$ cd EddieBot
 $ npm install
 ```
 
