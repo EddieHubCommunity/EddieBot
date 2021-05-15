@@ -35,7 +35,7 @@ jobs:
           path: dist
       - name: npm install and test
         run: |
-          npm install
+          npm ci
           npm test
   push_to_registry:
     name: Push Docker image to GitHub Packages
