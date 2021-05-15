@@ -63,8 +63,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/EddieHubCommunity/EddieBot:v${{ steps.package-version.outputs.current-version}}
-            ghcr.io/EddieHubCommunity/EddieBot:latest
+            ghcr.io/eddiehubcommunity/eddiebot:v${{ steps.package-version.outputs.current-version}}
+            ghcr.io/eddiehubcommunity/eddiebot:latest
   deploy:
     name: deploy to kube cluster
     needs: push_to_registry
@@ -82,5 +82,5 @@ jobs:
         with:
           namespace: 'default'
           manifests: kubernetes/deployment.yaml
-          images: 'ghcr.io/EddieHubCommunity/EddieBot:v${{ steps.package-version.outputs.current-version}}'
+          images: 'ghcr.io/eddiehubcommunity/eddiebot:v${{ steps.package-version.outputs.current-version}}'
           kubectl-version: 'latest'
