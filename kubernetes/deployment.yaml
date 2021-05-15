@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: eddiebot
-        image: ghcr.io/EddieHubCommunity/EddieBot:latest
+        image: ghcr.io/eddiehubcommunity/eddiebot:latest
         imagePullPolicy: Always
         env:
           - name: DISCORD_BOT_TOKEN
