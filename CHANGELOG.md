@@ -1,3 +1,12 @@
+## [0.4.3](https://github.com/EddieHubCommunity/EddieBot/compare/v0.4.2...v0.4.3) (2021-05-15)
+
+
+### Bug Fixes
+
+* renamed envars ([6406407](https://github.com/EddieHubCommunity/EddieBot/commit/6406407fb8bebc9eb0338bdc90b10f8e4ad6afe8))
+
+
+
 ## [0.4.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.4.1...v0.4.2) (2021-05-15)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * husky install check ([319bf81](https://github.com/EddieHubCommunity/EddieBot/commit/319bf81cd7def695d7ea94dbea736ddb9ccc4413))
-
-
-
-## [0.3.3](https://github.com/EddieHubCommunity/EddieBot/compare/v0.3.2...v0.3.3) (2021-05-15)
-
-
-### Bug Fixes
-
-* kubernetes ghcr path ([3489133](https://github.com/EddieHubCommunity/EddieBot/commit/34891339b2d3b4f0d4c01a5b41fded4e471f650f))
 
 
 
