@@ -11,8 +11,8 @@ Copy `.env.example` to `.env` and add your private information
 *Note: never commit this file, it should be ignored by git*
 
 ```
-DISCORD_TOKEN=
-PREFIX=
+DISCORD_TOKEN="<your-token>"
+PREFIX="!"
 ```
 
 ## Installation
