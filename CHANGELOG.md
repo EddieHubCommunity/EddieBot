@@ -1,3 +1,12 @@
+## [0.4.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.4.1...v0.4.2) (2021-05-15)
+
+
+### Bug Fixes
+
+* docs improvement to trigger Actions ([f392c35](https://github.com/EddieHubCommunity/EddieBot/commit/f392c352b79d36aa1a285da53c5c189f93e152c0))
+
+
+
 ## [0.4.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.4.0...v0.4.1) (2021-05-15)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * kubernetes ghcr path ([3489133](https://github.com/EddieHubCommunity/EddieBot/commit/34891339b2d3b4f0d4c01a5b41fded4e471f650f))
-
-
-
-## [0.3.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.3.1...v0.3.2) (2021-05-15)
-
-
-### Bug Fixes
-
-* dependency install ([c126f66](https://github.com/EddieHubCommunity/EddieBot/commit/c126f6607b994cb7cbeca63868b5d3ecb1ce67fb))
 
 
 
