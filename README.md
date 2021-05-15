@@ -12,7 +12,7 @@ Copy `.env.example` to `.env` and add your private information
 
 ```
 DISCORD_TOKEN="<your-token>"
-PREFIX="!"
+DISCORD_PREFIX="!"
 ```
 
 ## Installation

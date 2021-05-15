@@ -7,7 +7,7 @@ export class DiscordConfigService implements DiscordOptionsFactory {
   createDiscordOptions(): DiscordModuleOption {
     return {
       token: this.config.get('DISCORD_TOKEN'),
-      commandPrefix: this.config.get('PREFIX'),
+      commandPrefix: this.config.get('DISCORD_PREFIX'),
     };
   }
 }
