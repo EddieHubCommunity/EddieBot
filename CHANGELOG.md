@@ -1,3 +1,12 @@
+## [0.3.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.3.0...v0.3.1) (2021-05-15)
+
+
+### Bug Fixes
+
+* lowercase gh cr path ([5c71466](https://github.com/EddieHubCommunity/EddieBot/commit/5c71466380ea6f8820152bbee5b90cb03879adfe))
+
+
+
 # [0.3.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.1.0...v0.3.0) (2021-05-15)
 
 
