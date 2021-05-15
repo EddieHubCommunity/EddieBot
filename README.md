@@ -17,7 +17,27 @@ PREFIX=
 
 ## Installation
 
+#### SSH
+
 ```bash
+$ git clone git@github.com:EddieHubCommunity/EddieBot.git
+```
+
+#### GitHub CLI
+
+```bash
+$ gh repo clone EddieHubCommunity/EddieBot
+```
+
+#### HTTPS
+
+```bash
+$ git clone https://github.com/EddieHubCommunity/EddieBot.git
+```
+
+
+```bash
+$ cd EddieBot
 $ npm install
 ```
 
