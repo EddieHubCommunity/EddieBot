@@ -1,3 +1,12 @@
+## [0.4.4](https://github.com/EddieHubCommunity/EddieBot/compare/v0.4.3...v0.4.4) (2021-05-15)
+
+
+### Bug Fixes
+
+* secret rename mis-match ([8a6fe31](https://github.com/EddieHubCommunity/EddieBot/commit/8a6fe3199de88b4aa381a43aea5fa65448555649))
+
+
+
 ## [0.4.3](https://github.com/EddieHubCommunity/EddieBot/compare/v0.4.2...v0.4.3) (2021-05-15)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * version command ([122d253](https://github.com/EddieHubCommunity/EddieBot/commit/122d25349aafbfa4b82d9567f2690a736996e728))
-
-
-
-## [0.3.4](https://github.com/EddieHubCommunity/EddieBot/compare/v0.3.3...v0.3.4) (2021-05-15)
-
-
-### Bug Fixes
-
-* husky install check ([319bf81](https://github.com/EddieHubCommunity/EddieBot/commit/319bf81cd7def695d7ea94dbea736ddb9ccc4413))
 
 
 
