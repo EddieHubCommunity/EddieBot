@@ -2,7 +2,7 @@
 name: Ideas
 about: Have a new idea/feature for EddieBot?
 title: ''
-labels: enhancement
+labels: "⭐ goal: addition"
 assignees: ''
 
 ---

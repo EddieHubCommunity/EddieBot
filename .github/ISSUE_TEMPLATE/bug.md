@@ -2,7 +2,7 @@
 name: Bug
 about: To report a bug found in the bot's working.
 title: ''
-labels: bug
+labels: "🛠 goal: fix"
 assignees: ''
 
 ---

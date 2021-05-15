@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eddiebot-deployment
+  labels:
+    app: eddiebot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eddiebot
+  template:
+    metadata:
+      labels:
+        app: eddiebot
+    spec:
+      containers:
+      - name: eddiebot
+        image: ghcr.io/EddieHubCommunity/EddieBot:latest
+        imagePullPolicy: Always
+        env:
+          - name: DISCORD_BOT_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: discord-bot-secret
+                key: DISCORD_BOT_TOKEN
