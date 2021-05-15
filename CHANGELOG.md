@@ -1,3 +1,12 @@
+## [0.4.5](https://github.com/EddieHubCommunity/EddieBot/compare/v0.4.4...v0.4.5) (2021-05-15)
+
+
+### Bug Fixes
+
+* package repo details ([272a285](https://github.com/EddieHubCommunity/EddieBot/commit/272a2854678cae3aa74c074f9f38097cde46d6eb))
+
+
+
 ## [0.4.4](https://github.com/EddieHubCommunity/EddieBot/compare/v0.4.3...v0.4.4) (2021-05-15)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * discord bot prefix envar ([52344f2](https://github.com/EddieHubCommunity/EddieBot/commit/52344f2a19501edb95f93f0026bee69ed65c2375))
-
-
-
-# [0.4.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.3.4...v0.4.0) (2021-05-15)
-
-
-### Features
-
-* version command ([122d253](https://github.com/EddieHubCommunity/EddieBot/commit/122d25349aafbfa4b82d9567f2690a736996e728))
 
 
 
