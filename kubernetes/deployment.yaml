@@ -19,13 +19,13 @@ spec:
         image: ghcr.io/eddiehubcommunity/eddiebot:latest
         imagePullPolicy: Always
         env:
-          - name: DISCORD_BOT_TOKEN
+          - name: DISCORD_TOKEN
             valueFrom:
               secretKeyRef:
-                name: discord-bot-token
-                key: DISCORD_BOT_TOKEN
+                name: discord-token
+                key: DISCORD_TOKEN
           - name: DISCORD_PREFIX
             valueFrom:
               secretKeyRef:
-                name: discord-bot-prefix
-                key: DISCORD_BOT_PREFIX
+                name: discord-prefix
+                key: DISCORD_PREFIX
