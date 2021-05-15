@@ -5,6 +5,14 @@
   "author": "",
   "private": true,
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EddieHubCommunity/EddieBot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EddieHubCommunity/EddieBot/issues"
+  },
+  "homepage": "https://github.com/EddieHubCommunity/EddieBot#readme",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
