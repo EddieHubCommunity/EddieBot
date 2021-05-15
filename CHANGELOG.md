@@ -1,3 +1,12 @@
+## [0.3.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.3.1...v0.3.2) (2021-05-15)
+
+
+### Bug Fixes
+
+* dependency install ([c126f66](https://github.com/EddieHubCommunity/EddieBot/commit/c126f6607b994cb7cbeca63868b5d3ecb1ce67fb))
+
+
+
 ## [0.3.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.3.0...v0.3.1) (2021-05-15)
 
 
