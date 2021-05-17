@@ -1,3 +1,17 @@
+# [0.5.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.4.5...v0.5.0) (2021-05-17)
+
+
+### Bug Fixes
+
+* removed unused docs ([ae8b953](https://github.com/EddieHubCommunity/EddieBot/commit/ae8b95386f9b7fd5c821960a5d3ef7638c773cff))
+
+
+### Features
+
+* flag custom words ([#461](https://github.com/EddieHubCommunity/EddieBot/issues/461)) ([#537](https://github.com/EddieHubCommunity/EddieBot/issues/537)) ([81b9584](https://github.com/EddieHubCommunity/EddieBot/commit/81b9584cf8e87989f8e3754959367643f6a1ff72))
+
+
+
 ## [0.4.5](https://github.com/EddieHubCommunity/EddieBot/compare/v0.4.4...v0.4.5) (2021-05-15)
 
 
@@ -31,15 +45,6 @@
 ### Bug Fixes
 
 * docs improvement to trigger Actions ([f392c35](https://github.com/EddieHubCommunity/EddieBot/commit/f392c352b79d36aa1a285da53c5c189f93e152c0))
-
-
-
-## [0.4.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.4.0...v0.4.1) (2021-05-15)
-
-
-### Bug Fixes
-
-* discord bot prefix envar ([52344f2](https://github.com/EddieHubCommunity/EddieBot/commit/52344f2a19501edb95f93f0026bee69ed65c2375))
 
 
 
