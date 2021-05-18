@@ -73,7 +73,6 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 [![Forkers repo roster for @EddieHubCommunity/EddieBot](https://reporoster.com/forks/EddieHubCommunity/EddieBot)](https://github.com/EddieHubCommunity/EddieBot/network/members)
 
-
 ## License
 
 Nest is [MIT licensed](LICENSE).
