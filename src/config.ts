@@ -8,8 +8,6 @@ export default {
     allow: [
       'add',
       'basically',
-      'brother-sister',
-      'brothers-sisters',
       'clearly',
       'dad-mom',
       'daft',
