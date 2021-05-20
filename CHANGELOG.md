@@ -1,3 +1,12 @@
+## [0.5.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.5.0...v0.5.1) (2021-05-20)
+
+
+### Bug Fixes
+
+* consistent discord invite ([#540](https://github.com/EddieHubCommunity/EddieBot/issues/540)) ([4338098](https://github.com/EddieHubCommunity/EddieBot/commit/43380982cb4414e029fcebea04080dd8613db67c))
+
+
+
 # [0.5.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.4.5...v0.5.0) (2021-05-17)
 
 
@@ -36,15 +45,6 @@
 ### Bug Fixes
 
 * renamed envars ([6406407](https://github.com/EddieHubCommunity/EddieBot/commit/6406407fb8bebc9eb0338bdc90b10f8e4ad6afe8))
-
-
-
-## [0.4.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.4.1...v0.4.2) (2021-05-15)
-
-
-### Bug Fixes
-
-* docs improvement to trigger Actions ([f392c35](https://github.com/EddieHubCommunity/EddieBot/commit/f392c352b79d36aa1a285da53c5c189f93e152c0))
 
 
 
