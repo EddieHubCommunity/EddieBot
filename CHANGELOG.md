@@ -1,3 +1,12 @@
+## [0.5.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.5.1...v0.5.2) (2021-05-20)
+
+
+### Bug Fixes
+
+* brother/sister should not be ignored ([cfae119](https://github.com/EddieHubCommunity/EddieBot/commit/cfae1195dc3ce44c4922d6547c73d311d7b461e8))
+
+
+
 ## [0.5.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.5.0...v0.5.1) (2021-05-20)
 
 
@@ -36,15 +45,6 @@
 ### Bug Fixes
 
 * secret rename mis-match ([8a6fe31](https://github.com/EddieHubCommunity/EddieBot/commit/8a6fe3199de88b4aa381a43aea5fa65448555649))
-
-
-
-## [0.4.3](https://github.com/EddieHubCommunity/EddieBot/compare/v0.4.2...v0.4.3) (2021-05-15)
-
-
-### Bug Fixes
-
-* renamed envars ([6406407](https://github.com/EddieHubCommunity/EddieBot/commit/6406407fb8bebc9eb0338bdc90b10f8e4ad6afe8))
 
 
 
