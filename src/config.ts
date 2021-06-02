@@ -18,7 +18,7 @@ export default {
       'host-hostess',
       'hostesses-hosts',
       'husband-wife',
-      'jesus'
+      'jesus',
       'just',
       'latino',
       'long-time-no-see',
