@@ -1,3 +1,12 @@
+## [0.6.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.6.0...v0.6.1) (2021-06-02)
+
+
+### Bug Fixes
+
+* **alexjs:** case sensitivity eddieMatch ([#551](https://github.com/EddieHubCommunity/EddieBot/issues/551)) ([c81c3e1](https://github.com/EddieHubCommunity/EddieBot/commit/c81c3e166b4b9ef6003459a4f1b5cc8107517101))
+
+
+
 # [0.6.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.5.2...v0.6.0) (2021-06-02)
 
 
@@ -36,15 +45,6 @@
 ### Features
 
 * flag custom words ([#461](https://github.com/EddieHubCommunity/EddieBot/issues/461)) ([#537](https://github.com/EddieHubCommunity/EddieBot/issues/537)) ([81b9584](https://github.com/EddieHubCommunity/EddieBot/commit/81b9584cf8e87989f8e3754959367643f6a1ff72))
-
-
-
-## [0.4.5](https://github.com/EddieHubCommunity/EddieBot/compare/v0.4.4...v0.4.5) (2021-05-15)
-
-
-### Bug Fixes
-
-* package repo details ([272a285](https://github.com/EddieHubCommunity/EddieBot/commit/272a2854678cae3aa74c074f9f38097cde46d6eb))
 
 
 
