@@ -12,6 +12,7 @@ export default {
       'dad-mom',
       'daft',
       'easy',
+      'fellow',
       'fellowship',
       'gimp',
       'hero-heroine',
