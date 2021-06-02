@@ -1,7 +1,7 @@
 import { MessageEmbed } from 'discord.js';
 
 export default {
-  preventWords: ['guyz', 'guyzz', 'bruh', 'duude'],
+  preventWords: ['guyz', 'guyzz', 'bruh', 'duude', 'sir'],
   alexWhitelist: {
     profanitySureness: 1,
     noBinary: true,
