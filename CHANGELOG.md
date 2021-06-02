@@ -1,3 +1,12 @@
+# [0.6.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.5.2...v0.6.0) (2021-06-02)
+
+
+### Features
+
+* prevent sir from being used ([#550](https://github.com/EddieHubCommunity/EddieBot/issues/550)) ([a250e90](https://github.com/EddieHubCommunity/EddieBot/commit/a250e90000a23db33338808cb0493e5914df7976))
+
+
+
 ## [0.5.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.5.1...v0.5.2) (2021-05-20)
 
 
@@ -36,15 +45,6 @@
 ### Bug Fixes
 
 * package repo details ([272a285](https://github.com/EddieHubCommunity/EddieBot/commit/272a2854678cae3aa74c074f9f38097cde46d6eb))
-
-
-
-## [0.4.4](https://github.com/EddieHubCommunity/EddieBot/compare/v0.4.3...v0.4.4) (2021-05-15)
-
-
-### Bug Fixes
-
-* secret rename mis-match ([8a6fe31](https://github.com/EddieHubCommunity/EddieBot/commit/8a6fe3199de88b4aa381a43aea5fa65448555649))
 
 
 
