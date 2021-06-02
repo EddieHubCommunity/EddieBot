@@ -41,18 +41,25 @@ export class AlexService {
       return message.channel.send(embed);
     }
 
+    const splitMessage = messageText.split(' ');
+
     if (!alexMatch.length) {
-      const eddiehubMatch = preventWords.find((word) =>
-        messageText.toLowerCase().includes(word),
-      );
+      splitMessage.forEach((word) => {
+        let eddiehubMatch: string;
+        if (preventWords.includes(word.toLocaleLowerCase())) {
+          eddiehubMatch = word;
+        }
 
-      if (eddiehubMatch) {
-        const embed = defaultEmbed(config.colors.alerts)
-          .setTitle(`You used the word "${eddiehubMatch}"`)
-          .setDescription('This might not be inclusive or welcoming language');
+        if (eddiehubMatch) {
+          const embed = defaultEmbed(config.colors.alerts)
+            .setTitle(`You used the word "${eddiehubMatch}"`)
+            .setDescription(
+              'This might not be inclusive or welcoming language',
+            );
 
-        return message.channel.send(embed);
-      }
+          return message.channel.send(embed);
+        }
+      });
     }
 
     return;
