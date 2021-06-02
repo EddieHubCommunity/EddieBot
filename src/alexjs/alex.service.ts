@@ -45,18 +45,12 @@ export class AlexService {
 
     if (!alexMatch.length) {
       splitMessage.forEach((word) => {
-        let eddiehubMatch: string;
         if (preventWords.includes(word.toLocaleLowerCase())) {
-          eddiehubMatch = word;
-        }
-
-        if (eddiehubMatch) {
           const embed = defaultEmbed(config.colors.alerts)
-            .setTitle(`You used the word "${eddiehubMatch}"`)
+            .setTitle(`You used the word "${word}"`)
             .setDescription(
               'This might not be inclusive or welcoming language',
             );
-
           return message.channel.send(embed);
         }
       });
