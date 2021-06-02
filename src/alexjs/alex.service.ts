@@ -43,7 +43,7 @@ export class AlexService {
 
     if (!alexMatch.length) {
       const eddiehubMatch = preventWords.find((word) =>
-        message.content.includes(word),
+        messageText.toLowerCase().includes(word),
       );
 
       if (eddiehubMatch) {
