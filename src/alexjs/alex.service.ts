@@ -42,9 +42,7 @@ export class AlexService {
     }
 
     if (!alexMatch.length) {
-      const eddiehubMatch = preventWords.find((word) =>
-        message.content.includes(word),
-      );
+    const eddiehubMatch = preventWords.find((word) => messageText.toLowerCase().includes(word),
 
       if (eddiehubMatch) {
         const embed = defaultEmbed(config.colors.alerts)
