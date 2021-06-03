@@ -1,3 +1,12 @@
+## [0.6.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.6.1...v0.6.2) (2021-06-03)
+
+
+### Bug Fixes
+
+* check for multiple words ([#552](https://github.com/EddieHubCommunity/EddieBot/issues/552)) ([b631b58](https://github.com/EddieHubCommunity/EddieBot/commit/b631b58f41547501ec89d3d0832185b1818d3171))
+
+
+
 ## [0.6.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.6.0...v0.6.1) (2021-06-02)
 
 
@@ -31,20 +40,6 @@
 ### Bug Fixes
 
 * consistent discord invite ([#540](https://github.com/EddieHubCommunity/EddieBot/issues/540)) ([4338098](https://github.com/EddieHubCommunity/EddieBot/commit/43380982cb4414e029fcebea04080dd8613db67c))
-
-
-
-# [0.5.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.4.5...v0.5.0) (2021-05-17)
-
-
-### Bug Fixes
-
-* removed unused docs ([ae8b953](https://github.com/EddieHubCommunity/EddieBot/commit/ae8b95386f9b7fd5c821960a5d3ef7638c773cff))
-
-
-### Features
-
-* flag custom words ([#461](https://github.com/EddieHubCommunity/EddieBot/issues/461)) ([#537](https://github.com/EddieHubCommunity/EddieBot/issues/537)) ([81b9584](https://github.com/EddieHubCommunity/EddieBot/commit/81b9584cf8e87989f8e3754959367643f6a1ff72))
 
 
 
