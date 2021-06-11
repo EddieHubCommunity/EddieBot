@@ -1,3 +1,12 @@
+# [0.7.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.6.2...v0.7.0) (2021-06-11)
+
+
+### Features
+
+* alert removal ([#339](https://github.com/EddieHubCommunity/EddieBot/issues/339)) ([#555](https://github.com/EddieHubCommunity/EddieBot/issues/555)) ([b65c1f4](https://github.com/EddieHubCommunity/EddieBot/commit/b65c1f49af424cd96ad219fdd5d4f6cd839d1ae9))
+
+
+
 ## [0.6.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.6.1...v0.6.2) (2021-06-03)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * brother/sister should not be ignored ([cfae119](https://github.com/EddieHubCommunity/EddieBot/commit/cfae1195dc3ce44c4922d6547c73d311d7b461e8))
-
-
-
-## [0.5.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.5.0...v0.5.1) (2021-05-20)
-
-
-### Bug Fixes
-
-* consistent discord invite ([#540](https://github.com/EddieHubCommunity/EddieBot/issues/540)) ([4338098](https://github.com/EddieHubCommunity/EddieBot/commit/43380982cb4414e029fcebea04080dd8613db67c))
 
 
 
