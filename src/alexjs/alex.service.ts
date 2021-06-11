@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Message } from 'discord.js';
+import { Message, MessageEmbed } from 'discord.js';
 import * as alex from 'alex';
 import config from '../config';
 
@@ -14,11 +14,7 @@ export class AlexService {
     return str.replace(/\s{2,}/g, ' ');
   }
 
-  public checkAlex(message: Message) {
-    if (message.author.bot) {
-      return;
-    }
-
+  public check(message: Message): MessageEmbed[] {
     // Modify text by removing redundancy and special characters
     const messageText = [
       ...new Set(this.stripSpecialCharacters(message.content).split(' ')),
@@ -26,19 +22,21 @@ export class AlexService {
     const alexMatch = alex.markdown(messageText, alexWhitelist as alex.Config)
       .messages;
 
+    const notifications: MessageEmbed[] = [];
     if (alexMatch.length) {
       const embed = defaultEmbed(config.colors.alerts)
         .setTitle(`You used the word "${alexMatch[0].actual}"`)
         .setDescription(
           'This might not be inclusive or welcoming language. Please consider the following suggestions instead:',
-        );
+        )
+        .setAuthor(message.author.username, message.author.displayAvatarURL());
 
       alexMatch.forEach((suggestion) => {
         const field = suggestion.note ? suggestion.note : 'See above ^^';
         return embed.addField(suggestion.reason, field);
       });
 
-      return message.channel.send(embed);
+      notifications.push(embed);
     }
 
     const splitMessage = messageText.split(' ');
@@ -48,14 +46,17 @@ export class AlexService {
         if (preventWords.includes(word.toLocaleLowerCase())) {
           const embed = defaultEmbed(config.colors.alerts)
             .setTitle(`You used the word "${word}"`)
-            .setDescription(
-              'This might not be inclusive or welcoming language',
+            .setDescription('This might not be inclusive or welcoming language')
+            .setAuthor(
+              message.author.username,
+              message.author.displayAvatarURL(),
             );
-          return message.channel.send(embed);
+
+          notifications.push(embed);
         }
       });
     }
 
-    return;
+    return notifications;
   }
 }
