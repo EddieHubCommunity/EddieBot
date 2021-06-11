@@ -43,7 +43,7 @@ export class AlexService {
 
     if (!alexMatch.length) {
       splitMessage.forEach((word) => {
-        if (preventWords.includes(word.toLocaleLowerCase())) {
+        if (preventWords.includes(word.toLowerCase())) {
           const embed = defaultEmbed(config.colors.alerts)
             .setTitle(`You used the word "${word}"`)
             .setDescription('This might not be inclusive or welcoming language')
