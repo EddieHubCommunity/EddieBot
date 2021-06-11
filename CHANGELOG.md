@@ -1,3 +1,12 @@
+## [0.7.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.7.0...v0.7.1) (2021-06-11)
+
+
+### Bug Fixes
+
+* to lowercase fix ([#558](https://github.com/EddieHubCommunity/EddieBot/issues/558)) ([10f217c](https://github.com/EddieHubCommunity/EddieBot/commit/10f217c38102cab5b2935b7ba5b413876f291649))
+
+
+
 # [0.7.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.6.2...v0.7.0) (2021-06-11)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * prevent sir from being used ([#550](https://github.com/EddieHubCommunity/EddieBot/issues/550)) ([a250e90](https://github.com/EddieHubCommunity/EddieBot/commit/a250e90000a23db33338808cb0493e5914df7976))
-
-
-
-## [0.5.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.5.1...v0.5.2) (2021-05-20)
-
-
-### Bug Fixes
-
-* brother/sister should not be ignored ([cfae119](https://github.com/EddieHubCommunity/EddieBot/commit/cfae1195dc3ce44c4922d6547c73d311d7b461e8))
 
 
 
