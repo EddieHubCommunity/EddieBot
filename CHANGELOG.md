@@ -1,3 +1,12 @@
+## [0.7.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.7.1...v0.7.2) (2021-06-13)
+
+
+### Bug Fixes
+
+* add women to flag list ([#560](https://github.com/EddieHubCommunity/EddieBot/issues/560)) ([4fb02ae](https://github.com/EddieHubCommunity/EddieBot/commit/4fb02aeb432aafe61b64d63fcd0d12bc6cea4535))
+
+
+
 ## [0.7.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.7.0...v0.7.1) (2021-06-11)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * **alexjs:** case sensitivity eddieMatch ([#551](https://github.com/EddieHubCommunity/EddieBot/issues/551)) ([c81c3e1](https://github.com/EddieHubCommunity/EddieBot/commit/c81c3e166b4b9ef6003459a4f1b5cc8107517101))
-
-
-
-# [0.6.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.5.2...v0.6.0) (2021-06-02)
-
-
-### Features
-
-* prevent sir from being used ([#550](https://github.com/EddieHubCommunity/EddieBot/issues/550)) ([a250e90](https://github.com/EddieHubCommunity/EddieBot/commit/a250e90000a23db33338808cb0493e5914df7976))
 
 
 
