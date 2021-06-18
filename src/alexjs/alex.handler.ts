@@ -95,7 +95,7 @@ export class AlexHandler {
   }
 
   @On({ event: 'messageDelete' })
-  async onMessageDelete(deletedMessage: Message) {
+  onMessageDelete(deletedMessage: Message) {
     const deletedNotification = this.savedNotifications.find(
       (message: Notifications) =>
         message.messageId === deletedMessage.id &&
@@ -103,7 +103,7 @@ export class AlexHandler {
     );
     if (deletedNotification) {
       this.savedNotifications = this.savedNotifications.filter(
-        (notification) =>
+        (notification: Notifications) =>
           notification.channelId !== deletedNotification.channelId &&
           notification.messageId !== deletedNotification.messageId,
       );
