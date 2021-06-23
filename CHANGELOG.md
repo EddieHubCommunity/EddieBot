@@ -1,3 +1,12 @@
+# [0.8.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.7.2...v0.8.0) (2021-06-23)
+
+
+### Features
+
+* delete notification on messageDelete ([#557](https://github.com/EddieHubCommunity/EddieBot/issues/557)) ([309e92d](https://github.com/EddieHubCommunity/EddieBot/commit/309e92d27a79622c2c454d6f7d009199b534ec33))
+
+
+
 ## [0.7.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.7.1...v0.7.2) (2021-06-13)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * check for multiple words ([#552](https://github.com/EddieHubCommunity/EddieBot/issues/552)) ([b631b58](https://github.com/EddieHubCommunity/EddieBot/commit/b631b58f41547501ec89d3d0832185b1818d3171))
-
-
-
-## [0.6.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.6.0...v0.6.1) (2021-06-02)
-
-
-### Bug Fixes
-
-* **alexjs:** case sensitivity eddieMatch ([#551](https://github.com/EddieHubCommunity/EddieBot/issues/551)) ([c81c3e1](https://github.com/EddieHubCommunity/EddieBot/commit/c81c3e166b4b9ef6003459a4f1b5cc8107517101))
 
 
 
