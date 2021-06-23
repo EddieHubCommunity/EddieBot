@@ -93,4 +93,21 @@ export class AlexHandler {
     // when edit results in no new and no old
     return;
   }
+
+  @On({ event: 'messageDelete' })
+  onMessageDelete(deletedMessage: Message) {
+    const deletedNotification = this.savedNotifications.find(
+      (message: Notifications) =>
+        message.messageId === deletedMessage.id &&
+        message.channelId === deletedMessage.channel.id,
+    );
+    if (deletedNotification) {
+      this.savedNotifications = this.savedNotifications.filter(
+        (notification: Notifications) =>
+          notification.channelId !== deletedNotification.channelId &&
+          notification.messageId !== deletedNotification.messageId,
+      );
+    }
+    return;
+  }
 }
