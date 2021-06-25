@@ -10,13 +10,15 @@ export class VersionHandler {
   @OnCommand({ name: 'version' })
   async bot(@Context() [context]: [Message]): Promise<void> {
     await context.reply(
-      `Currently running version "${process.env.VERSION || '0.0.0'}"`,
+      `Currently running version "${
+        process.env.npm_package_version || '0.0.0'
+      }"`,
     );
   }
 
   @OnCommand({ name: 'api' })
   async api(@Context() [context]: [Message]): Promise<void> {
     const version = await this.versionService.getApi().toPromise();
-    await context.reply(version.data);
+    await context.reply(version);
   }
 }
