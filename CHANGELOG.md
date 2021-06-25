@@ -1,3 +1,12 @@
+## [0.9.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.9.0...v0.9.1) (2021-06-25)
+
+
+### Bug Fixes
+
+* version error handling ([#564](https://github.com/EddieHubCommunity/EddieBot/issues/564)) ([4b066a8](https://github.com/EddieHubCommunity/EddieBot/commit/4b066a8b863aa59a8c894ad1e7db3918539a92c5))
+
+
+
 # [0.9.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.8.0...v0.9.0) (2021-06-25)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * to lowercase fix ([#558](https://github.com/EddieHubCommunity/EddieBot/issues/558)) ([10f217c](https://github.com/EddieHubCommunity/EddieBot/commit/10f217c38102cab5b2935b7ba5b413876f291649))
-
-
-
-# [0.7.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.6.2...v0.7.0) (2021-06-11)
-
-
-### Features
-
-* alert removal ([#339](https://github.com/EddieHubCommunity/EddieBot/issues/339)) ([#555](https://github.com/EddieHubCommunity/EddieBot/issues/555)) ([b65c1f4](https://github.com/EddieHubCommunity/EddieBot/commit/b65c1f49af424cd96ad219fdd5d4f6cd839d1ae9))
 
 
 
