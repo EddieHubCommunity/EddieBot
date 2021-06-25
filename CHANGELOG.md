@@ -1,3 +1,12 @@
+# [0.9.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.8.0...v0.9.0) (2021-06-25)
+
+
+### Features
+
+* display API version ([#564](https://github.com/EddieHubCommunity/EddieBot/issues/564)) ([cf56f50](https://github.com/EddieHubCommunity/EddieBot/commit/cf56f50b030e43ef805639aa43c2e258ea653c7f))
+
+
+
 # [0.8.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.7.2...v0.8.0) (2021-06-23)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * alert removal ([#339](https://github.com/EddieHubCommunity/EddieBot/issues/339)) ([#555](https://github.com/EddieHubCommunity/EddieBot/issues/555)) ([b65c1f4](https://github.com/EddieHubCommunity/EddieBot/commit/b65c1f49af424cd96ad219fdd5d4f6cd839d1ae9))
-
-
-
-## [0.6.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.6.1...v0.6.2) (2021-06-03)
-
-
-### Bug Fixes
-
-* check for multiple words ([#552](https://github.com/EddieHubCommunity/EddieBot/issues/552)) ([b631b58](https://github.com/EddieHubCommunity/EddieBot/commit/b631b58f41547501ec89d3d0832185b1818d3171))
 
 
 
