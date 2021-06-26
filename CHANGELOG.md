@@ -1,3 +1,12 @@
+## [0.9.3](https://github.com/EddieHubCommunity/EddieBot/compare/v0.9.2...v0.9.3) (2021-06-26)
+
+
+### Bug Fixes
+
+* remove notification for deleted message ([#569](https://github.com/EddieHubCommunity/EddieBot/issues/569)) ([0d74032](https://github.com/EddieHubCommunity/EddieBot/commit/0d740325328eacc738a4bef6862cd0f2cafe9b1a))
+
+
+
 ## [0.9.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.9.1...v0.9.2) (2021-06-26)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * delete notification on messageDelete ([#557](https://github.com/EddieHubCommunity/EddieBot/issues/557)) ([309e92d](https://github.com/EddieHubCommunity/EddieBot/commit/309e92d27a79622c2c454d6f7d009199b534ec33))
-
-
-
-## [0.7.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.7.1...v0.7.2) (2021-06-13)
-
-
-### Bug Fixes
-
-* add women to flag list ([#560](https://github.com/EddieHubCommunity/EddieBot/issues/560)) ([4fb02ae](https://github.com/EddieHubCommunity/EddieBot/commit/4fb02aeb432aafe61b64d63fcd0d12bc6cea4535))
 
 
 
