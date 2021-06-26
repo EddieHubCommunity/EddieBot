@@ -109,7 +109,7 @@ export class AlexHandler {
       );
 
       const notificationMessage = await deletedMessage.channel.messages.fetch(
-        deletedNotification.messageId,
+        deletedNotification.notificationId,
       );
 
       if (notificationMessage && notificationMessage.deletable) {
