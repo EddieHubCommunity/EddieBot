@@ -21,6 +21,7 @@ export default {
       'husband-wife',
       'jesus',
       'just',
+      'kushi',
       'latino',
       'long-time-no-see',
       'master',
