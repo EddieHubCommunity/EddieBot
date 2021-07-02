@@ -7,8 +7,7 @@ export class CheckImageService {
 
   public checkImage(message: Message): void {
     const authorId = message.author.id;
-    console.log(authorId);
-    if (authorId) {
+    if (!authorId) {
       if (this.countsDictionary[authorId]) {
         this.countsDictionary[authorId]++;
       } else {
@@ -20,6 +19,5 @@ export class CheckImageService {
         this.countsDictionary[authorId] = 0;
       }
     }
-    console.log(this.countsDictionary);
   }
 }
