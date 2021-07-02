@@ -1,3 +1,12 @@
+# [0.10.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.9.3...v0.10.0) (2021-07-02)
+
+
+### Features
+
+* add "kushi" to whitelist ([ef75597](https://github.com/EddieHubCommunity/EddieBot/commit/ef755975212e1ce7bb6c05d0ebf3272152c5d648))
+
+
+
 ## [0.9.3](https://github.com/EddieHubCommunity/EddieBot/compare/v0.9.2...v0.9.3) (2021-06-26)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * display API version ([#564](https://github.com/EddieHubCommunity/EddieBot/issues/564)) ([cf56f50](https://github.com/EddieHubCommunity/EddieBot/commit/cf56f50b030e43ef805639aa43c2e258ea653c7f))
-
-
-
-# [0.8.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.7.2...v0.8.0) (2021-06-23)
-
-
-### Features
-
-* delete notification on messageDelete ([#557](https://github.com/EddieHubCommunity/EddieBot/issues/557)) ([309e92d](https://github.com/EddieHubCommunity/EddieBot/commit/309e92d27a79622c2c454d6f7d009199b534ec33))
 
 
 
