@@ -20,6 +20,7 @@ export default {
       'hostesses-hosts',
       'husband-wife',
       'just',
+      'kushi',
       'latino',
       'long-time-no-see',
       'master',
