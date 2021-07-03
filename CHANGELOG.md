@@ -1,3 +1,12 @@
+## [0.10.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.10.0...v0.10.1) (2021-07-03)
+
+
+### Bug Fixes
+
+* api envar ([#567](https://github.com/EddieHubCommunity/EddieBot/issues/567)) ([a0b1e24](https://github.com/EddieHubCommunity/EddieBot/commit/a0b1e240bf13a388d8ce07aefc99e4db8e15f7dc))
+
+
+
 # [0.10.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.9.3...v0.10.0) (2021-07-02)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * version error handling ([#564](https://github.com/EddieHubCommunity/EddieBot/issues/564)) ([4b066a8](https://github.com/EddieHubCommunity/EddieBot/commit/4b066a8b863aa59a8c894ad1e7db3918539a92c5))
-
-
-
-# [0.9.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.8.0...v0.9.0) (2021-06-25)
-
-
-### Features
-
-* display API version ([#564](https://github.com/EddieHubCommunity/EddieBot/issues/564)) ([cf56f50](https://github.com/EddieHubCommunity/EddieBot/commit/cf56f50b030e43ef805639aa43c2e258ea653c7f))
 
 
 
