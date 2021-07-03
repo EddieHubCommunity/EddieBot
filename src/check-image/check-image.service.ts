@@ -15,7 +15,7 @@ export class CheckImageService {
       }
 
       if (this.countsDictionary[authorId] > 3) {
-        message.author.send('Please consider adding a profile picture');
+        message.author.send('Please consider adding a profile picture.');
         this.countsDictionary[authorId] = 0;
       }
     }
