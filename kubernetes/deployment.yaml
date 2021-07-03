@@ -15,17 +15,22 @@ spec:
         app: eddiebot
     spec:
       containers:
-      - name: eddiebot
-        image: ghcr.io/eddiehubcommunity/eddiebot:latest
-        imagePullPolicy: Always
-        env:
-          - name: DISCORD_TOKEN
-            valueFrom:
-              secretKeyRef:
-                name: discord-token
-                key: DISCORD_TOKEN
-          - name: DISCORD_PREFIX
-            valueFrom:
-              secretKeyRef:
-                name: discord-prefix
-                key: DISCORD_PREFIX
+        - name: eddiebot
+          image: ghcr.io/eddiehubcommunity/eddiebot:latest
+          imagePullPolicy: Always
+          env:
+            - name: DISCORD_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: discord-token
+                  key: DISCORD_TOKEN
+            - name: DISCORD_PREFIX
+              valueFrom:
+                secretKeyRef:
+                  name: discord-prefix
+                  key: DISCORD_PREFIX
+            - name: API_URL
+              valueFrom:
+                secretKeyRef:
+                  name: api-url
+                  key: API_URL
