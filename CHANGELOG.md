@@ -1,3 +1,12 @@
+# [0.11.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.10.1...v0.11.0) (2021-07-04)
+
+
+### Features
+
+* profile image check ([#300](https://github.com/EddieHubCommunity/EddieBot/issues/300)) ([20f2e5d](https://github.com/EddieHubCommunity/EddieBot/commit/20f2e5d89364bf5c2827af88897f612e5f7856ce))
+
+
+
 ## [0.10.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.10.0...v0.10.1) (2021-07-03)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * delete notificaiton message ([#568](https://github.com/EddieHubCommunity/EddieBot/issues/568)) ([99e3a8d](https://github.com/EddieHubCommunity/EddieBot/commit/99e3a8d70ec03933c4e1004199e57270414b4545))
-
-
-
-## [0.9.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.9.0...v0.9.1) (2021-06-25)
-
-
-### Bug Fixes
-
-* version error handling ([#564](https://github.com/EddieHubCommunity/EddieBot/issues/564)) ([4b066a8](https://github.com/EddieHubCommunity/EddieBot/commit/4b066a8b863aa59a8c894ad1e7db3918539a92c5))
 
 
 
