@@ -3,6 +3,7 @@ import { Message } from 'discord.js';
 
 @Injectable()
 export class CheckImageService {
+  private alertAt = 10;
   private countsDictionary: { [key: string]: number } = {};
 
   public checkImage(message: Message): void {
@@ -14,7 +15,7 @@ export class CheckImageService {
         this.countsDictionary[authorId] = 1;
       }
 
-      if (this.countsDictionary[authorId] > 3) {
+      if (this.countsDictionary[authorId] > this.alertAt) {
         message.author.send(
           'Please consider adding a profile picture, it is more friendly. It does not have to be you, but something unique, like a cartoon version of yourself or a pet.',
         );
