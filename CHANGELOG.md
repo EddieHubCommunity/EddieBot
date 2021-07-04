@@ -1,3 +1,12 @@
+## [0.11.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.11.0...v0.11.1) (2021-07-04)
+
+
+### Bug Fixes
+
+* alert at no profile ([#300](https://github.com/EddieHubCommunity/EddieBot/issues/300)) ([d5519d0](https://github.com/EddieHubCommunity/EddieBot/commit/d5519d0d0fc65449fdfc44e9a10ce1099adace13))
+
+
+
 # [0.11.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.10.1...v0.11.0) (2021-07-04)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * remove notification for deleted message ([#569](https://github.com/EddieHubCommunity/EddieBot/issues/569)) ([0d74032](https://github.com/EddieHubCommunity/EddieBot/commit/0d740325328eacc738a4bef6862cd0f2cafe9b1a))
-
-
-
-## [0.9.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.9.1...v0.9.2) (2021-06-26)
-
-
-### Bug Fixes
-
-* delete notificaiton message ([#568](https://github.com/EddieHubCommunity/EddieBot/issues/568)) ([99e3a8d](https://github.com/EddieHubCommunity/EddieBot/commit/99e3a8d70ec03933c4e1004199e57270414b4545))
 
 
 
