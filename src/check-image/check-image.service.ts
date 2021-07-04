@@ -15,7 +15,9 @@ export class CheckImageService {
       }
 
       if (this.countsDictionary[authorId] > 3) {
-        message.author.send('Please consider adding a profile picture.');
+        message.author.send(
+          'Please consider adding a profile picture, it is more friendly. It does not have to be you, but something unique, like a cartoon version of yourself or a pet.',
+        );
         this.countsDictionary[authorId] = 0;
       }
     }
