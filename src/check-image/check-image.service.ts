@@ -7,7 +7,7 @@ export class CheckImageService {
 
   public checkImage(message: Message): void {
     const authorId = message.author.id;
-    if (!authorId) {
+    if (!message.author.avatar) {
       if (this.countsDictionary[authorId]) {
         this.countsDictionary[authorId]++;
       } else {
