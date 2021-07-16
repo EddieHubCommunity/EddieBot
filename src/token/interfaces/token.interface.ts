@@ -3,4 +3,5 @@ export interface TokenResponse {
   keyspace: string;
   scopes: string[];
   accessToken: string;
+  expiresIn: number;
 }
