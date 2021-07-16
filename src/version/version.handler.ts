@@ -18,6 +18,7 @@ export class VersionHandler {
 
   @OnCommand({ name: 'api' })
   async api(@Context() [context]: [Message]): Promise<void> {
+    console.log('api called');
     const version = await this.versionService.getApi().toPromise();
     await context.reply(version);
   }
