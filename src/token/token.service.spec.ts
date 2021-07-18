@@ -1,6 +1,7 @@
-import { HttpModule } from '@nestjs/common';
+import { CacheModule, HttpModule } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { Test, TestingModule } from '@nestjs/testing';
+import { TokenCacheService } from './token-cache.service';
 import { TokenService } from './token.service';
 
 describe('TokenService', () => {
@@ -8,8 +9,8 @@ describe('TokenService', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      imports: [ConfigModule, HttpModule],
-      providers: [TokenService],
+      imports: [ConfigModule, HttpModule, CacheModule.register()],
+      providers: [TokenService, TokenCacheService],
     }).compile();
 
     service = module.get<TokenService>(TokenService);
