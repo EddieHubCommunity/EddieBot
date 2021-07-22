@@ -2,7 +2,7 @@ name: Documentation typo
 description: Found a typo in the documentation? You can use this one!
 labels: ["📄 aspect: text"]
 body:
-  - type: input
+  - type: textarea
     id: description
     attributes:
       label: Description
@@ -20,7 +20,7 @@ body:
     id: extrainfo
     attributes:
       label: Additional information
-      description: Is there anything else we should know about this chore?
+      description: Is there anything else we should know about this issue?
     validations:
       required: false
   - type: markdown

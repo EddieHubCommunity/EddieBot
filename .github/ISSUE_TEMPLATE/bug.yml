@@ -2,7 +2,7 @@ name: Bug
 description: Report a bug found in the bot's source code
 labels: ["🛠 goal: fix"]
 body:
-  - type: input
+  - type: textarea
     id: description
     attributes:
       label: Description
@@ -20,7 +20,7 @@ body:
     id: extrainfo
     attributes:
       label: Additional information
-      description: Is there anything else we should know about this chore?
+      description: Is there anything else we should know about this bug?
     validations:
       required: false
   - type: markdown
