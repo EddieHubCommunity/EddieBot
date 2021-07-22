@@ -1,3 +1,17 @@
+# [0.12.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.11.1...v0.12.0) (2021-07-22)
+
+
+### Bug Fixes
+
+* Apply suggestions from code review ([6785d1b](https://github.com/EddieHubCommunity/EddieBot/commit/6785d1b09a69d9e415bff712f00bbfacc7ac674e))
+
+
+### Features
+
+* Convert all issue templates into issue... ([79ae99d](https://github.com/EddieHubCommunity/EddieBot/commit/79ae99d97a15ec37dca936fcbe7cf9dbf4e78344))
+
+
+
 ## [0.11.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.11.0...v0.11.1) (2021-07-04)
 
 
@@ -31,15 +45,6 @@
 ### Features
 
 * add "kushi" to whitelist ([ef75597](https://github.com/EddieHubCommunity/EddieBot/commit/ef755975212e1ce7bb6c05d0ebf3272152c5d648))
-
-
-
-## [0.9.3](https://github.com/EddieHubCommunity/EddieBot/compare/v0.9.2...v0.9.3) (2021-06-26)
-
-
-### Bug Fixes
-
-* remove notification for deleted message ([#569](https://github.com/EddieHubCommunity/EddieBot/issues/569)) ([0d74032](https://github.com/EddieHubCommunity/EddieBot/commit/0d740325328eacc738a4bef6862cd0f2cafe9b1a))
 
 
 
