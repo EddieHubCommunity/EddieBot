@@ -27,7 +27,7 @@ export class AlexService {
       const embed = defaultEmbed(config.colors.alerts)
         .setTitle(`You used the word "${alexMatch[0].actual}"`)
         .setDescription(
-          'This might not be inclusive or welcoming language. Please consider the following suggestions instead:',
+          'This might not be inclusive or welcoming language. Please update / edit your message with the following suggestions instead:',
         )
         .setAuthor(message.author.username, message.author.displayAvatarURL());
 
