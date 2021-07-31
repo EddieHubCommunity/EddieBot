@@ -1,3 +1,12 @@
+## [0.12.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.12.0...v0.12.1) (2021-07-31)
+
+
+### Bug Fixes
+
+* warning message ([#579](https://github.com/EddieHubCommunity/EddieBot/issues/579)) ([000bfeb](https://github.com/EddieHubCommunity/EddieBot/commit/000bfebcd10adaa9d168f09a5a9482fe110887e3))
+
+
+
 # [0.12.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.11.1...v0.12.0) (2021-07-22)
 
 
@@ -36,15 +45,6 @@
 ### Bug Fixes
 
 * api envar ([#567](https://github.com/EddieHubCommunity/EddieBot/issues/567)) ([a0b1e24](https://github.com/EddieHubCommunity/EddieBot/commit/a0b1e240bf13a388d8ce07aefc99e4db8e15f7dc))
-
-
-
-# [0.10.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.9.3...v0.10.0) (2021-07-02)
-
-
-### Features
-
-* add "kushi" to whitelist ([ef75597](https://github.com/EddieHubCommunity/EddieBot/commit/ef755975212e1ce7bb6c05d0ebf3272152c5d648))
 
 
 
