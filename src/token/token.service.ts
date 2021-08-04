@@ -11,9 +11,10 @@ export class TokenService {
 
   public async createToken(message: Message) {
     const serverId = message.guild.id;
-    let token = null;
     try {
-      token = await this.tokenCacheService.getNewToken(serverId, ['Data.Read']);
+      const token = await this.tokenCacheService.getNewToken(serverId, [
+        'Data.Read',
+      ]);
       const successEmbed = defaultEmbed(colors.message)
         .setTitle('New Token created')
         .setAuthor(message.author.username, message.author.displayAvatarURL())
