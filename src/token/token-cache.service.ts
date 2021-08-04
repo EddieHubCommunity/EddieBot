@@ -5,7 +5,7 @@ import { TokenResponse } from './interfaces/token.interface';
 
 @Injectable()
 export class TokenCacheService {
-  private url = `${this.config.get('API_URL')}/auth`;
+  private url = `${this.config.get('API_URL')}/auth/token`;
   constructor(
     private readonly http: HttpService,
     private readonly config: ConfigService,
