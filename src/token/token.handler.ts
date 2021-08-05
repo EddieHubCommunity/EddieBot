@@ -10,9 +10,8 @@ export class TokenHandler {
   @OnCommand({ name: 'create-token' })
   async createToken(message: Message) {
     if (message.member.roles.cache.some((role) => role.name === 'Moderators')) {
-      const embed = await this.tokenService.createToken(message);
-      const sentMessage = await message.channel.send(embed);
-      sentMessage.delete({ timeout: 180000 });
+      const response: string = await this.tokenService.createToken(message);
+      await message.author.send(response);
     } else {
       await message.reply('You are not authorized to do that');
     }
