@@ -15,8 +15,7 @@ export class TokenHandler {
     if (
       !message.member.roles.cache.some((role) => role.name === 'Moderators')
     ) {
-      await message.reply('You are not authorized to do that');
-      return;
+      return await message.reply('You are not authorized to do that');
     }
 
     switch (args[1]) {
@@ -25,11 +24,9 @@ export class TokenHandler {
         break;
 
       default:
-        await message.reply('Please specify a command');
-        return;
+        return await message.reply('Please specify valid arguments');
     }
 
-    await message.author.send(response);
-    return;
+    return await message.author.send(response);
   }
 }
