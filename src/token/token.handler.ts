@@ -7,13 +7,29 @@ import { TokenService } from './token.service';
 export class TokenHandler {
   constructor(private readonly tokenService: TokenService) {}
 
-  @OnCommand({ name: 'create-token' })
+  @OnCommand({ name: 'token' })
   async createToken(message: Message) {
-    if (message.member.roles.cache.some((role) => role.name === 'Moderators')) {
-      const response: string = await this.tokenService.createToken(message);
-      await message.author.send(response);
-    } else {
+    let response: string = null;
+    const args = message.content.trim().split(/ +/g);
+
+    if (
+      !message.member.roles.cache.some((role) => role.name === 'Moderators')
+    ) {
       await message.reply('You are not authorized to do that');
+      return;
     }
+
+    switch (args[1]) {
+      case 'create':
+        response = await this.tokenService.createToken(message);
+        break;
+
+      default:
+        await message.reply('Please specify a command');
+        return;
+    }
+
+    await message.author.send(response);
+    return;
   }
 }
