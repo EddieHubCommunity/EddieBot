@@ -34,3 +34,8 @@ spec:
                 secretKeyRef:
                   name: api-url
                   key: API_URL
+            - name: API_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: api-token
+                  key: API_TOKEN
