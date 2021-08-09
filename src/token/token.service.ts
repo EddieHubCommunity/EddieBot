@@ -15,6 +15,7 @@ export class TokenService {
       const returnString = `**New Token created**\n\nA new Accesstoken to access the Eddiehub-Api was created\n\nClientID 🆔:\n\`${token.clientId}\`\n\nAccessToken 🔑:\n\`${token.accessToken}\`\n\nScopes 🚀:\n\`${token.scopes}\``;
       return returnString;
     } catch (error) {
+      console.log(error.message);
       const returnString = `**Token creation failed**\n\nThere was an error creating a new token`;
       return returnString;
     }
