@@ -38,6 +38,9 @@ $ git clone https://github.com/EddieHubCommunity/EddieBot.git
 $ cd EddieBot
 $ npm install
 ```
+#### Github Docs
+
+https://discord.com/developers/docs/intro#bots-and-apps
 
 ## Running the app
 
@@ -68,6 +71,8 @@ $ npm run test:cov
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+
+
 
 ## License
 
