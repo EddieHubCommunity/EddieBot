@@ -42,6 +42,9 @@ $ git clone https://github.com/EddieHubCommunity/EddieBot.git
 $ cd EddieBot
 $ npm install
 ```
+#### Discord Docs
+
+- https://discord.com/developers/docs/intro#bots-and-apps
 
 ## Running the app
 
