@@ -1,3 +1,12 @@
+# [0.13.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.12.1...v0.13.0) (2021-08-09)
+
+
+### Features
+
+* create tokens for auth-logic ([#580](https://github.com/EddieHubCommunity/EddieBot/issues/580)) ([f5b9284](https://github.com/EddieHubCommunity/EddieBot/commit/f5b928438b6ad1d9e092b3c961ff18b2d7dab556))
+
+
+
 ## [0.12.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.12.0...v0.12.1) (2021-07-31)
 
 
@@ -36,15 +45,6 @@
 ### Features
 
 * profile image check ([#300](https://github.com/EddieHubCommunity/EddieBot/issues/300)) ([20f2e5d](https://github.com/EddieHubCommunity/EddieBot/commit/20f2e5d89364bf5c2827af88897f612e5f7856ce))
-
-
-
-## [0.10.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.10.0...v0.10.1) (2021-07-03)
-
-
-### Bug Fixes
-
-* api envar ([#567](https://github.com/EddieHubCommunity/EddieBot/issues/567)) ([a0b1e24](https://github.com/EddieHubCommunity/EddieBot/commit/a0b1e240bf13a388d8ce07aefc99e4db8e15f7dc))
 
 
 
