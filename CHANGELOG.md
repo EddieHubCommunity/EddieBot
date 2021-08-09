@@ -1,3 +1,12 @@
+## [0.13.4](https://github.com/EddieHubCommunity/EddieBot/compare/v0.13.3...v0.13.4) (2021-08-09)
+
+
+### Bug Fixes
+
+* documemtation ([#587](https://github.com/EddieHubCommunity/EddieBot/issues/587)) ([63a6872](https://github.com/EddieHubCommunity/EddieBot/commit/63a6872024ae33fdc883806aaa735706da06f937))
+
+
+
 ## [0.13.3](https://github.com/EddieHubCommunity/EddieBot/compare/v0.13.2...v0.13.3) (2021-08-09)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * create tokens for auth-logic ([#580](https://github.com/EddieHubCommunity/EddieBot/issues/580)) ([f5b9284](https://github.com/EddieHubCommunity/EddieBot/commit/f5b928438b6ad1d9e092b3c961ff18b2d7dab556))
-
-
-
-## [0.12.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.12.0...v0.12.1) (2021-07-31)
-
-
-### Bug Fixes
-
-* warning message ([#579](https://github.com/EddieHubCommunity/EddieBot/issues/579)) ([000bfeb](https://github.com/EddieHubCommunity/EddieBot/commit/000bfebcd10adaa9d168f09a5a9482fe110887e3))
 
 
 
