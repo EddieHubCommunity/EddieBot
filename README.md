@@ -40,7 +40,7 @@ $ npm install
 ```
 #### Discord Docs
 
-https://discord.com/developers/docs/intro#bots-and-apps
+- https://discord.com/developers/docs/intro#bots-and-apps
 
 ## Running the app
 
