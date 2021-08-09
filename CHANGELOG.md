@@ -1,3 +1,12 @@
+## [0.13.3](https://github.com/EddieHubCommunity/EddieBot/compare/v0.13.2...v0.13.3) (2021-08-09)
+
+
+### Bug Fixes
+
+* use api token ([#587](https://github.com/EddieHubCommunity/EddieBot/issues/587)) ([#589](https://github.com/EddieHubCommunity/EddieBot/issues/589)) ([5870839](https://github.com/EddieHubCommunity/EddieBot/commit/5870839e4f509582e311847b6d86f68af1f77911))
+
+
+
 ## [0.13.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.13.1...v0.13.2) (2021-08-09)
 
 
@@ -31,20 +40,6 @@
 ### Bug Fixes
 
 * warning message ([#579](https://github.com/EddieHubCommunity/EddieBot/issues/579)) ([000bfeb](https://github.com/EddieHubCommunity/EddieBot/commit/000bfebcd10adaa9d168f09a5a9482fe110887e3))
-
-
-
-# [0.12.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.11.1...v0.12.0) (2021-07-22)
-
-
-### Bug Fixes
-
-* Apply suggestions from code review ([6785d1b](https://github.com/EddieHubCommunity/EddieBot/commit/6785d1b09a69d9e415bff712f00bbfacc7ac674e))
-
-
-### Features
-
-* Convert all issue templates into issue... ([79ae99d](https://github.com/EddieHubCommunity/EddieBot/commit/79ae99d97a15ec37dca936fcbe7cf9dbf4e78344))
 
 
 
