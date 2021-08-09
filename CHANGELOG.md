@@ -1,3 +1,12 @@
+## [0.13.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.13.1...v0.13.2) (2021-08-09)
+
+
+### Bug Fixes
+
+* log token error ([#586](https://github.com/EddieHubCommunity/EddieBot/issues/586)) ([25aa977](https://github.com/EddieHubCommunity/EddieBot/commit/25aa97739bac6a2ba0b3f5f231771e580c845350))
+
+
+
 ## [0.13.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.13.0...v0.13.1) (2021-08-09)
 
 
@@ -36,15 +45,6 @@
 ### Features
 
 * Convert all issue templates into issue... ([79ae99d](https://github.com/EddieHubCommunity/EddieBot/commit/79ae99d97a15ec37dca936fcbe7cf9dbf4e78344))
-
-
-
-## [0.11.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.11.0...v0.11.1) (2021-07-04)
-
-
-### Bug Fixes
-
-* alert at no profile ([#300](https://github.com/EddieHubCommunity/EddieBot/issues/300)) ([d5519d0](https://github.com/EddieHubCommunity/EddieBot/commit/d5519d0d0fc65449fdfc44e9a10ce1099adace13))
 
 
 
