@@ -1,3 +1,12 @@
+## [0.13.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.13.0...v0.13.1) (2021-08-09)
+
+
+### Bug Fixes
+
+* roles to lowercase ([#585](https://github.com/EddieHubCommunity/EddieBot/issues/585)) ([6dce83e](https://github.com/EddieHubCommunity/EddieBot/commit/6dce83e7d9df0b1c9b22bd9909264ca3962d3248))
+
+
+
 # [0.13.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.12.1...v0.13.0) (2021-08-09)
 
 
@@ -36,15 +45,6 @@
 ### Bug Fixes
 
 * alert at no profile ([#300](https://github.com/EddieHubCommunity/EddieBot/issues/300)) ([d5519d0](https://github.com/EddieHubCommunity/EddieBot/commit/d5519d0d0fc65449fdfc44e9a10ce1099adace13))
-
-
-
-# [0.11.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.10.1...v0.11.0) (2021-07-04)
-
-
-### Features
-
-* profile image check ([#300](https://github.com/EddieHubCommunity/EddieBot/issues/300)) ([20f2e5d](https://github.com/EddieHubCommunity/EddieBot/commit/20f2e5d89364bf5c2827af88897f612e5f7856ce))
 
 
 
