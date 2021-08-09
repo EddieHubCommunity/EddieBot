@@ -13,7 +13,9 @@ export class TokenHandler {
     const args = message.content.trim().split(/ +/g);
 
     if (
-      !message.member.roles.cache.some((role) => role.name === 'Moderators')
+      !message.member.roles.cache.some(
+        (role) => role.name.toLowerCase() === 'moderators',
+      )
     ) {
       return await message.reply('You are not authorized to do that');
     }
