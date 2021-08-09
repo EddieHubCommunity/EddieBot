@@ -11,7 +11,11 @@ Copy `.env.example` to `.env` and add your private information
 ```
 DISCORD_TOKEN="<your-token>"
 DISCORD_PREFIX="!"
+API_URL=
+API_TOKEN=
 ```
+
+*Note: to perform some of the reading/writing from the DB you will need the API project `EddieHubCommunity/api`*
 
 ## Installation
 
