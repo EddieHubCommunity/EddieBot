@@ -1,6 +1,6 @@
 import { HttpService, Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { Message, MessageEmbed } from 'discord.js';
+import { Message } from 'discord.js';
 import config from '../config';
 import { ValidationResponse } from './interfaces/token.interface';
 import { TokenCacheService } from './token-cache.service';
@@ -14,8 +14,7 @@ export class TokenService {
   ) {}
 
   public async createToken(message: Message) {
-    // const serverId = message.guild.id;
-    const serverId = 'eddiehub';
+    const serverId = message.guild.id;
     let returnString: string;
     try {
       const token = await this.tokenCacheService.getNewToken(serverId, [
@@ -28,9 +27,8 @@ export class TokenService {
       return returnString;
     }
   }
-  public async validateToken(message: Message, token: String) {
-    let embed: MessageEmbed;
-    let url = `${this.configService.get('API_URL')}/auth/validate`;
+  public async validateToken(message: Message, token: string) {
+    const url = `${this.configService.get('API_URL')}/auth/validate`;
     try {
       const response = await this.httpService
         .post(
