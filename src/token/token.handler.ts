@@ -23,12 +23,20 @@ export class TokenHandler {
     switch (args[1]) {
       case 'create':
         response = await this.tokenService.createToken(message);
+        return await message.author.send(response);
+
+      case 'validate':
+        if (!args[2])
+          return await message.reply(
+            'Please provide a token as second argument',
+          );
+        const token = args[2];
+        const embed = await this.tokenService.validateToken(message, token);
+        message.channel.send(embed);
         break;
 
       default:
         return await message.reply('Please specify valid arguments');
     }
-
-    return await message.author.send(response);
   }
 }

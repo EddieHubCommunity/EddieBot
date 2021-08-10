@@ -5,3 +5,7 @@ export interface TokenResponse {
   accessToken: string;
   expiresIn: number;
 }
+
+export interface ValidationResponse {
+  valid: boolean;
+}
