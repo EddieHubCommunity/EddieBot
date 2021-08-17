@@ -67,7 +67,7 @@ export class AlexHandler {
         targetNotification.notificationId,
       );
       if (notificationMessage && notificationMessage.deletable) {
-        await notificationMessage.delete();
+        await notificationMessage.delete().catch(console.error);
 
         this.savedNotifications = this.savedNotifications.filter(
           (el) =>
@@ -113,7 +113,7 @@ export class AlexHandler {
       );
 
       if (notificationMessage && notificationMessage.deletable) {
-        await notificationMessage.delete();
+        await notificationMessage.delete().catch(console.error);
       }
     }
 
