@@ -9,7 +9,7 @@ const { defaultEmbed, alexWhitelist, preventWords } = config;
 export class AlexService {
   private stripSpecialCharacters(str: string) {
     // alexMatch special symbols and replace with ' '
-    str = str.replace(/[.,/#!$%?&*;:{}=\-_'"“”~()]/g, ' ');
+    str = str.replace(/[.,/`#!$%?&*;:{}=\-_'"“”~()]/g, ' ');
     // alexMatch double whitespace with single space for cleaner string
     return str.replace(/\s{2,}/g, ' ');
   }
