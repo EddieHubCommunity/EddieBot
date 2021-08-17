@@ -67,11 +67,11 @@ export class AlexHandler {
         targetNotification.notificationId,
       );
       if (notificationMessage && notificationMessage.deletable) {
-          try {
-            await notificationMessage.delete()
-          } catch (error) {
-           console.error(error) 
-          }
+        try {
+          await notificationMessage.delete();
+        } catch (error) {
+          console.error(error);
+        }
 
         this.savedNotifications = this.savedNotifications.filter(
           (el) =>
@@ -118,9 +118,9 @@ export class AlexHandler {
 
       if (notificationMessage && notificationMessage.deletable) {
         try {
-          await notificationMessage.delete()
+          await notificationMessage.delete();
         } catch (error) {
-         console.error(error) 
+          console.error(error);
         }
       }
     }
