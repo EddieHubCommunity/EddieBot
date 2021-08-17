@@ -1,3 +1,16 @@
+## [0.13.5](https://github.com/EddieHubCommunity/EddieBot/compare/v0.13.4...v0.13.5) (2021-08-17)
+
+
+### Bug Fixes
+
+* **code-review:** use `try/catch` ([65dcab7](https://github.com/EddieHubCommunity/EddieBot/commit/65dcab71b171fcd4710c7569f81d4c5f5c5a7a80))
+* **lint:** eslint ([b7d0620](https://github.com/EddieHubCommunity/EddieBot/commit/b7d062082ffd5d2bdd2f0bdb10669fc06d4e51e4))
+* **nodejs-compat:** unhandled catch ([a915351](https://github.com/EddieHubCommunity/EddieBot/commit/a915351bcbca5e8bbeac761caf4dc42030c6edb3))
+* **regex:** block code blocks ([3799e6e](https://github.com/EddieHubCommunity/EddieBot/commit/3799e6e33feb4c5c39489bafa511292eb543d0dd))
+* **regex:** block words starting with `\` ([4641a53](https://github.com/EddieHubCommunity/EddieBot/commit/4641a5310e5773c0b60d86466c4136ba23c48298))
+
+
+
 ## [0.13.4](https://github.com/EddieHubCommunity/EddieBot/compare/v0.13.3...v0.13.4) (2021-08-09)
 
 
@@ -31,15 +44,6 @@
 ### Bug Fixes
 
 * roles to lowercase ([#585](https://github.com/EddieHubCommunity/EddieBot/issues/585)) ([6dce83e](https://github.com/EddieHubCommunity/EddieBot/commit/6dce83e7d9df0b1c9b22bd9909264ca3962d3248))
-
-
-
-# [0.13.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.12.1...v0.13.0) (2021-08-09)
-
-
-### Features
-
-* create tokens for auth-logic ([#580](https://github.com/EddieHubCommunity/EddieBot/issues/580)) ([f5b9284](https://github.com/EddieHubCommunity/EddieBot/commit/f5b928438b6ad1d9e092b3c961ff18b2d7dab556))
 
 
 
