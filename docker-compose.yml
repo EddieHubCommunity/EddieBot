@@ -21,8 +21,8 @@ services:
         - APPROVED_TOKENS=abc,def
         - DEBUG=false
         - JWT_SECRET=test-secret
-        - STARGATE_BASEURL=http://localhost:8082
+        - STARGATE_BASEURL=http://stargate:8082
         - STARGATE_BASE_API_PATH=/v2/namespaces
-        - STARGATE_AUTH_URL=http://localhost:8081/v1/auth
+        - STARGATE_AUTH_URL=http://stargate:8081/v1/auth
         - STARGATE_USERNAME=cassandra
         - STARGATE_PASSWORD=cassandra
