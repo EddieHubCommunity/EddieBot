@@ -30,7 +30,7 @@ export class AlexService {
           'discordapp.com/invite/' ||
           'discord.com/invite/' ||
           'https://' ||
-          'http://.' ||
+          'http://' ||
           'www.',
       )
     ) {
@@ -59,7 +59,7 @@ export class AlexService {
           'discordapp.com/invite/' ||
           'discord.com/invite/' ||
           'https://' ||
-          'http://.' ||
+          'http://' ||
           'www.',
       )
     ) {
