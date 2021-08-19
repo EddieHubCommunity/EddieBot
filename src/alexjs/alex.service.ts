@@ -23,7 +23,8 @@ export class AlexService {
       .messages;
 
     const notifications: MessageEmbed[] = [];
-    if (alexMatch.length) {
+    if (
+        alexMatch.length && !(message.content.includes('discord.gg/'||'discordapp.com/invite/'||'discord.com/invite/'||'https://'||'http://.'||'www.'))) { // Ignore links
       const embed = defaultEmbed(config.colors.alerts)
         .setTitle(`You used the word "${alexMatch[0].actual}"`)
         .setDescription(
@@ -41,7 +42,8 @@ export class AlexService {
 
     const splitMessage = messageText.split(' ');
 
-    if (!alexMatch.length) {
+    if (
+        alexMatch.length && !(message.content.includes('discord.gg/'||'discordapp.com/invite/'||'discord.com/invite/'||'https://'||'http://.'||'www.'))) { // Ignore links
       splitMessage.forEach((word) => {
         if (preventWords.includes(word.toLowerCase())) {
           const embed = defaultEmbed(config.colors.alerts)
