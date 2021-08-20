@@ -22,18 +22,13 @@ export class AlexService {
     const alexMatch = alex.markdown(messageText, alexWhitelist as alex.Config)
       .messages;
 
+    let blockedLinks = 0;
+
+    const linkRegex = /(([a-z]+:\/\/)?(([a-z0-9-]+\.)+([a-z]{2,3}|aero|arpa|coop|info|jobs|museum|name|nato|travel|local|internal))(:[0-9]{1,5})?(\/[a-z0-9_\-.~]+)*(\/([a-z0-9_\-.]*)(\?[a-z0-9+_\-.%=&amp;]*)?)?(#[a-zA-Z0-9!$&'()*+.=-_~:@/?]*)?)(\s+|$)/gi;
+    blockedLinks += (message.content.match(linkRegex) || []).length;
+
     const notifications: MessageEmbed[] = [];
-    if (
-      alexMatch.length &&
-      !message.content.includes(
-        'discord.gg/' ||
-          'discordapp.com/invite/' ||
-          'discord.com/invite/' ||
-          'https://' ||
-          'http://' ||
-          'www.',
-      )
-    ) {
+    if (alexMatch.length && blockedLinks! > 0) {
       // Ignore links
       const embed = defaultEmbed(config.colors.alerts)
         .setTitle(`You used the word "${alexMatch[0].actual}"`)
@@ -52,17 +47,7 @@ export class AlexService {
 
     const splitMessage = messageText.split(' ');
 
-    if (
-      alexMatch.length &&
-      !message.content.includes(
-        'discord.gg/' ||
-          'discordapp.com/invite/' ||
-          'discord.com/invite/' ||
-          'https://' ||
-          'http://' ||
-          'www.',
-      )
-    ) {
+    if (alexMatch.length && blockedLinks! > 0) {
       // Ignore links
       splitMessage.forEach((word) => {
         if (preventWords.includes(word.toLowerCase())) {
