@@ -1,3 +1,12 @@
+## [0.15.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.0...v0.15.1) (2021-08-26)
+
+
+### Bug Fixes
+
+* remove words from allow list ([5c40e91](https://github.com/EddieHubCommunity/EddieBot/commit/5c40e91d0cc484f66ac807a59e8da94d813bda27))
+
+
+
 # [0.15.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.14.1...v0.15.0) (2021-08-26)
 
 
@@ -35,15 +44,6 @@
 * **nodejs-compat:** unhandled catch ([a915351](https://github.com/EddieHubCommunity/EddieBot/commit/a915351bcbca5e8bbeac761caf4dc42030c6edb3))
 * **regex:** block code blocks ([3799e6e](https://github.com/EddieHubCommunity/EddieBot/commit/3799e6e33feb4c5c39489bafa511292eb543d0dd))
 * **regex:** block words starting with `\` ([4641a53](https://github.com/EddieHubCommunity/EddieBot/commit/4641a5310e5773c0b60d86466c4136ba23c48298))
-
-
-
-## [0.13.4](https://github.com/EddieHubCommunity/EddieBot/compare/v0.13.3...v0.13.4) (2021-08-09)
-
-
-### Bug Fixes
-
-* documemtation ([#587](https://github.com/EddieHubCommunity/EddieBot/issues/587)) ([63a6872](https://github.com/EddieHubCommunity/EddieBot/commit/63a6872024ae33fdc883806aaa735706da06f937))
 
 
 
