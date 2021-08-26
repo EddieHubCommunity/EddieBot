@@ -1,3 +1,12 @@
+# [0.14.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.13.5...v0.14.0) (2021-08-26)
+
+
+### Features
+
+* gitpodify ([#600](https://github.com/EddieHubCommunity/EddieBot/issues/600)) ([4243e5c](https://github.com/EddieHubCommunity/EddieBot/commit/4243e5c51393035a969df3a55ed3779376407ea6))
+
+
+
 ## [0.13.5](https://github.com/EddieHubCommunity/EddieBot/compare/v0.13.4...v0.13.5) (2021-08-17)
 
 
@@ -35,15 +44,6 @@
 ### Bug Fixes
 
 * log token error ([#586](https://github.com/EddieHubCommunity/EddieBot/issues/586)) ([25aa977](https://github.com/EddieHubCommunity/EddieBot/commit/25aa97739bac6a2ba0b3f5f231771e580c845350))
-
-
-
-## [0.13.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.13.0...v0.13.1) (2021-08-09)
-
-
-### Bug Fixes
-
-* roles to lowercase ([#585](https://github.com/EddieHubCommunity/EddieBot/issues/585)) ([6dce83e](https://github.com/EddieHubCommunity/EddieBot/commit/6dce83e7d9df0b1c9b22bd9909264ca3962d3248))
 
 
 
