@@ -1,3 +1,12 @@
+## [0.14.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.14.0...v0.14.1) (2021-08-26)
+
+
+### Bug Fixes
+
+* copyright holder's name to EddieHub ([#610](https://github.com/EddieHubCommunity/EddieBot/issues/610)) ([7c51068](https://github.com/EddieHubCommunity/EddieBot/commit/7c510684d061b6dda23eac8e52ed37e37d071860))
+
+
+
 # [0.14.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.13.5...v0.14.0) (2021-08-26)
 
 
@@ -35,15 +44,6 @@
 ### Bug Fixes
 
 * use api token ([#587](https://github.com/EddieHubCommunity/EddieBot/issues/587)) ([#589](https://github.com/EddieHubCommunity/EddieBot/issues/589)) ([5870839](https://github.com/EddieHubCommunity/EddieBot/commit/5870839e4f509582e311847b6d86f68af1f77911))
-
-
-
-## [0.13.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.13.1...v0.13.2) (2021-08-09)
-
-
-### Bug Fixes
-
-* log token error ([#586](https://github.com/EddieHubCommunity/EddieBot/issues/586)) ([25aa977](https://github.com/EddieHubCommunity/EddieBot/commit/25aa97739bac6a2ba0b3f5f231771e580c845350))
 
 
 
