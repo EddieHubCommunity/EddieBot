@@ -1,11 +1,17 @@
-## Description
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+# EddieBot
+
+The official [EddieBot](https://github.com/EddieHubCommunity/EddieBot.git) for the official [Discord server](http://discord.eddiehub.org). Join us at [Discord](http://discord.eddiehub.org) today!
+
+## Features
+
+- Uses a powerful [API](https://github.com/EddieHubCommunity/api.git) built by the EddieHub community.
+- Checking all people's messages for inclusive language.
 
 ## Config / Secrets environment variables
 
 Copy `.env.example` to `.env` and add your private information
 
-*Note: never commit this file, it should be ignored by git*
+*Note: never commit this file, it should be ignored by Git*
 
 ```
 DISCORD_TOKEN="<your-token>"
@@ -18,19 +24,19 @@ API_TOKEN=
 
 ## Installation
 
-#### SSH
+### SSH
 
 ```bash
 $ git clone git@github.com:EddieHubCommunity/EddieBot.git
 ```
 
-#### GitHub CLI
+### GitHub CLI
 
 ```bash
 $ gh repo clone EddieHubCommunity/EddieBot
 ```
 
-#### HTTPS
+### HTTPS
 
 ```bash
 $ git clone https://github.com/EddieHubCommunity/EddieBot.git
@@ -41,7 +47,7 @@ $ git clone https://github.com/EddieHubCommunity/EddieBot.git
 $ cd EddieBot
 $ npm install
 ```
-#### Discord Docs
+### Discord Docs
 
 - https://discord.com/developers/docs/intro#bots-and-apps
 
@@ -73,10 +79,10 @@ $ npm run test:cov
 
 ## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+EddieBot is an MIT-licensed open source project. It can grow thanks to the contributors and the community members. If you'd like to join them, feel free to make a pull request and we'll review it.
 
-Still stuck join us on [discord](http://discord.eddiehub.org/) and ask for help 
+Stuck? Have any questions or comments? Join us on [Discord](http://discord.eddiehub.org/) and ask for help.
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+The EddieBot is licensed under the [MIT](https://github.com/EddieHubCommunity/EddieBot/blob/main/LICENSE) license.
