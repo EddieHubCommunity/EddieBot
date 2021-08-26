@@ -1,0 +1,28 @@
+version: '3.9'
+services:
+  stargate:
+    image: 'stargateio/stargate-3_11:v1.0.29'
+    ports:
+      - '8080:8080'
+      - '8081:8081'
+      - '8082:8082'
+      - '127.0.0.1:9042:9042'
+    environment:
+      - CLUSTER_NAME=stargate
+      - CLUSTER_VERSION=3.11
+      - DEVELOPER_MODE=true
+  eddiehub-api:
+    image: ghcr.io/eddiehubcommunity/api:latest
+    ports:
+        - '3000:3000'
+    depends_on:
+        - stargate
+    environment:
+        - APPROVED_TOKENS=abc,def
+        - DEBUG=false
+        - JWT_SECRET=test-secret
+        - STARGATE_BASEURL=http://stargate:8082
+        - STARGATE_BASE_API_PATH=/v2/namespaces
+        - STARGATE_AUTH_URL=http://stargate:8081/v1/auth
+        - STARGATE_USERNAME=cassandra
+        - STARGATE_PASSWORD=cassandra
