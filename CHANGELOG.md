@@ -1,3 +1,12 @@
+# [0.15.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.14.1...v0.15.0) (2021-08-26)
+
+
+### Features
+
+* king to allow list ([#582](https://github.com/EddieHubCommunity/EddieBot/issues/582)) ([8dcc1ab](https://github.com/EddieHubCommunity/EddieBot/commit/8dcc1ab2153334705e22175d0b8a5b2d9712173a))
+
+
+
 ## [0.14.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.14.0...v0.14.1) (2021-08-26)
 
 
@@ -35,15 +44,6 @@
 ### Bug Fixes
 
 * documemtation ([#587](https://github.com/EddieHubCommunity/EddieBot/issues/587)) ([63a6872](https://github.com/EddieHubCommunity/EddieBot/commit/63a6872024ae33fdc883806aaa735706da06f937))
-
-
-
-## [0.13.3](https://github.com/EddieHubCommunity/EddieBot/compare/v0.13.2...v0.13.3) (2021-08-09)
-
-
-### Bug Fixes
-
-* use api token ([#587](https://github.com/EddieHubCommunity/EddieBot/issues/587)) ([#589](https://github.com/EddieHubCommunity/EddieBot/issues/589)) ([5870839](https://github.com/EddieHubCommunity/EddieBot/commit/5870839e4f509582e311847b6d86f68af1f77911))
 
 
 
