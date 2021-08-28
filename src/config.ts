@@ -31,6 +31,7 @@ export default {
       'postman-postwoman',
       'special',
       'superman-superwoman',
+      'simple',
       'just',
     ],
   },
