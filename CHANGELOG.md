@@ -1,3 +1,12 @@
+## [0.15.3](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.2...v0.15.3) (2021-08-28)
+
+
+### Bug Fixes
+
+* allow word simple ([#614](https://github.com/EddieHubCommunity/EddieBot/issues/614)) ([90bd7b4](https://github.com/EddieHubCommunity/EddieBot/commit/90bd7b4ec3668ebfb95902b49be355d0e7c11bbf))
+
+
+
 ## [0.15.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.1...v0.15.2) (2021-08-28)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * copyright holder's name to EddieHub ([#610](https://github.com/EddieHubCommunity/EddieBot/issues/610)) ([7c51068](https://github.com/EddieHubCommunity/EddieBot/commit/7c510684d061b6dda23eac8e52ed37e37d071860))
-
-
-
-# [0.14.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.13.5...v0.14.0) (2021-08-26)
-
-
-### Features
-
-* gitpodify ([#600](https://github.com/EddieHubCommunity/EddieBot/issues/600)) ([4243e5c](https://github.com/EddieHubCommunity/EddieBot/commit/4243e5c51393035a969df3a55ed3779376407ea6))
 
 
 
