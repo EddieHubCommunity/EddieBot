@@ -1,3 +1,12 @@
+## [0.15.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.1...v0.15.2) (2021-08-28)
+
+
+### Bug Fixes
+
+* allow word just ([#613](https://github.com/EddieHubCommunity/EddieBot/issues/613)) ([1951c8d](https://github.com/EddieHubCommunity/EddieBot/commit/1951c8d6857025a6f5c5c62f89b54cd82c776ff8))
+
+
+
 ## [0.15.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.0...v0.15.1) (2021-08-26)
 
 
@@ -31,19 +40,6 @@
 ### Features
 
 * gitpodify ([#600](https://github.com/EddieHubCommunity/EddieBot/issues/600)) ([4243e5c](https://github.com/EddieHubCommunity/EddieBot/commit/4243e5c51393035a969df3a55ed3779376407ea6))
-
-
-
-## [0.13.5](https://github.com/EddieHubCommunity/EddieBot/compare/v0.13.4...v0.13.5) (2021-08-17)
-
-
-### Bug Fixes
-
-* **code-review:** use `try/catch` ([65dcab7](https://github.com/EddieHubCommunity/EddieBot/commit/65dcab71b171fcd4710c7569f81d4c5f5c5a7a80))
-* **lint:** eslint ([b7d0620](https://github.com/EddieHubCommunity/EddieBot/commit/b7d062082ffd5d2bdd2f0bdb10669fc06d4e51e4))
-* **nodejs-compat:** unhandled catch ([a915351](https://github.com/EddieHubCommunity/EddieBot/commit/a915351bcbca5e8bbeac761caf4dc42030c6edb3))
-* **regex:** block code blocks ([3799e6e](https://github.com/EddieHubCommunity/EddieBot/commit/3799e6e33feb4c5c39489bafa511292eb543d0dd))
-* **regex:** block words starting with `\` ([4641a53](https://github.com/EddieHubCommunity/EddieBot/commit/4641a5310e5773c0b60d86466c4136ba23c48298))
 
 
 
