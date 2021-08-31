@@ -1,3 +1,12 @@
+## [0.15.4](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.3...v0.15.4) (2021-08-31)
+
+
+### Bug Fixes
+
+* fellas to banned words ([#617](https://github.com/EddieHubCommunity/EddieBot/issues/617)) ([63b33e0](https://github.com/EddieHubCommunity/EddieBot/commit/63b33e0ecd962174ddfebc5e44a5c4987e1c27e1))
+
+
+
 ## [0.15.3](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.2...v0.15.3) (2021-08-28)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * king to allow list ([#582](https://github.com/EddieHubCommunity/EddieBot/issues/582)) ([8dcc1ab](https://github.com/EddieHubCommunity/EddieBot/commit/8dcc1ab2153334705e22175d0b8a5b2d9712173a))
-
-
-
-## [0.14.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.14.0...v0.14.1) (2021-08-26)
-
-
-### Bug Fixes
-
-* copyright holder's name to EddieHub ([#610](https://github.com/EddieHubCommunity/EddieBot/issues/610)) ([7c51068](https://github.com/EddieHubCommunity/EddieBot/commit/7c510684d061b6dda23eac8e52ed37e37d071860))
 
 
 
