@@ -9,7 +9,7 @@ export default {
     'women',
     'sir',
     'man',
-  'fellas',
+    'fellas',
   ],
   alexWhitelist: {
     profanitySureness: 1,
