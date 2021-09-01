@@ -10,6 +10,9 @@ export default {
     'sir',
     'man',
     'fellas',
+    'madam',
+    'maam',
+    "ma'am",
   ],
   alexWhitelist: {
     profanitySureness: 1,
