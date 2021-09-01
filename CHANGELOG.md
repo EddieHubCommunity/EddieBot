@@ -1,3 +1,12 @@
+## [0.15.5](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.4...v0.15.5) (2021-09-01)
+
+
+### Bug Fixes
+
+* versions of 'mam' to banned words ([#607](https://github.com/EddieHubCommunity/EddieBot/issues/607)) ([41eb7f7](https://github.com/EddieHubCommunity/EddieBot/commit/41eb7f7bf52f13e829bbe48017f8e647ab9963f2))
+
+
+
 ## [0.15.4](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.3...v0.15.4) (2021-08-31)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * remove words from allow list ([5c40e91](https://github.com/EddieHubCommunity/EddieBot/commit/5c40e91d0cc484f66ac807a59e8da94d813bda27))
-
-
-
-# [0.15.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.14.1...v0.15.0) (2021-08-26)
-
-
-### Features
-
-* king to allow list ([#582](https://github.com/EddieHubCommunity/EddieBot/issues/582)) ([8dcc1ab](https://github.com/EddieHubCommunity/EddieBot/commit/8dcc1ab2153334705e22175d0b8a5b2d9712173a))
 
 
 
