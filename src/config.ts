@@ -12,7 +12,7 @@ export default {
     'fellas',
     'madam',
     'maam',
-    "ma'am"
+    "ma'am",
   ],
   alexWhitelist: {
     profanitySureness: 1,
