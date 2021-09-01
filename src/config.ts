@@ -13,6 +13,7 @@ export default {
     'madam',
     'maam',
     "ma'am",
+    "kid",
   ],
   alexWhitelist: {
     profanitySureness: 1,
