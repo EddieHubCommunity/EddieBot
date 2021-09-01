@@ -42,6 +42,7 @@ export default {
       'superman-superwoman',
       'simple',
       'just',
+      'fellow',
     ],
   },
 
