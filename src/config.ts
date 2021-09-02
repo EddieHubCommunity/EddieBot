@@ -4,6 +4,7 @@ export default {
   preventWords: [
     'guyz',
     'guyzz',
+    "dude",
     'bruh',
     'duude',
     'women',
