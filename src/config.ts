@@ -14,6 +14,7 @@ export default {
     'madam',
     'maam',
     "ma'am",
+    'yessir',
   ],
   alexWhitelist: {
     profanitySureness: 1,
