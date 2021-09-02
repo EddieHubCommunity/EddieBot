@@ -1,3 +1,12 @@
+## [0.15.6](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.5...v0.15.6) (2021-09-02)
+
+
+### Bug Fixes
+
+* flay sir alternative ([33acd0e](https://github.com/EddieHubCommunity/EddieBot/commit/33acd0ea8149069b563d3c152a21eb2ee74d1d76))
+
+
+
 ## [0.15.5](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.4...v0.15.5) (2021-09-01)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * allow word just ([#613](https://github.com/EddieHubCommunity/EddieBot/issues/613)) ([1951c8d](https://github.com/EddieHubCommunity/EddieBot/commit/1951c8d6857025a6f5c5c62f89b54cd82c776ff8))
-
-
-
-## [0.15.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.0...v0.15.1) (2021-08-26)
-
-
-### Bug Fixes
-
-* remove words from allow list ([5c40e91](https://github.com/EddieHubCommunity/EddieBot/commit/5c40e91d0cc484f66ac807a59e8da94d813bda27))
 
 
 
