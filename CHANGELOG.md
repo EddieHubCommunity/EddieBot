@@ -1,3 +1,12 @@
+## [0.15.7](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.6...v0.15.7) (2021-09-02)
+
+
+### Bug Fixes
+
+* yessir blocked word ([#629](https://github.com/EddieHubCommunity/EddieBot/issues/629)) ([26dd050](https://github.com/EddieHubCommunity/EddieBot/commit/26dd050df8bb8c819a09b28f4e9274aed0318e6d))
+
+
+
 ## [0.15.6](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.5...v0.15.6) (2021-09-02)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * allow word simple ([#614](https://github.com/EddieHubCommunity/EddieBot/issues/614)) ([90bd7b4](https://github.com/EddieHubCommunity/EddieBot/commit/90bd7b4ec3668ebfb95902b49be355d0e7c11bbf))
-
-
-
-## [0.15.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.1...v0.15.2) (2021-08-28)
-
-
-### Bug Fixes
-
-* allow word just ([#613](https://github.com/EddieHubCommunity/EddieBot/issues/613)) ([1951c8d](https://github.com/EddieHubCommunity/EddieBot/commit/1951c8d6857025a6f5c5c62f89b54cd82c776ff8))
 
 
 
