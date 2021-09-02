@@ -8,6 +8,7 @@ export default {
     'duude',
     'women',
     'sir',
+    'sirr',
     'man',
     'fellas',
     'madam',
