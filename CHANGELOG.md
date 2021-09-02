@@ -1,3 +1,12 @@
+## [0.15.8](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.7...v0.15.8) (2021-09-02)
+
+
+### Bug Fixes
+
+* block word chad ([#630](https://github.com/EddieHubCommunity/EddieBot/issues/630)) ([ad22836](https://github.com/EddieHubCommunity/EddieBot/commit/ad2283628711e19e487e1e89830c490926a59ef6))
+
+
+
 ## [0.15.7](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.6...v0.15.7) (2021-09-02)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * fellas to banned words ([#617](https://github.com/EddieHubCommunity/EddieBot/issues/617)) ([63b33e0](https://github.com/EddieHubCommunity/EddieBot/commit/63b33e0ecd962174ddfebc5e44a5c4987e1c27e1))
-
-
-
-## [0.15.3](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.2...v0.15.3) (2021-08-28)
-
-
-### Bug Fixes
-
-* allow word simple ([#614](https://github.com/EddieHubCommunity/EddieBot/issues/614)) ([90bd7b4](https://github.com/EddieHubCommunity/EddieBot/commit/90bd7b4ec3668ebfb95902b49be355d0e7c11bbf))
 
 
 

@@ -1,6 +1,6 @@
 {
   "name": "eddiehub",
-  "version": "0.15.7",
+  "version": "0.15.8",
   "description": "Discord bot built using NestJS",
   "author": "",
   "private": true,
