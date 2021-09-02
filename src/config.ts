@@ -1,7 +1,7 @@
 import { MessageEmbed } from 'discord.js';
 
 export default {
-  preventWords: [
+  preventWords: [  /*words that should be prevented by the bot*/
     'guyz',
     'guyzz',
     'bruh',
@@ -21,7 +21,7 @@ export default {
     "harsh",
     "shit",
   ],
-  alexWhitelist: {
+  alexWhitelist: {  /*it is the config for the AlexJS library, that ignores certain words or groups of words*/
     profanitySureness: 1,
     noBinary: true,
     allow: [
@@ -31,6 +31,7 @@ export default {
       'dad-mom',
       'daft',
       'fellow',
+      'fellowship',
       'gimp',
       'hero-heroine',
       'host-hostess',
