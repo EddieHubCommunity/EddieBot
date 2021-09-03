@@ -1,6 +1,7 @@
 import { MessageEmbed } from 'discord.js';
 
 export default {
+  // words we block in addition to AlexJS
   preventWords: [
     'guyz',
     'guyzz',
@@ -17,9 +18,12 @@ export default {
     'yessir',
     'chad',
   ],
+  // words we allow even if AlexJS blocks (words are sometimes grouped by we want to be more granular)
+  allowedWords: ['fellow'],
   alexWhitelist: {
     profanitySureness: 1,
     noBinary: true,
+    // AlexJS to ignore these grouped words https://github.com/retextjs/retext-equality/blob/main/rules.md
     allow: [
       'add',
       'basically',
