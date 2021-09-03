@@ -1,3 +1,12 @@
+# [0.16.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.9...v0.16.0) (2021-09-03)
+
+
+### Features
+
+* granula AlexJS ignore ([#627](https://github.com/EddieHubCommunity/EddieBot/issues/627)) ([c8032bd](https://github.com/EddieHubCommunity/EddieBot/commit/c8032bd137e4166ff701690736f1814c0fdea088))
+
+
+
 ## [0.15.9](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.8...v0.15.9) (2021-09-03)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * flay sir alternative ([33acd0e](https://github.com/EddieHubCommunity/EddieBot/commit/33acd0ea8149069b563d3c152a21eb2ee74d1d76))
-
-
-
-## [0.15.5](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.4...v0.15.5) (2021-09-01)
-
-
-### Bug Fixes
-
-* versions of 'mam' to banned words ([#607](https://github.com/EddieHubCommunity/EddieBot/issues/607)) ([41eb7f7](https://github.com/EddieHubCommunity/EddieBot/commit/41eb7f7bf52f13e829bbe48017f8e647ab9963f2))
 
 
 
