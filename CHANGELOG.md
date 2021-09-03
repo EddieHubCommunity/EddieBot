@@ -1,3 +1,12 @@
+## [0.16.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.16.0...v0.16.1) (2021-09-03)
+
+
+### Bug Fixes
+
+* simp to block list ([#635](https://github.com/EddieHubCommunity/EddieBot/issues/635)) ([4f4c570](https://github.com/EddieHubCommunity/EddieBot/commit/4f4c570b815bd469d116d5c851da55ae00185351))
+
+
+
 # [0.16.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.9...v0.16.0) (2021-09-03)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * yessir blocked word ([#629](https://github.com/EddieHubCommunity/EddieBot/issues/629)) ([26dd050](https://github.com/EddieHubCommunity/EddieBot/commit/26dd050df8bb8c819a09b28f4e9274aed0318e6d))
-
-
-
-## [0.15.6](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.5...v0.15.6) (2021-09-02)
-
-
-### Bug Fixes
-
-* flay sir alternative ([33acd0e](https://github.com/EddieHubCommunity/EddieBot/commit/33acd0ea8149069b563d3c152a21eb2ee74d1d76))
 
 
 
