@@ -1,3 +1,12 @@
+## [0.15.9](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.8...v0.15.9) (2021-09-03)
+
+
+### Bug Fixes
+
+* slang word chad ([#633](https://github.com/EddieHubCommunity/EddieBot/issues/633)) ([668e25e](https://github.com/EddieHubCommunity/EddieBot/commit/668e25e064e9b7458ca5e16dad6293ba79865d82))
+
+
+
 ## [0.15.8](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.7...v0.15.8) (2021-09-02)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * versions of 'mam' to banned words ([#607](https://github.com/EddieHubCommunity/EddieBot/issues/607)) ([41eb7f7](https://github.com/EddieHubCommunity/EddieBot/commit/41eb7f7bf52f13e829bbe48017f8e647ab9963f2))
-
-
-
-## [0.15.4](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.3...v0.15.4) (2021-08-31)
-
-
-### Bug Fixes
-
-* fellas to banned words ([#617](https://github.com/EddieHubCommunity/EddieBot/issues/617)) ([63b33e0](https://github.com/EddieHubCommunity/EddieBot/commit/63b33e0ecd962174ddfebc5e44a5c4987e1c27e1))
 
 
 
