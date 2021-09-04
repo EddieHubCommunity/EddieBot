@@ -20,7 +20,7 @@ export default {
     'harsh',
     'shit',
   ],
-  alexWhitelist: {    /*it is the config for the AlexJS library, that ignores certain words or groups of words*/
+  alexWhitelist: {    
     profanitySureness: 1,
     noBinary: true,
     allow: [
