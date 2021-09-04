@@ -2,6 +2,8 @@ import { MessageEmbed } from 'discord.js';
 
 export default {
   // words we block in addition to AlexJS
+  // please check words are not already covered by AlexJS and the libraries it uses first
+  // http://alexjs.com
   preventWords: [
     'guyz',
     'guyzz',
