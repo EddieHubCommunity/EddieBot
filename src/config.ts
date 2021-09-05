@@ -19,7 +19,7 @@ export default {
     "ma'am",
     'yessir',
     'chad',
-    'simp',
+    'simp','simps','simping',
     'mate',
   ],
   // words we allow even if AlexJS blocks (words are sometimes grouped by we want to be more granular)
