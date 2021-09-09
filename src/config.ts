@@ -20,6 +20,7 @@ export default {
     noBinary: true,
     allow: [
       'add',
+      'ball',
       'basically',
       'clearly',
       'dad-mom',
