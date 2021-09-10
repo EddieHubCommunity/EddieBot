@@ -56,6 +56,7 @@ export default {
       'superman-superwoman',
       'simple',
       'just',
+      'god'
     ],
   },
 
