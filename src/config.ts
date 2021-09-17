@@ -41,6 +41,7 @@ export default {
       'moaning',
       'obvious',
       'of-course',
+      'prince',
       'postman-postwoman',
       'special',
       'superman-superwoman',
