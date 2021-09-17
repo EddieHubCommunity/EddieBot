@@ -21,7 +21,7 @@ export default {
     'chad',
     'simp',
     'mate',
-    'anaa'
+    'anaa',
   ],
   // words we allow even if AlexJS blocks (words are sometimes grouped by we want to be more granular)
   allowedWords: ['fellow'],
