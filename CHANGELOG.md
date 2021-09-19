@@ -1,3 +1,12 @@
+## [0.16.3](https://github.com/EddieHubCommunity/EddieBot/compare/v0.16.2...v0.16.3) (2021-09-19)
+
+
+### Bug Fixes
+
+* boys to block list ([#658](https://github.com/EddieHubCommunity/EddieBot/issues/658)) ([e8548bb](https://github.com/EddieHubCommunity/EddieBot/commit/e8548bb31805d03b445cd27e2c89ed36fb3824a8))
+
+
+
 ## [0.16.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.16.1...v0.16.2) (2021-09-04)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * slang word chad ([#633](https://github.com/EddieHubCommunity/EddieBot/issues/633)) ([668e25e](https://github.com/EddieHubCommunity/EddieBot/commit/668e25e064e9b7458ca5e16dad6293ba79865d82))
-
-
-
-## [0.15.8](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.7...v0.15.8) (2021-09-02)
-
-
-### Bug Fixes
-
-* block word chad ([#630](https://github.com/EddieHubCommunity/EddieBot/issues/630)) ([ad22836](https://github.com/EddieHubCommunity/EddieBot/commit/ad2283628711e19e487e1e89830c490926a59ef6))
 
 
 
