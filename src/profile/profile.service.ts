@@ -5,6 +5,10 @@ import { TokenCacheService } from '../token/token-cache.service';
 export class ProfileService {
     constructor(private readonly http: HttpService, private readonly tokenCache: TokenCacheService) { }
     public checkExistingUser(userid: string) { 
-        
+
     }
+
+    public createUser(){}
+
+    public updateUser(){}
 }
