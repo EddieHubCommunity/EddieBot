@@ -5,6 +5,6 @@ import { ProfileService } from './profile.service';
 
 @Module({
   imports: [HttpModule, TokenModule],
-  providers: [ProfileService, ProfileHandler]
+  providers: [ProfileService, ProfileHandler],
 })
-export class ProfileModule { }
+export class ProfileModule {}
