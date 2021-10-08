@@ -10,7 +10,11 @@ describe('ProfileService', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      imports: [ConfigModule.forRoot({ isGlobal: true }), HttpModule, TokenModule],
+      imports: [
+        ConfigModule.forRoot({ isGlobal: true }),
+        HttpModule,
+        TokenModule,
+      ],
       providers: [ProfileHandler, ProfileService],
     }).compile();
 
