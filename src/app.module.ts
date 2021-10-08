@@ -7,6 +7,7 @@ import { AlexModule } from './alexjs/alex.module';
 import { VersionModule } from './version/version.module';
 import { CheckImageModule } from './check-image/check-image.module';
 import { TokenModule } from './token/token.module';
+import { ProfileModule } from './profile/profile.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { TokenModule } from './token/token.module';
     VersionModule,
     CheckImageModule,
     TokenModule,
+    ProfileModule,
   ],
   providers: [AppService, DiscordConfigService],
 })
