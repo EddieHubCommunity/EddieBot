@@ -1,3 +1,12 @@
+## [0.17.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.0...v0.17.1) (2021-10-09)
+
+
+### Bug Fixes
+
+* block word 'simping'  ([#648](https://github.com/EddieHubCommunity/EddieBot/issues/648)) ([f39d176](https://github.com/EddieHubCommunity/EddieBot/commit/f39d176de08387ccc7ca58c6997e726fffc60b5f)), closes [#647](https://github.com/EddieHubCommunity/EddieBot/issues/647)
+
+
+
 # [0.17.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.16.3...v0.17.0) (2021-10-08)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * simp to block list ([#635](https://github.com/EddieHubCommunity/EddieBot/issues/635)) ([4f4c570](https://github.com/EddieHubCommunity/EddieBot/commit/4f4c570b815bd469d116d5c851da55ae00185351))
-
-
-
-# [0.16.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.9...v0.16.0) (2021-09-03)
-
-
-### Features
-
-* granula AlexJS ignore ([#627](https://github.com/EddieHubCommunity/EddieBot/issues/627)) ([c8032bd](https://github.com/EddieHubCommunity/EddieBot/commit/c8032bd137e4166ff701690736f1814c0fdea088))
 
 
 
