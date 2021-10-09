@@ -1,3 +1,12 @@
+# [0.17.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.16.3...v0.17.0) (2021-10-08)
+
+
+### Features
+
+* dork to block list([#659](https://github.com/EddieHubCommunity/EddieBot/issues/659))  ([b2499af](https://github.com/EddieHubCommunity/EddieBot/commit/b2499af839df5c853742114833ecef2c434b930c))
+
+
+
 ## [0.16.3](https://github.com/EddieHubCommunity/EddieBot/compare/v0.16.2...v0.16.3) (2021-09-19)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * granula AlexJS ignore ([#627](https://github.com/EddieHubCommunity/EddieBot/issues/627)) ([c8032bd](https://github.com/EddieHubCommunity/EddieBot/commit/c8032bd137e4166ff701690736f1814c0fdea088))
-
-
-
-## [0.15.9](https://github.com/EddieHubCommunity/EddieBot/compare/v0.15.8...v0.15.9) (2021-09-03)
-
-
-### Bug Fixes
-
-* slang word chad ([#633](https://github.com/EddieHubCommunity/EddieBot/issues/633)) ([668e25e](https://github.com/EddieHubCommunity/EddieBot/commit/668e25e064e9b7458ca5e16dad6293ba79865d82))
 
 
 
