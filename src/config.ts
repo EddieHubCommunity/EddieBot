@@ -21,6 +21,8 @@ export default {
     'yessir',
     'chad',
     'simp',
+    'simps',
+    'simping',
     'mate',
     'dork',
   ],
