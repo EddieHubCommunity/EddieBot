@@ -1,3 +1,12 @@
+## [0.17.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.1...v0.17.2) (2021-10-10)
+
+
+### Bug Fixes
+
+* block sis ([#661](https://github.com/EddieHubCommunity/EddieBot/issues/661)) ([605bb37](https://github.com/EddieHubCommunity/EddieBot/commit/605bb372a015c1784b2c75b9d764385116626a32))
+
+
+
 ## [0.17.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.0...v0.17.1) (2021-10-09)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * mate word not allowed ([280d8c5](https://github.com/EddieHubCommunity/EddieBot/commit/280d8c5c5c92f096cddd1173d35aa70815987314))
-
-
-
-## [0.16.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.16.0...v0.16.1) (2021-09-03)
-
-
-### Bug Fixes
-
-* simp to block list ([#635](https://github.com/EddieHubCommunity/EddieBot/issues/635)) ([4f4c570](https://github.com/EddieHubCommunity/EddieBot/commit/4f4c570b815bd469d116d5c851da55ae00185351))
 
 
 
