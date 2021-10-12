@@ -1,3 +1,12 @@
+## [0.17.4](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.3...v0.17.4) (2021-10-12)
+
+
+### Bug Fixes
+
+* remove unneeded extra line ([#611](https://github.com/EddieHubCommunity/EddieBot/issues/611)) ([b451687](https://github.com/EddieHubCommunity/EddieBot/commit/b451687507d89ebb0779f2fa87b1bfc063d605f2))
+
+
+
 ## [0.17.3](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.2...v0.17.3) (2021-10-12)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * dork to block list([#659](https://github.com/EddieHubCommunity/EddieBot/issues/659))  ([b2499af](https://github.com/EddieHubCommunity/EddieBot/commit/b2499af839df5c853742114833ecef2c434b930c))
-
-
-
-## [0.16.3](https://github.com/EddieHubCommunity/EddieBot/compare/v0.16.2...v0.16.3) (2021-09-19)
-
-
-### Bug Fixes
-
-* boys to block list ([#658](https://github.com/EddieHubCommunity/EddieBot/issues/658)) ([e8548bb](https://github.com/EddieHubCommunity/EddieBot/commit/e8548bb31805d03b445cd27e2c89ed36fb3824a8))
 
 
 
