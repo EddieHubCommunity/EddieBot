@@ -1,3 +1,12 @@
+## [0.17.3](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.2...v0.17.3) (2021-10-12)
+
+
+### Bug Fixes
+
+* block words ([#631](https://github.com/EddieHubCommunity/EddieBot/issues/631)) ([0b9a353](https://github.com/EddieHubCommunity/EddieBot/commit/0b9a3534766ccb8e8d3b6273b275527ea1a88b9d))
+
+
+
 ## [0.17.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.1...v0.17.2) (2021-10-10)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * boys to block list ([#658](https://github.com/EddieHubCommunity/EddieBot/issues/658)) ([e8548bb](https://github.com/EddieHubCommunity/EddieBot/commit/e8548bb31805d03b445cd27e2c89ed36fb3824a8))
-
-
-
-## [0.16.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.16.1...v0.16.2) (2021-09-04)
-
-
-### Bug Fixes
-
-* mate word not allowed ([280d8c5](https://github.com/EddieHubCommunity/EddieBot/commit/280d8c5c5c92f096cddd1173d35aa70815987314))
 
 
 
