@@ -24,16 +24,15 @@ API_TOKEN=
 
 ## Installation
 
-**1.** Start by making a fork the [**EddieBot**](https://github.com/EddieHubCommunity/EddieBot) repository. Click on the <a href="https://github.com/EddieHubCommunity/EddieBot"><img src="https://img.icons8.com/ios/24/32CD32/code-fork.png"></a> symbol at the top right corner.
+**1.** Start by making a fork of the repository. Click on the "Fork" symbol at the top right corner.
 
 **2.** Clone your new fork of the repository:
 
-### SSH  [Github Docs](https://docs.github.com/en/github/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github)
+### SSH  [Github Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
 
 ```bash
 $ git clone git@github.com:EddieHubCommunity/EddieBot.git
 ```
-
 
 ### GitHub CLI
 
