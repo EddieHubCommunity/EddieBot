@@ -4,6 +4,7 @@ export default {
   preventWords: [  /*words that should be prevented by the bot*/
     'guyz',
     'guyzz',
+    'boys',
     'bruh',
     'duude',
     'women',
@@ -13,16 +14,11 @@ export default {
     'fellas',
     'madam',
     'maam',
-    'abuse',
-    'abusing',
-    'mad',
-    'get lost',
-    'harsh',
-    'shit',
   ],
   alexWhitelist: {    
     profanitySureness: 1,
     noBinary: true,
+    // AlexJS to ignore these grouped words https://github.com/retextjs/retext-equality/blob/main/rules.md
     allow: [
       'add',
       'basically',
@@ -51,6 +47,8 @@ export default {
       'superman-superwoman',
       'simple',
       'just',
+      'nephew-niece',
+      'nephews-nieces',
     ],
   },
 

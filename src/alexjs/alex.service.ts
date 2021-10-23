@@ -23,7 +23,10 @@ export class AlexService {
       .messages;
 
     const notifications: MessageEmbed[] = [];
-    if (alexMatch.length) {
+    if (
+      alexMatch.length &&
+      !config.allowedWords.includes(alexMatch[0].actual as string)
+    ) {
       const embed = defaultEmbed(config.colors.alerts)
         .setTitle(`You used the word "${alexMatch[0].actual}"`)
         .setDescription(
