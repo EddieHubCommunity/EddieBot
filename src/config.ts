@@ -62,6 +62,8 @@ export default {
       'superman-superwoman',
       'simple',
       'just',
+      'nephew-niece',
+      'nephews-nieces',
     ],
   },
 
