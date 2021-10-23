@@ -1,3 +1,12 @@
+## [0.17.5](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.4...v0.17.5) (2021-10-23)
+
+
+### Bug Fixes
+
+* nephew niece to allow words ([#668](https://github.com/EddieHubCommunity/EddieBot/issues/668)) ([c14e8c3](https://github.com/EddieHubCommunity/EddieBot/commit/c14e8c3c3d2a0e268c526696ef5b3f28ec4124ac))
+
+
+
 ## [0.17.4](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.3...v0.17.4) (2021-10-12)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * block word 'simping'  ([#648](https://github.com/EddieHubCommunity/EddieBot/issues/648)) ([f39d176](https://github.com/EddieHubCommunity/EddieBot/commit/f39d176de08387ccc7ca58c6997e726fffc60b5f)), closes [#647](https://github.com/EddieHubCommunity/EddieBot/issues/647)
-
-
-
-# [0.17.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.16.3...v0.17.0) (2021-10-08)
-
-
-### Features
-
-* dork to block list([#659](https://github.com/EddieHubCommunity/EddieBot/issues/659))  ([b2499af](https://github.com/EddieHubCommunity/EddieBot/commit/b2499af839df5c853742114833ecef2c434b930c))
 
 
 
