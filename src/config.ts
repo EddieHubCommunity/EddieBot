@@ -63,7 +63,7 @@ export default {
       'simple',
       'just',
       'nephew-niece',
-      'nephews-nieces'
+      'nephews-nieces',
     ],
   },
 
