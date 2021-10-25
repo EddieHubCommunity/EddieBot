@@ -1,4 +1,4 @@
-import { MessageEmbed } from 'discord.js';
+import { ColorResolvable, MessageEmbed } from 'discord.js';
 
 export default {
   // words we block in addition to AlexJS
@@ -69,7 +69,7 @@ export default {
 
   defaultEmbed: (color = '#0099ff') => {
     return new MessageEmbed()
-      .setColor(color)
+      .setColor(color as ColorResolvable)
       .setFooter(
         'Our bot is Open Source, you can find it here https://github.com/EddieHubCommunity/EddieBot',
       );

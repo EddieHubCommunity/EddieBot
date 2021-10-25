@@ -1,4 +1,5 @@
-import { HttpService, Injectable, Logger } from '@nestjs/common';
+import { HttpService } from '@nestjs/axios';
+import { Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { of } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -10,7 +11,7 @@ export class VersionService {
   constructor(
     private httpService: HttpService,
     private configService: ConfigService,
-  ) {}
+  ) { }
 
   getApi() {
     try {

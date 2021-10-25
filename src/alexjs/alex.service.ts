@@ -25,10 +25,10 @@ export class AlexService {
     const notifications: MessageEmbed[] = [];
     if (
       alexMatch.length &&
-      !config.allowedWords.includes(alexMatch[0].actual as string)
+      !config.allowedWords.includes(alexMatch[0].message as string)
     ) {
       const embed = defaultEmbed(config.colors.alerts)
-        .setTitle(`You used the word "${alexMatch[0].actual}"`)
+        .setTitle(`You used the word "${alexMatch[0].message}"`)
         .setDescription(
           'This might not be inclusive or welcoming language. Please update / edit your message with the following suggestions instead:',
         )

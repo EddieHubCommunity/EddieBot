@@ -1,4 +1,5 @@
-import { CACHE_MANAGER, HttpService, Inject, Injectable } from '@nestjs/common';
+import { HttpService } from '@nestjs/axios';
+import { CACHE_MANAGER, Inject, Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { Cache } from 'cache-manager';
 import { TokenResponse } from './interfaces/token.interface';
@@ -10,7 +11,7 @@ export class TokenCacheService {
     private readonly http: HttpService,
     private readonly config: ConfigService,
     @Inject(CACHE_MANAGER) private cacheManager: Cache,
-  ) {}
+  ) { }
   public async getNewToken(
     serverId: string,
     scopes: string[],

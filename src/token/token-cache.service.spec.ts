@@ -1,4 +1,5 @@
-import { CacheModule, HttpModule } from '@nestjs/common';
+import { HttpModule } from '@nestjs/axios';
+import { CacheModule } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { Test, TestingModule } from '@nestjs/testing';
 import { TokenCacheService } from './token-cache.service';

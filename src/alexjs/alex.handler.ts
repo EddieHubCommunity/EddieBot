@@ -1,7 +1,8 @@
+import { On } from '@discord-nestjs/core';
 import { Injectable } from '@nestjs/common';
-import { On } from 'discord-nestjs';
 import { Message } from 'discord.js';
 import { AlexService } from './alex.service';
+
 
 interface Notifications {
   messageId: string;
@@ -13,9 +14,9 @@ interface Notifications {
 export class AlexHandler {
   private savedNotifications: Notifications[] = [];
 
-  constructor(private readonly alexService: AlexService) {}
+  constructor(private readonly alexService: AlexService) { }
 
-  @On({ event: 'message' })
+  @On('messageCreate')
   async onMessage(message: Message) {
     if (message.author.bot) {
       return;
@@ -24,7 +25,7 @@ export class AlexHandler {
     const notifications = this.alexService.check(message);
 
     if (notifications.length) {
-      const sent = await message.channel.send(notifications[0]);
+      const sent = await message.channel.send({ embeds: [notifications[0]] });
       this.savedNotifications.push({
         messageId: message.id,
         channelId: message.channel.id,
@@ -35,7 +36,7 @@ export class AlexHandler {
     return;
   }
 
-  @On({ event: 'messageUpdate' })
+  @On('messageUpdate')
   async onMessageUpdate(oldMessage: Message, newMessage: Message) {
     if (newMessage.author.bot) {
       return;
@@ -52,7 +53,7 @@ export class AlexHandler {
 
     // when edit results in new notification, but not old
     if (!targetNotification && notifications.length) {
-      const sent = await newMessage.channel.send(notifications[0]);
+      const sent = await newMessage.channel.send({ embeds: [notifications[0]] });
       this.savedNotifications.push({
         messageId: newMessage.id,
         channelId: newMessage.channel.id,
@@ -89,7 +90,7 @@ export class AlexHandler {
         targetNotification.notificationId,
       );
       if (notificationMessage) {
-        await notificationMessage.edit(notifications[0]);
+        await notificationMessage.edit({ embeds: [notifications[0]] });
         return;
       }
     }
@@ -98,7 +99,7 @@ export class AlexHandler {
     return;
   }
 
-  @On({ event: 'messageDelete' })
+  @On('messageDelete')
   async onMessageDelete(deletedMessage: Message) {
     const deletedNotification = this.savedNotifications.find(
       (message: Notifications) =>
