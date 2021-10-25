@@ -3,7 +3,7 @@ import { VersionService } from './version.service';
 
 @Injectable()
 export class VersionHandler {
-  constructor(private versionService: VersionService) { }
+  constructor(private versionService: VersionService) {}
 
   // @OnCommand({ name: 'version' })
   // async bot(@Context() [context]: [Message]): Promise<void> {

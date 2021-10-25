@@ -3,7 +3,7 @@ import { TokenService } from './token.service';
 
 @Injectable()
 export class TokenHandler {
-  constructor(private readonly tokenService: TokenService) { }
+  constructor(private readonly tokenService: TokenService) {}
 
   // @OnCommand({ name: 'token' })
   // async createToken(message: Message) {
