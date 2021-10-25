@@ -11,7 +11,7 @@ export class VersionService {
   constructor(
     private httpService: HttpService,
     private configService: ConfigService,
-  ) { }
+  ) {}
 
   getApi() {
     try {

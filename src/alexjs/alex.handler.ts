@@ -3,7 +3,6 @@ import { Injectable } from '@nestjs/common';
 import { Message } from 'discord.js';
 import { AlexService } from './alex.service';
 
-
 interface Notifications {
   messageId: string;
   channelId: string;
@@ -14,7 +13,7 @@ interface Notifications {
 export class AlexHandler {
   private savedNotifications: Notifications[] = [];
 
-  constructor(private readonly alexService: AlexService) { }
+  constructor(private readonly alexService: AlexService) {}
 
   @On('messageCreate')
   async onMessage(message: Message) {
@@ -53,7 +52,9 @@ export class AlexHandler {
 
     // when edit results in new notification, but not old
     if (!targetNotification && notifications.length) {
-      const sent = await newMessage.channel.send({ embeds: [notifications[0]] });
+      const sent = await newMessage.channel.send({
+        embeds: [notifications[0]],
+      });
       this.savedNotifications.push({
         messageId: newMessage.id,
         channelId: newMessage.channel.id,

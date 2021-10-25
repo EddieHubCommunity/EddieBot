@@ -21,4 +21,4 @@ import { DiscordModule } from '@discord-nestjs/core';
   ],
   providers: [AppService, DiscordConfigService],
 })
-export class AppModule { }
+export class AppModule {}

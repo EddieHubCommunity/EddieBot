@@ -1,6 +1,4 @@
 import { Injectable } from '@nestjs/common';
-// import { Context, OnCommand } from 'discord-nestjs';
-import { Message } from 'discord.js';
 import { VersionService } from './version.service';
 
 @Injectable()

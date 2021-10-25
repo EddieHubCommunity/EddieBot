@@ -19,8 +19,10 @@ export class AlexService {
     const messageText = [
       ...new Set(this.stripSpecialCharacters(message.content).split(' ')),
     ].join(' ');
-    const alexMatch = alex.markdown(messageText, alexWhitelist as alex.Config)
-      .messages;
+    const alexMatch = alex.markdown(
+      messageText,
+      alexWhitelist as alex.Config,
+    ).messages;
 
     const notifications: MessageEmbed[] = [];
     if (

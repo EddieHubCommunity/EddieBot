@@ -9,4 +9,4 @@ import { HttpModule } from '@nestjs/axios';
   providers: [TokenHandler, TokenService, TokenCacheService],
   exports: [TokenCacheService],
 })
-export class TokenModule { }
+export class TokenModule {}

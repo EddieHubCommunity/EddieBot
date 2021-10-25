@@ -11,7 +11,7 @@ export class TokenCacheService {
     private readonly http: HttpService,
     private readonly config: ConfigService,
     @Inject(CACHE_MANAGER) private cacheManager: Cache,
-  ) { }
+  ) {}
   public async getNewToken(
     serverId: string,
     scopes: string[],
