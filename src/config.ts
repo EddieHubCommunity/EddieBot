@@ -8,6 +8,7 @@ export default {
     'yessir',
     'guyz',
     'guyzz',
+    'guyss',
     'boys',
     'bruh',
     'duude',
