@@ -1,3 +1,12 @@
+## [0.17.6](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.5...v0.17.6) (2021-11-03)
+
+
+### Bug Fixes
+
+* block word people try to trick the bot ([75123fd](https://github.com/EddieHubCommunity/EddieBot/commit/75123fd6169cd80f660024a8cde1351e9d37582a))
+
+
+
 ## [0.17.5](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.4...v0.17.5) (2021-10-23)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * block sis ([#661](https://github.com/EddieHubCommunity/EddieBot/issues/661)) ([605bb37](https://github.com/EddieHubCommunity/EddieBot/commit/605bb372a015c1784b2c75b9d764385116626a32))
-
-
-
-## [0.17.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.0...v0.17.1) (2021-10-09)
-
-
-### Bug Fixes
-
-* block word 'simping'  ([#648](https://github.com/EddieHubCommunity/EddieBot/issues/648)) ([f39d176](https://github.com/EddieHubCommunity/EddieBot/commit/f39d176de08387ccc7ca58c6997e726fffc60b5f)), closes [#647](https://github.com/EddieHubCommunity/EddieBot/issues/647)
 
 
 
