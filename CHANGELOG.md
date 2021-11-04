@@ -1,3 +1,12 @@
+## [0.17.7](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.6...v0.17.7) (2021-11-04)
+
+
+### Bug Fixes
+
+* duplicate config ([#676](https://github.com/EddieHubCommunity/EddieBot/issues/676)) ([c864f59](https://github.com/EddieHubCommunity/EddieBot/commit/c864f591d0fd046b50245d64340e0d746a370e70))
+
+
+
 ## [0.17.6](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.5...v0.17.6) (2021-11-03)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * block words ([#631](https://github.com/EddieHubCommunity/EddieBot/issues/631)) ([0b9a353](https://github.com/EddieHubCommunity/EddieBot/commit/0b9a3534766ccb8e8d3b6273b275527ea1a88b9d))
-
-
-
-## [0.17.2](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.1...v0.17.2) (2021-10-10)
-
-
-### Bug Fixes
-
-* block sis ([#661](https://github.com/EddieHubCommunity/EddieBot/issues/661)) ([605bb37](https://github.com/EddieHubCommunity/EddieBot/commit/605bb372a015c1784b2c75b9d764385116626a32))
 
 
 
