@@ -1,3 +1,12 @@
+## [0.17.8](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.7...v0.17.8) (2021-11-29)
+
+
+### Bug Fixes
+
+* **preventWords:** block 'bhaiya' ([#679](https://github.com/EddieHubCommunity/EddieBot/issues/679)) ([135ed1a](https://github.com/EddieHubCommunity/EddieBot/commit/135ed1aceb797121274a39b1bbdf2e6141669366))
+
+
+
 ## [0.17.7](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.6...v0.17.7) (2021-11-04)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * remove unneeded extra line ([#611](https://github.com/EddieHubCommunity/EddieBot/issues/611)) ([b451687](https://github.com/EddieHubCommunity/EddieBot/commit/b451687507d89ebb0779f2fa87b1bfc063d605f2))
-
-
-
-## [0.17.3](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.2...v0.17.3) (2021-10-12)
-
-
-### Bug Fixes
-
-* block words ([#631](https://github.com/EddieHubCommunity/EddieBot/issues/631)) ([0b9a353](https://github.com/EddieHubCommunity/EddieBot/commit/0b9a3534766ccb8e8d3b6273b275527ea1a88b9d))
 
 
 
