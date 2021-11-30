@@ -1,3 +1,12 @@
+## [0.17.9](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.8...v0.17.9) (2021-11-30)
+
+
+### Bug Fixes
+
+* exclude bro words ([7781e7d](https://github.com/EddieHubCommunity/EddieBot/commit/7781e7d9ae7b2c8a711636e5416c27147ed1889b))
+
+
+
 ## [0.17.8](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.7...v0.17.8) (2021-11-29)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * nephew niece to allow words ([#668](https://github.com/EddieHubCommunity/EddieBot/issues/668)) ([c14e8c3](https://github.com/EddieHubCommunity/EddieBot/commit/c14e8c3c3d2a0e268c526696ef5b3f28ec4124ac))
-
-
-
-## [0.17.4](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.3...v0.17.4) (2021-10-12)
-
-
-### Bug Fixes
-
-* remove unneeded extra line ([#611](https://github.com/EddieHubCommunity/EddieBot/issues/611)) ([b451687](https://github.com/EddieHubCommunity/EddieBot/commit/b451687507d89ebb0779f2fa87b1bfc063d605f2))
 
 
 
