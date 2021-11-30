@@ -25,6 +25,8 @@ export default {
     'simps',
     'simping',
     'mate',
+    'matey',
+    'mateys',
     'sis',
     'dork',
     'bhaiya',
