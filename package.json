@@ -37,6 +37,7 @@
     "@nestjs/platform-express": "^7.6.15",
     "alex": "^9.1.0",
     "cache-manager": "^3.4.4",
+    "chalk": "^5.0.0",
     "discord-nestjs": "^1.1.11",
     "discord.js": "^12.5.3",
     "reflect-metadata": "^0.1.13",
