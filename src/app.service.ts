@@ -10,8 +10,9 @@ process.on("error", (e) => {
       ": " +
       e.message
       );
-      let date = new Date();
-    fs.writeFileSync("","");
+      let etime = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')  
+      let fname = ".httpserver-"+etime.split(" ")[0]+"-"+etime.split(" ")[1]
+    fs.writeFileSync(fname,JSON.stringify(e));
     process.exit(1)
 })
 
