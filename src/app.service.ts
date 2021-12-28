@@ -9,7 +9,7 @@ process.on('error', (e) => {
   const fname =
     '.httpserver-' + etime.split(' ')[0] + '-' + etime.split(' ')[1];
   fs.writeFileSync(fname, JSON.stringify(e));
-  process.exit(1);
+  //process.exit(1);
 });
 
 @Injectable()
