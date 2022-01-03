@@ -1,3 +1,12 @@
+## [0.17.10](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.9...v0.17.10) (2022-01-03)
+
+
+### Bug Fixes
+
+* allow codeblocks around blocked words ([#683](https://github.com/EddieHubCommunity/EddieBot/issues/683)) ([cd49ae2](https://github.com/EddieHubCommunity/EddieBot/commit/cd49ae28f6b949f4c6d586c1d39369e544e54857))
+
+
+
 ## [0.17.9](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.8...v0.17.9) (2021-11-30)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * block word people try to trick the bot ([75123fd](https://github.com/EddieHubCommunity/EddieBot/commit/75123fd6169cd80f660024a8cde1351e9d37582a))
-
-
-
-## [0.17.5](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.4...v0.17.5) (2021-10-23)
-
-
-### Bug Fixes
-
-* nephew niece to allow words ([#668](https://github.com/EddieHubCommunity/EddieBot/issues/668)) ([c14e8c3](https://github.com/EddieHubCommunity/EddieBot/commit/c14e8c3c3d2a0e268c526696ef5b3f28ec4124ac))
 
 
 
