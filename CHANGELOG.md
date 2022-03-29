@@ -1,3 +1,12 @@
+## [0.17.11](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.10...v0.17.11) (2022-03-29)
+
+
+### Bug Fixes
+
+* block variation of the word man ([0b60785](https://github.com/EddieHubCommunity/EddieBot/commit/0b607853a8ded6defaa9232e978fb158ba6bf059))
+
+
+
 ## [0.17.10](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.9...v0.17.10) (2022-01-03)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * duplicate config ([#676](https://github.com/EddieHubCommunity/EddieBot/issues/676)) ([c864f59](https://github.com/EddieHubCommunity/EddieBot/commit/c864f591d0fd046b50245d64340e0d746a370e70))
-
-
-
-## [0.17.6](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.5...v0.17.6) (2021-11-03)
-
-
-### Bug Fixes
-
-* block word people try to trick the bot ([75123fd](https://github.com/EddieHubCommunity/EddieBot/commit/75123fd6169cd80f660024a8cde1351e9d37582a))
 
 
 
