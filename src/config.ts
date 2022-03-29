@@ -15,6 +15,8 @@ export default {
     'sir',
     'sirr',
     'man',
+    'maan',
+    'mann',
     'fellas',
     'madam',
     'maam',
