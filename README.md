@@ -24,7 +24,11 @@ API_TOKEN=
 
 ## Installation
 
-### SSH
+**1.** Start by making a fork of the repository. Click on the "Fork" symbol at the top right corner.
+
+**2.** Clone your new fork of the repository:
+
+### SSH  [Github Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
 
 ```bash
 $ git clone git@github.com:EddieHubCommunity/EddieBot.git
@@ -42,11 +46,57 @@ $ gh repo clone EddieHubCommunity/EddieBot
 $ git clone https://github.com/EddieHubCommunity/EddieBot.git
 ```
 
+**3.** Set upstream command:
+```bash
+git remote add upstream https://github.com/EddieHubCommunity/EddieBot.git
+```
+
+**4.** Navigate to the new project directory:
 
 ```bash
-$ cd EddieBot
-$ npm install
+cd EddieBot
 ```
+
+**5.** Create a new branch:
+```bash
+git checkout -b YourBranchName
+```
+
+**6.** Sync your fork or local repository with the origin repository:
+- In your forked repository click on "Fetch upstream"
+- Click "Fetch and merge".
+
+### Alternatively, Git CLI way to Sync forked repository with origin repository:
+```bash
+git fetch upstream
+```
+```bash
+git merge upstream/main
+```
+
+**7.** Make your changes to the source code.
+
+**8.** Stage your changes and commit:
+
+```bash
+git add .
+```
+
+```bash
+git commit -m "<your_commit_message>"
+```
+
+**9.** Push your local commits to the remote repository:
+
+```bash
+git push origin YourBranchName
+```
+
+**10.** Create a [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)!
+
+**11.** **Congratulations!** You've made your first contribution to [**EddieBot**](https://github.com/EddieHubCommunity/EddieBot/graphs/contributors)! 🙌🏼
+
+
 ### Discord Docs
 
 - https://discord.com/developers/docs/intro#bots-and-apps
@@ -54,6 +104,8 @@ $ npm install
 ## Running the app
 
 ```bash
+$ npm install
+
 # development
 $ npm run start
 
