@@ -59,7 +59,7 @@ cd EddieBot
 
 **5.** Create a new branch:
 ```bash
-git checkout -b YourBranchName
+git checkout -b <branch-name>
 ```
 
 **6.** Sync your fork or local repository with the origin repository:
@@ -79,17 +79,17 @@ git merge upstream/main
 **8.** Stage your changes and commit:
 
 ```bash
-git add .
+git add <filename>
 ```
 
 ```bash
-git commit -m "<your_commit_message>"
+git commit -m "<your-commit-message>"
 ```
 
 **9.** Push your local commits to the remote repository:
 
 ```bash
-git push origin YourBranchName
+git push origin <branch-name>
 ```
 
 **10.** Create a [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)!
