@@ -1,3 +1,12 @@
+## [0.17.12](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.11...v0.17.12) (2022-04-26)
+
+
+### Bug Fixes
+
+* bruhh blocked ([#706](https://github.com/EddieHubCommunity/EddieBot/issues/706)) ([2d7f15b](https://github.com/EddieHubCommunity/EddieBot/commit/2d7f15bd94730be83cf84e0420cc53bf96787c32))
+
+
+
 ## [0.17.11](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.10...v0.17.11) (2022-03-29)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * **preventWords:** block 'bhaiya' ([#679](https://github.com/EddieHubCommunity/EddieBot/issues/679)) ([135ed1a](https://github.com/EddieHubCommunity/EddieBot/commit/135ed1aceb797121274a39b1bbdf2e6141669366))
-
-
-
-## [0.17.7](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.6...v0.17.7) (2021-11-04)
-
-
-### Bug Fixes
-
-* duplicate config ([#676](https://github.com/EddieHubCommunity/EddieBot/issues/676)) ([c864f59](https://github.com/EddieHubCommunity/EddieBot/commit/c864f591d0fd046b50245d64340e0d746a370e70))
 
 
 
