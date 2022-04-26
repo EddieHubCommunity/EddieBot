@@ -14,8 +14,8 @@ export default {
     'women',
     'sir',
     'sirr',
-    'bruh'
-    'bruhh'
+    'bruh',
+    'bruhh',
     'man',
     'maan',
     'mann',
