@@ -1,3 +1,12 @@
+# [0.18.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.12...v0.18.0) (2022-04-29)
+
+
+### Features
+
+* remove stale action ([#710](https://github.com/EddieHubCommunity/EddieBot/issues/710)) ([f7b89cd](https://github.com/EddieHubCommunity/EddieBot/commit/f7b89cd2061259553033ba5b439fcbb3f555528b))
+
+
+
 ## [0.17.12](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.11...v0.17.12) (2022-04-26)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * exclude bro words ([7781e7d](https://github.com/EddieHubCommunity/EddieBot/commit/7781e7d9ae7b2c8a711636e5416c27147ed1889b))
-
-
-
-## [0.17.8](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.7...v0.17.8) (2021-11-29)
-
-
-### Bug Fixes
-
-* **preventWords:** block 'bhaiya' ([#679](https://github.com/EddieHubCommunity/EddieBot/issues/679)) ([135ed1a](https://github.com/EddieHubCommunity/EddieBot/commit/135ed1aceb797121274a39b1bbdf2e6141669366))
 
 
 
