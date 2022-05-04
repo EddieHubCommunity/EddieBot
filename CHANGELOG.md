@@ -1,3 +1,12 @@
+## [0.18.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.18.0...v0.18.1) (2022-05-04)
+
+
+### Bug Fixes
+
+* removed duplicate config ([#711](https://github.com/EddieHubCommunity/EddieBot/issues/711)) ([ae01c3f](https://github.com/EddieHubCommunity/EddieBot/commit/ae01c3f8803814cdca0b74881c1237b70281f7ac))
+
+
+
 # [0.18.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.12...v0.18.0) (2022-04-29)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * allow codeblocks around blocked words ([#683](https://github.com/EddieHubCommunity/EddieBot/issues/683)) ([cd49ae2](https://github.com/EddieHubCommunity/EddieBot/commit/cd49ae28f6b949f4c6d586c1d39369e544e54857))
-
-
-
-## [0.17.9](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.8...v0.17.9) (2021-11-30)
-
-
-### Bug Fixes
-
-* exclude bro words ([7781e7d](https://github.com/EddieHubCommunity/EddieBot/commit/7781e7d9ae7b2c8a711636e5416c27147ed1889b))
 
 
 
