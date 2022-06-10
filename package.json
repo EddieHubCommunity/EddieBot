@@ -15,7 +15,7 @@
   "homepage": "https://github.com/EddieHubCommunity/EddieBot#readme",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nest build",
+    "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "node -r dotenv/config prod/main.js",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
@@ -25,6 +25,7 @@
   "dependencies": {
     "alex": "^10.0.0",
     "discord.js": "^13.8.0",
+    "dotenv": "^16.0.1",
     "mongoose": "^6.3.6",
     "rimraf": "^3.0.2",
     "winston": "^3.7.2"

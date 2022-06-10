@@ -4,7 +4,7 @@ import { errorHandler } from '../utils/errorHandler';
 
 export const connectDb = async (bot: ExtendedClient) => {
   try {
-    await connect(process.env.MONGO_URI || 'no uri found');
+    await connect(bot.config.dbUri);
   } catch (err) {
     await errorHandler(bot, err, 'database connection');
   }
