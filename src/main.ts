@@ -1,5 +1,6 @@
 import { Client } from 'discord.js';
 import { IntentOptions } from './config/IntentOptions';
+import { connectDb } from './database/connectDb';
 import { handleEvents } from './events/_handleEvents';
 import { ExtendedClient } from './interfaces/ExtendedClient';
 
@@ -8,6 +9,8 @@ import { ExtendedClient } from './interfaces/ExtendedClient';
   bot.cache = {};
 
   handleEvents(bot);
+
+  await connectDb();
 
   await bot.login(process.env.DISCORD_TOKEN);
 })();
