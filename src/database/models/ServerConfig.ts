@@ -2,8 +2,11 @@ import { Document, model, Schema } from 'mongoose';
 
 export interface ServerConfig extends Document {
   serverId: string;
-  allow: string[];
-  deny: string[];
+  alexConfig: {
+    allow: string[];
+    profanitySureness: 0 | 1 | 2;
+    noBinary: boolean;
+  };
 }
 
 const ServerConfigSchema = new Schema({
@@ -12,11 +15,12 @@ const ServerConfigSchema = new Schema({
     required: true,
     unique: true,
   },
-  allow: {
-    type: Array,
-  },
-  deny: {
-    type: Array,
+  alexConfig: {
+    type: {
+      allow: Array,
+      profanitySureness: Number,
+      noBinary: Boolean,
+    },
   },
 });
 
