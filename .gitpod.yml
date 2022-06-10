@@ -1,11 +1,9 @@
 tasks:
   - name: Eddiebot
-    openMode: split-left
     init: |
       npm install
       npm run build
   - name: Mongo
-    openMode: split-right
     command: mkdir -p /workspace/data && mongod --dbpath /workspace/data
 
 image:
