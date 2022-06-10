@@ -15,7 +15,7 @@
   "homepage": "https://github.com/EddieHubCommunity/EddieBot#readme",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nest build",
+    "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "node -r dotenv/config prod/main.js",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
@@ -23,9 +23,14 @@
     "prepare": "if test \"$HUSKY\" != \"0\" ; then husky install ; fi"
   },
   "dependencies": {
-    "alex": "^9.1.0",
+    "@discordjs/builders": "^0.15.0",
+    "@discordjs/rest": "^0.5.0",
+    "alex": "^9.1.1",
     "discord.js": "^13.8.0",
-    "rimraf": "^3.0.2"
+    "dotenv": "^16.0.1",
+    "mongoose": "^6.3.6",
+    "rimraf": "^3.0.2",
+    "winston": "^3.7.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
