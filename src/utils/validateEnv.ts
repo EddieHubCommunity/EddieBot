@@ -6,7 +6,8 @@ export const validateEnv = (bot: ExtendedClient) => {
   if (
     !process.env.DISCORD_TOKEN ||
     !process.env.EDDIEBOT_MONGO_CONNECTION_STRING ||
-    !process.env.DEBUG_HOOK
+    !process.env.DEBUG_HOOK ||
+    !process.env.HOME_GUILD
   ) {
     logHandler.log('error', 'Missing environment variables!');
     process.exit(1);
@@ -18,5 +19,6 @@ export const validateEnv = (bot: ExtendedClient) => {
     debugHook: new WebhookClient({
       url: process.env.DEBUG_HOOK,
     }),
+    homeGuild: process.env.HOME_GUILD,
   };
 };
