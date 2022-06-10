@@ -1,30 +1,20 @@
 tasks:
-  - name: Stargate
-    command: docker-compose up stargate
-  - name: api
-    command: |
-      sleep 35
-      docker-compose up eddiehub-api
   - name: Eddiebot
     init: |
-      npm i -g npm
       npm install
-      gp await-port 3000
-    command: npm run start:dev
+      npm run build
+  - name: Mongo
+    command: mkdir -p /workspace/data && mongod --dbpath /workspace/data
+
+image:
+  file: .gitpod/Dockerfile
 
 github:
   prebuilds:
-    # enable for the default branch (defaults to true)
     main: true
-    # enable for all branches in this repo (defaults to false)
     branches: true
-    # enable for pull requests coming from this repo (defaults to true)
     pullRequests: true
-    # enable for pull requests coming from forks (defaults to false)
     pullRequestsFromForks: true
-    # add a check to pull requests (defaults to true)
     addCheck: true
-    # add a "Review in Gitpod" button as a comment to pull requests (defaults to false)
     addComment: false
-    # add a "Review in Gitpod" button to the pull request's description (defaults to false)
     addBadge: true
