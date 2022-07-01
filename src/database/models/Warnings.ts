@@ -2,9 +2,9 @@ import { Document, model, Schema } from 'mongoose';
 
 export interface Warnings extends Document {
   serverId: string;
-  messageId: number;
-  channelId: number;
-  notificationId: number;
+  messageId: string;
+  channelId: string;
+  notificationId: string;
 }
 
 const WarningsSchema = new Schema({
@@ -14,17 +14,17 @@ const WarningsSchema = new Schema({
     unique: true,
   },
   messageId: {
-    type: Number,
+    type: String,
     required: true,
     unique: true,
   },
   channelId: {
-    type: Number,
+    type: String,
     required: true,
     unique: true,
   },
   notificationId: {
-    type: Number,
+    type: String,
     required: true,
     unique: true,
   },
