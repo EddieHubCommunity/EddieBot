@@ -82,7 +82,7 @@ export const onUpdate = async (
         savedWarning.notificationId, // TODO: Bug
       );
       if (notificationMessage) {
-        await notificationMessage.edit({embeds: [triggeredWarnings[0]]}); // TODO: Bug
+        await notificationMessage.edit({ embeds: [triggeredWarnings[0]] }); // TODO: Bug
         return;
       }
     }
