@@ -11,7 +11,7 @@ export interface ExtendedClient extends Client {
   config: {
     token: string;
     dbUri: string;
-    debugHook: WebhookClient;
+    debugHook: WebhookClient | undefined;
     homeGuild: string;
   };
 }
