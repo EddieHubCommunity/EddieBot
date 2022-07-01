@@ -61,28 +61,29 @@ export const onUpdate = async (
         serverId: newMessage.guild.id,
         messageId: newMessage.id,
         channelId: newMessage.channel.id,
-        notificationId: sent.id,
+        warningId: sent.id,
       });
     }
 
     // when edit results in no new warning, but has existing warning, so fixed
     if (savedWarning && !triggeredWarnings.length) {
       const notificationMessage = await newMessage.channel.messages.fetch(
-        savedWarning.notificationId, // TODO: Bug
+        savedWarning.warningId,
       );
       if (notificationMessage) {
         await notificationMessage.delete();
-        return;
       }
+      savedWarning.remove();
+      return;
     }
 
     // when edit results in new warning AND has existing warning
     if (savedWarning && triggeredWarnings.length) {
       const notificationMessage = await newMessage.channel.messages.fetch(
-        savedWarning.notificationId, // TODO: Bug
+        savedWarning.warningId,
       );
       if (notificationMessage) {
-        await notificationMessage.edit({ embeds: [triggeredWarnings[0]] }); // TODO: Bug
+        await notificationMessage.edit({ embeds: [triggeredWarnings[0]] });
         return;
       }
     }

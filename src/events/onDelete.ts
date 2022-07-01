@@ -28,12 +28,13 @@ export const onDelete = async (
 
     if (savedWarning) {
       const notificationMessage = await message.channel.messages.fetch(
-        savedWarning.notificationId, // TODO: Bug
+        savedWarning.warningId,
       );
       if (notificationMessage) {
         await notificationMessage.delete();
-        return;
       }
+      savedWarning.remove();
+      return;
     }
 
     return;

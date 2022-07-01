@@ -45,7 +45,7 @@ export const onMessage = async (bot: ExtendedClient, message: Message) => {
       serverId: message.guild.id,
       messageId: message.id,
       channelId: message.channel.id,
-      notificationId: sent.id,
+      warningId: sent.id,
     });
   } catch (error) {
     await errorHandler(bot, error, 'on message');

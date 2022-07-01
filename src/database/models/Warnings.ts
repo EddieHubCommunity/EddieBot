@@ -4,26 +4,26 @@ export interface Warnings extends Document {
   serverId: string;
   messageId: string;
   channelId: string;
-  notificationId: string;
+  warningId: string;
 }
 
 const WarningsSchema = new Schema({
   serverId: {
     type: String,
     required: true,
-    unique: true,
+    unique: false,
   },
   messageId: {
     type: String,
     required: true,
-    unique: true,
+    unique: false,
   },
   channelId: {
     type: String,
     required: true,
-    unique: true,
+    unique: false,
   },
-  notificationId: {
+  warningId: {
     type: String,
     required: true,
     unique: true,
