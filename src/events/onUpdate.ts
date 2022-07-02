@@ -73,7 +73,7 @@ export const onUpdate = async (
       if (notificationMessage) {
         await notificationMessage.delete();
       }
-      savedWarning.remove();
+      await savedWarning.remove();
       return;
     }
 

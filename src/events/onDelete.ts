@@ -7,33 +7,22 @@ export const onDelete = async (
   bot: ExtendedClient,
   message: Message | PartialMessage,
 ) => {
-  if (message.partial) {
-    try {
-      message = await message.fetch();
-    } catch (error) {
-      return await errorHandler(bot, error, 'fetching partial message');
-    }
-  }
-
-  if (message.author.bot || !message.content || !message.guild) {
-    return;
-  }
-
   try {
     const savedWarning = await Warnings.findOne({
-      serverId: message.guild.id,
+      serverId: message.guildId,
       messageId: message.id,
-      channelId: message.channel.id,
+      channelId: message.channelId,
     });
 
     if (savedWarning) {
       const notificationMessage = await message.channel.messages.fetch(
         savedWarning.warningId,
       );
+
       if (notificationMessage) {
         await notificationMessage.delete();
       }
-      savedWarning.remove();
+      await savedWarning.remove();
       return;
     }
 
