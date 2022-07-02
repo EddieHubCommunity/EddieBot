@@ -5,6 +5,7 @@ import { stripSpecialCharacters } from '../alexjs/stripSpecialCharacters';
 import { ExtendedClient } from '../interfaces/ExtendedClient';
 import { errorHandler } from '../utils/errorHandler';
 import Warnings from '../database/models/Warnings';
+import Statistics from '../database/models/Statistics';
 
 export const onMessage = async (bot: ExtendedClient, message: Message) => {
   try {
@@ -47,6 +48,14 @@ export const onMessage = async (bot: ExtendedClient, message: Message) => {
       channelId: message.channel.id,
       warningId: sent.id,
     });
+
+    await Statistics.findOneAndUpdate(
+      {
+        serverId: message.guild.id,
+      },
+      { $inc: { totalTriggers: 1 } },
+      { upsert: true },
+    ).exec();
   } catch (error) {
     await errorHandler(bot, error, 'on message');
   }
