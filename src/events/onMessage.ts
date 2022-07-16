@@ -4,6 +4,7 @@ import { checkBannedWords } from '../alexjs/checkBannedWords';
 import { stripSpecialCharacters } from '../alexjs/stripSpecialCharacters';
 import { ExtendedClient } from '../interfaces/ExtendedClient';
 import { errorHandler } from '../utils/errorHandler';
+import Warnings from '../database/models/Warnings';
 
 export const onMessage = async (bot: ExtendedClient, message: Message) => {
   try {
@@ -11,12 +12,16 @@ export const onMessage = async (bot: ExtendedClient, message: Message) => {
       return;
     }
 
-    const warnings = [];
+    const triggeredWarnings = [];
     const cleaned = stripSpecialCharacters(message.content);
-    warnings.push(...(await checkContent(bot, cleaned, message.guild.id)));
-    warnings.push(...(await checkBannedWords(bot, cleaned, message.guild.id)));
+    triggeredWarnings.push(
+      ...(await checkContent(bot, cleaned, message.guild.id)),
+    );
+    triggeredWarnings.push(
+      ...(await checkBannedWords(bot, cleaned, message.guild.id)),
+    );
 
-    warnings.map((warning) =>
+    triggeredWarnings.map((warning) =>
       warning
         .setColor('#ff0000')
         .addField(
@@ -29,11 +34,19 @@ export const onMessage = async (bot: ExtendedClient, message: Message) => {
         ),
     );
 
-    if (!warnings.length) {
+    if (!triggeredWarnings.length) {
       return;
     }
 
-    await message.channel.send({ embeds: warnings.slice(0, 3) });
+    const sent = await message.channel.send({
+      embeds: triggeredWarnings.slice(0, 1),
+    });
+    await Warnings.create({
+      serverId: message.guild.id,
+      messageId: message.id,
+      channelId: message.channel.id,
+      warningId: sent.id,
+    });
   } catch (error) {
     await errorHandler(bot, error, 'on message');
   }

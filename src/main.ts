@@ -9,7 +9,10 @@ import { registerCommands } from './utils/registerCommands';
 import { validateEnv } from './utils/validateEnv';
 
 (async () => {
-  const bot = new Client({ intents: IntentOptions }) as ExtendedClient;
+  const bot = new Client({
+    intents: IntentOptions,
+    partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
+  }) as ExtendedClient;
   validateEnv(bot);
   bot.cache = {};
   bot.commands = await loadCommands(bot);
