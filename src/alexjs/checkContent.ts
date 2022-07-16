@@ -4,6 +4,7 @@ import { MessageEmbed } from 'discord.js';
 import { ExtendedClient } from '../interfaces/ExtendedClient';
 import { errorHandler } from '../utils/errorHandler';
 import { getAlexConfig } from '../utils/getAlexConfig';
+import { AlexJsOptions } from '../config/AlexJsOptions';
 
 export const checkContent = async (
   bot: ExtendedClient,
@@ -12,9 +13,12 @@ export const checkContent = async (
 ): Promise<MessageEmbed[]> => {
   try {
     const config = await getAlexConfig(bot, serverId);
-    const rawResult = alex.markdown(content, config.alexConfig).messages;
-
+    const rawResult = alex.markdown(content, {
+      ...AlexJsOptions,
+      ...config.alexConfig,
+    }).messages;
     const embeds: MessageEmbed[] = [];
+
     for (const message of rawResult) {
       const embed = new MessageEmbed();
       embed.setTitle(`You used ${message.actual}`);
