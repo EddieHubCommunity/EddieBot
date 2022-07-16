@@ -62,7 +62,7 @@ cd EddieBot
 git checkout -b <branch-name>
 ```
 
-**6.** Sync your fork or local repository with the origin repository:
+**6.** Sync your fork or a local repository with the origin repository:
 - In your forked repository click on "Fetch upstream"
 - Click "Fetch and merge".
 

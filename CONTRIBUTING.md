@@ -9,7 +9,7 @@ As a contributor, here are the guidelines we would like you to follow:
 
 ## <a name="commit"></a> Commit Message Guidelines 😎
 
-In order to make git commit messages **easier to read** and faster to reason about, we follow some guidelines on most commits to keep the **format predictable**. Check [Conventional Commits specification](https://conventionalcommits.org) for more information about our guidelines.
+To make git commit messages **easier to read** and faster to reason about, we follow some guidelines on most commits to keep the **format predictable**. Check [Conventional Commits specification](https://conventionalcommits.org) for more information about our guidelines.
 
 **Examples**:
 
@@ -17,8 +17,8 @@ In order to make git commit messages **easier to read** and faster to reason abo
 docs(changelog): update changelog to beta.5
 docs: add API documentation to the bot
 test(server): add cache tests to the movie resource
-fix(web): add validation to phone input field
-fix(web): remove avatar image from being required in form
+fix(web): add validation to the phone input field
+fix(web): remove avatar image from being required in the form
 fix(release): need to depend on latest rxjs and zone.js
 ```
 
