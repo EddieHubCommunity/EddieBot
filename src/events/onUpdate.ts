@@ -5,6 +5,7 @@ import { stripSpecialCharacters } from '../alexjs/stripSpecialCharacters';
 import { ExtendedClient } from '../interfaces/ExtendedClient';
 import { errorHandler } from '../utils/errorHandler';
 import Warnings from '../database/models/Warnings';
+import Statistics from '../database/models/Statistics';
 
 export const onUpdate = async (
   bot: ExtendedClient,
@@ -63,6 +64,14 @@ export const onUpdate = async (
         channelId: newMessage.channel.id,
         warningId: sent.id,
       });
+
+      await Statistics.findOneAndUpdate(
+        {
+          serverId: newMessage.guild.id,
+        },
+        { $inc: { totalTriggers: 1 } },
+        { upsert: true },
+      ).exec();
     }
 
     // when edit results in no new warning, but has existing warning, so fixed
@@ -74,6 +83,14 @@ export const onUpdate = async (
         await notificationMessage.delete();
       }
       await savedWarning.remove();
+
+      await Statistics.findOneAndUpdate(
+        {
+          serverId: newMessage.guild.id,
+        },
+        { $inc: { totalTriggersFixed: 1 } },
+        { upsert: true },
+      ).exec();
       return;
     }
 
@@ -86,6 +103,14 @@ export const onUpdate = async (
         await notificationMessage.edit({ embeds: [triggeredWarnings[0]] });
         return;
       }
+
+      await Statistics.findOneAndUpdate(
+        {
+          serverId: newMessage.guild.id,
+        },
+        { $inc: { totalTriggers: 1 } },
+        { upsert: true },
+      ).exec();
     }
 
     // when edit results in no new and no old

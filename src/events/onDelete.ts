@@ -2,6 +2,7 @@ import { Message, PartialMessage } from 'discord.js';
 import { ExtendedClient } from '../interfaces/ExtendedClient';
 import { errorHandler } from '../utils/errorHandler';
 import Warnings from '../database/models/Warnings';
+import Statistics from '../database/models/Statistics';
 
 export const onDelete = async (
   bot: ExtendedClient,
@@ -23,6 +24,14 @@ export const onDelete = async (
         await notificationMessage.delete();
       }
       await savedWarning.remove();
+
+      await Statistics.findOneAndUpdate(
+        {
+          serverId: message.guildId,
+        },
+        { $inc: { totalTriggersFixed: 1 } },
+        { upsert: true },
+      ).exec();
       return;
     }
 
