@@ -62,7 +62,7 @@ cd EddieBot
 git checkout -b <branch-name>
 ```
 
-**6.** Sync your fork or local repository with the origin repository:
+**6.** Sync your fork or a local repository with the origin repository:
 - In your forked repository click on "Fetch upstream"
 - Click "Fetch and merge".
 
@@ -138,3 +138,9 @@ Stuck? Have any questions or comments? Join us on [Discord](http://discord.eddie
 ## License
 
 The EddieBot is licensed under the [MIT](https://github.com/EddieHubCommunity/EddieBot/blob/main/LICENSE) license.
+
+## Thanks to all Contributors 💪 
+
+Thanks a lot for spending your time helping EddieBot grow. Thanks a lot! Keep rocking 🍻
+
+[![Contributors](https://contrib.rocks/image?repo=EddieHubCommunity/EddieBot)](https://github.com/EddieHubCommunity/EddieBot/graphs/contributors)
