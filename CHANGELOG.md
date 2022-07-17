@@ -1,3 +1,17 @@
+# [1.0.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.19.0...v1.0.0) (2022-07-17)
+
+
+### Bug Fixes
+
+* publish docker ([4f9ee25](https://github.com/EddieHubCommunity/EddieBot/commit/4f9ee2563601088d6a7c8c468820f6eae185d59b))
+
+
+### BREAKING CHANGES
+
+* multi tenancy
+
+
+
 # [0.19.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.18.1...v0.19.0) (2022-07-17)
 
 
@@ -39,15 +53,6 @@
 ### Bug Fixes
 
 * bruhh blocked ([#706](https://github.com/EddieHubCommunity/EddieBot/issues/706)) ([2d7f15b](https://github.com/EddieHubCommunity/EddieBot/commit/2d7f15bd94730be83cf84e0420cc53bf96787c32))
-
-
-
-## [0.17.11](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.10...v0.17.11) (2022-03-29)
-
-
-### Bug Fixes
-
-* block variation of the word man ([0b60785](https://github.com/EddieHubCommunity/EddieBot/commit/0b607853a8ded6defaa9232e978fb158ba6bf059))
 
 
 
