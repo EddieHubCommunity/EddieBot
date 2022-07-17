@@ -21,7 +21,7 @@ export const checkContent = async (
 
     for (const message of rawResult) {
       const embed = new MessageEmbed();
-      embed.setTitle(`You used ${message.actual}`);
+      embed.setTitle(`You used the word "${message.actual}"`);
       embed.setDescription(
         'This might not be inclusive or welcoming language. Please update / edit your message with the following suggestions instead:',
       );
