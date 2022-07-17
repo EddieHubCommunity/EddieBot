@@ -14,10 +14,18 @@ spec:
       labels:
         app: eddiebot
     spec:
+      volumes:
+        - name: mongo-crt
+          secret:
+            secretName: mongo-crt
       containers:
         - name: eddiebot
           image: ghcr.io/eddiehubcommunity/eddiebot:latest
           imagePullPolicy: Always
+          volumeMounts:
+            - mountPath: '/etc/mongo/crt'
+              name: mongo-crt
+              readOnly: true
           env:
             - name: DISCORD_TOKEN
               valueFrom:
