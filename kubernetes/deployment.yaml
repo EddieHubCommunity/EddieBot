@@ -24,18 +24,13 @@ spec:
                 secretKeyRef:
                   name: discord-token
                   key: DISCORD_TOKEN
-            - name: DISCORD_PREFIX
+            - name: EDDIEBOT_MONGO_CONNECTION_STRING
               valueFrom:
                 secretKeyRef:
-                  name: discord-prefix
-                  key: DISCORD_PREFIX
-            - name: API_URL
+                  name: eddiebot-mongo-connection-string
+                  key: EDDIEBOT_MONGO_CONNECTION_STRING
+            - name: HOME_GUILD
               valueFrom:
                 secretKeyRef:
-                  name: api-url
-                  key: API_URL
-            - name: API_TOKEN
-              valueFrom:
-                secretKeyRef:
-                  name: api-token-secret
-                  key: API_TOKEN
+                  name: home-guild
+                  key: HOME_GUILD
