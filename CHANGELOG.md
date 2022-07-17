@@ -1,3 +1,20 @@
+# [0.19.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.18.1...v0.19.0) (2022-07-17)
+
+
+### Bug Fixes
+
+* docker build ([169d30e](https://github.com/EddieHubCommunity/EddieBot/commit/169d30e3367735f11b49ff3599c5f91982b6be7e))
+
+
+### Features
+
+* custom word checker ([#729](https://github.com/EddieHubCommunity/EddieBot/issues/729)) ([#730](https://github.com/EddieHubCommunity/EddieBot/issues/730)) ([c2a0cc7](https://github.com/EddieHubCommunity/EddieBot/commit/c2a0cc73e1f4b1b587a92903ad619342d2306f83))
+* initial prototype ([#717](https://github.com/EddieHubCommunity/EddieBot/issues/717)) ([ac62b48](https://github.com/EddieHubCommunity/EddieBot/commit/ac62b485b0790fbcddbb28fe55311f6192ed3f56)), closes [#719](https://github.com/EddieHubCommunity/EddieBot/issues/719)
+* statistics ([#734](https://github.com/EddieHubCommunity/EddieBot/issues/734)) ([45b6d71](https://github.com/EddieHubCommunity/EddieBot/commit/45b6d71203a0e826ca597e2dbd7e26c37a605195)), closes [#729](https://github.com/EddieHubCommunity/EddieBot/issues/729) [#731](https://github.com/EddieHubCommunity/EddieBot/issues/731) [#731](https://github.com/EddieHubCommunity/EddieBot/issues/731) [#731](https://github.com/EddieHubCommunity/EddieBot/issues/731) [#733](https://github.com/EddieHubCommunity/EddieBot/issues/733)
+* warnings to db ([#731](https://github.com/EddieHubCommunity/EddieBot/issues/731)) ([#732](https://github.com/EddieHubCommunity/EddieBot/issues/732)) ([9fa0ac0](https://github.com/EddieHubCommunity/EddieBot/commit/9fa0ac0f6faebbe9a344ba42518c6ce93cc563d2)), closes [#729](https://github.com/EddieHubCommunity/EddieBot/issues/729)
+
+
+
 ## [0.18.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.18.0...v0.18.1) (2022-05-04)
 
 
@@ -31,15 +48,6 @@
 ### Bug Fixes
 
 * block variation of the word man ([0b60785](https://github.com/EddieHubCommunity/EddieBot/commit/0b607853a8ded6defaa9232e978fb158ba6bf059))
-
-
-
-## [0.17.10](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.9...v0.17.10) (2022-01-03)
-
-
-### Bug Fixes
-
-* allow codeblocks around blocked words ([#683](https://github.com/EddieHubCommunity/EddieBot/issues/683)) ([cd49ae2](https://github.com/EddieHubCommunity/EddieBot/commit/cd49ae28f6b949f4c6d586c1d39369e544e54857))
 
 
 
