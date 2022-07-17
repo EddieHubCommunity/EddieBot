@@ -15,7 +15,7 @@ jobs:
       - uses: actions/upload-artifact@main
         with:
           name: artifacts
-          path: dist/
+          path: prod/
 
   test:
     runs-on: ubuntu-latest
@@ -32,7 +32,7 @@ jobs:
       - uses: actions/download-artifact@main
         with:
           name: artifacts
-          path: dist
+          path: prod
       - name: npm install and test
         run: |
           npm ci

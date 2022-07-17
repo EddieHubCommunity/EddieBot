@@ -4,23 +4,18 @@ The official [EddieBot](https://github.com/EddieHubCommunity/EddieBot.git) for t
 
 ## Features
 
-- Uses a powerful [API](https://github.com/EddieHubCommunity/api.git) built by the EddieHub community.
 - Checking all people's messages for inclusive language.
 
 ## Config / Secrets environment variables
 
 Copy `.env.example` to `.env` and add your private information
 
-*Note: never commit this file, it should be ignored by Git*
+*Note: never commit this file, it is ignored by Git*
 
 ```
 DISCORD_TOKEN="<your-token>"
-DISCORD_PREFIX="!"
-API_URL=
-API_TOKEN=
+EDDIEBOT_MONGO_CONNECTION_STRING="<your-mongo-connection-string>"
 ```
-
-*Note: to perform some of the reading/writing from the DB you will need the API project `EddieHubCommunity/api`*
 
 ## Installation
 
@@ -107,26 +102,8 @@ git push origin <branch-name>
 $ npm install
 
 # development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+$ npm run build
+$ npm start
 ```
 
 ## Support

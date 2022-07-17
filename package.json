@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/EddieHubCommunity/EddieBot#readme",
   "scripts": {
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf prod",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "node -r dotenv/config prod/main.js",
