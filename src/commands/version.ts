@@ -13,7 +13,7 @@ export const version: Command = {
 
       const embed = new MessageEmbed();
       embed.setTitle('Introducing EddieBot!!!');
-      embed.setDescription(`Currently running version ${process.env.ENV}`);
+      embed.setDescription(`Currently running version ${process.env.VERSION}`);
 
       await interaction.editReply({ embeds: [embed] });
     } catch (err) {
