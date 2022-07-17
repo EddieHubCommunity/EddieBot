@@ -1,3 +1,12 @@
+## [1.0.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.0.0...v1.0.1) (2022-07-17)
+
+
+### Bug Fixes
+
+* github actions node version ([1b7ca58](https://github.com/EddieHubCommunity/EddieBot/commit/1b7ca5859e5e2d23bb0fde4f5f82a4aacc834fd4))
+
+
+
 # [1.0.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.19.0...v1.0.0) (2022-07-17)
 
 
@@ -44,15 +53,6 @@
 ### Features
 
 * remove stale action ([#710](https://github.com/EddieHubCommunity/EddieBot/issues/710)) ([f7b89cd](https://github.com/EddieHubCommunity/EddieBot/commit/f7b89cd2061259553033ba5b439fcbb3f555528b))
-
-
-
-## [0.17.12](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.11...v0.17.12) (2022-04-26)
-
-
-### Bug Fixes
-
-* bruhh blocked ([#706](https://github.com/EddieHubCommunity/EddieBot/issues/706)) ([2d7f15b](https://github.com/EddieHubCommunity/EddieBot/commit/2d7f15bd94730be83cf84e0420cc53bf96787c32))
 
 
 
