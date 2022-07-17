@@ -1,3 +1,12 @@
+## [1.0.2](https://github.com/EddieHubCommunity/EddieBot/compare/v1.0.1...v1.0.2) (2022-07-17)
+
+
+### Bug Fixes
+
+* github actions no test ([2068503](https://github.com/EddieHubCommunity/EddieBot/commit/206850334f6a0f3f9ede46b0de1fa289b6dda41e))
+
+
+
 ## [1.0.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.0.0...v1.0.1) (2022-07-17)
 
 
@@ -44,15 +53,6 @@
 ### Bug Fixes
 
 * removed duplicate config ([#711](https://github.com/EddieHubCommunity/EddieBot/issues/711)) ([ae01c3f](https://github.com/EddieHubCommunity/EddieBot/commit/ae01c3f8803814cdca0b74881c1237b70281f7ac))
-
-
-
-# [0.18.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.17.12...v0.18.0) (2022-04-29)
-
-
-### Features
-
-* remove stale action ([#710](https://github.com/EddieHubCommunity/EddieBot/issues/710)) ([f7b89cd](https://github.com/EddieHubCommunity/EddieBot/commit/f7b89cd2061259553033ba5b439fcbb3f555528b))
 
 
 
