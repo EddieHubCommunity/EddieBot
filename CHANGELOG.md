@@ -1,3 +1,12 @@
+## [1.1.2](https://github.com/EddieHubCommunity/EddieBot/compare/v1.1.1...v1.1.2) (2022-07-17)
+
+
+### Bug Fixes
+
+* improved display trigger word ([a8b9065](https://github.com/EddieHubCommunity/EddieBot/commit/a8b90657fa81f365ecec24df2e47344158c63828))
+
+
+
 ## [1.1.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.1.0...v1.1.1) (2022-07-17)
 
 
@@ -31,20 +40,6 @@
 ### Bug Fixes
 
 * github actions node version ([1b7ca58](https://github.com/EddieHubCommunity/EddieBot/commit/1b7ca5859e5e2d23bb0fde4f5f82a4aacc834fd4))
-
-
-
-# [1.0.0](https://github.com/EddieHubCommunity/EddieBot/compare/v0.19.0...v1.0.0) (2022-07-17)
-
-
-### Bug Fixes
-
-* publish docker ([4f9ee25](https://github.com/EddieHubCommunity/EddieBot/commit/4f9ee2563601088d6a7c8c468820f6eae185d59b))
-
-
-### BREAKING CHANGES
-
-* multi tenancy
 
 
 
