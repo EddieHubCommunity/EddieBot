@@ -1,3 +1,12 @@
+# [1.1.0](https://github.com/EddieHubCommunity/EddieBot/compare/v1.0.2...v1.1.0) (2022-07-17)
+
+
+### Features
+
+* version command ([d30e5c9](https://github.com/EddieHubCommunity/EddieBot/commit/d30e5c94c4eebc7f6aab59700f56cdcb703843f1))
+
+
+
 ## [1.0.2](https://github.com/EddieHubCommunity/EddieBot/compare/v1.0.1...v1.0.2) (2022-07-17)
 
 
@@ -44,15 +53,6 @@
 * initial prototype ([#717](https://github.com/EddieHubCommunity/EddieBot/issues/717)) ([ac62b48](https://github.com/EddieHubCommunity/EddieBot/commit/ac62b485b0790fbcddbb28fe55311f6192ed3f56)), closes [#719](https://github.com/EddieHubCommunity/EddieBot/issues/719)
 * statistics ([#734](https://github.com/EddieHubCommunity/EddieBot/issues/734)) ([45b6d71](https://github.com/EddieHubCommunity/EddieBot/commit/45b6d71203a0e826ca597e2dbd7e26c37a605195)), closes [#729](https://github.com/EddieHubCommunity/EddieBot/issues/729) [#731](https://github.com/EddieHubCommunity/EddieBot/issues/731) [#731](https://github.com/EddieHubCommunity/EddieBot/issues/731) [#731](https://github.com/EddieHubCommunity/EddieBot/issues/731) [#733](https://github.com/EddieHubCommunity/EddieBot/issues/733)
 * warnings to db ([#731](https://github.com/EddieHubCommunity/EddieBot/issues/731)) ([#732](https://github.com/EddieHubCommunity/EddieBot/issues/732)) ([9fa0ac0](https://github.com/EddieHubCommunity/EddieBot/commit/9fa0ac0f6faebbe9a344ba42518c6ce93cc563d2)), closes [#729](https://github.com/EddieHubCommunity/EddieBot/issues/729)
-
-
-
-## [0.18.1](https://github.com/EddieHubCommunity/EddieBot/compare/v0.18.0...v0.18.1) (2022-05-04)
-
-
-### Bug Fixes
-
-* removed duplicate config ([#711](https://github.com/EddieHubCommunity/EddieBot/issues/711)) ([ae01c3f](https://github.com/EddieHubCommunity/EddieBot/commit/ae01c3f8803814cdca0b74881c1237b70281f7ac))
 
 
 
