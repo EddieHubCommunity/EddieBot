@@ -1,4 +1,9 @@
-export const AlexJsOptions = {
+import { Config } from 'alex';
+
+export const AlexJsOptions: {
+  allowedWords: string[];
+  alexWhitelist: Config;
+} = {
   // words we allow even if AlexJS blocks (words are sometimes grouped by we want to be more granular)
   allowedWords: ['fellow'],
   alexWhitelist: {

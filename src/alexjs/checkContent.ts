@@ -14,7 +14,7 @@ export const checkContent = async (
   try {
     const config = await getAlexConfig(bot, serverId);
     const rawResult = alex.markdown(content, {
-      ...AlexJsOptions,
+      ...AlexJsOptions.alexWhitelist,
       ...config.alexConfig,
     }).messages;
     const embeds: MessageEmbed[] = [];
