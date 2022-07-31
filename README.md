@@ -29,6 +29,8 @@ EDDIEBOT_MONGO_CONNECTION_STRING="<your-mongo-connection-string>"
 $ git clone git@github.com:EddieHubCommunity/EddieBot.git
 ```
 
+*note: recommended*
+
 ### GitHub CLI
 
 ```bash
