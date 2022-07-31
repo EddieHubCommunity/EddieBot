@@ -1,6 +1,6 @@
 # EddieBot
 
-The official [EddieBot](https://github.com/EddieHubCommunity/EddieBot.git) for the official [Discord server](http://discord.eddiehub.org). Join us at [Discord](http://discord.eddiehub.org) today!
+The official **EddieBot** for the official [Discord server](http://discord.eddiehub.org). Join us at [Discord](http://discord.eddiehub.org) today!
 
 ## Features
 
