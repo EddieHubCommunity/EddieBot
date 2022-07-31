@@ -1,3 +1,12 @@
+## [1.2.3](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.2...v1.2.3) (2022-07-31)
+
+
+### Bug Fixes
+
+* docs formatting ([4d8e810](https://github.com/EddieHubCommunity/EddieBot/commit/4d8e8108f0038d4f32ad4c0746f164926038ccef))
+
+
+
 ## [1.2.2](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.1...v1.2.2) (2022-07-31)
 
 
@@ -36,15 +45,6 @@
 ### Bug Fixes
 
 * improved display trigger word ([a8b9065](https://github.com/EddieHubCommunity/EddieBot/commit/a8b90657fa81f365ecec24df2e47344158c63828))
-
-
-
-## [1.1.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.1.0...v1.1.1) (2022-07-17)
-
-
-### Bug Fixes
-
-* kubernetes mongo volume ([d7a81f3](https://github.com/EddieHubCommunity/EddieBot/commit/d7a81f33d4f45431503f2304dde2b6a8d1fb9d7f))
 
 
 
