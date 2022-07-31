@@ -1,5 +1,5 @@
 import { REST } from '@discordjs/rest';
-import { Routes } from 'discord-api-types/v9';
+import { Routes } from 'discord.js';
 import { ExtendedClient } from '../interfaces/ExtendedClient';
 import { errorHandler } from './errorHandler';
 import { logHandler } from './logHandler';
@@ -16,7 +16,7 @@ export const registerCommands = async (bot: ExtendedClient) => {
       );
       return;
     }
-    const rest = new REST({ version: '9' }).setToken(bot.config.token);
+    const rest = new REST({ version: '10' }).setToken(bot.config.token);
     const commandData = bot.commands.map((command) => command.data.toJSON());
 
     if (!commandData.length) {

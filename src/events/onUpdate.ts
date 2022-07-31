@@ -1,4 +1,4 @@
-import { Message, PartialMessage } from 'discord.js';
+import { EmbedBuilder, Message, PartialMessage } from 'discord.js';
 import { checkContent } from '../alexjs/checkContent';
 import { checkBannedWords } from '../alexjs/checkBannedWords';
 import { stripSpecialCharacters } from '../alexjs/stripSpecialCharacters';
@@ -25,7 +25,7 @@ export const onUpdate = async (
   }
 
   try {
-    const triggeredWarnings = [];
+    const triggeredWarnings: EmbedBuilder[] = [];
     const cleaned = stripSpecialCharacters(newMessage.content);
     triggeredWarnings.push(
       ...(await checkContent(bot, cleaned, newMessage.guild.id)),
@@ -35,16 +35,17 @@ export const onUpdate = async (
     );
 
     triggeredWarnings.map((warning) =>
-      warning
-        .setColor('#ff0000')
-        .addField(
-          'TIP: ',
-          'Edit your message as suggested to make this warning go away',
-        )
-        .addField(
-          'Open Source Improvements: ',
-          'EddieBot is Open Source, you can find it here https://github.com/EddieHubCommunity/EddieBot',
-        ),
+      warning.setColor('#ff0000').addFields([
+        {
+          name: 'TIP: ',
+          value: 'Edit your message as suggested to make this warning go away',
+        },
+        {
+          name: 'Open Source Improvements: ',
+          value:
+            'EddieBot is Open Source, you can find it here https://github.com/EddieHubCommunity/EddieBot',
+        },
+      ]),
     );
 
     const savedWarning = await Warnings.findOne({

@@ -1,5 +1,4 @@
-import { SlashCommandBuilder } from '@discordjs/builders';
-import { MessageEmbed } from 'discord.js';
+import { EmbedBuilder, SlashCommandBuilder } from 'discord.js';
 import { Command } from '../interfaces/Command';
 import { errorHandler } from '../utils/errorHandler';
 
@@ -11,7 +10,7 @@ export const version: Command = {
     try {
       await interaction.deferReply();
 
-      const embed = new MessageEmbed();
+      const embed = new EmbedBuilder();
       embed.setTitle('Introducing EddieBot!!!');
       embed.setDescription(`Currently running version ${process.env.VERSION}`);
 

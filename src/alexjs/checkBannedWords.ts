@@ -1,4 +1,4 @@
-import { MessageEmbed } from 'discord.js';
+import { EmbedBuilder } from 'discord.js';
 
 import { ExtendedClient } from '../interfaces/ExtendedClient';
 import { errorHandler } from '../utils/errorHandler';
@@ -9,8 +9,8 @@ export const checkBannedWords = async (
   bot: ExtendedClient,
   content: string,
   serverId: string,
-): Promise<MessageEmbed[]> => {
-  const embeds: MessageEmbed[] = [];
+): Promise<EmbedBuilder[]> => {
+  const embeds: EmbedBuilder[] = [];
   try {
     const config = await getBannedWordConfig(bot, serverId);
     const checkWords = config.bannedWordConfig
@@ -18,7 +18,7 @@ export const checkBannedWords = async (
       : BannedWordsOptions;
     content.split(' ').forEach((word) => {
       if (checkWords.includes(word.toLowerCase())) {
-        const embed = new MessageEmbed();
+        const embed = new EmbedBuilder();
         embed.setTitle(`You used the word "${word}"`);
         embed.setDescription(
           'This might not be inclusive or welcoming language',
