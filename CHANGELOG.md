@@ -1,3 +1,12 @@
+## [1.2.2](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.1...v1.2.2) (2022-07-31)
+
+
+### Bug Fixes
+
+* clone note added ([2e13cf2](https://github.com/EddieHubCommunity/EddieBot/commit/2e13cf24d25084a519c4e8b54796ce2ced95f127))
+
+
+
 ## [1.2.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.0...v1.2.1) (2022-07-18)
 
 
@@ -36,15 +45,6 @@
 ### Bug Fixes
 
 * kubernetes mongo volume ([d7a81f3](https://github.com/EddieHubCommunity/EddieBot/commit/d7a81f33d4f45431503f2304dde2b6a8d1fb9d7f))
-
-
-
-# [1.1.0](https://github.com/EddieHubCommunity/EddieBot/compare/v1.0.2...v1.1.0) (2022-07-17)
-
-
-### Features
-
-* version command ([d30e5c9](https://github.com/EddieHubCommunity/EddieBot/commit/d30e5c94c4eebc7f6aab59700f56cdcb703843f1))
 
 
 
