@@ -1,4 +1,4 @@
-import { Client } from 'discord.js';
+import { Client, Partials } from 'discord.js';
 import { IntentOptions } from './config/IntentOptions';
 import { connectDb } from './database/connectDb';
 import { handleEvents } from './events/_handleEvents';
@@ -11,7 +11,7 @@ import { validateEnv } from './utils/validateEnv';
 (async () => {
   const bot = new Client({
     intents: IntentOptions,
-    partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
+    partials: [Partials.Message, Partials.Channel, Partials.Reaction],
   }) as ExtendedClient;
   validateEnv(bot);
   bot.cache = {};
