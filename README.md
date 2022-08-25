@@ -101,7 +101,7 @@ git push origin <branch-name>
 ## Running the app
 
 ```bash
-$ npm install
+$ npm ci
 
 # development
 $ npm run build
