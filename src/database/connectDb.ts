@@ -6,7 +6,6 @@ import { errorHandler } from '../utils/errorHandler';
 export const connectDb = async (bot: ExtendedClient) => {
   // DigitalOcean Apps has cert as environment variable but Mongo needs a file path
   // Write Mongo cert file to disk
-  console.log('DB CERT ...', process.cwd());
   fs.writeFileSync('cert.pem', process.env.CA_CERT!);
 
   try {
