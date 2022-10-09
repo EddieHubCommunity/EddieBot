@@ -1,3 +1,12 @@
+## [1.2.7](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.6...v1.2.7) (2022-10-09)
+
+
+### Bug Fixes
+
+* debug mongo connection string ([f949a36](https://github.com/EddieHubCommunity/EddieBot/commit/f949a3670f7a5ada1223352d49df5222daf81f34))
+
+
+
 ## [1.2.6](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.5...v1.2.6) (2022-10-09)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * docs formatting ([4d8e810](https://github.com/EddieHubCommunity/EddieBot/commit/4d8e8108f0038d4f32ad4c0746f164926038ccef))
-
-
-
-## [1.2.2](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.1...v1.2.2) (2022-07-31)
-
-
-### Bug Fixes
-
-* clone note added ([2e13cf2](https://github.com/EddieHubCommunity/EddieBot/commit/2e13cf24d25084a519c4e8b54796ce2ced95f127))
 
 
 
