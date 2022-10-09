@@ -1,3 +1,12 @@
+## [1.2.8](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.7...v1.2.8) (2022-10-09)
+
+
+### Bug Fixes
+
+* debug mongo ssl cert ([413a13c](https://github.com/EddieHubCommunity/EddieBot/commit/413a13c4c3da5a339db8b1fea83ab52bcd43089f))
+
+
+
 ## [1.2.7](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.6...v1.2.7) (2022-10-09)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * change npm install method ([#746](https://github.com/EddieHubCommunity/EddieBot/issues/746)) ([a4f5def](https://github.com/EddieHubCommunity/EddieBot/commit/a4f5def0c98e62d2e21df39d4cbb268393920681))
-
-
-
-## [1.2.3](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.2...v1.2.3) (2022-07-31)
-
-
-### Bug Fixes
-
-* docs formatting ([4d8e810](https://github.com/EddieHubCommunity/EddieBot/commit/4d8e8108f0038d4f32ad4c0746f164926038ccef))
 
 
 
