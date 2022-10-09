@@ -1,3 +1,12 @@
+## [1.2.6](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.5...v1.2.6) (2022-10-09)
+
+
+### Bug Fixes
+
+* mongo connection string ([91662a0](https://github.com/EddieHubCommunity/EddieBot/commit/91662a0b06aaf1742f5aedcd899a05bd6d38879e))
+
+
+
 ## [1.2.5](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.4...v1.2.5) (2022-10-09)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * clone note added ([2e13cf2](https://github.com/EddieHubCommunity/EddieBot/commit/2e13cf24d25084a519c4e8b54796ce2ced95f127))
-
-
-
-## [1.2.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.0...v1.2.1) (2022-07-18)
-
-
-### Bug Fixes
-
-* pass correct config object ([#740](https://github.com/EddieHubCommunity/EddieBot/issues/740)) ([a2a47d9](https://github.com/EddieHubCommunity/EddieBot/commit/a2a47d9f9c8526a25c02c2e7ad1e465a42123a91))
 
 
 
