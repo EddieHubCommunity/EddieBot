@@ -1,3 +1,12 @@
+## [1.2.11](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.10...v1.2.11) (2022-10-09)
+
+
+### Bug Fixes
+
+* health check endpoint ([64d4604](https://github.com/EddieHubCommunity/EddieBot/commit/64d460429abeedb90b509200233623417839ef4c))
+
+
+
 ## [1.2.10](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.9...v1.2.10) (2022-10-09)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * debug mongo connection string ([f949a36](https://github.com/EddieHubCommunity/EddieBot/commit/f949a3670f7a5ada1223352d49df5222daf81f34))
-
-
-
-## [1.2.6](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.5...v1.2.6) (2022-10-09)
-
-
-### Bug Fixes
-
-* mongo connection string ([91662a0](https://github.com/EddieHubCommunity/EddieBot/commit/91662a0b06aaf1742f5aedcd899a05bd6d38879e))
 
 
 
