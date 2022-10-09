@@ -1,3 +1,12 @@
+## [1.2.5](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.4...v1.2.5) (2022-10-09)
+
+
+### Bug Fixes
+
+* mongo cert file ([f786824](https://github.com/EddieHubCommunity/EddieBot/commit/f7868249e7af04f3858b1d1d58b6ce05547934ea))
+
+
+
 ## [1.2.4](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.3...v1.2.4) (2022-08-25)
 
 
@@ -31,20 +40,6 @@
 ### Bug Fixes
 
 * pass correct config object ([#740](https://github.com/EddieHubCommunity/EddieBot/issues/740)) ([a2a47d9](https://github.com/EddieHubCommunity/EddieBot/commit/a2a47d9f9c8526a25c02c2e7ad1e465a42123a91))
-
-
-
-# [1.2.0](https://github.com/EddieHubCommunity/EddieBot/compare/v1.1.2...v1.2.0) (2022-07-17)
-
-
-### Bug Fixes
-
-* deployed version ([936447f](https://github.com/EddieHubCommunity/EddieBot/commit/936447fb032eaf45be9d17b24168165677e97fb7))
-
-
-### Features
-
-* display bot stats ([407bc55](https://github.com/EddieHubCommunity/EddieBot/commit/407bc55d936966e4b2f9b6c38ade6c39dac6f7a5))
 
 
 
