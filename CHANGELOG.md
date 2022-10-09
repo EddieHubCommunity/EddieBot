@@ -1,3 +1,12 @@
+## [1.2.10](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.9...v1.2.10) (2022-10-09)
+
+
+### Bug Fixes
+
+* remove debug code ([5ab912e](https://github.com/EddieHubCommunity/EddieBot/commit/5ab912e777ac44b093cd0075d7061f68aa2666e7))
+
+
+
 ## [1.2.9](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.8...v1.2.9) (2022-10-09)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * mongo connection string ([91662a0](https://github.com/EddieHubCommunity/EddieBot/commit/91662a0b06aaf1742f5aedcd899a05bd6d38879e))
-
-
-
-## [1.2.5](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.4...v1.2.5) (2022-10-09)
-
-
-### Bug Fixes
-
-* mongo cert file ([f786824](https://github.com/EddieHubCommunity/EddieBot/commit/f7868249e7af04f3858b1d1d58b6ce05547934ea))
 
 
 
