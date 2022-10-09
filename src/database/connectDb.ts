@@ -1,15 +1,16 @@
+import fs from 'fs';
 import { connect } from 'mongoose';
 import { ExtendedClient } from '../interfaces/ExtendedClient';
 import { errorHandler } from '../utils/errorHandler';
-import fs from 'fs';
 
 export const connectDb = async (bot: ExtendedClient) => {
   // DigitalOcean Apps has cert as environment variable but Mongo needs a file path
   // Write Mongo cert file to disk
+  console.log('DB CERT ...', process.env.CA_CERT);
   fs.writeFileSync('cert.pem', process.env.CA_CERT!);
 
   try {
-    await connect(`${bot.config.dbUri}&tlsCAFile=cert.pem`);
+    await connect(bot.config.dbUri);
   } catch (err) {
     await errorHandler(bot, err, 'database connection');
   }
