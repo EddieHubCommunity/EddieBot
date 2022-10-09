@@ -1,3 +1,12 @@
+## [1.2.9](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.8...v1.2.9) (2022-10-09)
+
+
+### Bug Fixes
+
+* debug mongo cert path ([ee55b19](https://github.com/EddieHubCommunity/EddieBot/commit/ee55b1956251ce3fad17ed2fbe7cdac9a257d32e))
+
+
+
 ## [1.2.8](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.7...v1.2.8) (2022-10-09)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * mongo cert file ([f786824](https://github.com/EddieHubCommunity/EddieBot/commit/f7868249e7af04f3858b1d1d58b6ce05547934ea))
-
-
-
-## [1.2.4](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.3...v1.2.4) (2022-08-25)
-
-
-### Bug Fixes
-
-* change npm install method ([#746](https://github.com/EddieHubCommunity/EddieBot/issues/746)) ([a4f5def](https://github.com/EddieHubCommunity/EddieBot/commit/a4f5def0c98e62d2e21df39d4cbb268393920681))
 
 
 
