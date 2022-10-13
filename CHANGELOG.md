@@ -1,3 +1,12 @@
+## [1.2.12](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.11...v1.2.12) (2022-10-13)
+
+
+### Bug Fixes
+
+* alternative ban word ([#757](https://github.com/EddieHubCommunity/EddieBot/issues/757)) ([4460dcb](https://github.com/EddieHubCommunity/EddieBot/commit/4460dcb0d259d5ddde62603f7fab770e5c2f7377))
+
+
+
 ## [1.2.11](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.10...v1.2.11) (2022-10-09)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * debug mongo ssl cert ([413a13c](https://github.com/EddieHubCommunity/EddieBot/commit/413a13c4c3da5a339db8b1fea83ab52bcd43089f))
-
-
-
-## [1.2.7](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.6...v1.2.7) (2022-10-09)
-
-
-### Bug Fixes
-
-* debug mongo connection string ([f949a36](https://github.com/EddieHubCommunity/EddieBot/commit/f949a3670f7a5ada1223352d49df5222daf81f34))
 
 
 
