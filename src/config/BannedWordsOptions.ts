@@ -2,6 +2,7 @@
 // please check words are not already covered by AlexJS and the libraries it uses first
 // http://alexjs.com
 export const BannedWordsOptions = [
+  'gys',
   'guyz',
   'guyzz',
   'guyss',
