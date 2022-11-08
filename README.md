@@ -6,6 +6,8 @@ The official **EddieBot** for the official [Discord server](http://discord.eddie
 
 - Checking all people's messages for inclusive language.
 
+![Eddie bit warning](https://user-images.githubusercontent.com/624760/200577618-af25764f-a9ce-4ce8-a1f2-f8808c682c77.png)
+
 ## Config / Secrets environment variables
 
 Copy `.env.example` to `.env` and add your private information
