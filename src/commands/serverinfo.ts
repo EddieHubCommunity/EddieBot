@@ -22,7 +22,7 @@ export const serverinfo: Command = {
         {
           name: 'Member Count:',
           value:
-            'We have Total: ${botMembers.size + userMembers.size}\nUsers: ${userMembers.size}\nBots: ${botMembers.size}`
+            'We have Total: ${botMembers.size + userMembers.size}\nUsers: ${userMembers.size}\nBots: ${botMembers.size}
             members in the community! ',
         },
         {
