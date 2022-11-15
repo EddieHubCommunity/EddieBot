@@ -5,7 +5,7 @@ export const AlexJsOptions: {
   alexWhitelist: Config;
 } = {
   // words we allow even if AlexJS blocks (words are sometimes grouped by we want to be more granular)
-  allowedWords: ['fellow'],
+  allowedWords: ['fellow', 'invalid'],
   alexWhitelist: {
     profanitySureness: 1,
     noBinary: true,
