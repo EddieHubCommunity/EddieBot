@@ -10,8 +10,8 @@ export const serverinfo: Command = {
     try {
       await interaction.deferReply();
       
-      const botMembers = await message.guild!.members.fetch().then(totalMembers => totalMembers.filter(m => m.user.bot))
-      const userMembers = await message.guild!.members.fetch().then(totalMembers => totalMembers.filter(m => !m.user.bot))
+      const botMembers = await interaction.guild!.members.fetch().then(totalMembers => totalMembers.filter(m => m.user.bot));
+      const userMembers = await interaction.guild!.members.fetch().then(totalMembers => totalMembers.filter(m => !m.user.bot));
 
       const embed = new EmbedBuilder();
       embed.setTitle('EddieHubCommunity');
