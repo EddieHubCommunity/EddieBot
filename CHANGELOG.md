@@ -1,3 +1,12 @@
+## [1.2.13](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.12...v1.2.13) (2022-11-15)
+
+
+### Bug Fixes
+
+* fella, gang banned words ([1f91f19](https://github.com/EddieHubCommunity/EddieBot/commit/1f91f198515fdf7f046e25f7ef76acd09b8c3d08))
+
+
+
 ## [1.2.12](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.11...v1.2.12) (2022-10-13)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * debug mongo cert path ([ee55b19](https://github.com/EddieHubCommunity/EddieBot/commit/ee55b1956251ce3fad17ed2fbe7cdac9a257d32e))
-
-
-
-## [1.2.8](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.7...v1.2.8) (2022-10-09)
-
-
-### Bug Fixes
-
-* debug mongo ssl cert ([413a13c](https://github.com/EddieHubCommunity/EddieBot/commit/413a13c4c3da5a339db8b1fea83ab52bcd43089f))
 
 
 
