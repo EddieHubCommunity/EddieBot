@@ -40,7 +40,7 @@ export const serverinfo: Command = {
 
       await interaction.editReply({ embeds: [embed] });
     } catch (err) {
-      await errorHandler(bot, err, 'help command');
+      await errorHandler(bot, err, 'serverinfo command');
     }
   },
 };
