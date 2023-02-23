@@ -1,3 +1,12 @@
+## [1.2.14](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.13...v1.2.14) (2023-02-23)
+
+
+### Bug Fixes
+
+* broo word banned ([110d224](https://github.com/EddieHubCommunity/EddieBot/commit/110d224f6c60db9e2e1a827c0b5787bf1bbe7273))
+
+
+
 ## [1.2.13](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.12...v1.2.13) (2022-11-15)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * remove debug code ([5ab912e](https://github.com/EddieHubCommunity/EddieBot/commit/5ab912e777ac44b093cd0075d7061f68aa2666e7))
-
-
-
-## [1.2.9](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.8...v1.2.9) (2022-10-09)
-
-
-### Bug Fixes
-
-* debug mongo cert path ([ee55b19](https://github.com/EddieHubCommunity/EddieBot/commit/ee55b1956251ce3fad17ed2fbe7cdac9a257d32e))
 
 
 
