@@ -3,6 +3,7 @@
 // http://alexjs.com
 export const BannedWordsOptions = [
   'broo',
+  'bros',
   'gys',
   'guyz',
   'guyzz',
