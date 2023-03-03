@@ -25,7 +25,6 @@ export const BannedWordsOptions = [
   'maam',
   "ma'am",
   'yessir',
-  'chad',
   'simp',
   'simps',
   'simping',
