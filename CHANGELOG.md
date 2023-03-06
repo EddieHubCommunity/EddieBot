@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.14...v1.3.0) (2023-03-06)
+
+
+### Features
+
+* dudez banned words ([#777](https://github.com/EddieHubCommunity/EddieBot/issues/777)) ([1706fe1](https://github.com/EddieHubCommunity/EddieBot/commit/1706fe17b7aced95279203b020dcf7c01ec73f58))
+
+
+
 ## [1.2.14](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.13...v1.2.14) (2023-02-23)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * health check endpoint ([64d4604](https://github.com/EddieHubCommunity/EddieBot/commit/64d460429abeedb90b509200233623417839ef4c))
-
-
-
-## [1.2.10](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.9...v1.2.10) (2022-10-09)
-
-
-### Bug Fixes
-
-* remove debug code ([5ab912e](https://github.com/EddieHubCommunity/EddieBot/commit/5ab912e777ac44b093cd0075d7061f68aa2666e7))
 
 
 
