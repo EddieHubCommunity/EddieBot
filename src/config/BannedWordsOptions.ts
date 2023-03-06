@@ -35,4 +35,5 @@ export const BannedWordsOptions = [
   'dork',
   'bhaiya',
   'bhai',
+  'dudez',
 ];
