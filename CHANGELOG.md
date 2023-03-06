@@ -1,3 +1,12 @@
+## [1.3.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.3.0...v1.3.1) (2023-03-06)
+
+
+### Bug Fixes
+
+* lock file ([086208e](https://github.com/EddieHubCommunity/EddieBot/commit/086208ea40cd45f47d7dc35ea00223b0b6fdc267))
+
+
+
 # [1.3.0](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.14...v1.3.0) (2023-03-06)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * alternative ban word ([#757](https://github.com/EddieHubCommunity/EddieBot/issues/757)) ([4460dcb](https://github.com/EddieHubCommunity/EddieBot/commit/4460dcb0d259d5ddde62603f7fab770e5c2f7377))
-
-
-
-## [1.2.11](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.10...v1.2.11) (2022-10-09)
-
-
-### Bug Fixes
-
-* health check endpoint ([64d4604](https://github.com/EddieHubCommunity/EddieBot/commit/64d460429abeedb90b509200233623417839ef4c))
 
 
 
