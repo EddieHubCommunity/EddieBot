@@ -1,10 +1,10 @@
 # EddieBot
 
-The official **EddieBot** for the official [Discord server](http://discord.eddiehub.org). Join us at [Discord](http://discord.eddiehub.org) today!
+The official **EddieBot** for the EddieHub [Discord server](http://discord.eddiehub.org). Join us at [Discord](http://discord.eddiehub.org) today!
 
 ## Features
 
-- Checking all people's messages for inclusive language.
+- Checking peoples' messages for inclusive language.
 
 ![Eddie bit warning](https://user-images.githubusercontent.com/624760/200577618-af25764f-a9ce-4ce8-a1f2-f8808c682c77.png)
 
@@ -125,3 +125,9 @@ The EddieBot is licensed under the [MIT](https://github.com/EddieHubCommunity/Ed
 Thanks a lot for spending your time helping EddieBot grow. Thanks a lot! Keep rocking 🍻
 
 [![Contributors](https://contrib.rocks/image?repo=EddieHubCommunity/EddieBot)](https://github.com/EddieHubCommunity/EddieBot/graphs/contributors)
+
+## Our Pledge
+
+We take participation in our community as a harassment-free experience for everyone and we pledge to act in ways to contribute to an open, welcoming, diverse and inclusive community.  
+
+If you have experienced or been made aware of unacceptable behaviour, please remember that you can report this.  Read our [Code of Conduct](https://github.com/EddieHubCommunity/EddieBot/blob/main/CODE_OF_CONDUCT.md).
