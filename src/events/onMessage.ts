@@ -6,6 +6,7 @@ import { ExtendedClient } from '../interfaces/ExtendedClient';
 import { errorHandler } from '../utils/errorHandler';
 import Warnings from '../database/models/Warnings';
 import Statistics from '../database/models/Statistics';
+import { sentenceTypoFixer } from '../utils/typoFixer';
 
 export const onMessage = async (bot: ExtendedClient, message: Message) => {
   try {
@@ -14,7 +15,9 @@ export const onMessage = async (bot: ExtendedClient, message: Message) => {
     }
 
     const triggeredWarnings: EmbedBuilder[] = [];
-    const cleaned = stripSpecialCharacters(message.content);
+    const cleaned = await sentenceTypoFixer(
+      stripSpecialCharacters(message.content),
+    );
     triggeredWarnings.push(
       ...(await checkContent(bot, cleaned, message.guild.id)),
     );

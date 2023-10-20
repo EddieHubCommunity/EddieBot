@@ -110,6 +110,12 @@ $ npm run build
 $ npm start
 ```
 
+## Running the tests
+
+```bash
+$ npm test
+```
+
 ## Support
 
 EddieBot is an MIT-licensed open source project. It can grow thanks to the contributors and the community members. If you'd like to join them, feel free to make a pull request and we'll review it.
