@@ -24,4 +24,28 @@ describe('TypoFixer module tests', () => {
     // then
     expect(output).toBe(expectedOutput);
   });
+
+  test('Should replace FFoo by Foo', async () => {
+    // given
+    const expectedOutput = 'Foo';
+    const inputWord = 'Ffoo';
+
+    // when
+    const output = await sentenceTypoFixer(inputWord);
+
+    // then
+    expect(output).toBe(expectedOutput);
+  });
+
+  test('Should not replace picking', async () => {
+    // given
+    const expectedOutput = 'picking';
+    const inputWord = 'picking';
+
+    // when
+    const output = await sentenceTypoFixer(inputWord);
+
+    // then
+    expect(output).toBe(expectedOutput);
+  });
 });
