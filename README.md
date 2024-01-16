@@ -1,3 +1,5 @@
+[![RepoRater](https://repo-rater.eddiehub.io/api/badge?owner=EddieHubCommunity&name=EddieBot)](https://repo-rater.eddiehub.io/rate?owner=EddieHubCommunity&name=EddieBot)
+
 # EddieBot
 
 The official **EddieBot** for the EddieHub [Discord server](http://discord.eddiehub.org). Join us at [Discord](http://discord.eddiehub.org) today!
