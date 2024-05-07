@@ -1,4 +1,4 @@
-import { EmbedBuilder, Message } from 'discord.js';
+import { EmbedBuilder, Message, TextChannel } from 'discord.js';
 import { checkContent } from '../alexjs/checkContent';
 import { checkBannedWords } from '../alexjs/checkBannedWords';
 import { stripSpecialCharacters } from '../alexjs/stripSpecialCharacters';
@@ -15,7 +15,15 @@ export const onMessage = async (bot: ExtendedClient, message: Message) => {
       return;
     }
 
-    await checkLinks(bot, message);
+    const linkMessage = await checkLinks(bot, message);
+    if (linkMessage) {
+      const adminChannel = bot.channels.cache.get(
+        process.env.ADMIN_CHANNEL!,
+      ) as TextChannel;
+      await adminChannel.send({
+        embeds: [linkMessage],
+      });
+    }
 
     const cleaned = await sentenceTypoFixer(
       stripSpecialCharacters(message.content),

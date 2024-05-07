@@ -1,4 +1,4 @@
-import { Message, PartialMessage } from 'discord.js';
+import { EmbedBuilder, Message, PartialMessage } from 'discord.js';
 
 import { ExtendedClient } from '../interfaces/ExtendedClient';
 import { errorHandler } from '../utils/errorHandler';
@@ -9,26 +9,32 @@ const urlPattern = /(http|https):\/\/([\w-]+(\.[\w-]+)+)(\/[\w-./?%&=]*)?/;
 export const checkLinks = async (
   bot: ExtendedClient,
   message: Message | PartialMessage,
-): Promise<void> => {
+): Promise<EmbedBuilder | null> => {
   const content = message.content;
 
   try {
     const urlMatch = content?.match(urlPattern);
     if (!urlMatch) {
-      return;
+      return null;
     }
 
     if (urlMatch) {
       if (allowedLinks.every((link) => urlMatch[0].includes(link))) {
-        return;
+        return null;
       }
     }
 
     await message.delete();
 
-    return;
+    const embed = new EmbedBuilder();
+    embed.setTitle(
+      `The user "${message.author?.username}" message contains a link`,
+    );
+    embed.setDescription(message.content);
+
+    return embed;
   } catch (error) {
     await errorHandler(bot, error, 'link checking');
-    return;
+    return null;
   }
 };
