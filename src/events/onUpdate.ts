@@ -7,6 +7,7 @@ import { errorHandler } from '../utils/errorHandler';
 import Warnings from '../database/models/Warnings';
 import Statistics from '../database/models/Statistics';
 import { sentenceTypoFixer } from '../utils/typoFixer';
+import { checkLinks } from '../links/checkLinks';
 
 export const onUpdate = async (
   bot: ExtendedClient,
@@ -24,6 +25,8 @@ export const onUpdate = async (
   if (newMessage.author.bot || !newMessage.content || !newMessage.guild) {
     return;
   }
+
+  await checkLinks(bot, newMessage);
 
   try {
     const triggeredWarnings: EmbedBuilder[] = [];
