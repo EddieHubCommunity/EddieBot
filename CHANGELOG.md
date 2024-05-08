@@ -1,3 +1,12 @@
+# [1.5.0](https://github.com/EddieHubCommunity/EddieBot/compare/v1.4.1...v1.5.0) (2024-05-08)
+
+
+### Features
+
+* log removed messages to admin channel ([#793](https://github.com/EddieHubCommunity/EddieBot/issues/793)) ([614fc53](https://github.com/EddieHubCommunity/EddieBot/commit/614fc53870d6cfa2d00d60a6eb1d7e02b92a91d9))
+
+
+
 ## [1.4.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.4.0...v1.4.1) (2024-05-07)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * lock file ([086208e](https://github.com/EddieHubCommunity/EddieBot/commit/086208ea40cd45f47d7dc35ea00223b0b6fdc267))
-
-
-
-# [1.3.0](https://github.com/EddieHubCommunity/EddieBot/compare/v1.2.14...v1.3.0) (2023-03-06)
-
-
-### Features
-
-* dudez banned words ([#777](https://github.com/EddieHubCommunity/EddieBot/issues/777)) ([1706fe1](https://github.com/EddieHubCommunity/EddieBot/commit/1706fe17b7aced95279203b020dcf7c01ec73f58))
 
 
 
