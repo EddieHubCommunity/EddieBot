@@ -1,4 +1,3 @@
-import fs from 'fs';
 import { connect } from 'mongoose';
 import { ExtendedClient } from '../interfaces/ExtendedClient';
 import { errorHandler } from '../utils/errorHandler';
