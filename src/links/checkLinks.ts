@@ -3,7 +3,7 @@ import { EmbedBuilder, Message, PartialMessage } from 'discord.js';
 import { ExtendedClient } from '../interfaces/ExtendedClient';
 import { errorHandler } from '../utils/errorHandler';
 
-const allowedLinks = ['github.com'];
+const allowedLinks = ['github.com', 'eddiejaoude.io', 'gitlab.com'];
 const urlPattern = /(http|https):\/\/([\w-]+(\.[\w-]+)+)(\/[\w-./?%&=]*)?/;
 
 export const checkLinks = async (
