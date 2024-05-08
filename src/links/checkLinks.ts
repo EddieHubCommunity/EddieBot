@@ -19,7 +19,7 @@ export const checkLinks = async (
     }
 
     if (urlMatch) {
-      if (allowedLinks.every((link) => urlMatch[0].includes(link))) {
+      if (allowedLinks.some((link) => urlMatch[0].includes(link))) {
         return null;
       }
     }
