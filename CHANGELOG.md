@@ -1,3 +1,12 @@
+## [1.5.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.5.0...v1.5.1) (2024-05-08)
+
+
+### Bug Fixes
+
+* allowed links ([b78e41e](https://github.com/EddieHubCommunity/EddieBot/commit/b78e41e253296c6e801cb1a8e606c7ce70e55520))
+
+
+
 # [1.5.0](https://github.com/EddieHubCommunity/EddieBot/compare/v1.4.1...v1.5.0) (2024-05-08)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * typo checker and fixer [#771](https://github.com/EddieHubCommunity/EddieBot/issues/771) ([#788](https://github.com/EddieHubCommunity/EddieBot/issues/788)) ([5bba98f](https://github.com/EddieHubCommunity/EddieBot/commit/5bba98ffe963e6c43a197336a52373b787e3cfb0))
-
-
-
-## [1.3.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.3.0...v1.3.1) (2023-03-06)
-
-
-### Bug Fixes
-
-* lock file ([086208e](https://github.com/EddieHubCommunity/EddieBot/commit/086208ea40cd45f47d7dc35ea00223b0b6fdc267))
 
 
 
