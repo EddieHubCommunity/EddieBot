@@ -39,8 +39,14 @@ export const onUpdate = async (
         .setTitle(`Message Updated by "${newMessage.author?.username}"`)
         .setDescription(`Message updated in ${newMessage.channel} channel`)
         .addFields(
-          { name: 'Old Message', value: oldContent! },
-          { name: 'New Message', value: newContent! },
+          {
+            name: 'Old Message',
+            value: oldContent ?? 'No old message available',
+          },
+          {
+            name: 'New Message',
+            value: newContent ?? 'No new message available',
+          },
           { name: 'Author', value: newMessage.author.toString() },
           { name: 'Channel', value: newMessage.channel.toString() },
         )
