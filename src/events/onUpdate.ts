@@ -28,6 +28,33 @@ export const onUpdate = async (
 
   await checkLinks(bot, newMessage);
 
+  // log to admin channel updates
+  const oldContent = oldMessage.content;
+  const newContent = newMessage.content;
+
+  if (oldContent !== newContent) {
+    const logChannel = bot.channels.cache.get(process.env.ADMIN_CHANNEL!);
+    if (logChannel && logChannel.isTextBased()) {
+      const logEmbed = new EmbedBuilder()
+        .setTitle(`Message Updated by "${newMessage.author?.username}"`)
+        .setDescription(`Message updated in ${newMessage.channel} channel`)
+        .addFields(
+          {
+            name: 'Old Message',
+            value: oldContent ?? 'No old message available',
+          },
+          {
+            name: 'New Message',
+            value: newContent ?? 'No new message available',
+          },
+          { name: 'Author', value: newMessage.author.toString() },
+          { name: 'Channel', value: newMessage.channel.toString() },
+        )
+        .setTimestamp();
+      await logChannel.send({ embeds: [logEmbed] });
+    }
+  }
+
   try {
     const triggeredWarnings: EmbedBuilder[] = [];
     const cleaned = await sentenceTypoFixer(
