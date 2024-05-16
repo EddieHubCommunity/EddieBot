@@ -12,6 +12,11 @@ export const checkLinks = async (
 ): Promise<EmbedBuilder | null> => {
   const content = message.content;
 
+  // ignore link check in message from users who have the "team eddie" role
+  if (message.member?.roles.cache.some((role) => role.name === 'team eddi')) {
+    return null;
+  }
+
   try {
     const urlMatch = content?.match(urlPattern);
     if (!urlMatch) {
