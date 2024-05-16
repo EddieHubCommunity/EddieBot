@@ -1,3 +1,12 @@
+## [1.6.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.6.0...v1.6.1) (2024-05-16)
+
+
+### Bug Fixes
+
+* check link for role ([61d27e8](https://github.com/EddieHubCommunity/EddieBot/commit/61d27e8b7a002c3f60e4cd93e9a0fcbb43f9bed5))
+
+
+
 # [1.6.0](https://github.com/EddieHubCommunity/EddieBot/compare/v1.5.3...v1.6.0) (2024-05-16)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * allowed links ([b78e41e](https://github.com/EddieHubCommunity/EddieBot/commit/b78e41e253296c6e801cb1a8e606c7ce70e55520))
-
-
-
-# [1.5.0](https://github.com/EddieHubCommunity/EddieBot/compare/v1.4.1...v1.5.0) (2024-05-08)
-
-
-### Features
-
-* log removed messages to admin channel ([#793](https://github.com/EddieHubCommunity/EddieBot/issues/793)) ([614fc53](https://github.com/EddieHubCommunity/EddieBot/commit/614fc53870d6cfa2d00d60a6eb1d7e02b92a91d9))
 
 
 
