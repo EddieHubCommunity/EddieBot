@@ -1,3 +1,12 @@
+# [1.6.0](https://github.com/EddieHubCommunity/EddieBot/compare/v1.5.3...v1.6.0) (2024-05-16)
+
+
+### Features
+
+* ignore link check for role ([#800](https://github.com/EddieHubCommunity/EddieBot/issues/800)) ([2ec6e00](https://github.com/EddieHubCommunity/EddieBot/commit/2ec6e002fec0c7ef5cacec0374ef8f9dea3c8124))
+
+
+
 ## [1.5.3](https://github.com/EddieHubCommunity/EddieBot/compare/v1.5.2...v1.5.3) (2024-05-15)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * log removed messages to admin channel ([#793](https://github.com/EddieHubCommunity/EddieBot/issues/793)) ([614fc53](https://github.com/EddieHubCommunity/EddieBot/commit/614fc53870d6cfa2d00d60a6eb1d7e02b92a91d9))
-
-
-
-## [1.4.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.4.0...v1.4.1) (2024-05-07)
-
-
-### Bug Fixes
-
-* mongo does not need cert file ([#792](https://github.com/EddieHubCommunity/EddieBot/issues/792)) ([02a4aa4](https://github.com/EddieHubCommunity/EddieBot/commit/02a4aa49b04222c16c0e02c5bbdc1ac2933d186a))
 
 
 
