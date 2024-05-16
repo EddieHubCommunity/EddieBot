@@ -13,7 +13,7 @@ export const checkLinks = async (
   const content = message.content;
 
   // ignore link check in message from users who have the "team eddie" role
-  if (message.member?.roles.cache.some((role) => role.name === 'team eddi')) {
+  if (message.member?.roles.cache.some((role) => role.name === 'team eddie')) {
     return null;
   }
 
