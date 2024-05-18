@@ -15,8 +15,25 @@ Copy `.env.example` to `.env` and add your private information
 *Note: never commit this file, it is ignored by Git*
 
 ```
-DISCORD_TOKEN="<your-token>"
-EDDIEBOT_MONGO_CONNECTION_STRING="<your-mongo-connection-string>"
+# .env file
+
+# required: discord API token
+DISCORD_TOKEN=
+
+# required: mongo URL connection string
+EDDIEBOT_MONGO_CONNECTION_STRING=
+
+# optional
+DEBUG_HOOK=
+
+# required: discord server id
+HOME_GUILD="699608417039286293"
+
+# optional
+NODE_ENV="development"
+
+# required: channel id for logs
+ADMIN_CHANNEL=
 ```
 
 ## Installation
