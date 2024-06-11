@@ -1,3 +1,12 @@
+## [1.7.2](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.1...v1.7.2) (2024-06-11)
+
+
+### Bug Fixes
+
+* rename deploy to deploy.yml ([74ad9a7](https://github.com/EddieHubCommunity/EddieBot/commit/74ad9a7f25143f50cd8e69d8c39474371f819336))
+
+
+
 ## [1.7.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.0...v1.7.1) (2024-06-11)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * ignore link check for role ([#800](https://github.com/EddieHubCommunity/EddieBot/issues/800)) ([2ec6e00](https://github.com/EddieHubCommunity/EddieBot/commit/2ec6e002fec0c7ef5cacec0374ef8f9dea3c8124))
-
-
-
-## [1.5.3](https://github.com/EddieHubCommunity/EddieBot/compare/v1.5.2...v1.5.3) (2024-05-15)
-
-
-### Bug Fixes
-
-* log updates to admin channel ([#798](https://github.com/EddieHubCommunity/EddieBot/issues/798)) ([cc38054](https://github.com/EddieHubCommunity/EddieBot/commit/cc380546adb54299945fa2e6541478a773442270))
 
 
 
