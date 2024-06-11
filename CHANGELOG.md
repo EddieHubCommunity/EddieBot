@@ -1,3 +1,12 @@
+## [1.7.3](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.2...v1.7.3) (2024-06-11)
+
+
+### Bug Fixes
+
+* deploy image to caprover ([808f049](https://github.com/EddieHubCommunity/EddieBot/commit/808f049467176ea5f8616637501a88b3e5e8263a))
+
+
+
 ## [1.7.2](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.1...v1.7.2) (2024-06-11)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * check link for role ([61d27e8](https://github.com/EddieHubCommunity/EddieBot/commit/61d27e8b7a002c3f60e4cd93e9a0fcbb43f9bed5))
-
-
-
-# [1.6.0](https://github.com/EddieHubCommunity/EddieBot/compare/v1.5.3...v1.6.0) (2024-05-16)
-
-
-### Features
-
-* ignore link check for role ([#800](https://github.com/EddieHubCommunity/EddieBot/issues/800)) ([2ec6e00](https://github.com/EddieHubCommunity/EddieBot/commit/2ec6e002fec0c7ef5cacec0374ef8f9dea3c8124))
 
 
 
