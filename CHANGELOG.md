@@ -1,3 +1,12 @@
+# [1.7.0](https://github.com/EddieHubCommunity/EddieBot/compare/v1.6.1...v1.7.0) (2024-06-11)
+
+
+### Features
+
+* gh action deploy ([#803](https://github.com/EddieHubCommunity/EddieBot/issues/803)) ([d8534f0](https://github.com/EddieHubCommunity/EddieBot/commit/d8534f0e6c5008aef2775ad9a8cb047ee7024b9f))
+
+
+
 ## [1.6.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.6.0...v1.6.1) (2024-05-16)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * url check ([#796](https://github.com/EddieHubCommunity/EddieBot/issues/796)) ([0048b2b](https://github.com/EddieHubCommunity/EddieBot/commit/0048b2b0f831176db53cc33f68fce2fcca6e9280))
-
-
-
-## [1.5.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.5.0...v1.5.1) (2024-05-08)
-
-
-### Bug Fixes
-
-* allowed links ([b78e41e](https://github.com/EddieHubCommunity/EddieBot/commit/b78e41e253296c6e801cb1a8e606c7ce70e55520))
 
 
 
