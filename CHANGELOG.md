@@ -1,3 +1,12 @@
+## [1.7.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.0...v1.7.1) (2024-06-11)
+
+
+### Bug Fixes
+
+* docker action ([98650e5](https://github.com/EddieHubCommunity/EddieBot/commit/98650e527ab3d9837c9a6a9016a66dbe79fe3e43))
+
+
+
 # [1.7.0](https://github.com/EddieHubCommunity/EddieBot/compare/v1.6.1...v1.7.0) (2024-06-11)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * log updates to admin channel ([#798](https://github.com/EddieHubCommunity/EddieBot/issues/798)) ([cc38054](https://github.com/EddieHubCommunity/EddieBot/commit/cc380546adb54299945fa2e6541478a773442270))
-
-
-
-## [1.5.2](https://github.com/EddieHubCommunity/EddieBot/compare/v1.5.1...v1.5.2) (2024-05-08)
-
-
-### Bug Fixes
-
-* url check ([#796](https://github.com/EddieHubCommunity/EddieBot/issues/796)) ([0048b2b](https://github.com/EddieHubCommunity/EddieBot/commit/0048b2b0f831176db53cc33f68fce2fcca6e9280))
 
 
 
