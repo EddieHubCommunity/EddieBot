@@ -1,3 +1,12 @@
+## [1.7.4](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.3...v1.7.4) (2024-06-12)
+
+
+### Bug Fixes
+
+* docker base image & js dependencies ([#804](https://github.com/EddieHubCommunity/EddieBot/issues/804)) ([bd87a08](https://github.com/EddieHubCommunity/EddieBot/commit/bd87a08501bb420801ef05288e28ff4c6bb9bfef))
+
+
+
 ## [1.7.3](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.2...v1.7.3) (2024-06-11)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * gh action deploy ([#803](https://github.com/EddieHubCommunity/EddieBot/issues/803)) ([d8534f0](https://github.com/EddieHubCommunity/EddieBot/commit/d8534f0e6c5008aef2775ad9a8cb047ee7024b9f))
-
-
-
-## [1.6.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.6.0...v1.6.1) (2024-05-16)
-
-
-### Bug Fixes
-
-* check link for role ([61d27e8](https://github.com/EddieHubCommunity/EddieBot/commit/61d27e8b7a002c3f60e4cd93e9a0fcbb43f9bed5))
 
 
 
