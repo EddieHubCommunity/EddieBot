@@ -4,7 +4,7 @@ import { ExtendedClient } from '../interfaces/ExtendedClient';
 import { errorHandler } from '../utils/errorHandler';
 
 const allowedLinks = ['github.com', 'eddiejaoude.io', 'gitlab.com'];
-const urlPattern = /(http|https):\/\/([\w-]+(\.[\w-]+)+)(\/[\w-./?%&=]*)?/;
+const urlPattern = /(http|https):\/\/([\w-]+(\.[\w-]+)+)(\/[\w-./?%&=]*)?/g;
 
 export const checkLinks = async (
   bot: ExtendedClient,
@@ -18,13 +18,17 @@ export const checkLinks = async (
   }
 
   try {
-    const urlMatch = content?.match(urlPattern);
-    if (!urlMatch) {
+    const foundUrls = content?.match(urlPattern);
+    if (!foundUrls) {
       return null;
     }
 
-    if (urlMatch) {
-      if (allowedLinks.some((link) => urlMatch[0].includes(link))) {
+    if (foundUrls) {
+      if (
+        foundUrls.every((found) =>
+          allowedLinks.some((allowed) => found.includes(allowed)),
+        )
+      ) {
         return null;
       }
     }
