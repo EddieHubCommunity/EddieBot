@@ -1,3 +1,12 @@
+## [1.7.6](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.5...v1.7.6) (2024-06-22)
+
+
+### Bug Fixes
+
+* remove team eddie role ([09d2c6f](https://github.com/EddieHubCommunity/EddieBot/commit/09d2c6f64bffa1537bb78028733f95239e6f673b))
+
+
+
 ## [1.7.5](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.4...v1.7.5) (2024-06-20)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * rename deploy to deploy.yml ([74ad9a7](https://github.com/EddieHubCommunity/EddieBot/commit/74ad9a7f25143f50cd8e69d8c39474371f819336))
-
-
-
-## [1.7.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.0...v1.7.1) (2024-06-11)
-
-
-### Bug Fixes
-
-* docker action ([98650e5](https://github.com/EddieHubCommunity/EddieBot/commit/98650e527ab3d9837c9a6a9016a66dbe79fe3e43))
 
 
 
