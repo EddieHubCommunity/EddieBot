@@ -1,3 +1,12 @@
+## [1.7.7](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.6...v1.7.7) (2024-06-23)
+
+
+### Bug Fixes
+
+* update action dependencies to latest versions ([#808](https://github.com/EddieHubCommunity/EddieBot/issues/808)) ([e935a42](https://github.com/EddieHubCommunity/EddieBot/commit/e935a42d0c4126533d66a275fbfdd93162f06165))
+
+
+
 ## [1.7.6](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.5...v1.7.6) (2024-06-22)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * deploy image to caprover ([808f049](https://github.com/EddieHubCommunity/EddieBot/commit/808f049467176ea5f8616637501a88b3e5e8263a))
-
-
-
-## [1.7.2](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.1...v1.7.2) (2024-06-11)
-
-
-### Bug Fixes
-
-* rename deploy to deploy.yml ([74ad9a7](https://github.com/EddieHubCommunity/EddieBot/commit/74ad9a7f25143f50cd8e69d8c39474371f819336))
 
 
 
