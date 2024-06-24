@@ -1,3 +1,12 @@
+## [1.7.9](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.8...v1.7.9) (2024-06-24)
+
+
+### Bug Fixes
+
+* remove labels action as it is no longer needed ([#809](https://github.com/EddieHubCommunity/EddieBot/issues/809)) ([149ce2b](https://github.com/EddieHubCommunity/EddieBot/commit/149ce2b263c38ecdcb1bfd6dc041be0c145e61a2))
+
+
+
 ## [1.7.8](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.7...v1.7.8) (2024-06-24)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * link checker ([e4e891c](https://github.com/EddieHubCommunity/EddieBot/commit/e4e891c987a52a20f2465062cc5599af5bcbcd58))
-
-
-
-## [1.7.4](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.3...v1.7.4) (2024-06-12)
-
-
-### Bug Fixes
-
-* docker base image & js dependencies ([#804](https://github.com/EddieHubCommunity/EddieBot/issues/804)) ([bd87a08](https://github.com/EddieHubCommunity/EddieBot/commit/bd87a08501bb420801ef05288e28ff4c6bb9bfef))
 
 
 
