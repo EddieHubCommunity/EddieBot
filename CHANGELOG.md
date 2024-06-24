@@ -1,3 +1,12 @@
+## [1.7.8](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.7...v1.7.8) (2024-06-24)
+
+
+### Bug Fixes
+
+* switch release action to softprops/action-gh-release ([#810](https://github.com/EddieHubCommunity/EddieBot/issues/810)) ([b8e69e3](https://github.com/EddieHubCommunity/EddieBot/commit/b8e69e3abc43ef437cfb2ac6c42884d47cd8f4cc))
+
+
+
 ## [1.7.7](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.6...v1.7.7) (2024-06-23)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * docker base image & js dependencies ([#804](https://github.com/EddieHubCommunity/EddieBot/issues/804)) ([bd87a08](https://github.com/EddieHubCommunity/EddieBot/commit/bd87a08501bb420801ef05288e28ff4c6bb9bfef))
-
-
-
-## [1.7.3](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.2...v1.7.3) (2024-06-11)
-
-
-### Bug Fixes
-
-* deploy image to caprover ([808f049](https://github.com/EddieHubCommunity/EddieBot/commit/808f049467176ea5f8616637501a88b3e5e8263a))
 
 
 
