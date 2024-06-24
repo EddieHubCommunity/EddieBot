@@ -18,11 +18,10 @@ jobs:
           github-token: ${{ secrets.CHANGELOG_RELEASE }}
 
       - name: create release
-        uses: actions/create-release@v1
+        uses: softprops/action-gh-release@v2
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.CHANGELOG_RELEASE }}
         with:
+          name: ${{ steps.changelog.outputs.tag }}
           tag_name: ${{ steps.changelog.outputs.tag }}
-          release_name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
+          token: ${{ secrets.CHANGELOG_RELEASE }}
