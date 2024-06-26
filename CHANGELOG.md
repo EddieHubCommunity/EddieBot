@@ -1,3 +1,12 @@
+## [1.7.10](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.9...v1.7.10) (2024-06-26)
+
+
+### Bug Fixes
+
+* **deps:** bump ws from 8.17.0 to 8.17.1 ([#805](https://github.com/EddieHubCommunity/EddieBot/issues/805)) ([d7a0193](https://github.com/EddieHubCommunity/EddieBot/commit/d7a01934d1a10e7757366d7908065a686669a096))
+
+
+
 ## [1.7.9](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.8...v1.7.9) (2024-06-24)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * remove team eddie role ([09d2c6f](https://github.com/EddieHubCommunity/EddieBot/commit/09d2c6f64bffa1537bb78028733f95239e6f673b))
-
-
-
-## [1.7.5](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.4...v1.7.5) (2024-06-20)
-
-
-### Bug Fixes
-
-* link checker ([e4e891c](https://github.com/EddieHubCommunity/EddieBot/commit/e4e891c987a52a20f2465062cc5599af5bcbcd58))
 
 
 
