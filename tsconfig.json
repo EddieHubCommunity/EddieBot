@@ -3,7 +3,8 @@
   "compilerOptions": {
     "outDir": "./prod",
     "sourceMap": false,
-   },
+    "verbatimModuleSyntax": false,
+  },
   "include": ["src/**/*"],
   "exclude": ["src/**/__test__/*"]
 }
