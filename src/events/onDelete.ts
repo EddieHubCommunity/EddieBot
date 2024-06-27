@@ -23,7 +23,7 @@ export const onDelete = async (
       if (notificationMessage) {
         await notificationMessage.delete();
       }
-      await savedWarning.remove();
+      await savedWarning.deleteOne();
 
       await Statistics.findOneAndUpdate(
         {
