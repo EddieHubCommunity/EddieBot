@@ -1,7 +1,7 @@
 import { Client, WebhookClient } from 'discord.js';
 import { Document } from 'mongoose';
-import { ServerConfig } from '../database/models/ServerConfig';
-import { Command } from './Command';
+import type { ServerConfig } from '../database/models/ServerConfig.js';
+import type { Command } from './Command.js';
 
 export interface ExtendedClient extends Client {
   commands: Command[];

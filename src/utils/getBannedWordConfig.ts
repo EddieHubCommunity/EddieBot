@@ -1,5 +1,5 @@
-import ServerConfig from '../database/models/ServerConfig';
-import { ExtendedClient } from '../interfaces/ExtendedClient';
+import ServerConfig from '../database/models/ServerConfig.js';
+import type { ExtendedClient } from '../interfaces/ExtendedClient.js';
 
 export const getBannedWordConfig = async (
   bot: ExtendedClient,

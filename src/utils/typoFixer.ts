@@ -1,4 +1,4 @@
-import { dict } from '../config/DictionaryOptions';
+import { dict } from '../config/DictionaryOptions.js';
 
 export async function sentenceTypoFixer(sentence: string) {
   const sentenceWords = sentence.split(/\s+/);

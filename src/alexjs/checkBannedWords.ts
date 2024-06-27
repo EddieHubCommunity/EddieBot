@@ -1,9 +1,9 @@
 import { EmbedBuilder } from 'discord.js';
 
-import { ExtendedClient } from '../interfaces/ExtendedClient';
-import { errorHandler } from '../utils/errorHandler';
-import { BannedWordsOptions } from '../config/BannedWordsOptions';
-import { getBannedWordConfig } from '../utils/getBannedWordConfig';
+import type { ExtendedClient } from '../interfaces/ExtendedClient.js';
+import { errorHandler } from '../utils/errorHandler.js';
+import { BannedWordsOptions } from '../config/BannedWordsOptions.js';
+import { getBannedWordConfig } from '../utils/getBannedWordConfig.js';
 
 export const checkBannedWords = async (
   bot: ExtendedClient,
@@ -13,7 +13,7 @@ export const checkBannedWords = async (
   const embeds: EmbedBuilder[] = [];
   try {
     const config = await getBannedWordConfig(bot, serverId);
-    const checkWords = config.bannedWordConfig
+    const checkWords = config?.bannedWordConfig
       ? config.bannedWordConfig
       : BannedWordsOptions;
     content.split(' ').forEach((word) => {

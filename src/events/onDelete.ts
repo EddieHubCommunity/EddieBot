@@ -1,8 +1,8 @@
-import { Message, PartialMessage } from 'discord.js';
-import { ExtendedClient } from '../interfaces/ExtendedClient';
-import { errorHandler } from '../utils/errorHandler';
-import Warnings from '../database/models/Warnings';
-import Statistics from '../database/models/Statistics';
+import type { Message, PartialMessage } from 'discord.js';
+import type { ExtendedClient } from '../interfaces/ExtendedClient.js';
+import { errorHandler } from '../utils/errorHandler.js';
+import Warnings from '../database/models/Warnings.js';
+import Statistics from '../database/models/Statistics.js';
 
 export const onDelete = async (
   bot: ExtendedClient,

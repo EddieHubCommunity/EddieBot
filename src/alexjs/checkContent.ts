@@ -1,10 +1,10 @@
-import alex from 'alex';
+import { markdown } from 'alex';
 import { EmbedBuilder } from 'discord.js';
 
-import { ExtendedClient } from '../interfaces/ExtendedClient';
-import { errorHandler } from '../utils/errorHandler';
-import { getAlexConfig } from '../utils/getAlexConfig';
-import { AlexJsOptions } from '../config/AlexJsOptions';
+import type { ExtendedClient } from '../interfaces/ExtendedClient.js';
+import { errorHandler } from '../utils/errorHandler.js';
+import { getAlexConfig } from '../utils/getAlexConfig.js';
+import { AlexJsOptions } from '../config/AlexJsOptions.js';
 
 export const checkContent = async (
   bot: ExtendedClient,
@@ -13,9 +13,9 @@ export const checkContent = async (
 ): Promise<EmbedBuilder[]> => {
   try {
     const config = await getAlexConfig(bot, serverId);
-    const rawResult = alex.markdown(content, {
+    const rawResult = markdown(content, {
       ...AlexJsOptions.alexWhitelist,
-      ...config.alexConfig,
+      ...config?.alexConfig,
     }).messages;
     const embeds: EmbedBuilder[] = [];
 

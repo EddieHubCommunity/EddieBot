@@ -1,12 +1,12 @@
 import { Client, Partials } from 'discord.js';
-import { IntentOptions } from './config/IntentOptions';
-import { connectDb } from './database/connectDb';
-import { handleEvents } from './events/_handleEvents';
-import { ExtendedClient } from './interfaces/ExtendedClient';
-import { errorHandler } from './utils/errorHandler';
-import { loadCommands } from './utils/loadCommands';
-import { registerCommands } from './utils/registerCommands';
-import { validateEnv } from './utils/validateEnv';
+import { IntentOptions } from './config/IntentOptions.js';
+import { connectDb } from './database/connectDb.js';
+import { handleEvents } from './events/_handleEvents.js';
+import type { ExtendedClient } from './interfaces/ExtendedClient.js';
+import { errorHandler } from './utils/errorHandler.js';
+import { loadCommands } from './utils/loadCommands.js';
+import { registerCommands } from './utils/registerCommands.js';
+import { validateEnv } from './utils/validateEnv.js';
 
 import express from 'express';
 const app = express();

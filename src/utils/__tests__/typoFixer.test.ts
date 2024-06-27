@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import { sentenceTypoFixer } from '../typoFixer';
+import { sentenceTypoFixer } from '../typoFixer.js';
 describe('TypoFixer module tests', () => {
   test('Should replace the words with issues.', async () => {
     // given

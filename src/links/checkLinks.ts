@@ -1,7 +1,7 @@
-import { EmbedBuilder, Message, PartialMessage } from 'discord.js';
+import { EmbedBuilder, Message, type PartialMessage } from 'discord.js';
 
-import { ExtendedClient } from '../interfaces/ExtendedClient';
-import { errorHandler } from '../utils/errorHandler';
+import type { ExtendedClient } from '../interfaces/ExtendedClient.js';
+import { errorHandler } from '../utils/errorHandler.js';
 
 const allowedLinks = ['github.com', 'eddiejaoude.io', 'gitlab.com'];
 const urlPattern = /(http|https):\/\/([\w-]+(\.[\w-]+)+)(\/[\w-./?%&=]*)?/g;

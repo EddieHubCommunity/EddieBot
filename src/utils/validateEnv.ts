@@ -1,6 +1,6 @@
 import { WebhookClient } from 'discord.js';
-import { ExtendedClient } from '../interfaces/ExtendedClient';
-import { logHandler } from './logHandler';
+import type { ExtendedClient } from '../interfaces/ExtendedClient.js';
+import { logHandler } from './logHandler.js';
 
 export const validateEnv = (bot: ExtendedClient) => {
   if (!process.env.DISCORD_TOKEN) {

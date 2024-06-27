@@ -1,7 +1,7 @@
 import { EmbedBuilder, SlashCommandBuilder } from 'discord.js';
-import { Command } from '../interfaces/Command';
-import { errorHandler } from '../utils/errorHandler';
-import Statistics from '../database/models/Statistics';
+import type { Command } from '../interfaces/Command.js';
+import { errorHandler } from '../utils/errorHandler.js';
+import Statistics from '../database/models/Statistics.js';
 
 export const stats: Command = {
   data: new SlashCommandBuilder()
