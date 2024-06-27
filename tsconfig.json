@@ -3,6 +3,7 @@
   "compilerOptions": {
     "outDir": "./prod",
     "sourceMap": false,
-  },
-  "include": ["src/**/*"]
+   },
+  "include": ["src/**/*"],
+  "exclude": ["src/**/__test__/*"]
 }

@@ -22,7 +22,7 @@
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
     "lint:fix": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "prepare": "if test \"$HUSKY\" != \"0\" ; then husky ; fi",
-    "test": "jest"
+    "test": "node --experimental-vm-modules node_modules/.bin/jest"
   },
   "engines": {
     "node": ">=20"
@@ -39,8 +39,6 @@
     "winston": "^3.13.0"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.24.7",
-    "@babel/preset-typescript": "^7.24.7",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@jest/globals": "^29.7.0",
