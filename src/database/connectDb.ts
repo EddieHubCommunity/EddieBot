@@ -1,6 +1,6 @@
 import { connect } from 'mongoose';
-import { ExtendedClient } from '../interfaces/ExtendedClient';
-import { errorHandler } from '../utils/errorHandler';
+import type { ExtendedClient } from '../interfaces/ExtendedClient.js';
+import { errorHandler } from '../utils/errorHandler.js';
 
 export const connectDb = async (bot: ExtendedClient) => {
   // DigitalOcean Apps has cert as environment variable but Mongo needs a file path

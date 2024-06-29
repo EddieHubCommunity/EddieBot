@@ -1,8 +1,8 @@
 import { REST } from '@discordjs/rest';
 import { Routes } from 'discord.js';
-import { ExtendedClient } from '../interfaces/ExtendedClient';
-import { errorHandler } from './errorHandler';
-import { logHandler } from './logHandler';
+import type { ExtendedClient } from '../interfaces/ExtendedClient.js';
+import { errorHandler } from './errorHandler.js';
+import { logHandler } from './logHandler.js';
 
 /**
  * TODO: We want to be able to run this via a text command rather than on load.

@@ -1,6 +1,6 @@
-import { Interaction } from 'discord.js';
-import { ExtendedClient } from '../interfaces/ExtendedClient';
-import { errorHandler } from '../utils/errorHandler';
+import type { Interaction } from 'discord.js';
+import type { ExtendedClient } from '../interfaces/ExtendedClient.js';
+import { errorHandler } from '../utils/errorHandler.js';
 
 export const onInteraction = async (
   bot: ExtendedClient,

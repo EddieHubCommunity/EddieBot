@@ -1,13 +1,18 @@
-import { EmbedBuilder, Message, PartialMessage } from 'discord.js';
-import { checkContent } from '../alexjs/checkContent';
-import { checkBannedWords } from '../alexjs/checkBannedWords';
-import { stripSpecialCharacters } from '../alexjs/stripSpecialCharacters';
-import { ExtendedClient } from '../interfaces/ExtendedClient';
-import { errorHandler } from '../utils/errorHandler';
-import Warnings from '../database/models/Warnings';
-import Statistics from '../database/models/Statistics';
-import { sentenceTypoFixer } from '../utils/typoFixer';
-import { checkLinks } from '../links/checkLinks';
+import {
+  EmbedBuilder,
+  type APIEmbed,
+  type Message,
+  type PartialMessage,
+} from 'discord.js';
+import { checkContent } from '../alexjs/checkContent.js';
+import { checkBannedWords } from '../alexjs/checkBannedWords.js';
+import { stripSpecialCharacters } from '../alexjs/stripSpecialCharacters.js';
+import type { ExtendedClient } from '../interfaces/ExtendedClient.js';
+import { errorHandler } from '../utils/errorHandler.js';
+import Warnings from '../database/models/Warnings.js';
+import Statistics from '../database/models/Statistics.js';
+import { sentenceTypoFixer } from '../utils/typoFixer.js';
+import { checkLinks } from '../links/checkLinks.js';
 
 export const onUpdate = async (
   bot: ExtendedClient,
@@ -116,7 +121,7 @@ export const onUpdate = async (
       if (notificationMessage) {
         await notificationMessage.delete();
       }
-      await savedWarning.remove();
+      await savedWarning.deleteOne();
 
       await Statistics.findOneAndUpdate(
         {
@@ -134,7 +139,9 @@ export const onUpdate = async (
         savedWarning.warningId,
       );
       if (notificationMessage) {
-        await notificationMessage.edit({ embeds: [triggeredWarnings[0]] });
+        await notificationMessage.edit({
+          embeds: [triggeredWarnings[0] as APIEmbed],
+        });
         return;
       }
 

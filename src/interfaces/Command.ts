@@ -3,7 +3,7 @@ import {
   SlashCommandBuilder,
   SlashCommandSubcommandBuilder,
 } from 'discord.js';
-import { ExtendedClient } from './ExtendedClient';
+import type { ExtendedClient } from './ExtendedClient.js';
 
 export interface Command {
   data: SlashCommandBuilder | SlashCommandSubcommandBuilder;

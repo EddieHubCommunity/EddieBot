@@ -1,8 +1,8 @@
-import { readdir } from 'fs/promises';
-import { join } from 'path';
-import { Command } from '../interfaces/Command';
-import { ExtendedClient } from '../interfaces/ExtendedClient';
-import { errorHandler } from './errorHandler';
+import { readdir } from 'node:fs/promises';
+import { join } from 'node:path';
+import type { Command } from '../interfaces/Command.js';
+import type { ExtendedClient } from '../interfaces/ExtendedClient.js';
+import { errorHandler } from './errorHandler.js';
 
 export const loadCommands = async (bot: ExtendedClient): Promise<Command[]> => {
   try {
@@ -12,7 +12,7 @@ export const loadCommands = async (bot: ExtendedClient): Promise<Command[]> => {
       'utf-8',
     );
     for (const file of files) {
-      const name = file.split('.')[0];
+      const name = file.split('.')[0] || '';
       const command = await import(
         join(process.cwd(), 'prod', 'commands', file)
       );

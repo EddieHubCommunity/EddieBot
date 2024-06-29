@@ -1,13 +1,13 @@
 import { EmbedBuilder, Message, TextChannel } from 'discord.js';
-import { checkContent } from '../alexjs/checkContent';
-import { checkBannedWords } from '../alexjs/checkBannedWords';
-import { stripSpecialCharacters } from '../alexjs/stripSpecialCharacters';
-import { ExtendedClient } from '../interfaces/ExtendedClient';
-import { errorHandler } from '../utils/errorHandler';
-import Warnings from '../database/models/Warnings';
-import Statistics from '../database/models/Statistics';
-import { sentenceTypoFixer } from '../utils/typoFixer';
-import { checkLinks } from '../links/checkLinks';
+import { checkContent } from '../alexjs/checkContent.js';
+import { checkBannedWords } from '../alexjs/checkBannedWords.js';
+import { stripSpecialCharacters } from '../alexjs/stripSpecialCharacters.js';
+import type { ExtendedClient } from '../interfaces/ExtendedClient.js';
+import { errorHandler } from '../utils/errorHandler.js';
+import Warnings from '../database/models/Warnings.js';
+import Statistics from '../database/models/Statistics.js';
+import { sentenceTypoFixer } from '../utils/typoFixer.js';
+import { checkLinks } from '../links/checkLinks.js';
 
 export const onMessage = async (bot: ExtendedClient, message: Message) => {
   try {

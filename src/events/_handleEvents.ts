@@ -1,8 +1,8 @@
-import { ExtendedClient } from '../interfaces/ExtendedClient';
-import { onInteraction } from './onInteraction';
-import { onMessage } from './onMessage';
-import { onUpdate } from './onUpdate';
-import { onDelete } from './onDelete';
+import type { ExtendedClient } from '../interfaces/ExtendedClient.js';
+import { onInteraction } from './onInteraction.js';
+import { onMessage } from './onMessage.js';
+import { onUpdate } from './onUpdate.js';
+import { onDelete } from './onDelete.js';
 
 export const handleEvents = (bot: ExtendedClient) => {
   bot.on('ready', () => {

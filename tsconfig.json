@@ -1,13 +1,10 @@
 {
+  "extends" : "@total-typescript/tsconfig/tsc/no-dom/app",
   "compilerOptions": {
-    "target": "ES6",
-    "module": "CommonJS",
-    "rootDir": "./src",
     "outDir": "./prod",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true
-  }
+    "sourceMap": false,
+    "verbatimModuleSyntax": false,
+  },
+  "include": ["src/**/*"],
+  "exclude": ["src/**/__test__/*"]
 }

@@ -1,6 +1,6 @@
 import { EmbedBuilder, SlashCommandBuilder } from 'discord.js';
-import { Command } from '../interfaces/Command';
-import { errorHandler } from '../utils/errorHandler';
+import type { Command } from '../interfaces/Command.js';
+import { errorHandler } from '../utils/errorHandler.js';
 
 export const version: Command = {
   data: new SlashCommandBuilder()
