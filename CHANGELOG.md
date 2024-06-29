@@ -1,3 +1,12 @@
+# [1.8.0](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.10...v1.8.0) (2024-06-29)
+
+
+### Features
+
+* migrate to ESM to allow for Alex upgrade ([#811](https://github.com/EddieHubCommunity/EddieBot/issues/811)) ([2914a5f](https://github.com/EddieHubCommunity/EddieBot/commit/2914a5f35b911e723ccefe7b0fc17c28de683674))
+
+
+
 ## [1.7.10](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.9...v1.7.10) (2024-06-26)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * update action dependencies to latest versions ([#808](https://github.com/EddieHubCommunity/EddieBot/issues/808)) ([e935a42](https://github.com/EddieHubCommunity/EddieBot/commit/e935a42d0c4126533d66a275fbfdd93162f06165))
-
-
-
-## [1.7.6](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.5...v1.7.6) (2024-06-22)
-
-
-### Bug Fixes
-
-* remove team eddie role ([09d2c6f](https://github.com/EddieHubCommunity/EddieBot/commit/09d2c6f64bffa1537bb78028733f95239e6f673b))
 
 
 
