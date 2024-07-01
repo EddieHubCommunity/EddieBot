@@ -101,27 +101,6 @@ export const onUpdate = async (
       channelId: newMessage.channel.id,
     });
 
-    // When message has existing warning, but no new warning, it is fixed or
-    // contains an invalid link & has been deleted
-    if (savedWarning && (!triggeredWarnings.length || linkMessage)) {
-      const notificationMessage = await newMessage.channel.messages.fetch(
-        savedWarning.warningId,
-      );
-      if (notificationMessage) {
-        await notificationMessage.delete();
-      }
-      await savedWarning.deleteOne();
-
-      await Statistics.findOneAndUpdate(
-        {
-          serverId: newMessage.guild.id,
-        },
-        { $inc: { totalTriggersFixed: 1 } },
-        { upsert: true },
-      ).exec();
-      return;
-    }
-
     // when edit results in new warning, but no existing warning
     if (!savedWarning && triggeredWarnings.length) {
       const sent = await newMessage.channel.send({
@@ -141,6 +120,26 @@ export const onUpdate = async (
         { $inc: { totalTriggers: 1 } },
         { upsert: true },
       ).exec();
+    }
+
+    // when edit results in no new warning, but has existing warning, so fixed
+    if (savedWarning && !triggeredWarnings.length) {
+      const notificationMessage = await newMessage.channel.messages.fetch(
+        savedWarning.warningId,
+      );
+      if (notificationMessage) {
+        await notificationMessage.delete();
+      }
+      await savedWarning.deleteOne();
+
+      await Statistics.findOneAndUpdate(
+        {
+          serverId: newMessage.guild.id,
+        },
+        { $inc: { totalTriggersFixed: 1 } },
+        { upsert: true },
+      ).exec();
+      return;
     }
 
     // when edit results in new warning AND has existing warning
