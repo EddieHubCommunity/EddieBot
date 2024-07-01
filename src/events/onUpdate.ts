@@ -31,7 +31,16 @@ export const onUpdate = async (
     return;
   }
 
-  await checkLinks(bot, newMessage);
+  const linkMessage = await checkLinks(bot, newMessage);
+  if (linkMessage) {
+    const adminChannel = bot.channels.cache.get(process.env.ADMIN_CHANNEL!);
+    if (adminChannel && adminChannel.isTextBased()) {
+      await adminChannel.send({
+        embeds: [linkMessage],
+      });
+    }
+    return; // Return as message is deleted
+  }
 
   // log to admin channel updates
   const oldContent = oldMessage.content;
@@ -92,6 +101,27 @@ export const onUpdate = async (
       channelId: newMessage.channel.id,
     });
 
+    // When message has existing warning, but no new warning, it is fixed or
+    // contains an invalid link & has been deleted
+    if (savedWarning && (!triggeredWarnings.length || linkMessage)) {
+      const notificationMessage = await newMessage.channel.messages.fetch(
+        savedWarning.warningId,
+      );
+      if (notificationMessage) {
+        await notificationMessage.delete();
+      }
+      await savedWarning.deleteOne();
+
+      await Statistics.findOneAndUpdate(
+        {
+          serverId: newMessage.guild.id,
+        },
+        { $inc: { totalTriggersFixed: 1 } },
+        { upsert: true },
+      ).exec();
+      return;
+    }
+
     // when edit results in new warning, but no existing warning
     if (!savedWarning && triggeredWarnings.length) {
       const sent = await newMessage.channel.send({
@@ -111,26 +141,6 @@ export const onUpdate = async (
         { $inc: { totalTriggers: 1 } },
         { upsert: true },
       ).exec();
-    }
-
-    // when edit results in no new warning, but has existing warning, so fixed
-    if (savedWarning && !triggeredWarnings.length) {
-      const notificationMessage = await newMessage.channel.messages.fetch(
-        savedWarning.warningId,
-      );
-      if (notificationMessage) {
-        await notificationMessage.delete();
-      }
-      await savedWarning.deleteOne();
-
-      await Statistics.findOneAndUpdate(
-        {
-          serverId: newMessage.guild.id,
-        },
-        { $inc: { totalTriggersFixed: 1 } },
-        { upsert: true },
-      ).exec();
-      return;
     }
 
     // when edit results in new warning AND has existing warning
