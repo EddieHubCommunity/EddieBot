@@ -23,6 +23,7 @@ export const onMessage = async (bot: ExtendedClient, message: Message) => {
       await adminChannel.send({
         embeds: [linkMessage],
       });
+      return; // Return as message is deleted
     }
 
     const cleaned = await sentenceTypoFixer(

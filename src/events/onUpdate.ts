@@ -31,7 +31,16 @@ export const onUpdate = async (
     return;
   }
 
-  await checkLinks(bot, newMessage);
+  const linkMessage = await checkLinks(bot, newMessage);
+  if (linkMessage) {
+    const adminChannel = bot.channels.cache.get(process.env.ADMIN_CHANNEL!);
+    if (adminChannel && adminChannel.isTextBased()) {
+      await adminChannel.send({
+        embeds: [linkMessage],
+      });
+    }
+    return; // Return as message is deleted
+  }
 
   // log to admin channel updates
   const oldContent = oldMessage.content;
