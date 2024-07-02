@@ -4,7 +4,8 @@ import type { ExtendedClient } from '../interfaces/ExtendedClient.js';
 import { errorHandler } from '../utils/errorHandler.js';
 
 const allowedLinks = ['github.com', 'eddiejaoude.io', 'gitlab.com'];
-const urlPattern = /(http|https):\/\/([\w-]+(\.[\w-]+)+)(\/[\w-./?%&=]*)?/g;
+const urlPattern =
+  /[Hh][Tt][Tt][Pp][Ss]?:\/\/([\w-]+(\.[\w-]+)+)(\/[\w-./?%&=]*)?/g;
 
 export const checkLinks = async (
   bot: ExtendedClient,
