@@ -1,3 +1,12 @@
+## [1.8.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.8.0...v1.8.1) (2024-07-02)
+
+
+### Bug Fixes
+
+* invalid link deletes message, so stop checking ([#813](https://github.com/EddieHubCommunity/EddieBot/issues/813)) ([450dcf0](https://github.com/EddieHubCommunity/EddieBot/commit/450dcf083065c28434698b09a2c4513c6bf64145))
+
+
+
 # [1.8.0](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.10...v1.8.0) (2024-06-29)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * switch release action to softprops/action-gh-release ([#810](https://github.com/EddieHubCommunity/EddieBot/issues/810)) ([b8e69e3](https://github.com/EddieHubCommunity/EddieBot/commit/b8e69e3abc43ef437cfb2ac6c42884d47cd8f4cc))
-
-
-
-## [1.7.7](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.6...v1.7.7) (2024-06-23)
-
-
-### Bug Fixes
-
-* update action dependencies to latest versions ([#808](https://github.com/EddieHubCommunity/EddieBot/issues/808)) ([e935a42](https://github.com/EddieHubCommunity/EddieBot/commit/e935a42d0c4126533d66a275fbfdd93162f06165))
 
 
 
