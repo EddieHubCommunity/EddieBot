@@ -1,3 +1,12 @@
+## [1.8.2](https://github.com/EddieHubCommunity/EddieBot/compare/v1.8.1...v1.8.2) (2024-07-02)
+
+
+### Bug Fixes
+
+* handle http protocol capitalization when checking links ([#814](https://github.com/EddieHubCommunity/EddieBot/issues/814)) ([f83ff9f](https://github.com/EddieHubCommunity/EddieBot/commit/f83ff9f4ed79755021d1f603f77207bd7219f88c))
+
+
+
 ## [1.8.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.8.0...v1.8.1) (2024-07-02)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * remove labels action as it is no longer needed ([#809](https://github.com/EddieHubCommunity/EddieBot/issues/809)) ([149ce2b](https://github.com/EddieHubCommunity/EddieBot/commit/149ce2b263c38ecdcb1bfd6dc041be0c145e61a2))
-
-
-
-## [1.7.8](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.7...v1.7.8) (2024-06-24)
-
-
-### Bug Fixes
-
-* switch release action to softprops/action-gh-release ([#810](https://github.com/EddieHubCommunity/EddieBot/issues/810)) ([b8e69e3](https://github.com/EddieHubCommunity/EddieBot/commit/b8e69e3abc43ef437cfb2ac6c42884d47cd8f4cc))
 
 
 
