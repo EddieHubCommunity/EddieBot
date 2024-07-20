@@ -2,6 +2,11 @@
 
 The official **EddieBot** for the EddieHub [Discord server](http://discord.eddiehub.org). Join us at [Discord](http://discord.eddiehub.org) today!
 
+
+<a href="https://gitpod.io/#https://github.com/EddieHubCommunity/EddieBot" target="_blank">
+  <img src="https://gitpod.io/button/open-in-gitpod.svg" alt="Open EddieBot in Gitpod">
+</a>
+
 ## Features
 
 - Checking peoples' messages for inclusive language.
