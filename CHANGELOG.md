@@ -1,3 +1,12 @@
+## [1.8.3](https://github.com/EddieHubCommunity/EddieBot/compare/v1.8.2...v1.8.3) (2024-07-28)
+
+
+### Bug Fixes
+
+* remove URLs from content before checking for banned words ([#816](https://github.com/EddieHubCommunity/EddieBot/issues/816)) ([21f59e3](https://github.com/EddieHubCommunity/EddieBot/commit/21f59e3af92f24030a63828e717c9fd86f9724b0))
+
+
+
 ## [1.8.2](https://github.com/EddieHubCommunity/EddieBot/compare/v1.8.1...v1.8.2) (2024-07-02)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * **deps:** bump ws from 8.17.0 to 8.17.1 ([#805](https://github.com/EddieHubCommunity/EddieBot/issues/805)) ([d7a0193](https://github.com/EddieHubCommunity/EddieBot/commit/d7a01934d1a10e7757366d7908065a686669a096))
-
-
-
-## [1.7.9](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.8...v1.7.9) (2024-06-24)
-
-
-### Bug Fixes
-
-* remove labels action as it is no longer needed ([#809](https://github.com/EddieHubCommunity/EddieBot/issues/809)) ([149ce2b](https://github.com/EddieHubCommunity/EddieBot/commit/149ce2b263c38ecdcb1bfd6dc041be0c145e61a2))
 
 
 
