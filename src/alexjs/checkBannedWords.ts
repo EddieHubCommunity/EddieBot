@@ -12,12 +12,14 @@ export const checkBannedWords = async (
 ): Promise<EmbedBuilder[]> => {
   const embeds: EmbedBuilder[] = [];
   try {
-    const urlPattern = /https?:\/\/[^\s]+/g;
+    const urlPattern =
+      /[Hh][Tt][Tt][Pp][Ss]?:\/\/([\w-]+(\.[\w-]+)+)(\/[\w-./?%&=]*)?/g;
     const text: string = content.replace(urlPattern, '');
     const config = await getBannedWordConfig(bot, serverId);
     const checkWords = config?.bannedWordConfig
       ? config.bannedWordConfig
       : BannedWordsOptions;
+
     text.split(' ').forEach((word) => {
       if (checkWords.includes(word.toLowerCase())) {
         const embed = new EmbedBuilder();
