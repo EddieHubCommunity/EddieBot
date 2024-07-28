@@ -2,10 +2,9 @@ import { EmbedBuilder, Message, type PartialMessage } from 'discord.js';
 
 import type { ExtendedClient } from '../interfaces/ExtendedClient.js';
 import { errorHandler } from '../utils/errorHandler.js';
+import { urlPattern } from '../config/UrlRegex.js';
 
 const allowedLinks = ['github.com', 'eddiejaoude.io', 'gitlab.com'];
-const urlPattern =
-  /[Hh][Tt][Tt][Pp][Ss]?:\/\/([\w-]+(\.[\w-]+)+)(\/[\w-./?%&=]*)?/g;
 
 export const checkLinks = async (
   bot: ExtendedClient,
