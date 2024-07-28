@@ -4,6 +4,7 @@ import type { ExtendedClient } from '../interfaces/ExtendedClient.js';
 import { errorHandler } from '../utils/errorHandler.js';
 import { BannedWordsOptions } from '../config/BannedWordsOptions.js';
 import { getBannedWordConfig } from '../utils/getBannedWordConfig.js';
+import { urlPattern } from '../config/UrlRegex.js';
 
 export const checkBannedWords = async (
   bot: ExtendedClient,
@@ -12,8 +13,6 @@ export const checkBannedWords = async (
 ): Promise<EmbedBuilder[]> => {
   const embeds: EmbedBuilder[] = [];
   try {
-    const urlPattern =
-      /[Hh][Tt][Tt][Pp][Ss]?:\/\/([\w-]+(\.[\w-]+)+)(\/[\w-./?%&=]*)?/g;
     const text: string = content.replace(urlPattern, '');
     const config = await getBannedWordConfig(bot, serverId);
     const checkWords = config?.bannedWordConfig
