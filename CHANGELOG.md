@@ -1,3 +1,12 @@
+## [1.8.4](https://github.com/EddieHubCommunity/EddieBot/compare/v1.8.3...v1.8.4) (2024-08-16)
+
+
+### Bug Fixes
+
+* update dictionaries for typo ([#817](https://github.com/EddieHubCommunity/EddieBot/issues/817)) ([7ab2477](https://github.com/EddieHubCommunity/EddieBot/commit/7ab2477c1945a0ac946d958a27f189a5021f7ede))
+
+
+
 ## [1.8.3](https://github.com/EddieHubCommunity/EddieBot/compare/v1.8.2...v1.8.3) (2024-07-28)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * migrate to ESM to allow for Alex upgrade ([#811](https://github.com/EddieHubCommunity/EddieBot/issues/811)) ([2914a5f](https://github.com/EddieHubCommunity/EddieBot/commit/2914a5f35b911e723ccefe7b0fc17c28de683674))
-
-
-
-## [1.7.10](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.9...v1.7.10) (2024-06-26)
-
-
-### Bug Fixes
-
-* **deps:** bump ws from 8.17.0 to 8.17.1 ([#805](https://github.com/EddieHubCommunity/EddieBot/issues/805)) ([d7a0193](https://github.com/EddieHubCommunity/EddieBot/commit/d7a01934d1a10e7757366d7908065a686669a096))
 
 
 
