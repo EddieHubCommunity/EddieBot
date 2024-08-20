@@ -1,3 +1,12 @@
+## [1.8.5](https://github.com/EddieHubCommunity/EddieBot/compare/v1.8.4...v1.8.5) (2024-08-20)
+
+
+### Bug Fixes
+
+* update dependencies ([#818](https://github.com/EddieHubCommunity/EddieBot/issues/818)) ([956bb45](https://github.com/EddieHubCommunity/EddieBot/commit/956bb45c9968d77418d7e8b0533c37ec644da49e))
+
+
+
 ## [1.8.4](https://github.com/EddieHubCommunity/EddieBot/compare/v1.8.3...v1.8.4) (2024-08-16)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * invalid link deletes message, so stop checking ([#813](https://github.com/EddieHubCommunity/EddieBot/issues/813)) ([450dcf0](https://github.com/EddieHubCommunity/EddieBot/commit/450dcf083065c28434698b09a2c4513c6bf64145))
-
-
-
-# [1.8.0](https://github.com/EddieHubCommunity/EddieBot/compare/v1.7.10...v1.8.0) (2024-06-29)
-
-
-### Features
-
-* migrate to ESM to allow for Alex upgrade ([#811](https://github.com/EddieHubCommunity/EddieBot/issues/811)) ([2914a5f](https://github.com/EddieHubCommunity/EddieBot/commit/2914a5f35b911e723ccefe7b0fc17c28de683674))
 
 
 
