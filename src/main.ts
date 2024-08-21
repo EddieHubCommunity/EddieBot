@@ -31,7 +31,7 @@ const port = 8080;
   await registerCommands(bot);
 
   // used for DigitalOcean's app health check otherwise it kills the app
-  app.get('/', (req, res: any) => {
+  app.get('/', (req, res: express.Response) => {
     res.send('Discord bot is running');
   });
 
