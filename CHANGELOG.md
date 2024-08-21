@@ -1,3 +1,12 @@
+## [1.8.6](https://github.com/EddieHubCommunity/EddieBot/compare/v1.8.5...v1.8.6) (2024-08-21)
+
+
+### Bug Fixes
+
+* update ESLint to v9 ([#819](https://github.com/EddieHubCommunity/EddieBot/issues/819)) ([560e396](https://github.com/EddieHubCommunity/EddieBot/commit/560e396d4759acdd1b2742aab8e5b1f5ce2937b7))
+
+
+
 ## [1.8.5](https://github.com/EddieHubCommunity/EddieBot/compare/v1.8.4...v1.8.5) (2024-08-20)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * handle http protocol capitalization when checking links ([#814](https://github.com/EddieHubCommunity/EddieBot/issues/814)) ([f83ff9f](https://github.com/EddieHubCommunity/EddieBot/commit/f83ff9f4ed79755021d1f603f77207bd7219f88c))
-
-
-
-## [1.8.1](https://github.com/EddieHubCommunity/EddieBot/compare/v1.8.0...v1.8.1) (2024-07-02)
-
-
-### Bug Fixes
-
-* invalid link deletes message, so stop checking ([#813](https://github.com/EddieHubCommunity/EddieBot/issues/813)) ([450dcf0](https://github.com/EddieHubCommunity/EddieBot/commit/450dcf083065c28434698b09a2c4513c6bf64145))
 
 
 
