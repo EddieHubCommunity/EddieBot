@@ -32,7 +32,7 @@
     "alex": "^11.0.1",
     "discord.js": "^14.15.3",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2",
+    "express": "^4.21.0",
     "mongoose": "^8.5.3",
     "rimraf": "^6.0.1",
     "typo-js-ts": "^2.0.4",
