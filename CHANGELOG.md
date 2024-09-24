@@ -1,3 +1,12 @@
+## [1.8.7](https://github.com/EddieHubCommunity/EddieBot/compare/v1.8.6...v1.8.7) (2024-09-24)
+
+
+### Bug Fixes
+
+* dependencies ([#822](https://github.com/EddieHubCommunity/EddieBot/issues/822)) ([2e4af50](https://github.com/EddieHubCommunity/EddieBot/commit/2e4af506171a51b6119388a26dd025220965ff23))
+
+
+
 ## [1.8.6](https://github.com/EddieHubCommunity/EddieBot/compare/v1.8.5...v1.8.6) (2024-08-21)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * remove URLs from content before checking for banned words ([#816](https://github.com/EddieHubCommunity/EddieBot/issues/816)) ([21f59e3](https://github.com/EddieHubCommunity/EddieBot/commit/21f59e3af92f24030a63828e717c9fd86f9724b0))
-
-
-
-## [1.8.2](https://github.com/EddieHubCommunity/EddieBot/compare/v1.8.1...v1.8.2) (2024-07-02)
-
-
-### Bug Fixes
-
-* handle http protocol capitalization when checking links ([#814](https://github.com/EddieHubCommunity/EddieBot/issues/814)) ([f83ff9f](https://github.com/EddieHubCommunity/EddieBot/commit/f83ff9f4ed79755021d1f603f77207bd7219f88c))
 
 
 
