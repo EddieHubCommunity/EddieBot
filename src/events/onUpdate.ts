@@ -3,6 +3,7 @@ import {
   type APIEmbed,
   type Message,
   type PartialMessage,
+  type TextChannel,
 } from 'discord.js';
 import { checkContent } from '../alexjs/checkContent.js';
 import { checkBannedWords } from '../alexjs/checkBannedWords.js';
@@ -33,7 +34,9 @@ export const onUpdate = async (
 
   const linkMessage = await checkLinks(bot, newMessage);
   if (linkMessage) {
-    const adminChannel = bot.channels.cache.get(process.env.ADMIN_CHANNEL!);
+    const adminChannel = bot.channels.cache.get(
+      process.env.ADMIN_CHANNEL!,
+    ) as TextChannel;
     if (adminChannel && adminChannel.isTextBased()) {
       await adminChannel.send({
         embeds: [linkMessage],
@@ -47,7 +50,9 @@ export const onUpdate = async (
   const newContent = newMessage.content;
 
   if (oldContent !== newContent) {
-    const logChannel = bot.channels.cache.get(process.env.ADMIN_CHANNEL!);
+    const logChannel = bot.channels.cache.get(
+      process.env.ADMIN_CHANNEL!,
+    ) as TextChannel;
     if (logChannel && logChannel.isTextBased()) {
       const logEmbed = new EmbedBuilder()
         .setTitle(`Message Updated by "${newMessage.author?.username}"`)
@@ -103,7 +108,8 @@ export const onUpdate = async (
 
     // when edit results in new warning, but no existing warning
     if (!savedWarning && triggeredWarnings.length) {
-      const sent = await newMessage.channel.send({
+      const channel = newMessage.channel as TextChannel;
+      const sent = await channel.send({
         embeds: triggeredWarnings.slice(0, 1),
       });
       await Warnings.create({

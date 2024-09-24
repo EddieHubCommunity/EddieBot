@@ -56,7 +56,8 @@ export const onMessage = async (bot: ExtendedClient, message: Message) => {
       return;
     }
 
-    const sent = await message.channel.send({
+    const channel = message.channel as TextChannel;
+    const sent = await channel.send({
       embeds: triggeredWarnings.slice(0, 1),
     });
     await Warnings.create({
