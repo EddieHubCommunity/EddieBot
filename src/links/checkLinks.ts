@@ -4,7 +4,12 @@ import type { ExtendedClient } from '../interfaces/ExtendedClient.js';
 import { errorHandler } from '../utils/errorHandler.js';
 import { urlPattern } from '../config/UrlRegex.js';
 
-const allowedLinks = ['github.com', 'eddiejaoude.io', 'gitlab.com'];
+const allowedLinks = [
+  'github.com',
+  'eddiejaoude.io',
+  'gitlab.com',
+  'github.blog',
+];
 
 export const checkLinks = async (
   bot: ExtendedClient,
