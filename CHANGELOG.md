@@ -1,3 +1,12 @@
+## [1.8.8](https://github.com/EddieHubCommunity/EddieBot/compare/v1.8.7...v1.8.8) (2024-09-26)
+
+
+### Bug Fixes
+
+* github.blog to allowed links & cleanup testing errors ([#823](https://github.com/EddieHubCommunity/EddieBot/issues/823)) ([055acb3](https://github.com/EddieHubCommunity/EddieBot/commit/055acb3913a5cc75a6774c17e7b6929d1a5cafa8))
+
+
+
 ## [1.8.7](https://github.com/EddieHubCommunity/EddieBot/compare/v1.8.6...v1.8.7) (2024-09-24)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * update dictionaries for typo ([#817](https://github.com/EddieHubCommunity/EddieBot/issues/817)) ([7ab2477](https://github.com/EddieHubCommunity/EddieBot/commit/7ab2477c1945a0ac946d958a27f189a5021f7ede))
-
-
-
-## [1.8.3](https://github.com/EddieHubCommunity/EddieBot/compare/v1.8.2...v1.8.3) (2024-07-28)
-
-
-### Bug Fixes
-
-* remove URLs from content before checking for banned words ([#816](https://github.com/EddieHubCommunity/EddieBot/issues/816)) ([21f59e3](https://github.com/EddieHubCommunity/EddieBot/commit/21f59e3af92f24030a63828e717c9fd86f9724b0))
 
 
 
