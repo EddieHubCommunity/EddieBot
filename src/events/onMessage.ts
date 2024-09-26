@@ -20,9 +20,11 @@ export const onMessage = async (bot: ExtendedClient, message: Message) => {
       const adminChannel = bot.channels.cache.get(
         process.env.ADMIN_CHANNEL!,
       ) as TextChannel;
-      await adminChannel.send({
-        embeds: [linkMessage],
-      });
+      if (adminChannel) {
+        await adminChannel.send({
+          embeds: [linkMessage],
+        });
+      }
       return; // Return as message is deleted
     }
 
